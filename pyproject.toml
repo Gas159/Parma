@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "task manager"
+authors = ["Gas159 <pankot222@gmail.com>"]
+readme = "README.md"
+packages = [{include = "hexlet_code"}]
+
+
+[tool.poetry.scripts]
+page-loader = 'page_loader.scripts.page_loader:main'
+click = 'page_loader.my_dir.click1:parse_with_click'
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.5"
+django-extensions = "^3.2.1"
+ipython = "^8.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
