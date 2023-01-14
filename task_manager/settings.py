@@ -28,7 +28,7 @@ DEBUG = os.getenv('DEBUG') == 'yes'
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 
-ALLOWED_HOSTS = ['webserver', '127.0.0.1']
+ALLOWED_HOSTS = ['webserver', '127.0.0.1', 'python-project-52-production-05f4.up.railway.app']
 
 # Application definition
 

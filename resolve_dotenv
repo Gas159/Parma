@@ -8,3 +8,4 @@ Use a more fully-featured package like django-environ.
 There's slightly more configuration required, but if your project has multiple boolean settings it might be worth it. (I haven't actually used django-environ, but it looks pretty interesting so I may investigate).
 
 # создать приложение --> зарегистраровать в сетинг app --> reg in url
+curl -fsSL https://railway.app/install.sh | sh
