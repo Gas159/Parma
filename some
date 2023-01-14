@@ -166,3 +166,24 @@ class CategoriesCreateView(View):
     </table>
     <input type="submit" value="Создать">
   </form>
+
+# python manage.py check --deploy
+# python manage.py runserver
+# python manage.py startapp 'name app'
+# python manage.py createsuperuser 'name user '
+# django-admin # list commands
+# django-admin startproject 'name site'
+# python manage.py sqlmigrate women 0001  // позволяет посмотреть sql запрос который будет выполнен
+# python manage.py makemigrations
+# python manage.py migrate
+
+# from women.models import Women
+# >>> Women(title='Анджелина Джоли', content='Биография Анджелины Джоли')
+# <Women: Women object (None)>
+# >>> w1 = _    \\ '_' - хранит ссылку на последнее действие
+# >>> w1
+# <Women: Women object (None)>
+# w1.save() # save to db
+
+
+# создать приложение --> зарегистраровать в сетинг app --> reg in url

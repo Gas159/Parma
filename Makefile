@@ -1,28 +1,71 @@
-MANAGE := poetry run python manage.py
+LOCAL := poetry run python manage.py
 
-.PHONY: test
-test:
-	@poetry run pytest
-
-.PHONY: setup
-setup: db-clean install migrate
-
-.PHONY: install
 install:
-	@poetry install
+		poetry install
 
-.PHONY: db-clean
-db-clean:
-	@rm db.sqlite3 || true
 
-.PHONY: migrate
-migrate:
-	@$(MANAGE) migrate
+# runserver commands
+start:
+		$(LOCAL) runserver 8080
+run-gunicorn:
+		export DJANGO_SETTINGS_MODULE=task_manager.settings
+		poetry run gunicorn task_manager.wsgi --log-file -
 
-.PHONY: shell
+
+# service commands
 shell:
-	@$(MANAGE) shell_plus --ipython
+		$(LOCAL) shell_plus
 
-.PHONY: lint
+collectstatic:
+		$(LOCAL) collectstatic
+
+secretkey:
+		poetry run python -c 'from django.utils.crypto import get_random_string; print(get_random_string(40))'
+
+
+
+# make translate messages commands
+messages:
+		poetry run django-admin makemessages -l ru
+# django-admin makemessages --ignore="static" --ignore=".env"  -l ru
+
+
+
+compilemess:
+		poetry run django-admin compilemessages
+
+
+
+# migrate commands
+migrations:
+		$(LOCAL) makemigrations
+migrate:
+		$(LOCAL) migrate
+migrate-rw:
+		railway run python manage.py migrate
+
+
+# test commands
+test:
+		poetry run pytest
+test-cov:
+		poetry run pytest --cov
+test-coverage:
+		poetry run pytest --cov=task_manager --cov-report xml
+
+
+# linter & check commands
 lint:
-	@poetry run flake8 python_django_orm_blog
+		poetry run flake8 task_manager users tasks labels statuses
+
+
+selfcheck:
+		poetry check
+
+# complex commands
+check: selfcheck test lint
+
+build: check
+		poetry build
+
+.PHONY: install test lint selfcheck check build shell migrate collectstatic secretkey
