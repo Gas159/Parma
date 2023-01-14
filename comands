@@ -16,6 +16,9 @@ python manage.py migrate article 0005
 python manage.py migrate article zero
 
 python manage.py shell
+web: python manage.py migrate && gunicorn <project_name>.wsgi
+
+
 from hexlet_django_blog.article.models import Article # Импортируем наш класс модели Article
 a = Article()
 # Когда объект модели создан, его можно наполнять данными через обычные свойства.

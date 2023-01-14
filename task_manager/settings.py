@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 
 # Load envroinments variable
 load_dotenv()
+# load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
