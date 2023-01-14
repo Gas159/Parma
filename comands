@@ -82,3 +82,5 @@ curl -H "content-type: application/json" localhost:8080/courses
 # --head в этом случае игнорирует тело при выводе
 # -v, --verbose
 # -H, --header
+
+postgresql://postgres:l3D70CB9tmU589W8Eh8m@containers-us-west-110.railway.app:5926/railway

@@ -16,7 +16,7 @@ run-gunicorn:
 shell:
 		$(LOCAL) shell_plus
 
-collectstatic:
+collectstatics:
 		$(LOCAL) collectstatic
 
 secretkey:
