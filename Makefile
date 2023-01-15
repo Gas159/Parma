@@ -16,8 +16,9 @@ run-gunicorn:
 shell:
 		$(LOCAL) shell_plus
 
-collectstatics:
+collectstatic:
 		$(LOCAL) collectstatic
+
 
 secretkey:
 		poetry run python -c 'from django.utils.crypto import get_random_string; print(get_random_string(40))'
@@ -26,8 +27,7 @@ secretkey:
 
 # make translate messages commands
 messages:
-		poetry run django-admin makemessages -l ru
-# django-admin makemessages --ignore="static" --ignore=".env"  -l ru
+		django-admin makemessages --ignore="static" --ignore=".env"  -l ru
 
 export: #make export dependens from poetry on Heroku
 	poetry export -f requirements.txt -o requirements.txt
@@ -69,5 +69,8 @@ check: selfcheck test lint
 
 build: check
 		poetry build
+
+lang_check:
+		curl http://127.0.0.1:8080 -H "Accept-Language: ru"
 
 .PHONY: install test lint selfcheck check build shell migrate collectstatic secretkey
