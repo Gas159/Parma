@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 from task_manager.views import index
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', index),
-    # path('home/', index),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', index),
+                  # path('home/', index),
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

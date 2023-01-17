@@ -6,7 +6,7 @@ install:
 
 # runserver commands
 start:
-		$(LOCAL) runserver 8080
+		$(LOCAL) runserver 8081
 run-gunicorn:
 		export DJANGO_SETTINGS_MODULE=task_manager.settings
 		poetry run gunicorn task_manager.wsgi --log-file -
