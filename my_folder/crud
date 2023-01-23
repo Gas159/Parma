@@ -4,6 +4,12 @@ from django.urls import reverse_lazy # импортируем новые мет�
 
 from .models import Post
 
+setUp – выполняется перед запуском каждого теста;
+tearDown – выполняется после завершения каждого теста;
+setUpTestData – выполняется перед запуском всех тестов конкретного класса.
+tes: # python manage.py test my_app.tests.test_models.TrialTests
+		python manage.py test
+
 
 class BlogListView(ListView):
     model = Post

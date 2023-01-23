@@ -7,7 +7,7 @@ from django.contrib.auth.models import AbstractUser
 
 class Users(AbstractUser):
     def __str__(self):
-        return self.get_full_name()
+        return self.username
 
 # class Users(models.Model):
 #     username= models.CharField(max_length=255, verbose_name='Никнейм')
