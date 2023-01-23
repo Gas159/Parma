@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-15 16:41+0500\n"
+"POT-Creation-Date: 2023-01-23 15:45+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,31 +19,42 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
-#: task_manager/settings.py:119
+#: task_manager/settings.py:123
 msgid "Russia"
 msgstr ""
 
-#: task_manager/settings.py:120
+#: task_manager/settings.py:124
 msgid "English"
 msgstr ""
 
-#: task_manager/templates/index.html:64
+#: task_manager/templates/base.html:62
 msgid "Users"
-msgstr "Пользователь"
+msgstr ""
 
-#: task_manager/templates/index.html:68
+#: task_manager/templates/base.html:63
+msgid "пользщов"
+msgstr ""
+
+#: task_manager/templates/base.html:67
 msgid "Login"
-msgstr "Вход"
+msgstr ""
 
-#: task_manager/templates/index.html:72
+#: task_manager/templates/base.html:71
 msgid "Registration"
-msgstr "Регистрация"
+msgstr ""
 
-#: task_manager/templates/index.html:96
+#: task_manager/templates/index.html:12
 msgid "Драко Малфой залетел от мальчика который смог выжить."
-msgstr "Dralo Malfoy bla bla bla"
+msgstr ""
 
-#: task_manager/views.py:6
-msgid "this is some random text"
+#: task_manager/templates/users/users.html:19
+msgid "User name"
+msgstr ""
+
+#: task_manager/templates/users/users.html:20
+msgid "Full name"
+msgstr ""
+
+#: task_manager/templates/users/users.html:21
+msgid "Created date"
 msgstr ""

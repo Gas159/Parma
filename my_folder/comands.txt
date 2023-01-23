@@ -1,13 +1,15 @@
 There are not the page you're looking for. Come Home, padawan
 
 python manage.py #all commmands for django
-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
 django-admin startproject hexlet_django_blog .
-# python manage.py runserver
-# python manage.py startapp 'name app'
-# python manage.py createsuperuser 'name user '
-# django-admin # list commands
-# django-admin startproject 'name site'
+python manage.py migrate --run-syncdb # user_users
+
+
+python manage.py runserver
+python manage.py startapp 'name app'
+python manage.py createsuperuser
+django-admin # list commands
+
 
 # python manage.py sqlmigrate women 0001  // позволяет посмотреть sql запрос который будет выполнен
 # python manage.py makemigrations
@@ -17,6 +19,10 @@ python manage.py migrate article zero
 
 python manage.py shell
 web: python manage.py migrate && gunicorn <project_name>.wsgi
+
+    setUp – выполняется перед запуском каждого теста;
+    tearDown – выполняется после завершения каждого теста;
+    setUpTestData – выполняется перед запуском всех тестов конкретного класса.
 
 
 from hexlet_django_blog.article.models import Article # Импортируем наш класс модели Article

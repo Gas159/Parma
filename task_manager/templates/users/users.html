@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<!--<li><p>{{ users.name }}</p>-->
+<!--    <a href="#">Update</a></li>-->
+<!--    <a href="#">Delete</a></li>-->
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+</div>
+<table class="table">
+    <thead>
+    <tr class="table-info">
+        <th scope="col">ID</th>
+        <th scope="col">{% trans 'User name' %}</th>
+        <th scope="col">{% trans 'first name' %}</th>
+        <th scope="col">{% trans 'Created date' %}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    {% for user in users %}
+    <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.first_name}}</td>
+        <td>{{user.date_joined}}</td>
+        <td>
+             <a href="{% url 'update_user' user.pk %}">Изменить</a>
+            <br>
+            <a href="{% url 'delete_user' user.pk %}">Удалить</a>
+        </td>
+    </tr>
+    {% empty %}
+    <li>Sorry, no athletes in this list.</li>
+    {% endfor %}
+</table>
+{% endblock %}
+

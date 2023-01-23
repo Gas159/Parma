@@ -19,15 +19,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include
 
-# from home.views import index
-from .views import IndexView, UserLoginView, logout_view
+# from users.views import users
+from .views import UserView, RegisterUserView, UpdateUserView, DeleteUserView
 
 urlpatterns = [
-                  path('admin/', admin.site.urls),
-                  path('', IndexView.as_view(), name='home'),
-                  path('users/', include('users.urls')),
-                  path('login/', UserLoginView.as_view(), name='user_login'),
-                  path('logout/', logout_view, name='user_logout'),
-                  # path('accounts/', include('django.contrib.auth.urls')),
+    # path('', users, name='users'),
+    path('', UserView.as_view(), name='users'),
+    path('create/', RegisterUserView.as_view(), name='register'),
+    path('<int:pk>/update/', UpdateUserView.as_view(), name='update_user'),
+    path('<int:pk>/delete/', DeleteUserView.as_view(), name='delete_user'),
 
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+]

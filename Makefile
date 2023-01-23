@@ -54,6 +54,8 @@ test-cov:
 		poetry run pytest --cov
 test-coverage:
 		poetry run pytest --cov=task_manager --cov-report xml
+tes: # python manage.py test my_app.tests.test_models.TrialTests
+		python manage.py test
 
 
 # linter & check commands
