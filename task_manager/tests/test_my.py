@@ -90,18 +90,14 @@ class CRUD_user_test(TestCase):
         response = self.client.post(reverse('register'),
                                     {'username': 'john_smith', 'password': '12345'}, follow=True)
         self.assertEqual(response.status_code, 200)
-        # self.assertTemplateUsed(response, template_name='register.html')
-        # self.assertRedirects(response, reverse('users'))
+
 
     def test_read_user(self):
         response = self.client.post(reverse('user_login'),
                                     {'username': 'ivan_ivanov',
                                      'password': 'qwerty'})
-        # self.assertTrue(len(response.context['users']) == 1)
-
         self.assertEqual(response.status_code, 200)
-        # self.assertTemplateUsed(response, 'home.html')
-        # self.assertRedirects(response, reverse('home'))
+
 
     # UPDATE - обновленние данных пользователя
     def test_update_user(self):
@@ -112,10 +108,7 @@ class CRUD_user_test(TestCase):
                                      'last_name': 'Ivanov',
                                      'email': 'ivanivanov@gmail.com'})
         self.assertEqual(response.status_code, 302)
-        # print(response.context)
-        # self.assertEqual(User.objects.get(id=1).first_name, 'Ivan')
-        # self.assertEqual(self.user.last_name, 'Ivanov')
-        # self.assertEqual(self.user.email, 'ivanivanov@gmail.com')
+
 
 
     # DELETE - удаления пользователя

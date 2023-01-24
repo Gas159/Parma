@@ -16,3 +16,4 @@ env/
 venv/
 *.env
 staticfiles/
+/my_folder/oop/
