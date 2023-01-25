@@ -1,9 +1,7 @@
-
 import os
 from pathlib import Path
 from dotenv import load_dotenv
 import dj_database_url
-
 
 load_dotenv()
 # load_dotenv(os.path.join(BASE_DIR, ".env"))
@@ -18,7 +16,7 @@ DEBUG = os.getenv('DEBUG') == 'yes'
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 
-ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1','0.0.0.0',
+ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1', '0.0.0.0',
                  'localhost', 'python-project-52-production-05f4.up.railway.app']
 
 # Application definition
