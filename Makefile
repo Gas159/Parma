@@ -76,4 +76,9 @@ build: check
 lang_check:
 		curl http://127.0.0.1:8080 -H "Accept-Language: ru"
 
+PORT ?= 8000
+db:
+	python3 manage.py migrate
+	poetry run gunicorn --bind 0.0.0.0:$(PORT) task_manager.wsgi
+
 .PHONY: install test lint selfcheck check build shell migrate collectstatic secretkey

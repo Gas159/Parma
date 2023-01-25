@@ -1,5 +1,16 @@
 There are not the page you're looking for. Come Home, padawan
-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 actual 2023 !!!!!!!!!!!
+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
+
+
+- requirements.txt
+- Procfile
+- runtime.txt
+- django-project
+- environment variables / config variables
+- static file configuration
+- database configuration
+- migrate schema of database
+- gitignore file for ignoring virtualenvs, .env file, staticfiles, etc
 
 python manage.py #all commmands for django
 django-admin startproject hexlet_django_blog .
