@@ -33,8 +33,8 @@ messages:
 		django-admin makemessages --ignore="static" --ignore=".env"  -l ru
 
 export: #make export dependens from poetry on Heroku
-# 	poetry export -f requirements.txt -o requirements.txt
-	poetry export --without-hashes --format=requirements.txt > requirements.txt
+	poetry export -f requirements.txt -o requirements.txt
+# 	poetry export --without-hashes --format=requirements.txt > requirements.txt
 
 compilemess:
 		poetry run django-admin compilemessages
@@ -83,4 +83,7 @@ db:
 	python3 manage.py migrate
 	poetry run gunicorn --bind 0.0.0.0:$(PORT) task_manager.wsgi
 
+start1:
+	python3 manage.py migrate
+	poetry run gunicorn --bind 0.0.0.0:$(PORT) task_manager.wsgi
 .PHONY: install test lint selfcheck check build shell migrate collectstatic secretkey
