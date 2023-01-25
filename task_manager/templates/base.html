@@ -1,13 +1,10 @@
 <!doctype html>
 {% load i18n %}
 {% load static %}
-
 {% load bootstrap4 %}
-
 {% bootstrap_css %}
 {% bootstrap_javascript jquery='full' %}
 
-<!--{% bootstrap_messages %}-->
 
 <html lang="en">
 <head>
@@ -40,8 +37,8 @@
         }
 
     </style>
+
     <!-- Custom styles for this template -->
-    <!--    <link href="css/starter-template.css" rel="stylesheet">-->
     <link href="{% static 'css/starter-template.css' %}" rel="stylesheet">
 
 </head>
@@ -60,6 +57,12 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'users' %}">{% translate 'Users' %}
                     <span class="sr-only">(current)</span></a></li>
+            {% if request.user.is_authenticated %}
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}
+                    <span class="sr-only">(current)</span></a></li>
+            {% endif %}
+
             </ul>
 
 
@@ -99,14 +102,11 @@
                 {{request.user.first_name}}
             </button>
             <div class="dropdown-menu">
-                {% if request.user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}">
-                {% translate "Logout" %}</a></li>
+            {% if request.user.is_authenticated %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}"> {% translate "Logout" %}</a></li>
             {% else %}
-            <li class="nav-item"><a class="nav-link" href="{% url 'user_login' %}">
-                {% translate "Login" %}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">
-                {% trans 'Registration' %}</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'user_login' %}">{% translate "Login" %}</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">{% trans 'Registration' %}</a></li>
             {% endif %}
             </div>
         </div>

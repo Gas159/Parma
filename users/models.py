@@ -9,6 +9,7 @@ class Users(AbstractUser):
     def __str__(self):
         return self.username
 
+
 # class Users(models.Model):
 #     username= models.CharField(max_length=255, verbose_name='Никнейм')
 #     last_name= models.CharField(max_length=255, verbose_name='Фамилия')
@@ -34,21 +35,3 @@ class Users(AbstractUser):
 #     def __str__(self):
 #         return f'{self.name} id:{self.id}'
 
-
-from django.db import models
-
-class Trial(models.Model):
-    """Простая модель пользовательского триала"""
-
-    email = models.EmailField(
-        verbose_name='Электронная почта',
-        max_length=256,
-        unique=False,
-    )
-
-    def __str__(self):
-        return str(self.email)
-
-    class Meta:
-        verbose_name = 'Триал'
-        verbose_name_plural = 'Триалы'

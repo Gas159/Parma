@@ -1,13 +1,10 @@
-from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from django.contrib.auth import forms
 from django.forms import ModelForm
 
+from .models import Status
 
-# from users.models import Users
-
-class RegisterUserForm(UserCreationForm):
+class StatusesChangeForm(ModelForm):
     # username = forms.CharField(label='Логин')
     # # email = forms.EmailField(label='Email', required=False)
     # first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
@@ -16,7 +13,5 @@ class RegisterUserForm(UserCreationForm):
     # password2 = forms.CharField(label='Повтор пароля',
     #                             widget=forms.PasswordInput(attrs={'class': 'form-input'}))
     class Meta:
-        model = get_user_model()
-        fields = ['username', 'first_name', 'last_name']
-
-# class UpdateUser()
+        model = Status
+        fields = ['name']

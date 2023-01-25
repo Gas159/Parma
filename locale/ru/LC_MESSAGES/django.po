@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-23 15:45+0500\n"
+"POT-Creation-Date: 2023-01-25 20:55+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,27 +19,42 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: task_manager/settings.py:123
-msgid "Russia"
+
+#: statuses/models.py:6
+msgid "name"
 msgstr ""
 
-#: task_manager/settings.py:124
-msgid "English"
+#: statuses/models.py:13
+msgid "=Status="
 msgstr ""
 
-#: task_manager/templates/base.html:62
+#: statuses/models.py:14
+msgid "=Statuses="
+msgstr ""
+
+#: statuses/views.py:15
+msgid "Statuses"
+msgstr ""
+
+#: statuses/views.py:15 task_manager/views.py:26
+msgid "Create"
+msgstr ""
+
+#: task_manager/templates/base.html:61 users/views.py:29
 msgid "Users"
+msgstr "123"
+
+#: task_manager/templates/base.html:69 task_manager/templates/base.html:104
+msgid "Logout"
 msgstr ""
 
-#: task_manager/templates/base.html:63
-msgid "пользщов"
-msgstr ""
-
-#: task_manager/templates/base.html:67
+#: task_manager/templates/base.html:72 task_manager/templates/base.html:79
+#: task_manager/templates/base.html:106
 msgid "Login"
 msgstr ""
 
-#: task_manager/templates/base.html:71
+#: task_manager/templates/base.html:74 task_manager/templates/base.html:84
+#: task_manager/templates/base.html:107
 msgid "Registration"
 msgstr ""
 
@@ -47,14 +62,69 @@ msgstr ""
 msgid "Драко Малфой залетел от мальчика который смог выжить."
 msgstr ""
 
+#: task_manager/templates/login.html:7
+msgid "Enter"
+msgstr ""
+
+#: task_manager/templates/login.html:11
+msgid "Log in"
+msgstr ""
+
+#: task_manager/templates/statuses/statuses.html:19
 #: task_manager/templates/users/users.html:19
 msgid "User name"
 msgstr ""
 
+#: task_manager/templates/statuses/statuses.html:20
 #: task_manager/templates/users/users.html:20
-msgid "Full name"
+msgid "first name"
 msgstr ""
 
+#: task_manager/templates/statuses/statuses.html:21
 #: task_manager/templates/users/users.html:21
 msgid "Created date"
+msgstr ""
+
+#: task_manager/views.py:26
+msgid "User"
+msgstr ""
+
+#: task_manager/views.py:31
+msgid "Successfully login"
+msgstr ""
+
+#: users/views.py:29 users/views.py:66
+msgid "Update"
+msgstr ""
+
+#: users/views.py:29 users/views.py:76
+msgid "Delete"
+msgstr ""
+
+#: users/views.py:50
+msgid "User successfully registered"
+msgstr ""
+
+#: users/views.py:51
+msgid "Registration user"
+msgstr ""
+
+#: users/views.py:52
+msgid "Register"
+msgstr ""
+
+#: users/views.py:64
+msgid "User successfully changed"
+msgstr ""
+
+#: users/views.py:65
+msgid "Update user"
+msgstr ""
+
+#: users/views.py:74
+msgid "User successfully deleted"
+msgstr ""
+
+#: users/views.py:75
+msgid "Delete user"
 msgstr ""

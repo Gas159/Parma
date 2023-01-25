@@ -28,7 +28,8 @@ urlpatterns = [
                   path('users/', include('users.urls')),
                   path('login/', UserLoginView.as_view(), name='user_login'),
                   path('logout/', logout_view, name='user_logout'),
-                  # path('accounts/', include('django.contrib.auth.urls')),
+                  path('statuses/', include('statuses.urls')),
 
+                  # path('accounts/', include('django.contrib.auth.urls')),
 
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

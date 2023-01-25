@@ -23,6 +23,7 @@ from django.views.generic import TemplateView
 
 class IndexView(SuccessMessageMixin, TemplateView):
     template_name = 'index.html'
+    extra_context = {'title': _('User'), 'btn': _('Create')}
 
 
 class UserLoginView(SuccessMessageMixin, LoginView):
@@ -32,9 +33,6 @@ class UserLoginView(SuccessMessageMixin, LoginView):
 
     def get_success_url(self):
         return reverse_lazy('home')
-
-class UserLogout (LogoutView):
-    pass
 
 def logout_view(request):
     logout(request)

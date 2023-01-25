@@ -26,7 +26,7 @@ class UserView(ListView):
     template_name = 'users/users.html'
     model = Users
     context_object_name = 'users'
-    extra_context = {'title': 'Users'}
+    extra_context = {'title': _('Users'), 'btn_update': _('Update'), 'btn_delete': _('Delete')}
     redirect_field_name = 'home'
 
     # def get_context_data(self, *, object_list=None, **kwargs):
@@ -44,21 +44,21 @@ class UserView(ListView):
 
 class RegisterUserView(SuccessMessageMixin, CreateView):
     # form_class = UserCreationForm # Default django form for regustration users
-    form_class = RegisterUserForm
+    # form_class = RegisterUserForm
+    model = get_user_model()
     template_name = 'users/register.html'  # link on template
     success_url = reverse_lazy('user_login')  # redirect
     success_message = _('User successfully registered')
     extra_context = {'title': _('Registration user'),
                      'btn_name': _('Register')
                      }
+    fields = ['username', 'first_name']
 
 
 class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = get_user_model()
-    # fields = ['first_name',
-    #         'last_name',
-    #         'username', 'password']
-    form_class = RegisterUserForm
+    fields = ['first_name']
+    # form_class = RegisterUserForm
     template_name_suffix = '_update_form'
     success_url = reverse_lazy('users')
     success_message = _('User successfully changed')
@@ -70,7 +70,6 @@ class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 class DeleteUserView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Users
     success_url = reverse_lazy('users')
-    # template_name = 'users/users_confirm_delete.html'
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),
                      'btn_name': _('Delete'),

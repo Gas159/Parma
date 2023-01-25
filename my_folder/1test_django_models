@@ -49,3 +49,27 @@
 #         """Тест поля verbose_name_plural модели Trial"""
 #
 #         self.assertEqual(Trial._meta.verbose_name_plural, 'Триалы')
+
+
+
+
+
+
+
+from django.db import models
+
+class Trial(models.Model):
+    """Простая модель пользовательского триала"""
+
+    email = models.EmailField(
+        verbose_name='Электронная почта',
+        max_length=256,
+        unique=False,
+    )
+
+    def __str__(self):
+        return str(self.email)
+
+    class Meta:
+        verbose_name = 'Триал'
+        verbose_name_plural = 'Триалы'

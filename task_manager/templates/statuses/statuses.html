@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+    <h4><a href="{% url 'create_status' %}">{{ btn_create }}</a></h4>
+</div>
+<table class="table table-striped">
+    <thead>
+    <tr class="table-info">
+        <th scope="col">{{id}}</th>
+        <th scope="col">{{name}}</th>
+        <th scope="col">{{create}}</th>
+        <th scope="col">{{update}}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    {% for s in statuses %}
+    <tr>
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.created_at}}</td>
+        <td>{{s.update_at}}</td>
+        <td>
+              <a  href="{% url 'update_status' s.pk %}">{{ btn_update }}</a>
+            <br>
+              <a  href="{% url 'delete_status' s.pk %}">{{btn_delete}}</a>
+        </td>
+    </tr>
+    {% empty %}
+    <li>Sorry, no data in this list.</li>
+    {% endfor %}
+</table>
+{% endblock %}
+

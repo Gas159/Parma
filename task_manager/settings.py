@@ -29,8 +29,8 @@ DEBUG = os.getenv('DEBUG') == 'yes'
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 
-ALLOWED_HOSTS = ['testserver','webserver', '127.0.0.1',
-                 'localhost', 'python-project-52-production-05f4.up.railway.app' ]
+ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1',
+                 'localhost', 'python-project-52-production-05f4.up.railway.app']
 
 # Application definition
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'task_manager',
     'bootstrap4',
     'users.apps.UsersConfig',
+    'statuses.apps.StatusesConfig',
 ]
 
 MIDDLEWARE = [
@@ -117,13 +118,13 @@ AUTH_USER_MODEL = 'users.Users'
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 # LANGUAGE_CODE = 'Ru-ru'
-LANGUAGE_CODE = 'ru'
-# LANGUAGE_CODE = 'en'
+# LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'en'
 
-LANGUAGES = (
-    ('ru', _('Russia')),
-    ('en', _('English')),
-)
+# LANGUAGES = (
+#     ('ru', _('Russia')),
+#     ('en', _('English')),
+# )
 LOCALE_URL = "locale/"
 LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
 
