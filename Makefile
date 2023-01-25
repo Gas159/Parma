@@ -59,7 +59,7 @@ tes: # python manage.py test my_app.tests.test_models.TrialTests
 		python manage.py test
 
 
-# linter & check commands
+# linter & check commands1
 lint:
 		poetry run flake8 task_manager users tasks labels statuses
 
