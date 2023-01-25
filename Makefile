@@ -33,8 +33,8 @@ messages:
 		django-admin makemessages --ignore="static" --ignore=".env"  -l ru
 
 export: #make export dependens from poetry on Heroku
-	poetry export -f requirements.txt -o requirements.txt
-# 	poetry export --without-hashes --format=requirements.txt > requirements.txt
+# 	poetry export -f requirements.txt -o requirements.txt
+	poetry export --without-hashes --format=requirements.txt > requirements.txt
 
 compilemess:
 		poetry run django-admin compilemessages
