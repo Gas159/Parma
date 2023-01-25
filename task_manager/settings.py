@@ -17,8 +17,7 @@ DEBUG = os.getenv('DEBUG') == 'yes'
 
 
 ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1', '0.0.0.0',
-                 'localhost', 'python-project-52-production-05f4.up.railway.app',
-                 'python-project-52-production-457e.up.railway.app','python-project-52-production-b3b8.up.railway.app']
+                 'localhost','python-project-52-production-b3b8.up.railway.app']
 
 # Application definition
 
