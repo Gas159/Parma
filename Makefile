@@ -1,5 +1,7 @@
 LOCAL := poetry run python manage.py
 # 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
+# python manage.py migrate && gunicorn task_manager.wsgi
+
 
 install:
 		poetry install
