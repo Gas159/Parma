@@ -58,7 +58,7 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
 
 class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = get_user_model()
-    fields = ['first_name']
+    fields = ['first_name', 'last_name']
     # form_class = RegisterUserForm
     template_name_suffix = '_update_form'
     success_url = reverse_lazy('users')
