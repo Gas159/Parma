@@ -6,12 +6,9 @@
 
 {% block content %}
 
-<!--<li><p>{{ users.name }}</p>-->
-<!--    <a href="#">Update</a></li>-->
-<!--    <a href="#">Delete</a></li>-->
 <div class="container wrapper flex-grow-1">
-    <h1 class="my-4">{{ title }}</h1>
-</div>
+    <h1 class="my-4">{{ title }}</h1></div>
+
 <table class="table table-striped">
     <thead>
     <tr class="table-info">
@@ -26,7 +23,7 @@
     <tr>
         <td>{{user.id}}</td>
         <td>{{user.username}}</td>
-        <td>{{user.first_name}}</td>
+        <td>{{user.first_name}} {{user.last_name}}</td>
         <td>{{user.date_joined}}</td>
 
         <td>

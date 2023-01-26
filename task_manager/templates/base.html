@@ -61,13 +61,15 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}
                     <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'tasks' %}">{% translate 'Tasks' %}
+                    <span class="sr-only">(current)</span></a></li>
             {% endif %}
+        </ul>
 
-            </ul>
-
-
-            <ul class="navbar-nav" >
+        <ul class="navbar-nav">
             {% if request.user.is_authenticated %}
+            <li class="nav-item nav-link "> {{user.username}}</li>
             <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}">
                 {% translate "Logout" %}</a></li>
             {% else %}
@@ -76,48 +78,53 @@
             <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">
                 {% trans 'Registration' %}</a></li>
             {% endif %}
-            </ul>
+        </ul>
 
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link" href="{% url 'user_login' %}">{% translate "Login" %}-->
-            <!--                </a>-->
-            <!--            </li>-->
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link " href="{% url 'register' %}"-->
-            <!--                   tabindex="-1" aria-disabled="true">{% trans 'Registration' %}</a>-->
-            <!--            </li>-->
-            <!--                        <li class="nav-item dropdown">-->
-            <!--                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"-->
-            <!--                               aria-expanded="false">Выбор</a>-->
-            <!--                            <div class="dropdown-menu" aria-labelledby="dropdown01">-->
-            <!--                                <a class="dropdown-item" href="#">Action</a>-->
-            <!--                                <a class="dropdown-item" href="#">Another action</a>-->
-            <!--                                <a class="dropdown-item" href="#">Something else here</a>-->
-            <!--                            </div>-->
-            <!--                        </li>-->
+        <!--            <li class="nav-item">-->
+        <!--                <a class="nav-link" href="{% url 'user_login' %}">{% translate "Login" %}-->
+        <!--                </a>-->
+        <!--            </li>-->
+        <!--            <li class="nav-item">-->
+        <!--                <a class="nav-link " href="{% url 'register' %}"-->
+        <!--                   tabindex="-1" aria-disabled="true">{% trans 'Registration' %}</a>-->
+        <!--            </li>-->
+        <!--                        <li class="nav-item dropdown">-->
+        <!--                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"-->
+        <!--                               aria-expanded="false">Выбор</a>-->
+        <!--                            <div class="dropdown-menu" aria-labelledby="dropdown01">-->
+        <!--                                <a class="dropdown-item" href="#">Action</a>-->
+        <!--                                <a class="dropdown-item" href="#">Another action</a>-->
+        <!--                                <a class="dropdown-item" href="#">Something else here</a>-->
+        <!--                            </div>-->
+        <!--                        </li>-->
 
         </ul>
         <div class="dropdown">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                {{request.user.first_name}}
+                {{user}}
             </button>
             <div class="dropdown-menu">
-            {% if request.user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}"> {% translate "Logout" %}</a></li>
-            {% else %}
-            <li class="nav-item"><a class="nav-link" href="{% url 'user_login' %}">{% translate "Login" %}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">{% trans 'Registration' %}</a></li>
-            {% endif %}
+                <ul>
+                {% if user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}">
+                    {% translate "Logout"%}</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'user_login' %}">
+                    {% translate "Login"%}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">
+                    {% trans 'Registration'%}</a></li>
+                {% endif %}
+                    </ul>
             </div>
         </div>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-                aria-expanded="true">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--        <form class="form-inline my-2 my-lg-0">-->
-        <!--            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
-        <!--            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>-->
-        <!--        </form>-->
+<!--        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent"-->
+<!--                aria-expanded="true">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--                <form class="form-inline my-2 my-lg-0">-->
+<!--                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+<!--                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>-->
+<!--                </form>-->
     </div>
 </nav>
 
@@ -127,7 +134,6 @@
     {% bootstrap_messages %}
     {% endif %}
     {% block content %}
-
     {% endblock %}
 
 

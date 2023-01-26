@@ -1,0 +1,253 @@
+Все команды с урока :
+* ORM Django *
+app__app - Имя первичной модели через атрибут __ название поля первичной модели
+
+from django.db import connection,  reset_queries
+from django.core.paginator import Paginator
+python manage.py shell
+
+
+
+** Импорт модели **
+from myapp.models import *
+
+
+
+* SELECT * *
+MyApp.objects.all()
+MyApp.objects.all()[:3]
+* SQL ЗАПРОСЫ *
+from django.db import connection,  reset_queries
+
+connection.queries
+
+
+
+* ORDER BY *
+MyApp.objects.order_by('pk')
+MyApp.objects.all().order_by('-pk')
+MyApp.objects.all().reverse()
+
+
+* WHERE *
+
+MyApp.objects.filter(pk__gte=2)
+MyApp.objects.filter(pk__gt=2)
+MyApp.objects.get(pk=1)
+m = MyApp.objects.get(pk=1)
+m.cat
+m.cat.name
+
+
+
+* Обратная связь Категории с Материалом *
+w = Category.objects.all()[1] or w = Category.objects.get(pk=1)
+w.women_set.all()
+
+
+Category.myapp_set
+c.myapp_set.all()
+c.get_posts.all() #related_name='get_posts'
+
+
+
+* LIKE, iLIKE *
+# lookup - фильтры. SQLite не поддерживает поиск по ру символам.
+MyApp.objects.filter(title__contains='ли')    LIKE # без учета регистра
+MyApp.objects.filter(title__icontains='ли')   iLIKE
+MyApp.objects.filter(pk__in=[1,2,3])     IN
+MyApp.objects.filter(pk__in=[1,2,3], is_published=True)   AND
+
+# все три примера ниже равнозначны
+Women.objects.filter(cat__in=[1,2])
+Women.objects.filter(cat_id__in=[1,2])
+
+cats = Category.objects.filter(pk__gt=2)
+MyApp.objects.filter(cat__in=cats) # or cat_id__in=cats
+
+
+
+
+
+* AND, OR, NOT, Q import *
+
+# Класс Q:
+    & - логическое И (приоритет 2)
+    | - логическое ИЛИ (приоритет 3)
+    ~ - логическое НЕ (приоритет 1)
+
+from django.db.models import Q
+MyApp.objects.filter(Q(pk__gt=3) | Q(cat_id__gt=4))  & - ADN,  | - OR, ~ - NOT
+MyApp.objects.filter(~Q(pk=1) | Q(cat_id=2))
+MyApp.objects.filter(~Q(pk=1) & Q(cat_id=2))
+MyApp.objects.first()
+
+
+
+* FIRST, LAST *
+
+MyApp.objects.order_by('pk').first()
+MyApp.objects.order_by('-pk').first()
+MyApp.objects.last()
+
+
+
+* DATE, TIME *
+
+MyApp.objects.latest('time_update')
+MyApp.objects.earliest('time_update')
+MyApp.objects.order_by('title').earliest('time_update')
+
+
+
+* INTERVAL *
+
+a = MyApp.objects.get(pk=2)
+a.get_previous_by_название_поля
+a.get_next_by_название_поля
+a.get_previous_by_time_update()
+a.get_next_by_time_update()
+a.get_next_by_time_update(pk__gt=6)
+
+
+
+* EXISTS, COUNT *
+
+c = Category.objects.get(pk=1)
+c.myapp_set.exists()     * True если есть новости в категории
+c.myapp_set.count()     * количество новостей в категории
+MyApp.objects.filter(pk__gt=1).count()
+MyApp.objects.filter(cat__in=[1]) * Обращение к id Категории через Новости
+MyApp.objects.filter(cat__name='Политика')
+MyApp.objects.filter(cat__name__contains='лит')
+
+
+
+Category.objects.filter(myapp__title__contains='Нов')
+Category.objects.filter(myapp__title__contains='Нов').distinct()
+
+
+
+* Агрегирующие функции *
+
+ from django.db.models import *
+
+MyApp.objects.count()
+MyApp.objects.aggregate(Min('cat_id'))
+MyApp.objects.aggregate(Min('cat_id'), Max('cat'))
+MyApp.objects.aggregate(max=Min('cat_id'),min=Max('cat_id'))
+MyApp.objects.aggregate(res=Sum('cat_id') - Count('cat_id'))
+MyApp.objects.aggregate(avg=Avg('cat_id')
+MyApp.objects.filter(pk__gt=2).aggregate(avg=Avg('cat_id'))
+
+
+
+* Выбор некоторых полей *
+Women.objects.values('title', 'pk').get(pk=1)
+MyApp.objects.values('title', 'cat_id').get(pk=2)
+
+
+
+* Выбор из связанной модели *
+
+MyApp.objects.values('title', 'cat__name').get(pk=3)
+w = MyApp.objects.values('title', 'cat__slug').get(pk=3)
+for i in w:
+    print(i['title'] ,i['cat__slug'])
+
+
+
+
+* GROUP BY, Annotate *
+
+SELECT COUNT(id) FROM myapp GROUP BY cat_id
+MyApp.objects.values('cat_id').annotate(Count('id'))
+
+Women.objects.annotate(Count('id'))
+
+
+c = Category.objects.annotate(total=Count('myapp')) or c = Category.objects.annotate(Count('myapp'))
+len(c)
+c[0].total or c[0].women__count
+ c = Category.objects.annotate(total=Count('myapp')).filter(total__gt=0) NB
+
+
+
+ * Класс F *
+ # представление поля в числом
+
+from django.db.models import F
+MyApp.objects.filter(pk__gt=F('cat_id'))  * Сравнение полей таблицы
+
+# Увеличение просмотров поста
+views - поле в табалицy просмотров
+Women.objects.filter(slug='angelina').update(views=F('views')+1)
+or
+w = Women.objects.get(pk=1)
+w.views = F('views') + 1  or w.views += 1: w.save()
+
+
+
+
+
+* Length *
+
+from django.db.models.functions import Length
+l = MyApp.objects.annotate(len=Length('title'))
+l = [{'title': '...', 'len':9},{...},{...}]
+for x in l:
+     print(x.title, x.len)
+
+
+
+* RAW SQL *
+
+MyApp.objects.raw('SELECT * FROM myapp_myapp')
+a = _
+
+for item in a:
+    print(item.pk, item.title)
+
+
+w= Women.objects.raw('SELECT id, title FROM women_women WHERE slug="shakira"')
+slug='shakira'
+MyApp.objects.raw("SELECT id, title FROM myapp_myapp WHERE slug='%s'", [slug,some some])
+
+
+
+
+>>> Women(title='Анжелина', content="bio Angeli")
+<Women: Women object (None)>
+>>> w1 = _   # в "_" сохраняется результат последней вылоненной программы.
+w1 - <Women: Women object (None)>
+
+>>>Women.objects.create(title='Анжелина', content="bio Angeli") # сразу добавляет в базу
+
+Women.objects.all()
+len(w)
+Women.objects.all()[:4]
+Women.objects.filter(pk__gte=2) # greater than or equal to 2
+Women.objects.filter(pk__lte=2) # less than or equal to 2
+Women.objects.exclude(pk__gte=2) # ne vishe 2
+Women.objects.get(pk=2) # select only one raw
+Women.objects.filter(pk__lte=4).order_by('title') # select and order
+Women.objects.order_by('-time_update')
+Women.objects.update(cat_id=1)
+
+
+* For pagination *
+
+ListViews - передаёт в шаблон cсылка на класс paginator and page_obj
+women = ['a', 'b', 'c', 'd', 'e',  'f', 'g']
+p = Paginator(women, 3)
+p.count
+p.num_pages
+p.page_range
+
+
+p1 = p.page(1) or p.get_page(1) # first page
+p1.object_list # get list of page 1
+p1.has_next()  or p1.has_previous() # get next or previous page
+p1.has_other_pages() # существуют ли стринцы для разбивки
+p1.next_page_number() # есть ли next page
+

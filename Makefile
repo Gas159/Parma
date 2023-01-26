@@ -42,6 +42,11 @@ compilemess:
 
 
 # migrate commands
+migrat:
+		$(LOCAL) makemigrations
+		$(LOCAL) migrate
+
+
 migrations:
 		$(LOCAL) makemigrations
 migrate:

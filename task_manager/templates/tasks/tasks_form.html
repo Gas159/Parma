@@ -11,11 +11,11 @@
 
     <form action="" method="post">
         {% csrf_token %}
-        <p>Are you sure you want to delete "{{ object.name }}"?</p>
         {% bootstrap_form form %}
         <div class="form-group">
-            <input class="btn btn-danger" type="submit" value="{{ btn_delete }}">
+            <input class="btn btn-primary" type="submit" value="{{ btn }}">
         </div>
     </form>
 </div>
+
 {% endblock %}

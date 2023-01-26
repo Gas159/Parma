@@ -17,7 +17,7 @@ DEBUG = os.getenv('DEBUG') == 'yes'
 
 
 ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1', '0.0.0.0',
-                 'localhost','python-project-52-production-b3b8.up.railway.app']
+                 'localhost', 'python-project-52-production-b3b8.up.railway.app']
 
 # Application definition
 
@@ -32,8 +32,10 @@ INSTALLED_APPS = [
     'django_extensions',
     'task_manager',
     'bootstrap4',
+    'django_filters',
     'users.apps.UsersConfig',
     'statuses.apps.StatusesConfig',
+    'tasks.apps.TasksConfig',
 ]
 
 MIDDLEWARE = [
@@ -71,21 +73,19 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-DATABASE_URL = os.getenv('DATABASE_URL')
-DATABASES = {
-    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
-}
+# if os.getenv('DATABASE_URL'):
+#      DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+
 # if os.getenv('DATABASE_URL'):
 #     db_from_env = dj_database_url.config(conn_max_age=600)
 #     DATABASES['default'].update(db_from_env)
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -124,7 +124,7 @@ LANGUAGE_CODE = 'en'
 LOCALE_URL = "locale/"
 LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dushanbe'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True

@@ -1,0 +1,26 @@
+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 actual 2023
+poetry run python manage.py sqlmigrate women 0001
+
+
+index дал катс, шаблон через фор выводит кат,
+через метод модели реверс делаем ссылку на каждой кат через неймурл и квргс кат_айди,
+урл возращает фиев (+кат_айди) с функцией где вумен отфильтрована по кат_айди,
+возрашает подобное индекс предствлению.
+
+xrandr # monitor
+
+# 301/302 = redierct('/', permanet=True/False)
+
+ {% get_categories as categories%}
+ for c in categories
+
+simple tag - простые теги
+inclusion tags - включающие теги
+# $ chmod +x Installer
+# $ ./Installer
+
+
+
+
+
+

@@ -46,7 +46,7 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
     # form_class = UserCreationForm # Default django form for regustration users
     form_class = RegisterUserForm
     # model = get_user_model()
-    model = Users
+    # model = Users
     template_name = 'users/register.html'  # link on template
     success_url = reverse_lazy('user_login')  # redirect
     success_message = _('User successfully registered')
@@ -58,8 +58,8 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
 
 class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = get_user_model()
-    fields = ['first_name', 'last_name']
-    # form_class = RegisterUserForm
+    # fields = ['first_name', 'last_name']
+    form_class = RegisterUserForm
     template_name_suffix = '_update_form'
     success_url = reverse_lazy('users')
     success_message = _('User successfully changed')
@@ -73,5 +73,5 @@ class DeleteUserView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),
-                     'btn_name': _('Delete'),
+                     'btn_delete': _('Delete'),
                      }

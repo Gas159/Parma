@@ -15,12 +15,6 @@ from django.views.generic import FormView
 from django.views.generic import TemplateView
 
 
-
-# Create your views here.
-# def index(request):
-#     text = _("this is some random text")
-#     return render(request, 'index.html', {'text': text})
-
 class IndexView(SuccessMessageMixin, TemplateView):
     template_name = 'index.html'
     extra_context = {'title': _('User'), 'btn': _('Create')}
