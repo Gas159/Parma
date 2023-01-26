@@ -10,7 +10,7 @@ from .forms import StatusesChangeForm
 
 
 class StatusMixin(LoginRequiredMixin, SuccessMessageMixin):
-    title_name = {'id': 'ID', 'name': 'Name', 'create': 'Create date', 'update': 'Update date'}
+    # title_name = {'id': 'ID', 'name': 'Name', 'create': 'Create date', 'update': 'Update date'}
     model = Status
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('statuses')

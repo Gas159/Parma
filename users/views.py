@@ -44,15 +44,16 @@ class UserView(ListView):
 
 class RegisterUserView(SuccessMessageMixin, CreateView):
     # form_class = UserCreationForm # Default django form for regustration users
-    # form_class = RegisterUserForm
-    model = get_user_model()
+    form_class = RegisterUserForm
+    # model = get_user_model()
+    model = Users
     template_name = 'users/register.html'  # link on template
     success_url = reverse_lazy('user_login')  # redirect
     success_message = _('User successfully registered')
     extra_context = {'title': _('Registration user'),
                      'btn_name': _('Register')
                      }
-    fields = ['username', 'first_name']
+    # fields = ['username', 'first_name', 'password']
 
 
 class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
