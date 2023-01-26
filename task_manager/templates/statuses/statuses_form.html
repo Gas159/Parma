@@ -12,9 +12,6 @@
     <form action="" method="post">
         {% csrf_token %}
         {% bootstrap_form form %}
-        {% if user_update %}
-        {% bootstrap_form password_form %}
-        {% endif %}
         <div class="form-group">
             <input class="btn btn-primary" type="submit" value="{{ btn }}">
         </div>
