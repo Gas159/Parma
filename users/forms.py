@@ -11,5 +11,5 @@ class RegisterUserForm(UserCreationForm):
     class Meta:
         model = get_user_model()
         fields = ['username', 'first_name']
-
+        # fields = '__all__'
 # class UpdateUser()

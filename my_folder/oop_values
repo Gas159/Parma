@@ -9,7 +9,7 @@ __slots__ = ('x', 'y') - ограничение локальных свойст 
 setattr(Point, 'prop', 1) # add values to class, если нету то добавляем
 getattr(Point, 'a', False) # get (берет) значение из класса или экземпляра или возвращает False
 
-hasattr(Point, 'prop) # return bool exist  attr prop
+hasattr(Point, 'prop') # return bool exist  attr prop
 
 del Point.prop  # delete attr prop
 delattr(Point, 'prop')

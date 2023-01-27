@@ -23,7 +23,7 @@ class IndexView(SuccessMessageMixin, TemplateView):
 class UserLoginView(SuccessMessageMixin, LoginView):
     template_name = 'login.html'
     success_message = _('Successfully login')
-    success_url = reverse_lazy('home')
+    # success_url = reverse_lazy('home')
 
     def get_success_url(self):
         return reverse_lazy('home')

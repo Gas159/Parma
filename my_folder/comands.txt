@@ -32,6 +32,8 @@ python manage.py migrate article zero
 python manage.py shell
 web: python manage.py migrate && gunicorn <project_name>.wsgi
 
+Значением по умолчанию для null и blank является False.
+
     setUp – выполняется перед запуском каждого теста;
     tearDown – выполняется после завершения каждого теста;
     setUpTestData – выполняется перед запуском всех тестов конкретного класса.

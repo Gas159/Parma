@@ -37,14 +37,14 @@ class TaskMixin(LoginRequiredMixin, SuccessMessageMixin):
     fields = ['name', 'description', 'status', 'executor']
 
 
-class TaskView(TaskMixin, DetailView):
+class TaskView(TaskMixin, DetailView):  # modelname_detail.html.
     template_name = 'tasks/task.html'
     extra_context = {'title': _('Task'), 'btn_update': _('Update'),
                      'btn_delete': _('Delete')}
     context_object_name = 'task'
 
 
-class TasksListView(TaskMixin, ListView):
+class TasksListView(TaskMixin, ListView):  # modelname_list.html.
     template_name = 'tasks/tasks_list.html'
     extra_context = {'title': _('Tasks'), 'btn': _('Create task'), 'btn_update': _('Update'),
                      'btn_delete': _('Delete'), }
@@ -52,8 +52,8 @@ class TasksListView(TaskMixin, ListView):
     # filterset_class = TaskFilter
 
 
-class CreateTaskView(TaskMixin, CreateView):
-    template_name = 'tasks/tasks_form.html'
+class CreateTaskView(TaskMixin, CreateView):  # modelname_form.html
+    template_name = 'tasks/task_form.html'
     success_message = _("Task created successfully")
     extra_context = {'title': _('New Tasks'), 'btn': _('Create')}
 
@@ -63,16 +63,17 @@ class CreateTaskView(TaskMixin, CreateView):
         return super().form_valid(form)
 
 
-class UpdateTaskView(TaskMixin, UpdateView):
-    template_name = 'tasks/tasks_form.html'
+class UpdateTaskView(TaskMixin, UpdateView):  # modelname_form.html
+    # template_name = 'tasks/task_form.html'
     success_message = _('Task successfully changed')
     extra_context = {'title': _('Update task'), 'btn': _('Update')}
 
 
-class DeleteTaskView(TaskMixin, UserPassesTestMixin, DeleteView):
+class DeleteTaskView(TaskMixin, UserPassesTestMixin, DeleteView):  # modelname_confirm_delete.html
     template_name = 'users/users_confirm_delete.html'
     success_message = _('Task successfully deleted')
     extra_context = {'title': _('Delete task '), 'btn_delete': _('Delete'), }
+
     # self.get_object()
 
     # def test_func(self):
