@@ -17,8 +17,7 @@ from django.views.generic import TemplateView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 
-from users.models import Users
-from users.forms import RegisterUserForm
+
 from .models import Task
 
 {
@@ -44,12 +43,14 @@ class TaskView(TaskMixin, DetailView):  # modelname_detail.html.
     context_object_name = 'task'
 
 
-class TasksListView(TaskMixin, ListView):  # modelname_list.html.
+class TasksListView(TaskMixin, FilterView):  # modelname_list.html.
     # template_name = 'tasks/tasks_list.html'
     extra_context = {'title': _('Tasks'), 'btn': _('Create task'), 'btn_update': _('Update'),
                      'btn_delete': _('Delete'), }
     context_object_name = 'tasks'
     # filterset_class = TaskFilter
+    filterset_class = TaskFilter
+    template_name = 'tasks/task_list.html'
 
 
 class CreateTaskView(TaskMixin, CreateView):  # modelname_form.html

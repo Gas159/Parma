@@ -14,7 +14,7 @@ class Task(models.Model):
     author = models.ForeignKey(Users, related_name='author', on_delete=models.PROTECT,
                                verbose_name=_('Author'), default='2')
 
-    labels = models.ManyToManyField(Labels, related_name='label', through='TaskLabel', blank=True,
+    labels = models.ManyToManyField(Labels, through='TaskLabel', blank=True,
                                     verbose_name=_('Label'))
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
@@ -30,4 +30,4 @@ class Task(models.Model):
 
 class TaskLabel(models.Model):
     task = models.ForeignKey(Task, on_delete=models.PROTECT)
-    label = models.ForeignKey(Labels, on_delete=models.PROTECT)
+    labels = models.ForeignKey(Labels, on_delete=models.PROTECT)

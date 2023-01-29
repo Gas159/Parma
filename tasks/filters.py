@@ -1,23 +1,31 @@
 import django_filters
-from statuses.models import Status
+from labels.models import Labels
+from tasks.models import Task
+from django import forms
+from django.utils.translation import gettext_lazy as _
 
 class TaskFilter(django_filters.FilterSet):
-    name = django_filters.CharFilter(lookup_expr='iexact')
+    def show_own_task(self, queryset, arg, value):
+        if value:
+            return queryset.filter(author=self.request.user)
+        return queryset
 
-    # class Meta:
-    #     model = Status
-    #     fields = ['status', 'executor']#,'labels'
+    labels = django_filters.ModelChoiceFilter(
+        queryset=Labels.objects.all(),
+        # label=_('Label filter'),
+        widget=forms.Select(attrs={
+            'class': 'form-select',
+        })
+    )
+
+    self_task = django_filters.BooleanFilter(
+        method='show_own_task',
+        widget=forms.CheckboxInput,
+        label=_('Show own tasks'),
+        # field_name='author',
+    )
 
 
-# <!--<div class="card">-->
-# <!--    <div class="card-body bg-light">-->
-# <!--        <form method="GET" class="form-inline justify-content-center">-->
-# <!--            {% bootstrap_form filter.form %}-->
-# <!--            {% buttons %}-->
-# <!--            <button type="submit" class="btn btn-primary ml-4">-->
-# <!--                {% trans 'Show' %}-->
-# <!--            </button>-->
-# <!--            {% endbuttons %}-->
-# <!--        </form>-->
-# <!--    </div>-->
-# <!--    </div>-->
+    class Meta:
+        model = Task
+        fields = ['status', 'executor']

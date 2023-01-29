@@ -2,8 +2,11 @@
 * ORM Django *
 app__app - Имя первичной модели через атрибут __ название поля первичной модели
 
+* SQL ЗАПРОСЫ *
 from django.db import connection,  reset_queries
 from django.core.paginator import Paginator
+connection.querie
+
 python manage.py shell
 
 
@@ -12,15 +15,9 @@ python manage.py shell
 from myapp.models import *
 
 
-
 * SELECT * *
 MyApp.objects.all()
 MyApp.objects.all()[:3]
-* SQL ЗАПРОСЫ *
-from django.db import connection,  reset_queries
-
-connection.queries
-
 
 
 * ORDER BY *
@@ -157,7 +154,6 @@ for i in w:
 
 
 
-
 * GROUP BY, Annotate *
 
 SELECT COUNT(id) FROM myapp GROUP BY cat_id
@@ -179,14 +175,12 @@ c[0].total or c[0].women__count
 from django.db.models import F
 MyApp.objects.filter(pk__gt=F('cat_id'))  * Сравнение полей таблицы
 
-# Увеличение просмотров поста
-views - поле в табалицy просмотров
+
+# Увеличение просмотров поста views - поле в таблицy просмотров
 Women.objects.filter(slug='angelina').update(views=F('views')+1)
 or
 w = Women.objects.get(pk=1)
 w.views = F('views') + 1  or w.views += 1: w.save()
-
-
 
 
 
