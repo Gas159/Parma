@@ -21,19 +21,30 @@ def getTalk(type="shout"):
 # print(q())
 
 def bread(func):
-    def inner(x='123'):
+    def inner(*args, **kwargs ):
         print('first')
-        func(x)
+        print( inner.q )
+        func(args, kwargs, inner.q )
         print('last')
+    inner.q = 'test'
+    # q = inner.q
+    # print(inner.q)
+    # print(inner.__dict__)
     return inner
 
-@bread
-def sandwich(f='middle'):
-    print(f)
+# @bread
+def sandwich(*args,**kwargs):
+    # for i in kwargs.items():
+    #     print(i)
+    # w = kwargs
+    print(1, args, kwargs )
 
-
-sandwich()
-# sandwich = bread(sandwich)
-# sandwich('fdas')
+# sandwich(q = '321')
+# q = sandwich()
+# print(q, 'opop')
+# sandwich()
+sandwich = bread(sandwich)
+sandwich('123')
+# print(sandwich)
 #
 

@@ -1,8 +1,9 @@
 from django.db import models
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 from users.models import Users
 from statuses.models import Status
+from labels.models import Labels
 
 
 class Task(models.Model):
@@ -13,13 +14,8 @@ class Task(models.Model):
     author = models.ForeignKey(Users, related_name='author', on_delete=models.PROTECT,
                                verbose_name=_('Author'), default='2')
 
-    # labels = models.ManyToManyField(
-    #     Labels,
-    #     related_name='label',
-    #     through='TaskRelationLabel',
-    #     blank=True,
-    #     verbose_name=_('Label')
-    # )
+    labels = models.ManyToManyField(Labels, related_name='label', through='TaskLabel', blank=True,
+                                    verbose_name=_('Label'))
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
@@ -31,5 +27,7 @@ class Task(models.Model):
         verbose_name_plural = _("=Tasks=")
         ordering = ['-created_at']
 
-from django.db import models
 
+class TaskLabel(models.Model):
+    task = models.ForeignKey(Task, on_delete=models.PROTECT)
+    label = models.ForeignKey(Labels, on_delete=models.PROTECT)

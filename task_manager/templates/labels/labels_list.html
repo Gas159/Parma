@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1></div>
+
+<table class="table table-striped">
+
+
+    {% block content %}
+    <div class="container wrapper flex-grow-1">
+        <h1 class="my-4">{% trans 'Labels' %}</h1>
+        <h4><a href="{% url 'create_label' %}">{% trans 'Create labels' %}</a></h4>
+    </div>
+
+
+    <table class="table table-striped ">
+        <thead>
+        <tr class="table-info">
+            <th scope="col">ID</th>
+            <th scope="col">{% trans 'Name' %}</th>
+            <th scope="col">{% trans 'Created at' %}</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for label in labels %}
+        <tr>
+            <td>{{label.id}}</td>
+            <td>{{label.name}}</td>
+            <td>{{label.created_at|date:"d.m.Y"}}</td>
+            <td>
+                <a href="{% url 'update_label' label.pk %}">{{btn_update}}</a>
+                <br>
+                <a href="{% url 'delete_label' label.pk %}">{{btn_delete}}</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

@@ -34,7 +34,7 @@ class TaskMixin(LoginRequiredMixin, SuccessMessageMixin):
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('tasks')
     # extra_context = {'title': _('New Tasks'), 'btn': _('Create')}
-    fields = ['name', 'description', 'status', 'executor']
+    fields = ['name', 'description', 'status', 'executor', 'labels']
 
 
 class TaskView(TaskMixin, DetailView):  # modelname_detail.html.
@@ -45,7 +45,7 @@ class TaskView(TaskMixin, DetailView):  # modelname_detail.html.
 
 
 class TasksListView(TaskMixin, ListView):  # modelname_list.html.
-    template_name = 'tasks/tasks_list.html'
+    # template_name = 'tasks/tasks_list.html'
     extra_context = {'title': _('Tasks'), 'btn': _('Create task'), 'btn_update': _('Update'),
                      'btn_delete': _('Delete'), }
     context_object_name = 'tasks'

@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.safestring import mark_safe
-from tasks.models import Task
+from tasks.models import Labels
 
 
-@admin.register(Task)
+@admin.register(Labels)
 class UserAdmin(admin.ModelAdmin):
     search_fields = ['name']
-    list_display = ('id', 'name', 'description', 'created_at', 'author', 'executor' )
+    list_display = ('id', 'name', 'created_at' )
