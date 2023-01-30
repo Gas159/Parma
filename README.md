@@ -3,6 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/25bbcce7f38df198f52d/maintainability)](https://codeclimate.com/github/Gas159/python-project-52/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/25bbcce7f38df198f52d/test_coverage)](https://codeclimate.com/github/Gas159/python-project-52/test_coverage)
 [![pytests](https://github.com/Gas159/python-project-52/actions/workflows/test..yml/badge.svg)](https://github.com/Gas159/python-project-52/actions/workflows/test..yml)
+[![CI](https://github.com/Gas159/python-project-52/actions/workflows/test1.yml/badge.svg)](https://github.com/Gas159/python-project-52/actions/workflows/test1.yml)
 
 task manager: https://python-project-52-production-05f4.up.railway.app/
 <hr> <hr/>

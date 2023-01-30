@@ -62,11 +62,21 @@ migrate-rw:
 #		poetry run pytest --cov
 
 test:
-	poetry run python3 manage.py test
+	$(LOCAL) test
 
 test-cov:
 	poetry run coverage run ./manage.py test
 	poetry run coverage xml
+
+# test:
+# 	poetry run pytest -vv
+# 	echo 'Lint checkup process...'
+# 	poetry run flake8 page_loader
+#
+# test_cov:
+# 	poetry run pytest --cov=page_loader tests/ --cov-report xml
+# test1_cov:
+# 	poetry run pytest --cov=page_loader
 
 
 # linter & check commands1
