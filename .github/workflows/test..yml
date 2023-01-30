@@ -28,7 +28,7 @@ jobs:
           make install
       - name: Run linter and pytest
         run: |
-          make tes
+          make test
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v2.7.4
         env:
