@@ -14,7 +14,6 @@ DEBUG = os.getenv('DEBUG') == 'yes'
 ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1', '0.0.0.0',
                  'localhost', 'python-project-52-production-b3b8.up.railway.app']
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -49,7 +48,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'task_manager.urls'
-# LOGIN_REDIRECT_URL = 'home'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -97,8 +96,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.Users'
 
-LANGUAGE_CODE = 'ru'
-# LANGUAGE_CODE = 'en'
+# LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'en'
 
 # LANGUAGES = (
 #     ('ru', _('Russia')),
@@ -107,6 +106,7 @@ LANGUAGE_CODE = 'ru'
 
 
 TIME_ZONE = 'Asia/Dushanbe'
+
 USE_I18N = True
 # USE_L10N = True
 USE_TZ = True
@@ -120,6 +120,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 ROLLBAR = {
     'access_token': os.getenv('ACCESS_TOKEN'),
     'environment': 'development' if DEBUG else 'production',
