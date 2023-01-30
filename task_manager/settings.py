@@ -4,17 +4,12 @@ from dotenv import load_dotenv
 import dj_database_url
 
 load_dotenv()
-# load_dotenv(os.path.join(BASE_DIR, ".env"))1
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = os.getenv('DEBUG') == 'yes'
-# DEBUG = bool(os.environ.get('DEBUG', False))
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
 
 ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1', '0.0.0.0',
                  'localhost', 'python-project-52-production-b3b8.up.railway.app']
@@ -50,7 +45,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
-# 'task_manager.rollbar_middleware.CustomRollbarNotifierMiddleware',
+
 ]
 
 ROOT_URLCONF = 'task_manager.urls'
@@ -73,24 +68,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'task_manager.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-# if os.getenv('DATABASE_URL'):
-#      DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-
 if os.getenv('DATABASE_URL'):
-    db_from_env = dj_database_url.config(conn_max_age=600)
-    DATABASES['default'].update(db_from_env)
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+# if os.getenv('DATABASE_URL'):
+#     db_from_env = dj_database_url.config(conn_max_age=600)
+#     DATABASES['default'].update(db_from_env)
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
@@ -98,25 +87,16 @@ CSRF_TRUSTED_ORIGINS = [
     'https://localhost',
 ]
 AUTH_PASSWORD_VALIDATORS = [
-    # {
-    # 'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    # },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 3,
+        }
+    }
 ]
 
 AUTH_USER_MODEL = 'users.Users'
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-# LANGUAGE_CODE = 'Ru-ru'
 # LANGUAGE_CODE = 'ru'
 LANGUAGE_CODE = 'en'
 
@@ -132,25 +112,10 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-# STATIC_ROOT = BASE_DIR / "staticfiles"
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-# DISABLE_COLLECTSTATIC = 0
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-#     '/task_manager/static/',
-# ]
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'task_manager/static'),)
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ROLLBAR = {
@@ -159,7 +124,7 @@ ROLLBAR = {
     'code_version': '1.0',
     'root': BASE_DIR,
 }
-# Default settings
+
 BOOTSTRAP4 = {
 
     # The complete URL to the Bootstrap CSS file

@@ -9,6 +9,7 @@ from users.models import Users
 
 class CRUD_Labels_Test(TestCase):
     ''' Dont forget your doc string '''
+
     def setUp(self):
         Users.objects.create(
             first_name='Semen1',
@@ -24,6 +25,7 @@ class CRUD_Labels_Test(TestCase):
 
         # self.clinet = Client()
         # self.clinet.login(username='Semen_pes', password='ilovekitty')
+
     # Проверка доступа незалогененым пользователям
     def test_access(self):
         '''Незалогинение пользователи получают редирект'''
