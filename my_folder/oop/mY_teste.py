@@ -21,23 +21,26 @@ def getTalk(type="shout"):
 # print(q())
 
 def bread(func):
-    def inner(*args, **kwargs ):
+    def inner(*args, **kwargs):
         print('first')
-        print( inner.q )
-        func(args, kwargs, inner.q )
+        print(inner.q)
+        func(args, kwargs, inner.q)
         print('last')
+
     inner.q = 'test'
     # q = inner.q
     # print(inner.q)
     # print(inner.__dict__)
     return inner
 
+
 # @bread
-def sandwich(*args,**kwargs):
+def sandwich(*args, **kwargs):
     # for i in kwargs.items():
     #     print(i)
     # w = kwargs
-    print(1, args, kwargs )
+    print(1, args, kwargs)
+
 
 # sandwich(q = '321')
 # q = sandwich()
@@ -45,6 +48,19 @@ def sandwich(*args,**kwargs):
 # sandwich()
 sandwich = bread(sandwich)
 sandwich('123')
+
+
 # print(sandwich)
 #
 
+
+def spin_words(sentence):
+    # Your code goes here
+    # q = sentence.split()
+    # print(q, sentence, type(sentence))
+
+    return ' '.join((i if len(i) < 5 else i[:: -1] for i in sentence.split()))
+
+
+print(spin_words("Hey fellow warriors"))  # => returns "Hey wollef sroirraw"
+print(spin_words("This is another test"))  # => returns "Hey wollef sroirraw"
