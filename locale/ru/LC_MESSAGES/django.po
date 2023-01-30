@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-30 21:43+0500\n"
+"POT-Creation-Date: 2023-01-31 02:43+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,57 +32,63 @@ msgstr "Метка"
 msgid "=Labels="
 msgstr "Метки"
 
-#: labels/views.py:17 task_manager/templates/base.html:68
+#: labels/views.py:19 task_manager/templates/base.html:68
 #: task_manager/templates/tasks/task.html:36
 msgid "Labels"
 msgstr "Метки"
 
-#: labels/views.py:17 labels/views.py:18
+#: labels/views.py:19 labels/views.py:20
 #, fuzzy
 #| msgid "Create labels"
 msgid "Create label"
 msgstr "Создать метки"
 
-#: labels/views.py:17 labels/views.py:35 statuses/views.py:22
-#: statuses/views.py:37 task_manager/templates/tasks/task.html:51
-#: tasks/views.py:25 tasks/views.py:31 tasks/views.py:50 users/views.py:18
-#: users/views.py:51
+#: labels/views.py:19 labels/views.py:37 statuses/views.py:26
+#: statuses/views.py:41 task_manager/templates/tasks/task.html:51
+#: tasks/views.py:23 tasks/views.py:29 tasks/views.py:48 users/views.py:18
+#: users/views.py:45
 msgid "Update"
 msgstr "Обновить"
 
-#: labels/views.py:18 labels/views.py:41 statuses/views.py:22
-#: task_manager/templates/tasks/task.html:53 tasks/views.py:26
-#: tasks/views.py:32 tasks/views.py:56 users/views.py:18 users/views.py:60
+#: labels/views.py:20 labels/views.py:44 statuses/views.py:26
+#: task_manager/templates/tasks/task.html:53 tasks/views.py:24
+#: tasks/views.py:30 tasks/views.py:54 users/views.py:18 users/views.py:69
 msgid "Delete"
 msgstr "Удалить"
 
-#: labels/views.py:24
+#: labels/views.py:26
 msgid "Label created successfully"
 msgstr "Метка успешно создана"
 
-#: labels/views.py:25
+#: labels/views.py:27
 msgid "New Label"
 msgstr "Новая метка"
 
-#: labels/views.py:25 statuses/views.py:31 task_manager/views.py:17
-#: tasks/views.py:41
+#: labels/views.py:27 statuses/views.py:35 task_manager/views.py:17
+#: tasks/views.py:39
 msgid "Create"
 msgstr "Создать"
 
-#: labels/views.py:34
+#: labels/views.py:36
 msgid "Label successfully changed"
 msgstr "Метка успешно изменена"
 
-#: labels/views.py:35
+#: labels/views.py:37
 msgid "Update label"
 msgstr "Обновить метку"
 
-#: labels/views.py:40
+#: labels/views.py:42
 msgid "Label successfully deleted"
 msgstr "Метка успешно удалена"
 
-#: labels/views.py:41
-msgid "Delete label "
+#: labels/views.py:43
+msgid "Can't delete label because it's in use"
+msgstr "Невозможно удалить метку, потому что она используется"
+
+#: labels/views.py:44
+#, fuzzy
+#| msgid "Delete label "
+msgid "Delete label"
 msgstr "Удалить метку"
 
 #: statuses/models.py:6
@@ -97,61 +103,69 @@ msgstr "Статус"
 msgid "=Statuses="
 msgstr "Статусы"
 
-#: statuses/views.py:21 task_manager/templates/base.html:62
+#: statuses/views.py:25 task_manager/templates/base.html:62
 msgid "Statuses"
 msgstr "Статусы"
 
-#: statuses/views.py:21 statuses/views.py:31
+#: statuses/views.py:25 statuses/views.py:35
 msgid "Create status"
 msgstr "Создать статус"
 
-#: statuses/views.py:23
+#: statuses/views.py:27
 msgid "ID"
 msgstr ""
 
-#: statuses/views.py:23 task_manager/templates/labels/labels_list.html:22
+#: statuses/views.py:27 task_manager/templates/labels/labels_list.html:22
 #: task_manager/templates/tasks/task_list.html:37
 msgid "Name"
 msgstr "Имя"
 
-#: statuses/views.py:23
+#: statuses/views.py:27
 msgid "Create date"
 msgstr "Создать дату"
 
-#: statuses/views.py:24
+#: statuses/views.py:28
 msgid "Update date"
 msgstr "Обновить дату"
 
-#: statuses/views.py:30
+#: statuses/views.py:34
 msgid "Status created successfully"
 msgstr "Статс успешно создан"
 
-#: statuses/views.py:36
+#: statuses/views.py:40
 msgid "Status successfully changed"
 msgstr "Статус успешно обновлён"
 
-#: statuses/views.py:37
+#: statuses/views.py:41
 msgid "Update status"
 msgstr "Обновить статус"
 
-#: statuses/views.py:41
+#: statuses/views.py:45
 msgid "Status successfully deleted"
 msgstr "Статус успешно удалён"
 
-#: statuses/views.py:42
+#: statuses/views.py:46
 msgid "Delete status "
 msgstr "Удалить статус"
 
-#: statuses/views.py:42
+#: statuses/views.py:46
 msgid "Delete status"
 msgstr "Удалить статус"
+
+#: statuses/views.py:55
+msgid "You can not delete Label which is used"
+msgstr "Невозможно удалить метку, потому что она используется"
+
+#: statuses/views.py:57
+msgid "You can not delete Status which is used"
+msgstr "Невозможно удалить статус, потому что она используется"
 
 #: task_manager/templates/base.html:58 users/views.py:18
 msgid "Users"
 msgstr "Пользователи"
 
 #: task_manager/templates/base.html:65
-#: task_manager/templates/tasks/task_list.html:13 tasks/views.py:31
+#: task_manager/templates/tasks/task_list.html:13 tasks/views.py:29
 msgid "Tasks"
 msgstr "Задачи"
 
@@ -205,7 +219,7 @@ msgstr "Создано"
 msgid "Task without any label"
 msgstr "Задача без метки"
 
-#: task_manager/templates/tasks/task_list.html:14 tasks/views.py:31
+#: task_manager/templates/tasks/task_list.html:14 tasks/views.py:29
 msgid "Create task"
 msgstr "Создать задачу"
 
@@ -257,63 +271,67 @@ msgstr "Задача"
 msgid "=Tasks="
 msgstr "Задачи"
 
-#: tasks/views.py:25
+#: tasks/views.py:23
 msgid "Task"
 msgstr "Задача"
 
-#: tasks/views.py:40
+#: tasks/views.py:38
 msgid "Task created successfully"
 msgstr "Задача успешно создана"
 
-#: tasks/views.py:41
+#: tasks/views.py:39
 msgid "New Tasks"
 msgstr "Новая задача"
 
-#: tasks/views.py:49
+#: tasks/views.py:47
 msgid "Task successfully changed"
 msgstr "Задача успешно изменена"
 
-#: tasks/views.py:50
+#: tasks/views.py:48
 msgid "Update task"
 msgstr "Обновить задачу"
 
-#: tasks/views.py:55
+#: tasks/views.py:53
 msgid "Task successfully deleted"
 msgstr "Задача успешно удалена"
 
-#: tasks/views.py:56
+#: tasks/views.py:54
 msgid "Delete task "
 msgstr "Удалить задачу"
 
-#: tasks/views.py:64
+#: tasks/views.py:62
 msgid "Only author can delete task"
 msgstr "Только автор может удалить задачу"
 
-#: users/views.py:38
+#: users/views.py:26
 msgid "User successfully registered"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: users/views.py:39
+#: users/views.py:27
 msgid "Registration user"
 msgstr "Регистрация пользователя"
 
-#: users/views.py:40
+#: users/views.py:28
 msgid "Register"
 msgstr "Регистрация"
 
-#: users/views.py:49
+#: users/views.py:43
 msgid "User successfully changed"
-msgstr "Юзер успешно изменён"
+msgstr "Пользователь успешно изменён"
 
-#: users/views.py:50
+#: users/views.py:44
 msgid "Update user"
 msgstr "Обновить пользователя"
 
-#: users/views.py:58
+#: users/views.py:53 users/views.py:76
+msgid "You can not change another user"
+msgstr ""
+
+#: users/views.py:67
 msgid "User successfully deleted"
 msgstr "Пользователь успешно удалён"
 
-#: users/views.py:59
+#: users/views.py:68
 msgid "Delete user"
 msgstr "Удалить пользователя"
 

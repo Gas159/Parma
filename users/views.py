@@ -1,14 +1,14 @@
+from django.contrib import messages
 from django.utils.translation import gettext as _
-
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-
 from django.contrib.auth import get_user_model
-
 from django.contrib.messages.views import SuccessMessageMixin
 from users.forms import RegisterUserForm
 from users.models import Users
+from django.contrib.auth import login
+from django.shortcuts import redirect
 
 
 class UserView(ListView):
@@ -18,27 +18,21 @@ class UserView(ListView):
     extra_context = {'title': _('Users'), 'btn_update': _('Update'), 'btn_delete': _('Delete')}
     redirect_field_name = 'home'
 
-    # def get_context_data(self, *, object_list=None, **kwargs):
-    #     context = super().get_context_data(**kwargs)  # take initial context
-    #     # c_def = self.get_user_context(title='Главная страница')
-    #     # context['menu'] = menu
-    #     # context['title'] = 'Главная страница'
-    #     # context['cat_selected'] = 0
-    #     return context
-    # #
-    # def get_queryset(self):  # будет показано если опубликовано
-    #     return User.objects.filter(is_published=True).select_related(
-    #         'cat')  # жадная загрузка для уменьшения повторных sql запросов
-
 
 class RegisterUserView(SuccessMessageMixin, CreateView):
     form_class = RegisterUserForm
-    template_name = 'users/register.html'  # link on template
-    success_url = reverse_lazy('user_login')  # redirect
+    template_name = 'users/register.html'
+    success_url = reverse_lazy('home')
     success_message = _('User successfully registered')
     extra_context = {'title': _('Registration user'),
                      'btn_name': _('Register')
                      }
+
+    def form_valid(self, form):
+        """If the form is valid, save the associated model and log the user in."""
+        user = form.save()
+        login(self.request, user)
+        return redirect(self.success_url)
 
 
 class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
@@ -48,8 +42,23 @@ class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_url = reverse_lazy('users')
     success_message = _('User successfully changed')
     extra_context = {'title': _('Update user'),
-                     'btn_name': _('Update'),
-                     }
+                     'btn_name': _('Update'), }
+
+    def get(self, request, *args, **kwargs):
+        if request.user.id == kwargs.get('pk'):
+            messages.success(request, self.success_message)
+            return super().get(request, *args, **kwargs)
+        else:
+            messages.error(request, _(
+                'You can not change another user'))
+            return redirect(self.success_url)
+
+    def form_valid(self, form):
+        """If the form is valid, save the associated model and log the user in."""
+        user = form.save()
+        login(self.request, user)
+        messages.success(self.request, self.success_message)
+        return redirect(self.success_url)
 
 
 class DeleteUserView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
@@ -57,5 +66,17 @@ class DeleteUserView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),
-                     'btn_delete': _('Delete'),
-                     }
+                     'btn_delete': _('Delete'), }
+
+    def get(self, request, *args, **kwargs):
+        if request.user.id == kwargs.get('pk'):
+            return super().get(request, *args, **kwargs)
+        else:
+            messages.error(request, _(
+                'You can not change another user'))
+            return redirect(self.success_url)
+
+    def post(self, request, *args, **kwargs):
+        request.user.delete()
+        messages.success(request, self.success_message)
+        return redirect(self.success_url)

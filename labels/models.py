@@ -14,4 +14,4 @@ class Labels(models.Model):
     class Meta:
         verbose_name = _("=Label=")
         verbose_name_plural = _("=Labels=")
-        # ordering = ['created_at']
+        ordering = ['-created_at']

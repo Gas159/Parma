@@ -1,3 +1,5 @@
+from django.contrib import messages
+from django.shortcuts import redirect
 from django.utils.translation import gettext as _
 from .models import Labels
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
@@ -38,4 +40,11 @@ class UpdateLabelView(LabelsMixin, UpdateView):  # modelname_form.html
 #
 class DeleteLabelView(LabelsMixin, DeleteView):  # modelname_confirm_delete.html
     success_message = _('Label successfully deleted')
-    extra_context = {'title': _('Delete label '), 'btn_delete': _('Delete'), }
+    error_message = _('Can\'t delete label because it\'s in use')
+    extra_context = {'title': _('Delete label'), 'btn_delete': _('Delete'), }
+
+    def post(self, request, *args, **kwargs):
+        if self.get_object().task_set.all().count():
+            messages.error(request, self.error_message)
+            return redirect(self.success_url)
+        return super().post(self, request, *args, **kwargs)
