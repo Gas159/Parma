@@ -56,14 +56,17 @@ migrate-rw:
 
 
 # test commands
+#test:
+#		poetry run pytest
+#test-cov:
+#		poetry run pytest --cov
+
 test:
-		poetry run pytest
+	poetry run python3 manage.py test
+
 test-cov:
-		poetry run pytest --cov
-test-coverage:
-		poetry run pytest --cov=task_manager --cov-report xml
-tes: # python manage.py test my_app.tests.test_models.TrialTests
-		python manage.py test
+	poetry run coverage run ./manage.py test
+	poetry run coverage xml
 
 
 # linter & check commands1
