@@ -1,6 +1,6 @@
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext as _
 from .models import Labels
-from django.views.generic import ListView,  CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
@@ -14,8 +14,8 @@ class LabelsMixin(LoginRequiredMixin, SuccessMessageMixin):
 
 
 class LabelsListView(LabelsMixin, ListView):  # modelname_list.html.
-    extra_context = {'title': _('Tasks'), 'btn': _('Create task'), 'btn_update': _('Update'),
-                     'btn_delete': _('Delete'), }
+    extra_context = {'title': _('Labels'), 'btn': _('Create label'), 'btn_update': _('Update'),
+                     'btn_delete': _('Delete'), 'btn_create': _('Create label')}
     context_object_name = 'labels'
 
 

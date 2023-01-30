@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
-{% load i18n %}
-{% load static %}
 {% load bootstrap4 %}
-{% bootstrap_css %}
-{% bootstrap_javascript jquery='full' %}
+{% load i18n %}
 
 <div class="container wrapper flex-grow-1">
     <h1 class="my-4">{{ title }}</h1></div>
@@ -13,8 +10,8 @@
 
     {% block content %}
     <div class="container wrapper flex-grow-1">
-        <h1 class="my-4">{% trans 'Labels' %}</h1>
-        <h4><a href="{% url 'create_label' %}">{% trans 'Create labels' %}</a></h4>
+        <h1 class="my-4">{{ title }}</h1>
+        <h4><a href="{% url 'create_label' %}"> {{ btn_create }}</a> </h4>
     </div>
 
 
@@ -22,7 +19,7 @@
         <thead>
         <tr class="table-info">
             <th scope="col">ID</th>
-            <th scope="col">{% trans 'Name' %}</th>
+            <th scope="col">{% translate 'Name' %}</th>
             <th scope="col">{% trans 'Created at' %}</th>
             <th></th>
         </tr>

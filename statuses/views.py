@@ -1,22 +1,16 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import render
 from django.utils.translation import gettext as _
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
 from .models import Status
-from .forms import StatusesChangeForm
 
 
 class StatusMixin(LoginRequiredMixin, SuccessMessageMixin):
-    # title_name = {'id': 'ID', 'name': 'Name', 'create': 'Create date', 'update': 'Update date'}
     model = Status
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('statuses')
-    # extra_contexts = {'title': _('Statuses'), 'btn_create': _('Create status'),
-    #                  'btn_update': _('Update'), 'btn_delete': _('Delete'),
-    #                  }
     fields = ['name']
 
 

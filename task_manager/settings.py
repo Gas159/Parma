@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'statuses.apps.StatusesConfig',
     'tasks.apps.TasksConfig',
-    'labels.apps.LabelsConfig'
+    'labels.apps.LabelsConfig',
 ]
 
 MIDDLEWARE = [
@@ -97,20 +97,22 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.Users'
 
-# LANGUAGE_CODE = 'ru'
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ru'
+# LANGUAGE_CODE = 'en'
 
 # LANGUAGES = (
 #     ('ru', _('Russia')),
 #     ('en', _('English')),
 # )
-LOCALE_URL = "locale/"
-LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
+
 
 TIME_ZONE = 'Asia/Dushanbe'
 USE_I18N = True
-USE_L10N = True
+# USE_L10N = True
 USE_TZ = True
+
+LOCALE_URL = "locale/"
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")

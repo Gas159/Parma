@@ -1,16 +1,13 @@
 {% extends 'base.html' %}
-
 {% load bootstrap4 %}
-
 {% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
 
 
 {% block content %}
     <div class="starter-template">
         <h1> Hello mr. {{ user }}</h1>
         <h2>Bootstrap starter template</h2>
-        <h1>{% translate 'Драко Малфой залетел от мальчика который смог выжить.' %}</h1>
+        <h1>{% trans "Драко Малфой залетел от мальчика который смог выжить." %}</h1>
          <h1>Драко Малфой залетел от мальчика который смог выжить.</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
             mostly barebones HTML document.</p>

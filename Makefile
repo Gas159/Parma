@@ -1,15 +1,12 @@
 LOCAL := poetry run python3 manage.py
-# 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
-# python manage.py migrate && gunicorn task_manager.wsgi
-
 
 install:
 		poetry install
 
 
-# runserver commands
 start:
-		$(LOCAL) runserver 8081
+		$(LOCAL) runserver 8080
+
 run-gunicorn:
 		export DJANGO_SETTINGS_MODULE=task_manager.settings
 		poetry run gunicorn task_manager.wsgi --log-file
@@ -26,15 +23,14 @@ collectstatic:
 secretkey:
 		poetry run python -c 'from django.utils.crypto import get_random_string; print(get_random_string(40))'
 
+export:
+# 	poetry export -f requirements.txt -o requirements.txt
+	poetry export --without-hashes --format=requirements.txt > requirements.txt
 
 
 # make translate messages commands
 messages:
 		django-admin makemessages --ignore="static" --ignore=".env"  -l ru
-
-export: #make export dependens from poetry on Heroku
-# 	poetry export -f requirements.txt -o requirements.txt
-	poetry export --without-hashes --format=requirements.txt > requirements.txt
 
 compilemess:
 		poetry run django-admin compilemessages
@@ -63,6 +59,8 @@ migrate-rw:
 
 test:
 	$(LOCAL) test
+# test1:
+# 	$(LOCAL) test --with-coverage --cover-xml
 
 test-cov:
 	poetry run coverage run ./manage.py test
@@ -75,8 +73,7 @@ test-cov:
 #
 # test_cov:
 # 	poetry run pytest --cov=page_loader tests/ --cov-report xml
-# test1_cov:
-# 	poetry run pytest --cov=page_loader
+
 
 
 # linter & check commands1
