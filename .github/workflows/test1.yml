@@ -26,12 +26,12 @@ jobs:
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
-        make tests
+        make test
     - name: Test & publish code coverage
       uses: paambaati/codeclimate-action@v3.0.0
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST }}
       with:
-        coverageCommand: make tests-cov
+        coverageCommand: make test-cov
         debug: true

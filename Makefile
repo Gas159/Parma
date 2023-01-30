@@ -1,4 +1,4 @@
-LOCAL := poetry run python manage.py
+LOCAL := poetry run python3 manage.py
 # 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
 # python manage.py migrate && gunicorn task_manager.wsgi
 

@@ -74,8 +74,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-if os.getenv('DATABASE_URL'):
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# if os.getenv('DATABASE_URL'):
+#     DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 # if os.getenv('DATABASE_URL'):
 #     db_from_env = dj_database_url.config(conn_max_age=600)
