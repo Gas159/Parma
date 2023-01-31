@@ -7,10 +7,12 @@
 
 
 # Task Manager
+https://python-project-52-production-b3b8.up.railway.app/
 
 _Register, create, delete and edit tasks, labels and statuses, assign executors to tasks. Filter tasks by tags, statuses, and executors, or filter only your created tasks._
 
 A simple web application for task management. Implemented in the [Django 4.1.5](https://www.djangoproject.com/) framework using built-in class-based views (CBV) and a [PostgreSql](https://www.postgresql.org/) database. Website design - [Bootstrap v5.0](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+
 ## Demo
 Just click and try to use **[DEMO on Railway](https://python-project-52-production-b3b8.up.railway.app/)**
 
