@@ -2,7 +2,6 @@ from django.test import TestCase
 from django.urls import reverse
 from users.models import Users
 from statuses.models import Status
-# from labels.models import Labels
 
 
 # Create your tests here.
@@ -21,11 +20,6 @@ class CRUD_Tasks_Test(TestCase):
         Status.objects.create(name='status1')
         self.status = Status.objects.get(id=1)
 
-        # Labels.objects.create(name='label1')
-        # self.label = Labels.objects.get(id=1)
-
-        # Tasks.objects.create(name='status1')
-
     # Адреса которые нужно проверить
     url_tasks = [
         reverse('tasks'),
@@ -41,9 +35,8 @@ class CRUD_Tasks_Test(TestCase):
             resp = self.client.get(u)
             self.assertEqual(resp.status_code, 302)
 
-    # def test_access1(self, urls=url_tasks):
-    #     self.client.force_login(self.user)
-    #     for u2 in urls:
-    #         resp = self.client.get(u2)
-    #         print(resp)
-    #         self.assertEqual(resp.status_code, 200)
+    def test_access1(self, urls=url_tasks):
+        self.client.force_login(self.user)
+        for u2 in urls:
+            resp = self.client.get(u2)
+            self.assertEqual(resp.status_code, 200)

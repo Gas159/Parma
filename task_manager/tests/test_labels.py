@@ -1,7 +1,5 @@
 # Create your tests here.
-from multiprocessing.connection import Client
-# from unittest import TestCase, Client
-from django.test import TestCase, Client
+from django.test import TestCase
 from django.urls import reverse
 from labels.models import Labels
 from users.models import Users
@@ -13,18 +11,14 @@ class CRUD_Labels_Test(TestCase):
     def setUp(self):
         Users.objects.create(
             first_name='Semen1',
-            # last_name='Efr',
+            last_name='Efr',
             username='Semen_pes',
-            # email='root@gav.ru',
             password='ilovekitty'
         )
         self.user = Users.objects.get(id=1)
         Labels.objects.create(name='label1')
         Labels.objects.create(name='label2')
         Labels.objects.create(name='label3')
-
-        # self.clinet = Client()
-        # self.clinet.login(username='Semen_pes', password='ilovekitty')
 
     # Проверка доступа незалогененым пользователям
     def test_access(self):

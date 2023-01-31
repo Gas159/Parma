@@ -18,21 +18,19 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include
-
-# from home.views import index
 from .views import IndexView, UserLoginView, logout_view
 
 urlpatterns = [
-                  path('admin/', admin.site.urls),
-                  path('', IndexView.as_view(), name='home'),
-                  path('users/', include('users.urls')),
-                  path('login/', UserLoginView.as_view(), name='user_login'),
-                  path('logout/', logout_view, name='user_logout'),
-                  path('statuses/', include('statuses.urls')),
-                  path('tasks/', include('tasks.urls')),
-                  path('labels/', include('labels.urls')),
-                  path('i18n/', include('django.conf.urls.i18n'))
+    path('admin/', admin.site.urls),
+    path('', IndexView.as_view(), name='home'),
+    path('users/', include('users.urls')),
+    path('login/', UserLoginView.as_view(), name='user_login'),
+    path('logout/', logout_view, name='user_logout'),
+    path('statuses/', include('statuses.urls')),
+    path('tasks/', include('tasks.urls')),
+    path('labels/', include('labels.urls')),
+    path('i18n/', include('django.conf.urls.i18n'))
 
-                  # path('accounts/', include('django.contrib.auth.urls.py')),
-
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

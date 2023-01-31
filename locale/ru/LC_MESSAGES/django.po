@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-31 02:43+0500\n"
+"POT-Creation-Date: 2023-01-31 14:06+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,15 +20,15 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: labels/models.py:7
+#: labels/models.py:6
 msgid "Label name"
 msgstr "Имя"
 
-#: labels/models.py:15
+#: labels/models.py:14
 msgid "=Label="
 msgstr "Метка"
 
-#: labels/models.py:16
+#: labels/models.py:15
 msgid "=Labels="
 msgstr "Метки"
 
@@ -43,14 +43,14 @@ msgstr "Метки"
 msgid "Create label"
 msgstr "Создать метки"
 
-#: labels/views.py:19 labels/views.py:37 statuses/views.py:26
-#: statuses/views.py:41 task_manager/templates/tasks/task.html:51
+#: labels/views.py:19 labels/views.py:32 statuses/views.py:23
+#: statuses/views.py:38 task_manager/templates/tasks/task.html:51
 #: tasks/views.py:23 tasks/views.py:29 tasks/views.py:48 users/views.py:18
 #: users/views.py:45
 msgid "Update"
 msgstr "Обновить"
 
-#: labels/views.py:20 labels/views.py:44 statuses/views.py:26
+#: labels/views.py:20 labels/views.py:39 statuses/views.py:23
 #: task_manager/templates/tasks/task.html:53 tasks/views.py:24
 #: tasks/views.py:30 tasks/views.py:54 users/views.py:18 users/views.py:69
 msgid "Delete"
@@ -64,101 +64,99 @@ msgstr "Метка успешно создана"
 msgid "New Label"
 msgstr "Новая метка"
 
-#: labels/views.py:27 statuses/views.py:35 task_manager/views.py:17
+#: labels/views.py:27 statuses/views.py:32 task_manager/views.py:17
 #: tasks/views.py:39
 msgid "Create"
 msgstr "Создать"
 
-#: labels/views.py:36
+#: labels/views.py:31
 msgid "Label successfully changed"
 msgstr "Метка успешно изменена"
 
-#: labels/views.py:37
+#: labels/views.py:32
 msgid "Update label"
 msgstr "Обновить метку"
 
-#: labels/views.py:42
+#: labels/views.py:37
 msgid "Label successfully deleted"
 msgstr "Метка успешно удалена"
 
-#: labels/views.py:43
+#: labels/views.py:38
 msgid "Can't delete label because it's in use"
 msgstr "Невозможно удалить метку, потому что она используется"
 
-#: labels/views.py:44
+#: labels/views.py:39
 #, fuzzy
 #| msgid "Delete label "
 msgid "Delete label"
 msgstr "Удалить метку"
 
-#: statuses/models.py:6
+#: statuses/models.py:7
 msgid "name"
 msgstr "Имя"
 
-#: statuses/models.py:14
+#: statuses/models.py:15
 msgid "=Status="
 msgstr "Статус"
 
-#: statuses/models.py:15
+#: statuses/models.py:16
 msgid "=Statuses="
 msgstr "Статусы"
 
-#: statuses/views.py:25 task_manager/templates/base.html:62
+#: statuses/views.py:22 task_manager/templates/base.html:62
 msgid "Statuses"
 msgstr "Статусы"
 
-#: statuses/views.py:25 statuses/views.py:35
+#: statuses/views.py:22 statuses/views.py:32
 msgid "Create status"
 msgstr "Создать статус"
 
-#: statuses/views.py:27
+#: statuses/views.py:24
 msgid "ID"
 msgstr ""
 
-#: statuses/views.py:27 task_manager/templates/labels/labels_list.html:22
+#: statuses/views.py:24 task_manager/templates/labels/labels_list.html:22
 #: task_manager/templates/tasks/task_list.html:37
 msgid "Name"
 msgstr "Имя"
 
-#: statuses/views.py:27
+#: statuses/views.py:24
 msgid "Create date"
 msgstr "Создать дату"
 
-#: statuses/views.py:28
+#: statuses/views.py:25
 msgid "Update date"
 msgstr "Обновить дату"
 
-#: statuses/views.py:34
+#: statuses/views.py:31
 msgid "Status created successfully"
 msgstr "Статс успешно создан"
 
-#: statuses/views.py:40
+#: statuses/views.py:37
 msgid "Status successfully changed"
 msgstr "Статус успешно обновлён"
 
-#: statuses/views.py:41
+#: statuses/views.py:38
 msgid "Update status"
 msgstr "Обновить статус"
 
-#: statuses/views.py:45
+#: statuses/views.py:42
 msgid "Status successfully deleted"
 msgstr "Статус успешно удалён"
 
-#: statuses/views.py:46
+#: statuses/views.py:43
 msgid "Delete status "
 msgstr "Удалить статус"
 
-#: statuses/views.py:46
+#: statuses/views.py:43
 msgid "Delete status"
 msgstr "Удалить статус"
 
-#: statuses/views.py:55
-msgid "You can not delete Label which is used"
+#: statuses/views.py:44
+#, fuzzy
+#| msgid "Can't delete label because it's in use"
+msgid "Can't delete status because it's in use"
 msgstr "Невозможно удалить метку, потому что она используется"
-
-#: statuses/views.py:57
-msgid "You can not delete Status which is used"
-msgstr "Невозможно удалить статус, потому что она используется"
 
 #: task_manager/templates/base.html:58 users/views.py:18
 msgid "Users"
@@ -169,17 +167,16 @@ msgstr "Пользователи"
 msgid "Tasks"
 msgstr "Задачи"
 
-#: task_manager/templates/base.html:77 task_manager/templates/base.html:113
+#: task_manager/templates/base.html:77 task_manager/templates/base.html:96
 msgid "Logout"
 msgstr "Выйти"
 
-#: task_manager/templates/base.html:80 task_manager/templates/base.html:87
-#: task_manager/templates/base.html:116 task_manager/templates/login.html:7
+#: task_manager/templates/base.html:80 task_manager/templates/base.html:99
+#: task_manager/templates/login.html:7
 msgid "Login"
 msgstr "Войти"
 
-#: task_manager/templates/base.html:82 task_manager/templates/base.html:92
-#: task_manager/templates/base.html:118
+#: task_manager/templates/base.html:82 task_manager/templates/base.html:101
 msgid "Registration"
 msgstr "Регистрация"
 
@@ -247,7 +244,7 @@ msgstr "Пользователь"
 msgid "Successfully login"
 msgstr "Подтверждение входа"
 
-#: tasks/filters.py:24
+#: tasks/filters.py:25
 msgid "Show own tasks"
 msgstr "Показать свои задачи"
 
@@ -299,7 +296,7 @@ msgstr "Задача успешно удалена"
 msgid "Delete task "
 msgstr "Удалить задачу"
 
-#: tasks/views.py:62
+#: tasks/views.py:61
 msgid "Only author can delete task"
 msgstr "Только автор может удалить задачу"
 
@@ -334,6 +331,12 @@ msgstr "Пользователь успешно удалён"
 #: users/views.py:68
 msgid "Delete user"
 msgstr "Удалить пользователя"
+
+#~ msgid "You can not delete Label which is used"
+#~ msgstr "Невозможно удалить метку, потому что она используется"
+
+#~ msgid "You can not delete Status which is used"
+#~ msgstr "Невозможно удалить статус, потому что она используется"
 
 #, fuzzy
 #~| msgid "Labels"

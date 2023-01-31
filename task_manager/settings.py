@@ -14,7 +14,6 @@ DEBUG = os.getenv('DEBUG') == 'yes'
 ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1', '0.0.0.0',
                  'localhost', 'python-project-52-production-b3b8.up.railway.app']
 
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -73,12 +72,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-if os.getenv('DATABASE_URL'):
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
-# if os.getenv('DATABASE_URL'):
-#     db_from_env = dj_database_url.config(conn_max_age=600)
-#     DATABASES['default'].update(db_from_env)
+if os.getenv('DATABASE_URL'):
+    db_from_env = dj_database_url.config(conn_max_age=600)
+    DATABASES['default'].update(db_from_env)
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
@@ -96,19 +93,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.Users'
 
-# LANGUAGE_CODE = 'ru'
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ru'
+# LANGUAGE_CODE = 'en'
 
-# LANGUAGES = (
-#     ('ru', _('Russia')),
-#     ('en', _('English')),
-# )
+
 
 
 TIME_ZONE = 'Asia/Dushanbe'
 
 USE_I18N = True
-# USE_L10N = True
+
 USE_TZ = True
 
 LOCALE_URL = "locale/"

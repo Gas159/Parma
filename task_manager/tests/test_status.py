@@ -19,10 +19,8 @@ class CRUD_Statuses_Test(TestCase):
         Status.objects.create(name='status2-relax')
         Status.objects.create(name='status3-test')
 
-
     # Проверка доступа незалогиненым пользователям.
     def test_access(self):
-
         '''Незалогинение пользователи получают редирект'''
         resp1 = self.client.get(reverse('create_status'))
         self.assertEqual(resp1.status_code, 302)
@@ -43,7 +41,6 @@ class CRUD_Statuses_Test(TestCase):
         self.assertEqual(resp3.status_code, 200)
         resp4 = self.client.get(reverse('delete_status', kwargs={'pk': 1}))
         self.assertEqual(resp4.status_code, 200)
-
 
     # CREATE - Создание нового статуса
     def test_CreateStatus(self):

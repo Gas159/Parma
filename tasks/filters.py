@@ -4,6 +4,7 @@ from tasks.models import Task
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
+
 class TaskFilter(django_filters.FilterSet):
     def show_own_task(self, queryset, arg, value):
         if value:
@@ -12,7 +13,6 @@ class TaskFilter(django_filters.FilterSet):
 
     labels = django_filters.ModelChoiceFilter(
         queryset=Labels.objects.all(),
-        # label=_('Label filter'),
         widget=forms.Select(attrs={
             'class': 'form-select',
         })
@@ -22,9 +22,7 @@ class TaskFilter(django_filters.FilterSet):
         method='show_own_task',
         widget=forms.CheckboxInput,
         label=_('Show own tasks'),
-        # field_name='author',
     )
-
 
     class Meta:
         model = Task

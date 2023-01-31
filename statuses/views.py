@@ -1,13 +1,10 @@
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.db.models import ProtectedError
 from django.shortcuts import redirect
 from django.utils.translation import gettext as _
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-
-from labels.models import Labels
 from .models import Status
 
 
@@ -41,18 +38,13 @@ class UpdateStatusView(StatusMixin, UpdateView):
     extra_context = {'title': _('Update status'), 'btn': _('Update')}
 
 
-class DeleteStatusView(StatusMixin,  DeleteView):
+class DeleteStatusView(StatusMixin, DeleteView):
     success_message = _('Status successfully deleted')
     extra_context = {'title': _('Delete status '), 'btn_delete': _('Delete status'), }
+    error_message = _('Can\'t delete status because it\'s in use')
 
     def post(self, request, *args, **kwargs):
-        obj = self.get_object()
-        try:
-            obj.delete()
-            messages.success(self.request, self.success_message)
-        except ProtectedError:
-            if isinstance(object, Labels):
-                messages.error(self.request, _('You can not delete Label which is used'))
-            if isinstance(object, Status):
-                messages.error(self.request, _('You can not delete Status which is used'))
-        return redirect(self.success_url)
+        if self.get_object().task_set.all().count():
+            messages.error(request, self.error_message)
+            return redirect(self.success_url)
+        return super().post(self, request, *args, **kwargs)
