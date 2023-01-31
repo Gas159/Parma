@@ -22,6 +22,8 @@ collectstatic:
 secretkey:
 		poetry run python -c 'from django.utils.crypto import get_random_string; print(get_random_string(40))'
 
+createsuperuser:
+	python manage.py createsuperuser
 export:
 # 	poetry export -f requirements.txt -o requirements.txt
 	poetry export --without-hashes --format=requirements.txt > requirements.txt

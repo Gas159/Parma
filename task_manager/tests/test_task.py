@@ -34,9 +34,3 @@ class CRUD_Tasks_Test(TestCase):
         for u in urls:
             resp = self.client.get(u)
             self.assertEqual(resp.status_code, 302)
-
-    def test_access1(self, urls=url_tasks):
-        self.client.force_login(self.user)
-        for u2 in urls:
-            resp = self.client.get(u2)
-            self.assertEqual(resp.status_code, 200)

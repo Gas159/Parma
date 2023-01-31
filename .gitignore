@@ -1,6 +1,5 @@
 .venv/
 __pycache__/
-db.sqlite3
 *.idea/
 *.egg-info
 __pycache__
@@ -9,11 +8,9 @@ dist/
 .coverage
 coverage.xml
 .pytest_cache/
-.vim
-.env/
-env/
 venv/
 *.env
 staticfiles/
-/my_folder/oop/
 .env
+/my_folder/
+test-coverage-tool

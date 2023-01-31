@@ -43,7 +43,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
-
 ]
 
 ROOT_URLCONF = 'task_manager.urls'
@@ -82,6 +81,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://127.0.0.1',
     'https://localhost',
 ]
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
@@ -96,13 +96,8 @@ AUTH_USER_MODEL = 'users.Users'
 LANGUAGE_CODE = 'ru'
 # LANGUAGE_CODE = 'en'
 
-
-
-
 TIME_ZONE = 'Asia/Dushanbe'
-
 USE_I18N = True
-
 USE_TZ = True
 
 LOCALE_URL = "locale/"

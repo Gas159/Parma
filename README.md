@@ -5,30 +5,64 @@
 [![test](https://github.com/Gas159/python-project-52/actions/workflows/test.yml/badge.svg)](https://github.com/Gas159/python-project-52/actions/workflows/test.yml)
 [![CI](https://github.com/Gas159/python-project-52/actions/workflows/test1.yml/badge.svg)](https://github.com/Gas159/python-project-52/actions/workflows/test1.yml)
 
-task manager: https://python-project-52-production-05f4.up.railway.app/
+
+# Task Manager
+
+_Register, create, delete and edit tasks, labels and statuses, assign executors to tasks. Filter tasks by tags, statuses, and executors, or filter only your created tasks._
+
+A simple web application for task management. Implemented in the [Django 4.1.5](https://www.djangoproject.com/) framework using built-in class-based views (CBV) and a [PostgreSql](https://www.postgresql.org/) database. Website design - [Bootstrap v5.0](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+## Demo
+Just click and try to use **[DEMO on Railway](https://python-project-52-production-b3b8.up.railway.app/)**
+
 <hr> <hr/>
-<h1> Description </h1>
-<p> This programm download web pages with all localfiles</p>
 
 ## Installation
 ```
-$ pip install --user git+https://github.com/Gas159/python-project-51.git
+$ git clone https://github.com/Gas159/python-project-52.git
 ```
 
-## Usage
-Option -o or --output give u changes directory to download (default: current directory)
-
-## Running:
-
+Go to the project folder:
 ```
-$ page_loader http://some.adress.com/
+$ cd python-project-52`
 ```
 
+```
+$ make setup
+```
+For details look Makefile
+## Settings:
+Create an ".env" file in the root project directory: 
+```
+$ touch .env 
+```
+
+
+оr rename and edit existing ".env.example" file.
+
+Write following constants to the .env file:
+
+1. `SECRET_KEY='your_Django_secret_key'` 
+
+You can generate one with `make secretkey` command.
+
+2. `DATABASE_URL='your_database_url_path'` 
+
+To use simple sqlite database use this record: 
+
+`DATABASE_URL='sqlite:///db.sqlite3'`
+
+## Database preparation
+
+`make migrations`
+
+`make migrate`
+
+`make createsuperuser`
+
+## Start project
+
+`make start`
+
+Use this app in browser on http://localhost:8080
 <hr/>
 <hr>
-
-### Run program
-<a href="https://asciinema.org/a/7K7qLYrOJGkH58KTg0H0mtdKD" target="_blank"><img src="https://asciinema.org/a/7K7qLYrOJGkH58KTg0H0mtdKD.svg" /></a>
-
-### Wrong path and url running
-<a href="https://asciinema.org/a/kijuSgF9VYIA6wr1WzI0M0Vpb" target="_blank"><img src="https://asciinema.org/a/kijuSgF9VYIA6wr1WzI0M0Vpb.svg" /></a>
