@@ -48,7 +48,7 @@ msgstr "Создать метки"
 #: tasks/views.py:23 tasks/views.py:29 tasks/views.py:48 users/views.py:18
 #: users/views.py:45
 msgid "Update"
-msgstr "Обновить"
+msgstr "Изменить"
 
 #: labels/views.py:20 labels/views.py:39 statuses/views.py:23
 #: task_manager/templates/tasks/task.html:53 tasks/views.py:24
