@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-01 14:45+0500\n"
+"POT-Creation-Date: 2023-02-01 15:12+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,16 +173,15 @@ msgstr "Пользователи"
 msgid "Tasks"
 msgstr "Задачи"
 
-#: task_manager/templates/base.html:77 task_manager/templates/base.html:96
+#: task_manager/templates/base.html:77
 msgid "Logout"
 msgstr "Выход"
 
-#: task_manager/templates/base.html:80 task_manager/templates/base.html:99
-#: task_manager/templates/login.html:7
+#: task_manager/templates/base.html:80 task_manager/templates/login.html:7
 msgid "Login"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:82 task_manager/templates/base.html:101
+#: task_manager/templates/base.html:82
 msgid "Registration"
 msgstr "Регистрация"
 
@@ -233,12 +232,8 @@ msgstr "Показать"
 #: task_manager/templates/users/users.html:16
 #, fuzzy
 #| msgid "User name"
-msgid "User fullname"
+msgid "Username"
 msgstr "Имя пользователя"
-
-#: task_manager/templates/users/users.html:17
-msgid "first name"
-msgstr "Имя"
 
 #: task_manager/templates/users/users.html:18
 msgid "Created date"
@@ -343,6 +338,9 @@ msgstr "Пользователь успешно удалён"
 #: users/views.py:68
 msgid "Delete user"
 msgstr "Удалить пользователя"
+
+#~ msgid "first name"
+#~ msgstr "Имя"
 
 #, fuzzy
 #~| msgid "Successfully login"
