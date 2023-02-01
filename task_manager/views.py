@@ -1,14 +1,10 @@
+from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-
 from django.utils.translation import gettext as _
 from django.shortcuts import redirect
-
 from django.urls import reverse_lazy
-
-from django.contrib.auth.views import LoginView
-
+from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth import logout
-
 from django.views.generic import TemplateView
 
 
@@ -25,6 +21,10 @@ class UserLoginView(SuccessMessageMixin, LoginView):
         return reverse_lazy('home')
 
 
-def logout_view(request):
-    logout(request)
-    return redirect('home')
+class UserLogoutView(SuccessMessageMixin, LogoutView):
+    success_message = _('Successfully logout')
+
+    def get_success_url(self):
+        messages.warning(self.request, self.success_message)
+        return reverse_lazy('home')
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-31 14:06+0500\n"
+"POT-Creation-Date: 2023-02-01 14:23+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr "Метка успешно создана"
 msgid "New Label"
 msgstr "Новая метка"
 
-#: labels/views.py:27 statuses/views.py:32 task_manager/views.py:17
+#: labels/views.py:27 statuses/views.py:32 task_manager/views.py:13
 #: tasks/views.py:39
 msgid "Create"
 msgstr "Создать"
@@ -236,15 +236,21 @@ msgstr "Имя"
 msgid "Created date"
 msgstr "Дата создания"
 
-#: task_manager/views.py:17
+#: task_manager/views.py:13
 msgid "User"
 msgstr "Пользователь"
 
-#: task_manager/views.py:22
+#: task_manager/views.py:18
 msgid "Successfully login"
-msgstr "Подтверждение входа"
+msgstr "Вы залогинены"
 
-#: tasks/filters.py:25
+#: task_manager/views.py:25
+#, fuzzy
+#| msgid "Successfully login"
+msgid "Successfully logout"
+msgstr "Вы разлогинены"
+
+#: tasks/filters.py:24
 msgid "Show own tasks"
 msgstr "Показать свои задачи"
 
@@ -322,7 +328,7 @@ msgstr "Обновить пользователя"
 
 #: users/views.py:53 users/views.py:76
 msgid "You can not change another user"
-msgstr ""
+msgstr "123"
 
 #: users/views.py:67
 msgid "User successfully deleted"

@@ -18,14 +18,14 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include
-from .views import IndexView, UserLoginView, logout_view
+from .views import IndexView, UserLoginView, UserLogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='home'),
     path('users/', include('users.urls')),
     path('login/', UserLoginView.as_view(), name='user_login'),
-    path('logout/', logout_view, name='user_logout'),
+    path('logout/', UserLogoutView.as_view(), name='user_logout'),
     path('statuses/', include('statuses.urls')),
     path('tasks/', include('tasks.urls')),
     path('labels/', include('labels.urls')),

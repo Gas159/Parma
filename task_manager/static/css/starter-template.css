@@ -1,8 +1,10 @@
 body {
   padding-top: 5rem;
+  background: #4d545b ;
+  color: cornsilk;
+
 }
 .starter-template {
   padding: 3rem 1.5rem;
   text-align: center;
-  background-color: black;
 }
