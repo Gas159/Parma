@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-01 14:23+0500\n"
+"POT-Creation-Date: 2023-02-01 14:45+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr "Метка успешно создана"
 msgid "New Label"
 msgstr "Новая метка"
 
-#: labels/views.py:27 statuses/views.py:32 task_manager/views.py:13
+#: labels/views.py:27 statuses/views.py:32 task_manager/views.py:11
 #: tasks/views.py:39
 msgid "Create"
 msgstr "Создать"
@@ -113,7 +113,7 @@ msgstr "Создать статус"
 
 #: statuses/views.py:24
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: statuses/views.py:24 task_manager/templates/labels/labels_list.html:22
 #: task_manager/templates/tasks/task_list.html:37
@@ -158,6 +158,12 @@ msgstr "Удалить статус"
 msgid "Can't delete status because it's in use"
 msgstr "Невозможно удалить метку, потому что она используется"
 
+#: task_manager/templates/base.html:49
+#, fuzzy
+#| msgid "Task name"
+msgid "Task manager"
+msgstr "Менеджер задач"
+
 #: task_manager/templates/base.html:58 users/views.py:18
 msgid "Users"
 msgstr "Пользователи"
@@ -182,7 +188,7 @@ msgstr "Регистрация"
 
 #: task_manager/templates/index.html:10
 msgid "Драко Малфой залетел от мальчика который смог выжить."
-msgstr "Текс Драко"
+msgstr "Текс Драко 111111111111"
 
 #: task_manager/templates/labels/labels_list.html:23
 #: task_manager/templates/tasks/task_list.html:41
@@ -225,7 +231,9 @@ msgid "Show"
 msgstr "Показать"
 
 #: task_manager/templates/users/users.html:16
-msgid "User name"
+#, fuzzy
+#| msgid "User name"
+msgid "User fullname"
 msgstr "Имя пользователя"
 
 #: task_manager/templates/users/users.html:17
@@ -236,18 +244,16 @@ msgstr "Имя"
 msgid "Created date"
 msgstr "Дата создания"
 
-#: task_manager/views.py:13
+#: task_manager/views.py:11
 msgid "User"
 msgstr "Пользователь"
 
-#: task_manager/views.py:18
+#: task_manager/views.py:16
 msgid "Successfully login"
 msgstr "Вы залогинены"
 
-#: task_manager/views.py:25
-#, fuzzy
-#| msgid "Successfully login"
-msgid "Successfully logout"
+#: task_manager/views.py:26
+msgid "You are logged out"
 msgstr "Вы разлогинены"
 
 #: tasks/filters.py:24
@@ -337,6 +343,11 @@ msgstr "Пользователь успешно удалён"
 #: users/views.py:68
 msgid "Delete user"
 msgstr "Удалить пользователя"
+
+#, fuzzy
+#~| msgid "Successfully login"
+#~ msgid "Successfully logout"
+#~ msgstr "Вы разлогинены"
 
 #~ msgid "You can not delete Label which is used"
 #~ msgstr "Невозможно удалить метку, потому что она используется"

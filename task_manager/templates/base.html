@@ -46,7 +46,7 @@
 
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="{% url 'home' %}">Менеджер задач</a>
+    <a class="navbar-brand" href="{% url 'home' %}">{% trans 'Task manager' %}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -81,28 +81,6 @@
             <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">
                 {% trans 'Registration' %}</a></li>
             {% endif %}
-        </ul>
-
-
-        </ul>
-        <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                {{user}}
-            </button>
-            <div class="dropdown-menu">
-                <ul>
-                {% if user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}">
-                    {% translate "Logout"%}</a></li>
-                {% else %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'user_login' %}">
-                    {% translate "Login"%}</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">
-                    {% trans 'Registration'%}</a></li>
-                {% endif %}
-                    </ul>
-            </div>
-        </div>
     </div>
 </nav>
 
