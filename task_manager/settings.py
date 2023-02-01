@@ -93,7 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.Users'
 
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'ru'
 # LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'Asia/Dushanbe'
