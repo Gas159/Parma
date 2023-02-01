@@ -34,7 +34,7 @@ messages:
 		django-admin makemessages --ignore="static" --ignore=".env"  -l ru
 
 compilemess:
-		poetry run django-admin compilemessages
+		django-admin compilemessages
 
 
 
