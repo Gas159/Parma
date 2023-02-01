@@ -22,17 +22,17 @@ class UserView(ListView):
 class RegisterUserView(SuccessMessageMixin, CreateView):
     form_class = RegisterUserForm
     template_name = 'users/register.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('user_login')
     success_message = _('User successfully registered')
     extra_context = {'title': _('Registration user'),
                      'btn_name': _('Register')
                      }
 
-    def form_valid(self, form):
-        """If the form is valid, save the associated model and log the user in."""
-        user = form.save()
-        login(self.request, user)
-        return redirect(self.success_url)
+    # def form_valid(self, form):
+    #     """If the form is valid, save the associated model and log the user in."""
+    #     user = form.save()
+    #     login(self.request, user)
+    #     return redirect(self.success_url)
 
 
 class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
