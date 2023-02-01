@@ -319,11 +319,11 @@ msgstr "Пользователь успешно зарегистрирован"
 
 #: users/views.py:27
 msgid "Registration user"
-msgstr "Регистрация пользователя"
+msgstr "Регистрация"
 
 #: users/views.py:28
 msgid "Register"
-msgstr "Регистрация"
+msgstr "Зарегистрировать"
 
 #: users/views.py:43
 msgid "User successfully changed"
