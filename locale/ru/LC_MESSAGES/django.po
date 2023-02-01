@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-01 15:12+0500\n"
+"POT-Creation-Date: 2023-02-01 15:29+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,7 +162,7 @@ msgstr "Невозможно удалить метку, потому что он
 #, fuzzy
 #| msgid "Task name"
 msgid "Task manager"
-msgstr "Менеджер задач"
+msgstr "Менеджер задач1"
 
 #: task_manager/templates/base.html:58 users/views.py:18
 msgid "Users"
@@ -234,6 +234,12 @@ msgstr "Показать"
 #| msgid "User name"
 msgid "Username"
 msgstr "Имя пользователя"
+
+#: task_manager/templates/users/users.html:17
+#, fuzzy
+#| msgid "name"
+msgid "Fullname"
+msgstr "Полное имя"
 
 #: task_manager/templates/users/users.html:18
 msgid "Created date"
