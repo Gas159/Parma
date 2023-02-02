@@ -256,7 +256,7 @@ msgstr "Вы разлогинены"
 
 #: tasks/filters.py:31 tasks/models.py:18
 msgid "Label"
-msgstr "Метки"
+msgstr "Метка"
 
 #: tasks/filters.py:36
 msgid "Show own tasks"
