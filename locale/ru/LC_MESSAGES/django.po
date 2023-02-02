@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-02 05:41+0500\n"
+"POT-Creation-Date: 2023-02-02 05:54+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,7 +128,7 @@ msgstr "Дата обновления"
 
 #: statuses/views.py:31
 msgid "Status created successfully"
-msgstr "Статс успешно создан"
+msgstr "Статус успешно создан"
 
 #: statuses/views.py:37
 msgid "Status successfully changed"
@@ -222,7 +222,7 @@ msgstr "Задача без метки"
 
 #: task_manager/templates/tasks/task_list.html:14 tasks/views.py:29
 msgid "Create task"
-msgstr "Создать задачу"
+msgstr "Создать задачу."
 
 #: task_manager/templates/tasks/task_list.html:24
 msgid "Show"
@@ -252,7 +252,11 @@ msgstr "Вы залогинены"
 msgid "You are logged out"
 msgstr "Вы разлогинены"
 
-#: tasks/filters.py:24
+#: tasks/filters.py:18 tasks/models.py:18
+msgid "Label"
+msgstr "Метка"
+
+#: tasks/filters.py:23
 msgid "Show own tasks"
 msgstr "Показать свои задачи"
 
@@ -263,10 +267,6 @@ msgstr "Имя задачи"
 #: tasks/models.py:11
 msgid "Description"
 msgstr "Описание"
-
-#: tasks/models.py:18
-msgid "Label"
-msgstr "Метка"
 
 #: tasks/models.py:26
 msgid "=Task="
