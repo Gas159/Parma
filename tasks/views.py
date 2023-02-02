@@ -49,15 +49,22 @@ class UpdateTaskView(TaskMixin, UpdateView):  # modelname_form.html
     extra_context = {'title': _('Update task'), 'btn': _('Update')}
 
 
-class DeleteTaskView(TaskMixin, UserPassesTestMixin, DeleteView):  # modelname_confirm_delete.html
+class DeleteTaskView(TaskMixin, DeleteView):  # modelname_confirm_delete.htmlUser PassesTestMixin,
     template_name = 'users/users_confirm_delete.html'
     success_message = _('Task successfully deleted')
     extra_context = {'title': _('Delete task '), 'btn_delete': _('yes, delete'), }
 
-    def test_func(self):
-        author = Task.objects.get(id=self.get_object().id).author
-        return author == self.request.user
-
-    def handle_no_permission(self):
+    def get(self, request, *args, **kwargs):
+        author = self.get_object().author
+        # author = Task.objects.get(pk=task_id).author
+        if author == self.request.user:
+            return super().get(self, request, *args, **kwargs)
         messages.error(self.request, _('Only author can delete task'))
-        return redirect(reverse_lazy('tasks'))
+        return redirect('tasks')
+    # def test_func(self):
+    #     author = Task.objects.get(id=self.get_object().id).author
+    #     return author == self.request.user
+    #
+    # def handle_no_permission(self):
+    #     messages.error(self.request, _('Only author can delete task'))
+    #     return redirect(reverse_lazy('tasks'))
