@@ -38,6 +38,7 @@ class CreateTaskView(TaskMixin, CreateView):  # modelname_form.html
     success_message = _("Task created successfully")
     extra_context = {'title': _('New Tasks'), 'btn': _('Create')}
 
+    # Добавляем имя автора в поле author, которое не отображается в форме
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
