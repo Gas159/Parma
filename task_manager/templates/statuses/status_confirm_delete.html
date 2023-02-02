@@ -7,9 +7,9 @@
 
 
 <div class="container wrapper flex-grow-1">
-    <h1 class="my-4">{{ title }}</h1>
+    <h1 class="my-4 text-center">{{ title }}</h1>
 
-    <form action="" method="post">
+    <form action="" method="post" class="text-center">
         {% csrf_token %}
         <p>{% trans 'Are you sure you want to delete' %} {{ object.name }}?</p>
         {% bootstrap_form form %}
