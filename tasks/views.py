@@ -51,7 +51,7 @@ class UpdateTaskView(TaskMixin, UpdateView):  # modelname_form.html
 class DeleteTaskView(TaskMixin, UserPassesTestMixin, DeleteView):  # modelname_confirm_delete.html
     template_name = 'users/users_confirm_delete.html'
     success_message = _('Task successfully deleted')
-    extra_context = {'title': _('Delete task '), 'btn_delete': _('Delete'), }
+    extra_context = {'title': _('Delete task '), 'btn_delete': _('yes, delete'), }
 
     def test_func(self):
         author = Task.objects.get(id=self.get_object().id).author

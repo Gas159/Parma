@@ -40,7 +40,7 @@ class UpdateStatusView(StatusMixin, UpdateView):
 
 class DeleteStatusView(StatusMixin, DeleteView):
     success_message = _('Status successfully deleted')
-    extra_context = {'title': _('Delete status '), 'btn_delete': _('Delete status'), }
+    extra_context = {'title': _('Delete status '), 'btn_delete': _('yes, delete'), }
     error_message = _('Can\'t delete status because it\'s in use')
 
     def post(self, request, *args, **kwargs):

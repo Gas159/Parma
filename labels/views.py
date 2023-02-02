@@ -36,7 +36,7 @@ class UpdateLabelView(LabelsMixin, UpdateView):  # modelname_form.html
 class DeleteLabelView(LabelsMixin, DeleteView):  # modelname_confirm_delete.html
     success_message = _('Label successfully deleted')
     error_message = _('Can\'t delete label because it\'s in use')
-    extra_context = {'title': _('Delete label'), 'btn_delete': _('Delete'), }
+    extra_context = {'title': _('Delete label'), 'btn_delete': _('yes, delete'), }
 
     def post(self, request, *args, **kwargs):
         if self.get_object().task_set.all().count():

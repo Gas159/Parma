@@ -67,7 +67,7 @@ class DeleteUserView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),
-                     'btn_delete': _('Delete'), }
+                     'btn_delete': _('yes, delete'), }
 
     def handle_no_permission(self):
         messages.error(self.request, _('You are not authorized! Please sign in.'))

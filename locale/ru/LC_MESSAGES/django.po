@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-02 05:36+0500\n"
+"POT-Creation-Date: 2023-02-02 05:41+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,11 @@ msgstr "Создать метки"
 msgid "Update"
 msgstr "Изменить"
 
-#: labels/views.py:20 labels/views.py:39 statuses/views.py:23
+#: labels/views.py:20 statuses/views.py:23
 #: task_manager/templates/tasks/task.html:53 tasks/views.py:24
-#: tasks/views.py:30 tasks/views.py:54 users/views.py:18 users/views.py:70
+#: tasks/views.py:30 users/views.py:18
 msgid "Delete"
-msgstr "Да, удалить"
+msgstr "Удалить"
 
 #: labels/views.py:26
 msgid "Label created successfully"
@@ -84,6 +84,10 @@ msgstr "Невозможно удалить метку, потому что он
 #: labels/views.py:39
 msgid "Delete label"
 msgstr "Удалить метку"
+
+#: labels/views.py:39 statuses/views.py:43 tasks/views.py:54 users/views.py:70
+msgid "yes, delete"
+msgstr "Да, удалить"
 
 #: statuses/models.py:7
 msgid "name"
@@ -140,10 +144,6 @@ msgstr "Статус успешно удалён"
 
 #: statuses/views.py:43
 msgid "Delete status "
-msgstr "Удалить статус"
-
-#: statuses/views.py:43
-msgid "Delete status"
 msgstr "Удалить статус"
 
 #: statuses/views.py:44
@@ -343,5 +343,3 @@ msgstr "Пользователь успешно удалён"
 #: users/views.py:69
 msgid "Delete user"
 msgstr "Удаление пользователя"
-
-
