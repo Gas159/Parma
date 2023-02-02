@@ -72,9 +72,9 @@ DATABASES = {
     }
 }
 if DEBUG is not True:
-    if os.getenv('DATABASE_URL'):
-        db_from_env = dj_database_url.config(conn_max_age=600)
-        DATABASES['default'].update(db_from_env)
+    DATABASES = os.getenv('DATABASE_URL')
+    db_from_env = dj_database_url.config(conn_max_age=600)
+    DATABASES['default'].update(db_from_env)
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
@@ -94,7 +94,6 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTH_USER_MODEL = 'users.Users'
 
 LANGUAGE_CODE = 'ru-ru'
-# LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'Asia/Dushanbe'
 USE_I18N = True
@@ -158,7 +157,8 @@ BOOTSTRAP4 = {
     'javascript_in_head': False,
 
     # Include jQuery with Bootstrap JavaScript False|falsy|slim|full (default=False)
-    # False - means tag bootstrap_javascript use default value - `falsy` and does not include jQuery)
+    # False - means tag bootstrap_javascript use default value -
+    # `falsy` and does not include jQuery)
     'include_jquery': False,
 
     # Label class to use in horizontal forms
