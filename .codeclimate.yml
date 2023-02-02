@@ -7,3 +7,4 @@ exclude_patterns:
 - "task_manager/tests/"
 - "task_manager/rollbar_middleware.py"
 - "task_manager/labels/views.py"
+- "static/"
