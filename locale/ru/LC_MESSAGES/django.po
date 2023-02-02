@@ -136,7 +136,7 @@ msgstr "Статус успешно обновлён"
 
 #: statuses/views.py:38
 msgid "Update status"
-msgstr "Обновить статус"
+msgstr "Изменение статуса"
 
 #: statuses/views.py:42
 msgid "Status successfully deleted"
@@ -144,7 +144,7 @@ msgstr "Статус успешно удалён"
 
 #: statuses/views.py:43
 msgid "Delete status "
-msgstr "Удалить статус"
+msgstr "Удаление статуса"
 
 #: statuses/views.py:44
 msgid "Can't delete status because it's in use"
