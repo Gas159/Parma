@@ -71,10 +71,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# if os.getenv('DATABASE_URL'):
-#     db_from_env = dj_database_url.config(conn_max_age=600)
-#     DATABASES['default'].update(db_from_env)
+if DEBUG is not True:
+    if os.getenv('DATABASE_URL'):
+        db_from_env = dj_database_url.config(conn_max_age=600)
+        DATABASES['default'].update(db_from_env)
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
@@ -153,7 +153,8 @@ BOOTSTRAP4 = {
         "crossorigin": "anonymous",
     },
 
-    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap4.html)
+    # Put JavaScript in the HEAD section of the HTML document
+    # (only relevant if you use bootstrap4.html)
     'javascript_in_head': False,
 
     # Include jQuery with Bootstrap JavaScript False|falsy|slim|full (default=False)
@@ -175,7 +176,8 @@ BOOTSTRAP4 = {
     # Class to indicate error (better to set this in your Django form)
     'error_css_class': 'is-invalid',
 
-    # Class to indicate success, meaning the field has valid input (better to set this in your Django form)
+    # Class to indicate success, meaning the field has valid input
+    # (better to set this in your Django form)
     'success_css_class': 'is-valid',
 
     # Renderers (only set these if you have studied the source and understand the inner workings)

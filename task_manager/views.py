@@ -28,8 +28,3 @@ class UserLogoutView(SuccessMessageMixin, LogoutView):
 
     def get_success_url(self):
         return reverse_lazy('home')
-
-    # def get_success_url(self):
-    #     messages.warning(self.request, _('Successfully logout'))
-    #     return reverse_lazy('home')
-
