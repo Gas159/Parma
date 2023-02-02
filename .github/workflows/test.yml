@@ -30,7 +30,6 @@ jobs:
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
-#          make test
           make lint
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v2.7.4

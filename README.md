@@ -2,8 +2,7 @@
 [![Actions Status](https://github.com/Gas159/python-project-52/workflows/hexlet-check/badge.svg)](https://github.com/Gas159/python-project-52/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/25bbcce7f38df198f52d/maintainability)](https://codeclimate.com/github/Gas159/python-project-52/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/25bbcce7f38df198f52d/test_coverage)](https://codeclimate.com/github/Gas159/python-project-52/test_coverage)
-
-[//]: # ([![test]&#40;https://github.com/Gas159/python-project-52/actions/workflows/test.yml/badge.svg&#41;]&#40;https://github.com/Gas159/python-project-52/actions/workflows/test.yml&#41;)
+[![Linter](https://github.com/Gas159/python-project-52/actions/workflows/test.yml/badge.svg)](https://github.com/Gas159/python-project-52/actions/workflows/test.yml)
 [![CI](https://github.com/Gas159/python-project-52/actions/workflows/test1.yml/badge.svg)](https://github.com/Gas159/python-project-52/actions/workflows/test1.yml)
 
 
