@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-02 04:55+0500\n"
+"POT-Creation-Date: 2023-02-02 05:22+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,9 +50,9 @@ msgstr "Изменить"
 
 #: labels/views.py:20 labels/views.py:39 statuses/views.py:23
 #: task_manager/templates/tasks/task.html:53 tasks/views.py:24
-#: tasks/views.py:30 tasks/views.py:54 users/views.py:18 users/views.py:74
+#: tasks/views.py:30 tasks/views.py:54 users/views.py:18 users/views.py:70
 msgid "Delete"
-msgstr "Удалить"
+msgstr "Да, удалить"
 
 #: labels/views.py:26
 msgid "Label created successfully"
@@ -177,11 +177,11 @@ msgstr "Вход"
 msgid "Registration"
 msgstr "Регистрация"
 
-#: task_manager/templates/base.html:102
+#: task_manager/templates/base.html:103
 msgid "This project on GitHub"
 msgstr ""
 
-#: task_manager/templates/base.html:107
+#: task_manager/templates/base.html:108
 msgid "More projects"
 msgstr ""
 
@@ -236,6 +236,10 @@ msgstr "Полное имя"
 #: task_manager/templates/users/users.html:18
 msgid "Created date"
 msgstr "Дата создания"
+
+#: task_manager/templates/users/users_confirm_delete.html:14
+msgid "Are you sure you want to delete"
+msgstr "Вы уверены, что хотите удалить "
 
 #: task_manager/views.py:11
 msgid "User"
@@ -323,23 +327,23 @@ msgstr "Пользователь успешно изменён"
 
 #: users/views.py:44
 msgid "Update user"
-msgstr "Обновить пользователя"
+msgstr "Изменение пользователя"
 
-#: users/views.py:53 users/views.py:81
+#: users/views.py:50 users/views.py:79
 msgid "You can not change another user"
 msgstr "У вас нет прав для изменения другого пользователя."
 
-#: users/views.py:57
+#: users/views.py:54 users/views.py:73
 msgid "You are not authorized! Please sign in."
 msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
 
-#: users/views.py:72
+#: users/views.py:68
 msgid "User successfully deleted"
-msgstr "Пользователь успешно удалён."
+msgstr "Пользователь успешно удалён"
 
-#: users/views.py:73
+#: users/views.py:69
 msgid "Delete user"
-msgstr "Удалить пользователя"
+msgstr "Удаление пользователя"
 
 #~ msgid "Драко Малфой залетел от мальчика который смог выжить."
 #~ msgstr "Текс Драко 111111111111"
