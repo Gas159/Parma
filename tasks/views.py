@@ -49,7 +49,7 @@ class UpdateTaskView(TaskMixin, UpdateView):  # modelname_form.html
     extra_context = {'title': _('Update task'), 'btn': _('Update')}
 
 
-class DeleteTaskView(TaskMixin, DeleteView, UserPassesTestMixin):  # modelname_confirm_delete.html
+class DeleteTaskView(TaskMixin, DeleteView):  # modelname_confirm_delete.html UserPassesTestMixin
     template_name = 'users/users_confirm_delete.html'
     success_message = _('Task successfully deleted')
     extra_context = {'title': _('Delete task '), 'btn_delete': _('yes, delete'), }

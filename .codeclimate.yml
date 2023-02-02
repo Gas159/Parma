@@ -1,0 +1,9 @@
+exclude_patterns:
+- "migrations/"
+- "task_manager/**/migrations/"
+- "task_manager/**/admin.py"
+- "task_manager/**/urls.py"
+- "task_manager/**/models.py"
+- "task_manager/tests/"
+- "task_manager/rollbar_middleware.py"
+- "task_manager/labels/views.py"
