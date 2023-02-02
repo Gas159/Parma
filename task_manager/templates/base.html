@@ -21,12 +21,8 @@
 
     <link rel="canonical"
           href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
-    <link rel="shortcut icon" href="#" />
+    <link rel="shortcut icon" href="#"/>
     <style>
-        /*footer {*/
-        /*    padding-bottom: 5rem;*/
-        /*}*/
-
         body {
             padding-top: 5rem;
             background-color: #4d545b;
@@ -95,19 +91,22 @@
 </main>
 
 
-<!--<footer class="flex-wrap mx-auto fixed-bottom">-->
-<footer>
-  <div class="container my-5 pt-4 border-top sticky-lg-bottom">
-    <a class="text-muted text-center text-decoration-none"
-       target="_blank" href="https://github.com/DzmitrySha/python-project-52">
-        {% trans 'This project on GitHub' %}
-    </a>
-      <br>
-    <a class="text-muted text-center text-decoration-none lh-1"
-       target="_blank" href="https://github.com/DzmitrySha/">
-        {% trans 'More projects' %}
-    </a>
-  </div>
+
+<footer class="mt-auto position-sticky top-100">
+<!--<nav class="navbar fixed-bottom navbar-dark bg-dark">-->
+    <div class="container my-5 pt-4 border-top">
+        <a class="text-muted text-center text-decoration-none"
+           target="_blank" href="https://github.com/DzmitrySha/python-project-52">
+            {% trans 'This project on GitHub' %}
+        </a>
+        <br>
+        <a class="text-muted text-center text-decoration-none lh-1"
+           target="_blank" href="https://github.com/DzmitrySha/">
+            {% trans 'More projects' %}
+        </a>
+    </div>
+    </nav>
+</div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

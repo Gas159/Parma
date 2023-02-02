@@ -10,7 +10,7 @@ class Task(models.Model):
     name = models.CharField(max_length=250, unique=True, verbose_name=_('Task name'))
     description = models.TextField(max_length=300, blank=True, verbose_name=_('Description'))
     status = models.ForeignKey(Status, on_delete=models.PROTECT, null=True, verbose_name=_('Status'))
-    executor = models.ForeignKey(Users, on_delete=models.PROTECT,verbose_name=_('Executor') )
+    executor = models.ForeignKey(Users, on_delete=models.PROTECT, verbose_name=_('Executor'))
     author = models.ForeignKey(Users, related_name='author', on_delete=models.PROTECT,
                                verbose_name=_('Author'), default='2')
 
