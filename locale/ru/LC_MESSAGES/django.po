@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-02 05:54+0500\n"
+"POT-Creation-Date: 2023-02-02 06:34+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgstr "Метки"
 
 #: labels/views.py:19 labels/views.py:20
 msgid "Create label"
-msgstr "Создать метки"
+msgstr "Создать метку"
 
 #: labels/views.py:19 labels/views.py:32 statuses/views.py:23
 #: statuses/views.py:38 task_manager/templates/tasks/task.html:51
@@ -58,7 +58,7 @@ msgstr "Метка успешно создана"
 
 #: labels/views.py:27
 msgid "New Label"
-msgstr "Новая метка"
+msgstr "Создать метку"
 
 #: labels/views.py:27 statuses/views.py:32 task_manager/views.py:11
 #: tasks/views.py:39
@@ -203,12 +203,14 @@ msgid "Author"
 msgstr "Автор"
 
 #: task_manager/templates/tasks/task.html:23
-#: task_manager/templates/tasks/task_list.html:40
+#: task_manager/templates/tasks/task_list.html:40 tasks/filters.py:22
+#: tasks/models.py:13
 msgid "Executor"
 msgstr "Исполнитель"
 
 #: task_manager/templates/tasks/task.html:27
-#: task_manager/templates/tasks/task_list.html:38
+#: task_manager/templates/tasks/task_list.html:38 tasks/filters.py:17
+#: tasks/models.py:12
 msgid "Status"
 msgstr "Статус"
 
@@ -222,7 +224,7 @@ msgstr "Задача без метки"
 
 #: task_manager/templates/tasks/task_list.html:14 tasks/views.py:29
 msgid "Create task"
-msgstr "Создать задачу."
+msgstr "Создать задачу"
 
 #: task_manager/templates/tasks/task_list.html:24
 msgid "Show"
@@ -252,17 +254,17 @@ msgstr "Вы залогинены"
 msgid "You are logged out"
 msgstr "Вы разлогинены"
 
-#: tasks/filters.py:18 tasks/models.py:18
+#: tasks/filters.py:31 tasks/models.py:18
 msgid "Label"
 msgstr "Метка"
 
-#: tasks/filters.py:23
+#: tasks/filters.py:36
 msgid "Show own tasks"
-msgstr "Показать свои задачи"
+msgstr "Только свои задачи"
 
 #: tasks/models.py:10
 msgid "Task name"
-msgstr "Имя задачи"
+msgstr "Имя"
 
 #: tasks/models.py:11
 msgid "Description"
@@ -286,7 +288,7 @@ msgstr "Задача успешно создана"
 
 #: tasks/views.py:39
 msgid "New Tasks"
-msgstr "Новая задача"
+msgstr "Создать задачу"
 
 #: tasks/views.py:47
 msgid "Task successfully changed"
