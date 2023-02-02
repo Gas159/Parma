@@ -46,12 +46,13 @@ class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
     def get(self, request, *args, **kwargs):
         if request.user.id == kwargs.get('pk'):
-            messages.success(request, self.success_message)
             return super().get(request, *args, **kwargs)
-        else:
-            messages.error(request, _(
-                'You can not change another user'))
-            return redirect(self.success_url)
+        messages.error(request, _('You can not change another user'))
+        return redirect(self.success_url)
+
+    def handle_no_permission(self):
+        messages.error(self.request, _('You are not authorized! Please sign in.'))
+        return redirect('user_login')
 
     def form_valid(self, form):
         """If the form is valid, save the associated model and log the user in."""
@@ -68,15 +69,17 @@ class DeleteUserView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     extra_context = {'title': _('Delete user'),
                      'btn_delete': _('Delete'), }
 
+    def handle_no_permission(self):
+        messages.error(self.request, _('You are not authorized! Please sign in.'))
+        return redirect('user_login')
+
     def get(self, request, *args, **kwargs):
         if request.user.id == kwargs.get('pk'):
             return super().get(request, *args, **kwargs)
-        else:
-            messages.error(request, _(
-                'You can not change another user'))
-            return redirect(self.success_url)
-
-    def post(self, request, *args, **kwargs):
-        request.user.delete()
-        messages.success(request, self.success_message)
+        messages.error(request, _('You can not change another user'))
         return redirect(self.success_url)
+
+    # def post(self, request, *args, **kwargs):
+    #     request.user.delete()
+    #     messages.success(request, self.success_message)
+    #     return redirect(self.success_url)

@@ -1,6 +1,5 @@
-{% load i18n %}
 <!doctype html>
-
+{% load i18n %}
 {% load static %}
 {% load bootstrap4 %}
 {% bootstrap_css %}
@@ -16,73 +15,72 @@
     <meta name="generator" content="Jekyll v4.1.1">
     <title>{{title}}</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+          crossorigin="anonymous">
 
-    <!-- Bootstrap core CSS -->
-    
-
+    <link rel="canonical"
+          href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
+    <link rel="shortcut icon" href="#" />
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+        /*footer {*/
+        /*    padding-bottom: 5rem;*/
+        /*}*/
+
+        body {
+            padding-top: 5rem;
+            background-color: #4d545b;
+            color: white;
         }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+        text-center {
+            text-align: center !important;
         }
-
     </style>
-
-    <!-- Custom styles for this template -->
-    
-
 </head>
 
 
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="{% url 'home' %}">{% translate 'Task manager' %}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">{% translate 'Task manager' %}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'users' %}">{% translate 'Users' %}
-                    <span class="sr-only">(current)</span></a></li>
-            {% if request.user.is_authenticated %}
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}
-                    <span class="sr-only">(current)</span></a></li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'tasks' %}">{% translate 'Tasks' %}
-                    <span class="sr-only">(current)</span></a></li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'labels' %}">{% translate 'Labels' %}
-                    <span class="sr-only">(current)</span></a></li>
-            {% endif %}
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'users' %}">{% translate 'Users' %}
+                        <span class="sr-only">(current)</span></a></li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}
+                        <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'tasks' %}">{% translate 'Tasks' %}
+                        <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'labels' %}">{% translate 'Labels' %}
+                        <span class="sr-only">(current)</span></a></li>
+                {% endif %}
+            </ul>
 
-        <ul class="navbar-nav">
-            {% if request.user.is_authenticated %}
-<!--            <li class="nav-item nav-link "> {{user.username}}</li>-->
-            <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}">
-                {% translate "Logout" %}</a></li>
-            {% else %}
-            <li class="nav-item"><a class="nav-link" href="{% url 'user_login' %}">
-                {% translate "Login" %}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">
-                {% trans 'Registration' %}</a></li>
-            {% endif %}
-        </ul>
+            <ul class="navbar-nav">
+                {% if request.user.is_authenticated %}
+                <li class="nav-item nav-link "> {{user.username}}</li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}">
+                    {% translate "Logout" %}</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'user_login' %}">
+                    {% translate "Login" %}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">
+                    {% trans 'Registration' %}</a></li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
 </nav>
 
@@ -94,12 +92,24 @@
     {% block content %}
     {% endblock %}
 
+</main>
 
-</main><!-- /.container -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+
+<!--<footer class="flex-wrap mx-auto fixed-bottom">-->
+<!--  <div class="container my-5 pt-4 border-top">-->
+<!--    <a class="text-muted text-center text-decoration-none"-->
+<!--       target="_blank" href="https://github.com/DzmitrySha/python-project-52">-->
+<!--        {% trans 'This project on GitHub' %}-->
+<!--    </a>-->
+<!--      <br>-->
+<!--    <a class="text-muted text-center text-decoration-none lh-1"-->
+<!--       target="_blank" href="https://github.com/DzmitrySha/">-->
+<!--        {% trans 'More projects' %}-->
+<!--    </a>-->
+<!--  </div>-->
+<!--</footer>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
