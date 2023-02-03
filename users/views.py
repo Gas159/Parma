@@ -38,7 +38,7 @@ class UserView(ListView):
     redirect_field_name = 'home'
 
 
-class RegisterUserView(UserMixin, CreateView):
+class RegisterUserView(SuccessMessageMixin, CreateView):
     form_class = RegisterUserForm
     template_name = 'users/register.html'
     success_url = reverse_lazy('user_login')
