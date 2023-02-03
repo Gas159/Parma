@@ -39,7 +39,7 @@ class DeleteLabelView(LabelsMixin, DeleteView):  # modelname_confirm_delete.html
     extra_context = {'title': _('Delete label'), 'btn_delete': _('yes, delete'), }
 
     def post(self, request, *args, **kwargs):
-        if self.get_object().task_set.all().count():
+        if self.get_object().task_set.exists():
             messages.error(request, self.error_message)
             return redirect(self.success_url)
         return super().post(self, request, *args, **kwargs)
