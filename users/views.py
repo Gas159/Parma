@@ -11,6 +11,18 @@ from django.contrib.auth import login
 from django.shortcuts import redirect
 
 
+class UserMixin:
+    def get(self, request, *args, **kwargs):
+        if request.user.id == kwargs.get('pk'):
+            return super().get(request, *args, **kwargs)
+        messages.error(request, _('You can not change another user'))
+        return redirect(self.success_url)
+
+    def handle_no_permission(self):
+        messages.error(self.request, _('You are not authorized! Please sign in.'))
+        return redirect('user_login')
+
+
 class UserView(ListView):
     template_name = 'users/users.html'
     model = Users
@@ -28,14 +40,15 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
                      'btn_name': _('Register')
                      }
 
-    # def form_valid(self, form):
-    #     """If the form is valid, save the associated model and log the user in."""
-    #     user = form.save()
-    #     login(self.request, user)
-    #     return redirect(self.success_url)
+    def form_valid(self, form):
+        """If the form is valid, save the associated model and log the user in."""
+        user = form.save()
+        login(self.request, user)
+        messages.info(self.request, _('Thanks for registering. You are now logged in.'))
+        return redirect(self.success_url)
 
 
-class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+class UpdateUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = get_user_model()
     form_class = RegisterUserForm
     template_name_suffix = '_update_form'
@@ -43,16 +56,6 @@ class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_message = _('User successfully changed')
     extra_context = {'title': _('Update user'),
                      'btn_name': _('Update'), }
-
-    def get(self, request, *args, **kwargs):
-        if request.user.id == kwargs.get('pk'):
-            return super().get(request, *args, **kwargs)
-        messages.error(request, _('You can not change another user'))
-        return redirect(self.success_url)
-
-    def handle_no_permission(self):
-        messages.error(self.request, _('You are not authorized! Please sign in.'))
-        return redirect('user_login')
 
     def form_valid(self, form):
         """If the form is valid, save the associated model and log the user in."""
@@ -62,24 +65,9 @@ class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         return redirect(self.success_url)
 
 
-class DeleteUserView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+class DeleteUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Users
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),
                      'btn_delete': _('yes, delete'), }
-
-    def handle_no_permission(self):
-        messages.error(self.request, _('You are not authorized! Please sign in.'))
-        return redirect('user_login')
-
-    def get(self, request, *args, **kwargs):
-        if request.user.id == kwargs.get('pk'):
-            return super().get(request, *args, **kwargs)
-        messages.error(request, _('You can not change another user'))
-        return redirect(self.success_url)
-
-    # def post(self, request, *args, **kwargs):
-    #     request.user.delete()
-    #     messages.success(request, self.success_message)
-    #     return redirect(self.success_url)

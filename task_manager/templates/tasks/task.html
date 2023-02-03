@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block content %}
-<div class="container wrapper flex-grow-1">
+<div class="container wrapper flex-grow-1 ">
     <h1 class="my-4">{{ title }}</h1>
 
     {% if task %}
@@ -11,10 +11,10 @@
         <div class="card-header bg-secondary text-white">
             <h2>{{ task.name }}</h2>
         </div>
-        <div class="card-body bg-light">
+        <div class="card-body bg-light text-dark ">
             <p>{{ task.description }}</p>
             <hr>
-            <div class="container">
+            <div class="container ">
                 <div class="row p-1">
                     <div class="col">{% trans 'Author' %}</div>
                     <div class="col">{{ task.author }}</div>

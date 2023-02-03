@@ -44,7 +44,7 @@ class DeleteStatusView(StatusMixin, DeleteView):
     error_message = _('Can\'t delete status because it\'s in use')
 
     def post(self, request, *args, **kwargs):
-        if self.get_object().task_set.all().count():
+        if self.get_object().task_set.exists():
             messages.error(request, self.error_message)
             return redirect(self.success_url)
         return super().post(self, request, *args, **kwargs)
