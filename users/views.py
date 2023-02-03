@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth import get_user_model
 from django.contrib.messages.views import SuccessMessageMixin
 from users.forms import RegisterUserForm
@@ -11,23 +11,20 @@ from django.contrib.auth import login
 from django.shortcuts import redirect
 
 
-class UserMixin(LoginRequiredMixin, SuccessMessageMixin):
-    def get(self, request, *args, **kwargs):
-        if request.user.id == kwargs.get('pk'):
-            return super().get(request, *args, **kwargs)
-        messages.error(request, _('You can not change another user'))
-        return redirect(self.success_url)
-
+class UserAuthMixin(LoginRequiredMixin):
     def handle_no_permission(self):
         messages.error(self.request, _('You are not authorized! Please sign in.'))
         return redirect('user_login')
 
-    # def form_valid(self, form):
-    #     """If the form is valid, save the associated model and log the user in."""
-    #     user = form.save()
-    #     login(self.request, user)
-    #     messages.info(self.request, self.success_message)
-    #     return redirect(self.success_url)
+
+class UserMixin(UserPassesTestMixin, SuccessMessageMixin):
+    def test_func(self):
+        return self.get_object() == self.request.user
+
+    def handle_no_permission(self):
+        messages.error(self.request, _('You can not change another user'))
+        return redirect('users')
+
 
 
 class UserView(ListView):
@@ -48,7 +45,7 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
                      }
 
 
-class UpdateUserView(UserMixin, UpdateView):
+class UpdateUserView(UserMixin, UserAuthMixin, UpdateView):
     model = get_user_model()
     form_class = RegisterUserForm
     template_name_suffix = '_update_form'
@@ -65,7 +62,7 @@ class UpdateUserView(UserMixin, UpdateView):
         return redirect(self.success_url)
 
 
-class DeleteUserView(UserMixin, DeleteView):
+class DeleteUserView(UserMixin, UserAuthMixin, DeleteView):
     model = Users
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
