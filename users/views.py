@@ -40,12 +40,12 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
                      'btn_name': _('Register')
                      }
 
-    def form_valid(self, form):
-        """If the form is valid, save the associated model and log the user in."""
-        user = form.save()
-        login(self.request, user)
-        messages.info(self.request, _('Thanks for registering. You are now logged in.'))
-        return redirect(self.success_url)
+    # def form_valid(self, form):
+    #     """If the form is valid, save the associated model and log the user in."""
+    #     user = form.save()
+    #     login(self.request, user)
+    #     messages.info(self.request, _('Thanks for registering. You are now logged in.'))
+    #     return redirect(self.success_url)
 
 
 class UpdateUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, UpdateView):
