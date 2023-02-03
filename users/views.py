@@ -11,7 +11,7 @@ from django.contrib.auth import login
 from django.shortcuts import redirect
 
 
-class UserMixin:
+class UserMixin(LoginRequiredMixin,  SuccessMessageMixin):
     def get(self, request, *args, **kwargs):
         if request.user.id == kwargs.get('pk'):
             return super().get(request, *args, **kwargs)
@@ -38,7 +38,7 @@ class UserView(ListView):
     redirect_field_name = 'home'
 
 
-class RegisterUserView(UserMixin, SuccessMessageMixin, CreateView):
+class RegisterUserView(UserMixin, CreateView):
     form_class = RegisterUserForm
     template_name = 'users/register.html'
     success_url = reverse_lazy('user_login')
@@ -48,7 +48,7 @@ class RegisterUserView(UserMixin, SuccessMessageMixin, CreateView):
                      }
 
 
-class UpdateUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+class UpdateUserView(UserMixin,  UpdateView):
     model = get_user_model()
     form_class = RegisterUserForm
     template_name_suffix = '_update_form'
@@ -58,7 +58,7 @@ class UpdateUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, UpdateV
                      'btn_name': _('Update'), }
 
 
-class DeleteUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+class DeleteUserView(UserMixin,  DeleteView):
     model = Users
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
