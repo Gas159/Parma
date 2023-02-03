@@ -9,3 +9,4 @@ exclude_patterns:
 - "**/views.py"
 - "labels/views.py"
 - "static/"
+- "**/tests.py"

@@ -22,6 +22,13 @@ class UserMixin:
         messages.error(self.request, _('You are not authorized! Please sign in.'))
         return redirect('user_login')
 
+    def form_valid(self, form):
+        """If the form is valid, save the associated model and log the user in."""
+        user = form.save()
+        login(self.request, user)
+        messages.info(self.request, self.success_message)
+        return redirect(self.success_url)
+
 
 class UserView(ListView):
     template_name = 'users/users.html'
@@ -31,7 +38,7 @@ class UserView(ListView):
     redirect_field_name = 'home'
 
 
-class RegisterUserView(SuccessMessageMixin, CreateView):
+class RegisterUserView(UserMixin, SuccessMessageMixin, CreateView):
     form_class = RegisterUserForm
     template_name = 'users/register.html'
     success_url = reverse_lazy('user_login')
@@ -39,13 +46,6 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
     extra_context = {'title': _('Registration user'),
                      'btn_name': _('Register')
                      }
-
-    def form_valid(self, form):
-        """If the form is valid, save the associated model and log the user in."""
-        user = form.save()
-        login(self.request, user)
-        messages.info(self.request, self.success_message)
-        return redirect(self.success_url)
 
 
 class UpdateUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, UpdateView):
@@ -56,13 +56,6 @@ class UpdateUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, UpdateV
     success_message = _('User successfully changed')
     extra_context = {'title': _('Update user'),
                      'btn_name': _('Update'), }
-
-    def form_valid(self, form):
-        """If the form is valid, save the associated model and log the user in."""
-        user = form.save()
-        login(self.request, user)
-        messages.success(self.request, self.success_message)
-        return redirect(self.success_url)
 
 
 class DeleteUserView(UserMixin, LoginRequiredMixin, SuccessMessageMixin, DeleteView):
