@@ -11,7 +11,7 @@ from django.contrib.auth import login
 from django.shortcuts import redirect
 
 
-class UserMixin(LoginRequiredMixin,  SuccessMessageMixin):
+class UserMixin(LoginRequiredMixin, SuccessMessageMixin):
     def get(self, request, *args, **kwargs):
         if request.user.id == kwargs.get('pk'):
             return super().get(request, *args, **kwargs)
@@ -22,12 +22,12 @@ class UserMixin(LoginRequiredMixin,  SuccessMessageMixin):
         messages.error(self.request, _('You are not authorized! Please sign in.'))
         return redirect('user_login')
 
-    def form_valid(self, form):
-        """If the form is valid, save the associated model and log the user in."""
-        user = form.save()
-        login(self.request, user)
-        messages.info(self.request, self.success_message)
-        return redirect(self.success_url)
+    # def form_valid(self, form):
+    #     """If the form is valid, save the associated model and log the user in."""
+    #     user = form.save()
+    #     login(self.request, user)
+    #     messages.info(self.request, self.success_message)
+    #     return redirect(self.success_url)
 
 
 class UserView(ListView):
@@ -48,7 +48,7 @@ class RegisterUserView(UserMixin, CreateView):
                      }
 
 
-class UpdateUserView(UserMixin,  UpdateView):
+class UpdateUserView(UserMixin, UpdateView):
     model = get_user_model()
     form_class = RegisterUserForm
     template_name_suffix = '_update_form'
@@ -57,8 +57,15 @@ class UpdateUserView(UserMixin,  UpdateView):
     extra_context = {'title': _('Update user'),
                      'btn_name': _('Update'), }
 
+    def form_valid(self, form):
+        """If the form is valid, save the associated model and log the user in."""
+        user = form.save()
+        login(self.request, user)
+        messages.info(self.request, self.success_message)
+        return redirect(self.success_url)
 
-class DeleteUserView(UserMixin,  DeleteView):
+
+class DeleteUserView(UserMixin, DeleteView):
     model = Users
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
