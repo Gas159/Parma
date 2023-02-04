@@ -26,7 +26,6 @@ class UserMixin(UserPassesTestMixin, SuccessMessageMixin):
         return redirect('users')
 
 
-
 class UserView(ListView):
     template_name = 'users/users.html'
     model = Users
