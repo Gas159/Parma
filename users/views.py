@@ -11,7 +11,6 @@ from django.contrib.auth import login
 from django.shortcuts import redirect
 
 
-
 class UserMixin(UserPassesTestMixin, SuccessMessageMixin):
     def test_func(self):
         return self.get_object() == self.request.user
@@ -23,7 +22,6 @@ class UserMixin(UserPassesTestMixin, SuccessMessageMixin):
         else:
             messages.error(self.request, _('You are not authorized! Please sign in.'))
             return redirect('user_login')
-
 
 
 class UserView(ListView):
@@ -61,7 +59,7 @@ class UpdateUserView(LoginRequiredMixin, UserMixin, UpdateView):
         return redirect(self.success_url)
 
 
-class DeleteUserView(LoginRequiredMixin, UserMixin,  DeleteView):
+class DeleteUserView(LoginRequiredMixin, UserMixin, DeleteView):
     model = Users
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')

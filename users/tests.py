@@ -46,7 +46,6 @@ class CrudUsertest(TestCase):
                                      'password': self.user1.password})
         self.assertEqual(response.status_code, 200)
 
-
     # UPDATE - обновление данных пользователя
     def test_update_user(self):
         # with no login

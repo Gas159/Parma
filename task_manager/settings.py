@@ -7,7 +7,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 FIXTURE_DIRS = (
-   os.path.join(BASE_DIR, 'fixtures'),
+    os.path.join(BASE_DIR, 'fixtures'),
 )
 
 SECRET_KEY = os.getenv('SECRET_KEY')
