@@ -8,6 +8,7 @@ from task_manager.settings import FIXTURE_DIRS
 
 
 class CrudUsertest(TestCase):
+    ''' Dont forget your doc string :)'''
     fixtures = ['users.json']
 
     def setUp(self) -> None:

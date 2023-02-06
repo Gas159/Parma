@@ -4,7 +4,7 @@ from tasks.filters import TaskFilter
 from django.shortcuts import redirect
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 
@@ -49,14 +49,17 @@ class UpdateTaskView(TaskMixin, UpdateView):  # modelname_form.html
     extra_context = {'title': _('Update task'), 'btn': _('Update')}
 
 
-class DeleteTaskView(TaskMixin, DeleteView):  # modelname_confirm_delete.html UserPassesTestMixin
+class DeleteTaskView(PermissionRequiredMixin, TaskMixin,
+                     DeleteView):  # modelname_confirm_delete.html
     template_name = 'users/users_confirm_delete.html'
     success_message = _('Task successfully deleted')
     extra_context = {'title': _('Delete task '), 'btn_delete': _('yes, delete'), }
 
-    def get(self, request, *args, **kwargs):
-        author = self.get_object().author
-        if author == self.request.user:
-            return super().get(self, request, *args, **kwargs)
-        messages.error(self.request, _('Only author can delete task'))
+    def has_permission(self):
+        return self.get_object().author == self.request.user
+
+    def handle_no_permission(self):
+        messages.error(
+            self.request, _('Only author can delete task')
+        )
         return redirect('tasks')

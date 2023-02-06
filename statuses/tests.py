@@ -1,25 +1,28 @@
+import json
+import os
+from task_manager.settings import FIXTURE_DIRS
 from django.test import TestCase
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from labels.models import Labels
 from statuses.models import Status
 from users.models import Users
 
 
-# Create your tests here.
 class CrudStatusesTest(TestCase):
-    def setUp(self):
-        Users.objects.create(
-            first_name='Alexey',
-            last_name='Navalny',
-            username='FBK',
-            email='root@fbk.ru',
-            password='iloveputin'
-        )
-        self.user = Users.objects.get(id=1)
-        Status.objects.create(name='status1-work')
-        Status.objects.create(name='status2-relax')
-        Status.objects.create(name='status3-test')
+    fixtures = ['users.json', 'labels.json', 'tasks.json', 'statuses.json']
 
-    # Проверка доступа незалогиненым пользователям.
+    def setUp(self):
+        self.user = Users.objects.get(pk=1)
+        self.label = Labels.objects.get(pk=1)
+        self.login_url = reverse_lazy('user_login')
+        self.home = reverse_lazy('home')
+        self.update_pk_1 = reverse_lazy('update_status', kwargs={'pk': 1})
+        self.delete_pk_1 = reverse_lazy('delete_status', kwargs={'pk': 1})
+        self.update_pk_2 = reverse_lazy('update_status', kwargs={'pk': 2})
+        self.Status = Status.objects.get(pk=1)
+        with open(os.path.join(FIXTURE_DIRS[0], 'one_status.json')) as file:
+            self.test_status = json.load(file)
+
     def test_access(self):
         '''Незалогинение пользователи получают редирект'''
         resp1 = self.client.get(reverse('create_status'))
@@ -66,10 +69,10 @@ class CrudStatusesTest(TestCase):
         self.client.force_login(self.user)
         s1 = Status.objects.get(pk=1)
         resp = self.client.post(reverse('update_status', kwargs={'pk': 1}),
-                                {'name': 'Updated Status'})
+                                data=self.test_status)
         self.assertEqual(resp.status_code, 302)
         s1.refresh_from_db()
-        self.assertEqual(s1.name, 'Updated Status')
+        self.assertEqual(s1.name, 'update status 1')
 
     # DELETE - удаление статуса
     def test_DeleteStatus(self):
@@ -80,5 +83,11 @@ class CrudStatusesTest(TestCase):
         )
         self.assertEqual(resp.status_code, 302)
         self.assertEqual(Status.objects.count(), 2)
-        self.assertEqual(Status.objects.get(pk=1).name, 'status1-work')
-        self.assertEqual(Status.objects.get(pk=2).name, 'status2-relax')
+        self.assertEqual(Status.objects.get(pk=1).name, 'status 1')
+        self.assertEqual(Status.objects.get(pk=2).name, 'status 2')
+
+    def test_cant_delete_status_with_task(self):
+        self.client.force_login(user=self.user)
+        response = self.client.post(path=self.delete_pk_1)
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(first=Status.objects.count(), second=3)
