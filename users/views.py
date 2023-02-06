@@ -11,19 +11,19 @@ from django.contrib.auth import login
 from django.shortcuts import redirect
 
 
-class UserAuthMixin(LoginRequiredMixin):
-    def handle_no_permission(self):
-        messages.error(self.request, _('You are not authorized! Please sign in.'))
-        return redirect('user_login')
-
 
 class UserMixin(UserPassesTestMixin, SuccessMessageMixin):
     def test_func(self):
         return self.get_object() == self.request.user
 
     def handle_no_permission(self):
-        messages.error(self.request, _('You can not change another user'))
-        return redirect('users')
+        if self.request.user.is_authenticated:
+            messages.error(self.request, _('You can not change another user'))
+            return redirect('users')
+        else:
+            messages.error(self.request, _('You are not authorized! Please sign in.'))
+            return redirect('user_login')
+
 
 
 class UserView(ListView):
@@ -44,7 +44,7 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
                      }
 
 
-class UpdateUserView(UserMixin, UserAuthMixin, UpdateView):
+class UpdateUserView(LoginRequiredMixin, UserMixin, UpdateView):
     model = get_user_model()
     form_class = RegisterUserForm
     template_name_suffix = '_update_form'
@@ -61,7 +61,7 @@ class UpdateUserView(UserMixin, UserAuthMixin, UpdateView):
         return redirect(self.success_url)
 
 
-class DeleteUserView(UserMixin, UserAuthMixin, DeleteView):
+class DeleteUserView(LoginRequiredMixin, UserMixin,  DeleteView):
     model = Users
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
