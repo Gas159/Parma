@@ -37,7 +37,7 @@ For details look Makefile
 ## Settings:
 Create an ".env" file in the root project directory: 
 ```
-$ touch .env 
+$ cp .env.sample .env
 ```
 
 

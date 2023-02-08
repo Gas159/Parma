@@ -2,26 +2,14 @@ from django.contrib import messages
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth import get_user_model
 from django.contrib.messages.views import SuccessMessageMixin
+from task_manager.mixins import LoginAuthMixin
 from users.forms import RegisterUserForm
 from users.models import Users
 from django.contrib.auth import login
 from django.shortcuts import redirect
-
-
-class UserMixin(UserPassesTestMixin, SuccessMessageMixin):
-    def test_func(self):
-        return self.get_object() == self.request.user
-
-    def handle_no_permission(self):
-        if self.request.user.is_authenticated:
-            messages.error(self.request, _('You can not change another user'))
-            return redirect('users')
-        else:
-            messages.error(self.request, _('You are not authorized! Please sign in.'))
-            return redirect('user_login')
+from .mixins import UserMixin
 
 
 class UserView(ListView):
@@ -42,7 +30,7 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
                      }
 
 
-class UpdateUserView(LoginRequiredMixin, UserMixin, UpdateView):
+class UpdateUserView(LoginAuthMixin, UserMixin, UpdateView):
     model = get_user_model()
     form_class = RegisterUserForm
     template_name_suffix = '_update_form'
@@ -59,7 +47,7 @@ class UpdateUserView(LoginRequiredMixin, UserMixin, UpdateView):
         return redirect(self.success_url)
 
 
-class DeleteUserView(LoginRequiredMixin, UserMixin, DeleteView):
+class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
     model = Users
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')

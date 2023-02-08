@@ -6,6 +6,8 @@ from django.urls import reverse, reverse_lazy
 from labels.models import Labels
 from statuses.models import Status
 from users.models import Users
+from django.contrib.messages import get_messages
+from django.utils.translation import gettext_lazy as _
 
 
 class CrudStatusesTest(TestCase):
@@ -22,6 +24,7 @@ class CrudStatusesTest(TestCase):
         self.Status = Status.objects.get(pk=1)
         with open(os.path.join(FIXTURE_DIRS[0], 'one_status.json')) as file:
             self.test_status = json.load(file)
+        self.my_message = 'Вы не авторизованы! Пожалуйста, выполните вход.'
 
     def test_access(self):
         '''Незалогинение пользователи получают редирект'''
@@ -45,8 +48,13 @@ class CrudStatusesTest(TestCase):
         resp4 = self.client.get(reverse('delete_status', kwargs={'pk': 1}))
         self.assertEqual(resp4.status_code, 200)
 
+        messages = list(get_messages(resp1.wsgi_request))
+        self.assertEqual(len(messages), 4)
+        for m in range(len(messages)):
+            self.assertEqual(_(str(messages[m])), self.my_message)
+
     # CREATE - Создание нового статуса
-    def test_CreateStatus(self):
+    def test_create_status(self):
         self.client.force_login(self.user)
 
         '''Добавим статус'''
@@ -59,13 +67,13 @@ class CrudStatusesTest(TestCase):
         self.assertTrue(len(resp.context['statuses']) == 4)
 
     # READ - список всех статусов
-    def test_ListStatuses(self):
+    def test_list_status(self):
         self.client.force_login(self.user)
         resp = self.client.get(reverse('statuses'))
         self.assertTrue(len(resp.context['statuses']) == 3)
 
     # UPDATE - обновление статуса
-    def test_UpdateStatus(self):
+    def test_update_status(self):
         self.client.force_login(self.user)
         s1 = Status.objects.get(pk=1)
         resp = self.client.post(reverse('update_status', kwargs={'pk': 1}),
@@ -75,7 +83,7 @@ class CrudStatusesTest(TestCase):
         self.assertEqual(s1.name, 'update status 1')
 
     # DELETE - удаление статуса
-    def test_DeleteStatus(self):
+    def test_delete_status(self):
         self.client.force_login(self.user)
         self.assertEqual(Status.objects.count(), 3)
         resp = self.client.post(
@@ -86,7 +94,7 @@ class CrudStatusesTest(TestCase):
         self.assertEqual(Status.objects.get(pk=1).name, 'status 1')
         self.assertEqual(Status.objects.get(pk=2).name, 'status 2')
 
-    def test_cant_delete_status_with_task(self):
+    def test_delete_status_with_task(self):
         self.client.force_login(user=self.user)
         response = self.client.post(path=self.delete_pk_1)
         self.assertEqual(response.status_code, 302)

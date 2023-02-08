@@ -1,21 +1,11 @@
 from django.utils.translation import gettext as _
 from django_filters.views import FilterView
+from .mixins import TaskMixin
 from tasks.filters import TaskFilter
 from django.shortcuts import redirect
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib import messages
-
-from .models import Task
-
-
-class TaskMixin(LoginRequiredMixin, SuccessMessageMixin):
-    model = Task
-    login_url = reverse_lazy('user_login')
-    success_url = reverse_lazy('tasks')
-    fields = ['name', 'description', 'status', 'executor', 'labels']
 
 
 class TaskView(TaskMixin, DetailView):  # modelname_detail.html.

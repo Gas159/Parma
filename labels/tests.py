@@ -5,6 +5,8 @@ from django.urls import reverse, reverse_lazy
 from labels.models import Labels
 from task_manager.settings import FIXTURE_DIRS
 from users.models import Users
+from django.utils.translation import gettext_lazy as _
+from django.contrib.messages import get_messages
 
 
 class CrudLabelsTest(TestCase):
@@ -26,6 +28,8 @@ class CrudLabelsTest(TestCase):
         self.user3 = Users.objects.get(pk=3)
         with open(os.path.join(FIXTURE_DIRS[0], 'one_label.json')) as file:
             self.test_label = json.load(file)
+        self.my_message = 'Вы не авторизованы! Пожалуйста, выполните вход.'
+
 
     # Проверка доступа незалогиненым пользователям
     def test_access(self):
@@ -49,6 +53,12 @@ class CrudLabelsTest(TestCase):
         resp4 = self.client.get(reverse('delete_label', kwargs={'pk': 1}))
         self.assertEqual(resp4.status_code, 200)
 
+        messages = list(get_messages(resp1.wsgi_request))
+        self.assertEqual(len(messages), 4)
+        for m in range(len(messages)):
+            self.assertEqual(_(str(messages[m])), self.my_message)
+
+
     # CREATE - Создание новой метки
     def test_CreateLabel(self):
         self.client.force_login(self.user)
@@ -70,7 +80,7 @@ class CrudLabelsTest(TestCase):
         self.client.force_login(self.user1)
         self.assertNotEqual(self.label.name, self.test_label.get("name"))
 
-        response = self.client.post(self.update_pk_1, data=self.test_label)
+        response = self.client.post(self.update_pk_1, self.test_label)
         self.assertEqual(response.status_code, 302)
         self.label.refresh_from_db()
         self.assertEqual(self.label.name, self.test_label.get('name'))
@@ -89,5 +99,6 @@ class CrudLabelsTest(TestCase):
 
     def test_cant_delete_label_with_task(self):
         self.client.force_login(self.user2)
+        count_label = Labels.objects.count()
         self.client.post(reverse('delete_label', kwargs={'pk': 1}))
-        self.assertEqual(Labels.objects.count(), 3)
+        self.assertEqual(Labels.objects.count(), count_label)
