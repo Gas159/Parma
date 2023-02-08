@@ -30,7 +30,6 @@ class CrudLabelsTest(TestCase):
             self.test_label = json.load(file)
         self.my_message = 'Вы не авторизованы! Пожалуйста, выполните вход.'
 
-
     # Проверка доступа незалогиненым пользователям
     def test_access(self):
         '''Незалогинение пользователи получают редирект'''
@@ -58,15 +57,15 @@ class CrudLabelsTest(TestCase):
         for m in range(len(messages)):
             self.assertEqual(_(str(messages[m])), self.my_message)
 
-
     # CREATE - Создание новой метки
     def test_CreateLabel(self):
         self.client.force_login(self.user)
         '''Добавим статус'''
-        resp = self.client.post(reverse('create_label'), data=self.test_label)
+        resp = self.client.post(reverse('create_label'), self.test_label)
         self.assertEqual(resp.status_code, 302)
         self.assertRedirects(resp, reverse('labels'))
         '''Проверяем добавлен ли новый статус'''
+        self.assertEqual(Labels.objects.first().name, self.test_label.get('name'))
         resp = self.client.get(reverse('labels'))
         self.assertTrue(len(resp.context['labels']) == 4)
 

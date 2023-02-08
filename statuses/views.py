@@ -12,8 +12,6 @@ class StatusView(StatusMixin, ListView):
     extra_context = {
         'title': _('Statuses'), 'btn_create': _('Create status'),
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
-        'id': _('ID'), 'name': _('Name'), 'create': _('Create date'),
-        'update': _('Update date')
     }
 
 

@@ -14,10 +14,10 @@
 <table class="table table-striped">
     <thead>
     <tr class="table-info">
-        <th scope="col">{{id}}</th>
-        <th scope="col">{{name}}</th>
-        <th scope="col">{{create}}</th>
-        <th scope="col">{{update}}</th>
+        <th scope="col">{% trans 'ID' %}</th>
+        <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Create date' %}</th>
+        <th scope="col">{% trans 'Update date' %}</th>
         <th scope="col"></th>
     </tr>
     </thead>
@@ -34,7 +34,7 @@
         </td>
     </tr>
     {% empty %}
-    <li>Sorry, no data in this list.</li>
+    <p>Sorry, no data in this list.</p>
     {% endfor %}
 </table>
 {% endblock %}
