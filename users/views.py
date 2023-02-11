@@ -39,13 +39,6 @@ class UpdateUserView(LoginAuthMixin, UserMixin, UpdateView):
     extra_context = {'title': _('Update user'),
                      'btn_name': _('Update'), }
 
-    def form_valid(self, form):
-        """If the form is valid, save the associated model and log the user in."""
-        user = form.save()
-        login(self.request, user)
-        messages.info(self.request, self.success_message)
-        return redirect(self.success_url)
-
 
 class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
     model = Users

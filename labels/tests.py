@@ -58,7 +58,7 @@ class CrudLabelsTest(TestCase):
             self.assertEqual(_(str(messages[m])), self.my_message)
 
     # CREATE - Создание новой метки
-    def test_CreateLabel(self):
+    def test_create_label(self):
         self.client.force_login(self.user)
         '''Добавим статус'''
         resp = self.client.post(reverse('create_label'), self.test_label)
@@ -70,12 +70,12 @@ class CrudLabelsTest(TestCase):
         self.assertTrue(len(resp.context['labels']) == 4)
 
     # READ - список всех статусов
-    def test_Listlabel(self):
+    def test_list_label(self):
         self.client.force_login(self.user)
         resp = self.client.get(reverse('labels'))
         self.assertTrue(len(resp.context['labels']) == 3)
 
-    def test_UpdateLabels(self):
+    def test_update_labels(self):
         self.client.force_login(self.user1)
         self.assertNotEqual(self.label.name, self.test_label.get("name"))
 
@@ -85,7 +85,7 @@ class CrudLabelsTest(TestCase):
         self.assertEqual(self.label.name, self.test_label.get('name'))
 
     # DELETE - удаление статуса
-    def test_DeleteStatus(self):
+    def test_delete_status(self):
         self.client.force_login(self.user)
         self.assertEqual(Labels.objects.count(), 3)
         resp = self.client.post(
