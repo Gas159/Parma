@@ -1,4 +1,3 @@
-from django.contrib import messages
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -7,8 +6,6 @@ from django.contrib.messages.views import SuccessMessageMixin
 from task_manager.mixins import LoginAuthMixin
 from users.forms import RegisterUserForm
 from users.models import Users
-from django.contrib.auth import login
-from django.shortcuts import redirect
 from .mixins import UserMixin
 
 
