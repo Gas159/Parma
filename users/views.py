@@ -1,3 +1,4 @@
+from django.contrib.auth.views import PasswordChangeView
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -37,6 +38,12 @@ class UpdateUserView(LoginAuthMixin, UserMixin, UpdateView):
     success_message = _('User successfully changed')
     extra_context = {'title': _('Update user'),
                      'btn_name': _('Update'), }
+
+
+class UserPassChangeView(LoginAuthMixin, PasswordChangeView):
+    template_name = 'users/pass_change.html'
+    success_message = _('Password changed')
+    success_url = reverse_lazy('users')
 
 
 class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
