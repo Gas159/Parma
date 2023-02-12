@@ -1,11 +1,10 @@
-from django.contrib.auth.views import PasswordChangeView
+
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
 from django.contrib.messages.views import SuccessMessageMixin
 
-from .forms import UserChangeForm
 from task_manager.mixins import LoginAuthMixin
 from users.forms import RegisterUserForm
 from users.models import Users
@@ -32,18 +31,12 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
 
 class UpdateUserView(LoginAuthMixin, UserMixin, UpdateView):
     model = get_user_model()
-    form_class = UserChangeForm
+    form_class = RegisterUserForm
     template_name_suffix = '_update_form'
     success_url = reverse_lazy('users')
     success_message = _('User successfully changed')
     extra_context = {'title': _('Update user'),
                      'btn_name': _('Update'), }
-
-
-class UserPassChangeView(LoginAuthMixin, PasswordChangeView):
-    template_name = 'users/pass_change.html'
-    success_message = _('Password changed')
-    success_url = reverse_lazy('users')
 
 
 class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
