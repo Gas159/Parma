@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import redirect
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
@@ -13,18 +14,21 @@ class LabelsListView(LoginAuthMixin, LabelsMixin, ListView):  # modelname_list.h
 
 
 #
-class CreateLabelView(LoginAuthMixin, LabelsMixin, CreateView):  # modelname_form.html
+class CreateLabelView(LoginAuthMixin, LabelsMixin, CreateView,
+                      SuccessMessageMixin):  # modelname_form.html
     success_message = _("Label created successfully")
     extra_context = {'title': _('New Label'), 'btn': _('Create')}
 
 
-class UpdateLabelView(LoginAuthMixin, LabelsMixin, UpdateView):  # modelname_form.html
+class UpdateLabelView(LoginAuthMixin, LabelsMixin, UpdateView,
+                      SuccessMessageMixin):  # modelname_form.html
     success_message = _('Label successfully changed')
     extra_context = {'title': _('Update label'), 'btn': _('Update')}
 
 
 #
-class DeleteLabelView(LoginAuthMixin, LabelsMixin, DeleteView):  # modelname_confirm_delete.html
+class DeleteLabelView(LoginAuthMixin, LabelsMixin, DeleteView,
+                      SuccessMessageMixin):  # modelname_confirm_delete.html
     success_message = _('Label successfully deleted')
     error_message = _('Can\'t delete label because it\'s in use')
     extra_context = {'title': _('Delete label'), 'btn_delete': _('yes, delete'), }
