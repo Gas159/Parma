@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import UserChangeForm
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -29,7 +30,7 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
 
 class UpdateUserView(LoginAuthMixin, UserMixin, UpdateView):
     model = get_user_model()
-    form_class = RegisterUserForm
+    form_class = UserChangeForm
     template_name_suffix = '_update_form'
     success_url = reverse_lazy('users')
     success_message = _('User successfully changed')

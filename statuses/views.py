@@ -2,11 +2,11 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-
+from task_manager.mixins import LoginAuthMixin
 from .mixins import StatusMixin
 
 
-class StatusView(StatusMixin, ListView):
+class StatusView(LoginAuthMixin, StatusMixin, ListView):
     template_name = 'statuses/statuses.html'
     context_object_name = 'statuses'
     extra_context = {
@@ -15,19 +15,19 @@ class StatusView(StatusMixin, ListView):
     }
 
 
-class CreateStatusView(StatusMixin, CreateView):
+class CreateStatusView(LoginAuthMixin, StatusMixin, CreateView):
     template_name = 'statuses/statuses_form.html'
     success_message = _("Status created successfully")
     extra_context = {'title': _('Create status'), 'btn': _('Create')}
 
 
-class UpdateStatusView(StatusMixin, UpdateView):
+class UpdateStatusView(LoginAuthMixin, StatusMixin, UpdateView):
     template_name = 'statuses/statuses_form.html'
     success_message = _('Status successfully changed')
     extra_context = {'title': _('Update status'), 'btn': _('Update')}
 
 
-class DeleteStatusView(StatusMixin, DeleteView):
+class DeleteStatusView(LoginAuthMixin, StatusMixin, DeleteView):
     success_message = _('Status successfully deleted')
     extra_context = {'title': _('Delete status '), 'btn_delete': _('yes, delete'), }
     error_message = _('Can\'t delete status because it\'s in use')
