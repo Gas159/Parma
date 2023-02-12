@@ -16,19 +16,19 @@ class StatusView(LoginAuthMixin, StatusMixin, ListView):
     }
 
 
-class CreateStatusView(LoginAuthMixin, StatusMixin, CreateView, SuccessMessageMixin):
+class CreateStatusView(SuccessMessageMixin, LoginAuthMixin, StatusMixin, CreateView):
     template_name = 'statuses/statuses_form.html'
     success_message = _("Status created successfully")
     extra_context = {'title': _('Create status'), 'btn': _('Create')}
 
 
-class UpdateStatusView(LoginAuthMixin, StatusMixin, UpdateView, SuccessMessageMixin):
+class UpdateStatusView(SuccessMessageMixin, LoginAuthMixin, StatusMixin, UpdateView):
     template_name = 'statuses/statuses_form.html'
     success_message = _('Status successfully changed')
     extra_context = {'title': _('Update status'), 'btn': _('Update')}
 
 
-class DeleteStatusView(LoginAuthMixin, StatusMixin, DeleteView, SuccessMessageMixin):
+class DeleteStatusView(SuccessMessageMixin, LoginAuthMixin, StatusMixin, DeleteView):
     success_message = _('Status successfully deleted')
     extra_context = {'title': _('Delete status '), 'btn_delete': _('yes, delete'), }
     error_message = _('Can\'t delete status because it\'s in use')

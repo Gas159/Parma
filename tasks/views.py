@@ -24,8 +24,8 @@ class TasksListView(LoginAuthMixin, TaskMixin, FilterView):  # modelname_list.ht
     template_name = 'tasks/task_list.html'
 
 
-class CreateTaskView(LoginAuthMixin, TaskMixin, CreateView,
-                     SuccessMessageMixin):  # modelname_form.html
+class CreateTaskView(SuccessMessageMixin, LoginAuthMixin, TaskMixin,
+                     CreateView):  # modelname_form.html
     template_name = 'tasks/task_form.html'
     success_message = _("Task created successfully")
     extra_context = {'title': _('New Tasks'), 'btn': _('Create')}
@@ -36,14 +36,14 @@ class CreateTaskView(LoginAuthMixin, TaskMixin, CreateView,
         return super().form_valid(form)
 
 
-class UpdateTaskView(LoginAuthMixin, TaskMixin, UpdateView,
-                     SuccessMessageMixin):  # modelname_form.html
+class UpdateTaskView(SuccessMessageMixin, LoginAuthMixin, TaskMixin,
+                     UpdateView):  # modelname_form.html
     success_message = _('Task successfully changed')
     extra_context = {'title': _('Update task'), 'btn': _('Update')}
 
 
-class DeleteTaskView(TaskDeleteMixin, LoginAuthMixin, PermissionRequiredMixin, TaskMixin,
-                     DeleteView, SuccessMessageMixin):  # modelname_confirm_delete.html
+class DeleteTaskView(SuccessMessageMixin, TaskDeleteMixin, LoginAuthMixin, PermissionRequiredMixin,
+                     TaskMixin, DeleteView):  # modelname_confirm_delete.html
     template_name = 'users/users_confirm_delete.html'
     success_message = _('Task successfully deleted')
     extra_context = {'title': _('Delete task '), 'btn_delete': _('yes, delete'), }
