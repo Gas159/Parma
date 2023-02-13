@@ -1,4 +1,3 @@
-
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -45,6 +44,8 @@ class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),
                      'btn_delete': _('yes, delete'), }
+    error_message = _('Can\'t delete user because it\'s in use')
+
 
     def post(self, request, *args, **kwargs):
         if self.get_object().task_set.exists():
