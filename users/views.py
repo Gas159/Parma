@@ -45,3 +45,9 @@ class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),
                      'btn_delete': _('yes, delete'), }
+
+    def post(self, request, *args, **kwargs):
+        if self.get_object().task_set.exists():
+            messages.error(request, self.error_message)
+            return redirect(self.success_url)
+        return super().post(self, request, *args, **kwargs)
