@@ -46,7 +46,7 @@ class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),
                      'btn_delete': _('yes, delete'), }
-    error_message = _('Can\'t delete user because it\'s in use')
+    error_message = _('Невозможно удалить пользователя, потому что он используется')
 
     def post(self, request, *args, **kwargs):
         if self.get_object().task_set.exists():
