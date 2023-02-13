@@ -53,4 +53,3 @@ class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
             messages.error(request, self.error_message)
             return redirect(self.success_url)
         return super().post(self, request, *args, **kwargs)
-
