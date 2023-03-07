@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'statuses.apps.StatusesConfig',
     'tasks.apps.TasksConfig',
     'labels.apps.LabelsConfig',
+    'piece_of_iron.apps.PieceOfIronConfig',
 ]
 
 MIDDLEWARE = [

@@ -32,7 +32,7 @@
 <body class="d-flex flex-column min-vh-100 ">
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}">{% translate 'Task manager' %}</a>
+{#        <a class="navbar-brand" href="{% url 'home' %}">{% translate 'Task manager' %}</a>#}
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,20 +41,25 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'piece_of_iron' %}">{% translate 'Piece_of_iron' %}
+                        <span class="sr-only">(current)</span></a></li>
+
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'users' %}">{% translate 'Users' %}
                         <span class="sr-only">(current)</span></a></li>
-                {% if request.user.is_authenticated %}
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}
-                        <span class="sr-only">(current)</span></a></li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'tasks' %}">{% translate 'Tasks' %}
-                        <span class="sr-only">(current)</span></a></li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'labels' %}">{% translate 'Labels' %}
-                        <span class="sr-only">(current)</span></a></li>
-                {% endif %}
+{#                {% if request.user.is_authenticated %}#}
+{#                <li class="nav-item active">#}
+{#                    <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}#}
+{#                        <span class="sr-only">(current)</span></a></li>#}
+{#                <li class="nav-item active">#}
+{#                    <a class="nav-link" href="{% url 'tasks' %}">{% translate 'Tasks' %}#}
+{#                        <span class="sr-only">(current)</span></a></li>#}
+{#                <li class="nav-item active">#}
+{#                    <a class="nav-link" href="{% url 'labels' %}">{% translate 'Labels' %}#}
+{#                        <span class="sr-only">(current)</span></a></li>#}
+{#                {% endif %}#}
             </ul>
 
             <ul class="navbar-nav">
