@@ -1,8 +1,8 @@
 # # Create your tests here.
 # from django.test import TestCase
 # from django.urls import reverse
-# from labels.models import Labels
-# from users.models import Users
+# from labels.models.py import Labels
+# from users.models.py import Users
 #
 #
 # class CRUD_Labels_Test(TestCase):

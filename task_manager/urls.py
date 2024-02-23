@@ -27,9 +27,12 @@ urlpatterns = [
     path('statuses/', include('statuses.urls')),
     path('tasks/', include('tasks.urls')),
     path('labels/', include('labels.urls')),
-    path('piece_of_iron/', include('piece_of_iron.urls')),
-    path('i18n/', include('django.conf.urls.i18n'))
+    # path('piece_of_iron/', include('piece_of_iron.urls')),
+    path('i18n/', include('django.conf.urls.i18n')),
+    path('workplaces/', include('workplaces.urls')),
+
 
 ]
+
 # if settings.DEBUG:
 #     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

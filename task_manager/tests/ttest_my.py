@@ -1,7 +1,7 @@
 # from django.contrib.auth import get_user_model
 # from django.test import TestCase, Client
 # from django.urls.py import reverse, reverse_lazy
-# from users.models import Users
+# from users.models.py import Users
 #
 #
 # # setUp – выполняется перед запуском каждого теста;

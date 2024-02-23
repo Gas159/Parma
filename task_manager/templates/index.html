@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="text-center">
-    <h1> Hello mr. {{ user }}</h1>
+    <h1> Hello mr. {{ request.user.username }}</h1>
     <h1>Простое веб-приложения для управления задачами. Реализовано на
         фреймворке Django 4.1.5 используя встроенные представления на основе классов (CBV) и базу
         данных PostgreSql. Дизайн сайта - Bootstrap v5.0</h1>

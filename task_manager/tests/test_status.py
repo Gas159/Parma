@@ -1,7 +1,7 @@
 # from django.test import TestCase
 # from django.urls import reverse
-# from statuses.models import Status
-# from users.models import Users
+# from statuses.models.py import Status
+# from users.models.py import Users
 #
 #
 # # Create your tests here.

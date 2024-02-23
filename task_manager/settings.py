@@ -12,7 +12,9 @@ FIXTURE_DIRS = (
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG') == 'yes'
+
+# DEBUG = os.getenv('DEBUG') == 'yes'
+DEBUG = True
 
 ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1', '0.0.0.0',
                  'localhost', 'python-project-52-production-b3b8.up.railway.app']
@@ -33,7 +35,8 @@ INSTALLED_APPS = [
     'statuses.apps.StatusesConfig',
     'tasks.apps.TasksConfig',
     'labels.apps.LabelsConfig',
-    'piece_of_iron.apps.PieceOfIronConfig',
+    'workplaces.apps.WorkplaceConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -111,7 +114,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# DEFAULT_AUTO_FIELD = 'django.db.models.py.BigAutoField'
+# DEFAULT_AUTO_FIELD = 'django.db.models.py.BigAutoField'
 
 ROLLBAR = {
     'access_token': os.getenv('ACCESS_TOKEN'),

@@ -24,6 +24,15 @@ Just click and try to use **[DEMO on Railway](https://python-project-52-producti
 ```
 $ git clone https://github.com/Gas159/python-project-52.git
 ```
+Для винды:
+pip install poetry
+poetry install
+poetry update
+
+poetry run python3 manage.py makemigrations
+poetry run python3 manage.py migrate 
+poetry run gunicorn --bind 0.0.0.0:8000 task_manager.wsgi
+poetry run python3 manage.py runserver 8000 #запуск сервака
 
 Go to the project folder:
 ```

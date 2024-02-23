@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 
-# Create your models here.
+# Create your models.py here.
 class Status(models.Model):
     name = models.CharField(max_length=250, verbose_name=_('name'))
     created_at = models.DateTimeField(auto_now_add=True, null=True)

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+    <h4><a href="{% url 'create_workplace' %}">{{ btn_create }}</a></h4>
+</div>
+<table class="table table-striped">
+    <thead>
+    <tr class="table-info">
+        <th scope="col">{% trans 'ID' %}</th>
+        <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Descriptions' %}</th>
+        <th scope="col">{% trans 'Create date' %}</th>
+        <th scope="col">{% trans 'Update date' %}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    {% for w in workplaces %}
+    <tr>
+        <td>{{w.id}}</td>
+        <td>{{w.name}}</td>
+        <td>{{w.description}}</td>
+        <td>{{w.created_at}}</td>
+        <td>{{w.update_at}}</td>
+        <td>
+              <a  href="{% url 'workpass'  %}">{{ btn_update }}</a>
+            <br>
+              <a  href="{% url 'workpass'  %}">{{btn_delete}}</a>
+        </td>
+    </tr>
+    {% empty %}
+    <p>Sorry, no data in this list.</p>
+    {% endfor %}
+</table>
+{% endblock %}
+

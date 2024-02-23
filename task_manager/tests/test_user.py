@@ -1,6 +1,6 @@
 # from django.test import TestCase
 # from django.urls import reverse
-# from users.models import Users
+# from users.models.py import Users
 #
 #
 # class CRUD_user_test(TestCase):

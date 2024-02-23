@@ -3,7 +3,7 @@ exclude_patterns:
 - "**/migrations/"
 - "**/admin.py"
 - "**/urls.py"
-- "**/models.py"
+- "**/models.py.py"
 - "task_manager/tests/"
 - "task_manager/rollbar_middleware.py"
 - "**/views.py"
