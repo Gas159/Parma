@@ -9,7 +9,7 @@ class Tool(models.Model):
     description = models.TextField(max_length=333, verbose_name=_('Description'))
     workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT,
                                        null=True,verbose_name=_('Workplace'))
-    in_supply = models.CharField(max_length=222, default= 'В наличии')
+    in_supply = models.CharField(max_length=222, null=True, default='В наличии')
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     update_at = models.DateTimeField(auto_now=True, null=True)
 
