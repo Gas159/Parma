@@ -1,0 +1,16 @@
+
+python manage.py startapp название_приложения
+
+
+
+# install
+curl -sSL https://install.python-poetry.org | python3 -
+# update
+poetry self update
+# uninstall
+curl -sSL https://install.python-poetry.org | python3 - --uninstall
+rm /home/<username>/.local/bin/poetry
+
+sudo rm /usr/bin/poetry
+rm -rf ~/.poetry
+

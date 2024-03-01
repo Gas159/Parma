@@ -91,5 +91,8 @@ setup:
 	poetry run python3 manage.py makemigrations
 	poetry run python3 manage.py migrate
 	poetry run gunicorn --bind 0.0.0.0:$(PORT) task_manager.wsgi
+mig:
+	poetry run python3 manage.py makemigrations
+	poetry run python3 manage.py migrate
 
 .PHONY: install test lint selfcheck check build shell migrate collectstatic secretkey bla

@@ -25,14 +25,14 @@
     {% for w in workplaces %}
     <tr>
         <td>{{w.id}}</td>
-        <td>{{w.name}}</td>
+        <td><a href="{% url 'workplace' w.id  %}" > {{w.name}} </a></td>
         <td>{{w.description}}</td>
-        <td>{{w.created_at}}</td>
-        <td>{{w.update_at}}</td>
+        <td>{{w.created_at|date:"d.m.Y"}}</td>
+        <td>{{w.update_at|date:"d.m.Y"}}</td>
         <td>
               <a  href="{% url 'workpass'  %}">{{ btn_update }}</a>
-            <br>
-              <a  href="{% url 'workpass'  %}">{{btn_delete}}</a>
+<!--            <br>-->
+              <a class="text-danger"  href="{% url 'workpass'  %}">{{btn_delete}}</a>
         </td>
     </tr>
     {% empty %}

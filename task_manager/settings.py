@@ -13,10 +13,10 @@ FIXTURE_DIRS = (
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 
-# DEBUG = os.getenv('DEBUG') == 'yes'
-DEBUG = True
+DEBUG = os.getenv('DEBUG') == 'yes'
+# DEBUG = True
 
-ALLOWED_HOSTS = ['testserver', 'webserver', '127.0.0.1', '0.0.0.0',
+ALLOWED_HOSTS = ['*', 'testserver', 'webserver', '127.0.0.1', '0.0.0.0',
                  'localhost', 'python-project-52-production-b3b8.up.railway.app']
 
 INSTALLED_APPS = [
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'tasks.apps.TasksConfig',
     'labels.apps.LabelsConfig',
     'workplaces.apps.WorkplaceConfig',
+    'tools.apps.ToolsConfig'
 
 ]
 
@@ -75,7 +76,7 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite',
     }
 }
 if DEBUG is False:

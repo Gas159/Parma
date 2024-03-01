@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+<div class="container wrapper flex-grow-1 ">
+    <h1 class="my-4">{{ title }}</h1>
+
+    {% if workplace %}
+    <div class="card">
+        <div class="card-header bg-secondary text-white">
+            <h2>{{ workplace.name }}</h2>
+        </div>
+        <div class="card-body bg-light text-dark ">
+            <p>{{ workplace.description }}</p>
+            <hr>
+            <div class="container ">
+
+
+
+                <div class="row p-1">
+                    <div class="col">{% trans 'Tools' %}</div>
+                    <div class="col">{{ workplace.tool_set.workplace }}</div>
+                </div>
+                 <div class="row p-1">
+                    <div class="col">{% trans 'Created' %}</div>
+                    <div class="col">{{ workplace.created_at|date:"d.m.Y" }}</div>
+                </div>
+                <div class="row p-1">
+                    <div class="col">
+                        <h6>{% trans 'Tools' %}:</h6>
+                        <ul>
+                            {% if workplace %}
+                            {% for tool in workplace.tool_set.all %}
+                            <li>{{ tool.id }}   <a href="{% url 'tools' %}" > {{tool.name}} </a> </li>
+
+                            {% endfor %}
+                            {% else %}
+                            <p>{% trans 'workplace without any tools' %}</p>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <div class="col">
+
+                        <a class="btn btn-primary" href="{% url 'workpass' %}">
+                            {% trans 'Update'%}</a>
+                        <a class="btn btn-danger" href="{% url 'workpass' %}">
+                            {% trans 'Delete'%}</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+
+</div>
+{% endblock content %}

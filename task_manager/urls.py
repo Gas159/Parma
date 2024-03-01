@@ -30,6 +30,7 @@ urlpatterns = [
     # path('piece_of_iron/', include('piece_of_iron.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
     path('workplaces/', include('workplaces.urls')),
+    path('tools/', include('tools.urls')),
 
 
 ]

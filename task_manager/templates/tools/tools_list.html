@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+    <h4><a href="{% url 'create_tool' %}">{{ btn_create }}</a></h4>
+</div>
+<table class="table table-striped">
+    <thead>
+    <tr class="table-info">
+        <th scope="col">{% trans 'ID' %}</th>
+        <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Descriptions' %}</th>
+        <th scope="col">{% trans 'Workplace' %}</th>
+        <th scope="col">{% trans 'Create date' %}</th>
+        <th scope="col">{% trans 'Update date' %}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    {% for t in tools %}
+    <tr>
+        <td>{{t.id}}</td>
+        <td>{{t.name}}</td>
+        <td>{{t.description}}</td>
+        <td>{{t.workplace}}</td>
+        <td>{{t.created_at}}</td>
+        <td>{{t.update_at}}</td>
+        <td>
+              <a class="text-orange" href="{% url 'workpass'  %}">{{ btn_update }}</a>
+<!--            <br>-->
+              <a  class="text-danger" href="{% url 'workpass'  %}">{{btn_delete}}</a>
+        </td>
+    </tr>
+    {% empty %}
+    <p>Sorry, no data in this list.</p>
+    {% endfor %}
+</table>
+{% endblock %}
+
