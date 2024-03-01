@@ -8,7 +8,8 @@ class Tool(models.Model):
     name = models.CharField(max_length=222, unique=True, verbose_name=_('Tool name'))
     description = models.TextField(max_length=333, verbose_name=_('Description'))
     workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT,
-                                       null=True, default='На складе',verbose_name=_('Workplace'))
+                                       null=True,verbose_name=_('Workplace'))
+    in_supply = models.CharField(max_length=222, default= 'В наличии')
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     update_at = models.DateTimeField(auto_now=True, null=True)
 
