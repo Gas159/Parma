@@ -72,7 +72,7 @@ To use simple sqlite database use this record:
 
 `make createsuperuser`
 
-## Start project
+## Start project 1
 
 `make start`
 
