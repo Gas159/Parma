@@ -23,7 +23,7 @@ class WorkdaysListView(LoginAuthMixin, WorkdayMixin, ListView):
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
     }
 class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, CreateView):
-    template_name = 'workdays/workday_form.html'
+    template_name = 'workdays/wokrday_form.html'
     success_message = _("Workdays created successfully")
     extra_context = {'title': _('Create workdays'), 'btn': _('Create')}
 
