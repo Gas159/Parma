@@ -8,6 +8,6 @@ from .views import *
 urlpatterns = [
     path('', WorkdaysListView.as_view(), name='workdays'),
     path('toolspass/', toolspass, name='toolspass'),
-    path('create_tool/', CreateWorkdayView.as_view(), name='create_workday')
+    path('create_workday/', CreateWorkdayView.as_view(), name='create_workday')
 ]
 
