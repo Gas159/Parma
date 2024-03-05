@@ -24,6 +24,7 @@ secretkey:
 
 createsuperuser:
 	python manage.py createsuperuser
+
 export:
 # 	poetry export -f requirements.txt -o requirements.txt
 	poetry export --without-hashes --format=requirements.txt > requirements.txt
@@ -48,8 +49,7 @@ migrations:
 		$(LOCAL) makemigrations
 migrate:
 		$(LOCAL) migrate
-migrate-rw:
-		railway run python manage.py migrate
+
 
 test:
 	$(LOCAL) test
@@ -83,6 +83,7 @@ lang_check:
 
 PORT ?= 8000
 db:
+	poetry shell
 	python3 manage.py migrate
 	poetry run gunicorn --bind 0.0.0.0:$(PORT) task_manager.wsgi
 
