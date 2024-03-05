@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'tasks.apps.TasksConfig',
     'labels.apps.LabelsConfig',
     'workplaces.apps.WorkplaceConfig',
-    'tools.apps.ToolsConfig'
+    'tools.apps.ToolsConfig',
+    'products.apps.ProductsConfig',
 
 ]
 

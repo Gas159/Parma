@@ -52,6 +52,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'tools' %}">{% translate 'Tools' %}
                         <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'products' %}">{% translate 'Products' %}
+                        <span class="sr-only">(current)</span></a></li>
 
                 {% if request.user.username == '123' %}
                <li class="nav-item active">
