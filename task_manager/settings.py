@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'workplaces.apps.WorkplaceConfig',
     'tools.apps.ToolsConfig',
     'products.apps.ProductsConfig',
+    'workdays.apps.WorkdaysConfig',
 
 ]
 

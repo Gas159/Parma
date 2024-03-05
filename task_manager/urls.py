@@ -32,6 +32,7 @@ urlpatterns = [
     path('workplaces/', include('workplaces.urls')),
     path('tools/', include('tools.urls')),
     path('products/', include('products.urls')),
+    path('workdays/', include('workdays.urls')),
 
 
 ]
