@@ -16,39 +16,23 @@
     <tr class="table-info">
         <th scope="col">{% trans 'ID' %}</th>
         <th scope="col">{% trans 'Name' %}</th>
-        <th scope="col">{% trans 'Number' %}</th>
-        <th scope="col">{% trans 'Descriptions' %}</th>
-        <th scope="col">{% trans 'Step_1' %}</th>
-        <th scope="col">{% trans 'Step_2' %}</th>
-        <th scope="col">{% trans 'Status' %}</th>
+        <th scope="col">{% trans 'Product' %}</th>
+        <th scope="col">{% trans 'Time' %}</th>
+        <th scope="col">{% trans 'Description' %}</th>
         <th scope="col">{% trans 'Create date' %}</th>
         <th scope="col">{% trans 'Update date' %}</th>
         <th scope="col"></th>
     </tr>
     </thead>
-    {% for t in products %}
+    {% for w in workdays %}
     <tr>
-        <td>{{t.id}}</td>
-        <td>{{t.name}}</td>
-        <td>{{t.number}}</td>
-        <td>{{t.description}}</td>
-
-        {% if t.step_1 %}
-        <td> <p color="green"> {{t.step_1}} </p> </td>
-        {% else %}
-        <td></td>
-        {% endif %}
-
-        {% if t.step_2 %}
-        <td> <p color="green"> {{t.step_2}} </p> </td>
-        {% else %}
-        <td></td>
-<!--        <td><a class="text-danger"/> {{t.step_2}}</td>-->
-        {% endif %}
-
-        <td>{{t.status}}</td>
-        <td>{{t.created_at |date:"d.m.Y"}}</td>
-        <td>{{t.update_at }}</td>
+        <td>{{w.id}}</td>
+        <td>{{w.user}}</td>
+        <td>{{w.product}}</td>
+        <td>{{w.time}}</td>
+        <td>{{w.description}}</td>
+        <td>{{w.created_at |date:"d.m.Y"}}</td>
+        <td>{{w.update_at }}</td>
         <td>
               <a class="text-orange" href="{% url 'toolspass'  %}">{{ btn_update }}</a>
 <!--            <br>-->
