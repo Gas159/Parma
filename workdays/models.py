@@ -1,11 +1,14 @@
+
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from products.models import Product
+from users.models import Users
 
 
 class WorkDay(models.Model):
-    user = models.CharField(max_length=222, unique=True, verbose_name=_('Worker name'))
+    user1 = models.ForeignKey(Users, on_delete=models.CASCADE,  verbose_name=_('Worker name'))
+    # user = models.(Users, on_delete=models.CASCADE,  verbose_name=_('Worker name'))
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name=_('Product name'))
     time = models.IntegerField(verbose_name=_('Time'))
     description = models.TextField(max_length=333, verbose_name=_('Description'))
