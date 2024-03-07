@@ -33,7 +33,7 @@ class CreateTaskView(SuccessMessageMixin, LoginAuthMixin, TaskMixin,
     # Добавляем имя автора в поле author, которое не отображается в форме
     def form_valid(self, form):
         form.instance.author = self.request.user
-        print("hello")
+        print("hello1111111111111111111111111111111111111111")
         return super().form_valid(form)
         
 

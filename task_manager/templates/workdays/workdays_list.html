@@ -16,20 +16,30 @@
     <tr class="table-info">
         <th scope="col">{% trans 'ID' %}</th>
         <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Workplace' %}</th>
         <th scope="col">{% trans 'Product' %}</th>
         <th scope="col">{% trans 'Time' %}</th>
+        <th scope="col">{% trans 'Status' %}</th>
         <th scope="col">{% trans 'Description' %}</th>
         <th scope="col">{% trans 'Create date' %}</th>
         <th scope="col">{% trans 'Update date' %}</th>
+        <th></th>
 
     </tr>
     </thead>
     {% for w in workdays %}
     <tr>
-        <td>{{w.id}}</td>
-        <td>{{w.user1}}</td>
+        <td>{{ w.id }}</td>
+        <td>{{ w.user_name}}</td>
+        <td>{{ w.workplace}}</td>
         <td>{{w.product}}</td>
         <td>{{w.time}}</td>
+
+        {% if w.status %}
+        <td>{{w.status}}</td>
+        {% else %}
+            <td> </td>
+        {% endif %}
         <td>{{w.description}}</td>
         <td>{{w.created_at |date:"d.m.Y"}}</td>
         <td>{{w.update_at }}</td>
