@@ -18,9 +18,9 @@
         <th scope="col">{% trans 'Name' %}</th>
         <th scope="col">{% trans 'Number' %}</th>
         <th scope="col">{% trans 'Descriptions' %}</th>
-        <th scope="col">{% trans 'Step_1' %}</th>
-        <th scope="col">{% trans 'Step_2' %}</th>
-        <th scope="col">{% trans 'Status' %}</th>
+        <th scope="col">{% trans 'Clear_1' %}</th>
+        <th scope="col">{% trans 'Clear_2' %}</th>
+        <th scope="col">{% trans 'Clear_3' %}</th>
         <th scope="col">{% trans 'Create date' %}</th>
         <th scope="col">{% trans 'Update date' %}</th>
         <th scope="col"></th>
@@ -33,20 +33,20 @@
         <td>{{t.number}}</td>
         <td>{{t.description}}</td>
 
-        {% if t.step_1 %}
+        {% if t.status1 %}
         <td> <p color="green"> {{t.step_1}} </p> </td>
         {% else %}
         <td></td>
         {% endif %}
 
-        {% if t.step_2 %}
+        {% if t.status2 %}
         <td> <p color="green"> {{t.step_2}} </p> </td>
         {% else %}
         <td></td>
 <!--        <td><a class="text-danger"/> {{t.step_2}}</td>-->
         {% endif %}
 
-        <td>{{t.status}}</td>
+        <td>{{t.status3}}</td>
         <td>{{t.created_at |date:"d.m.Y"}}</td>
         <td>{{t.update_at }}</td>
         <td>
