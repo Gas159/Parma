@@ -6,5 +6,5 @@ class ProductsMixin:
     model = Product
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('products')
-    #fields = '__all__'
-    exclude = ['step_1', 'step_2']
+    fields = ['name', 'number', 'description']
+    #exclude = ['step_1', 'step_2']
