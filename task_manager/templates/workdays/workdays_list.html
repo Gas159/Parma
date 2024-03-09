@@ -18,31 +18,46 @@
         <th scope="col">{% trans 'Name' %}</th>
         <th scope="col">{% trans 'Workplace' %}</th>
         <th scope="col">{% trans 'Product' %}</th>
-        <th scope="col">{% trans 'Time of create' %}</th>
+        <th scope="col">{% trans 'Time of ' %}</th>
+        <th scope="col">{% trans 'Operation' %}</th>
         <th scope="col">{% trans 'Status' %}</th>
         <th scope="col">{% trans 'Description' %}</th>
         <th scope="col">{% trans 'Create date' %}</th>
         <th scope="col">{% trans 'Update date' %}</th>
         <th></th>
-
     </tr>
     </thead>
+
     {% for w in workdays %}
     <tr>
         <td>{{ w.id }}</td>
-        <td>{{ w.user_name}}</td>
+        <td>{{user.last_name}} {{user.first_name}}</td>
         <td>{{ w.workplace}}</td>
         <td>{{w.product}}</td>
-        <td>{{w.time }}</td>
+        <td><p class="centr"> {{ w.time }} ч </p></td>
 
-        {% if w.status %}
-        <td>{{w.status}}</td>
+        {% if w.operation %}
+        <td>{{w.operation}}</td>
         {% else %}
         <td></td>
         {% endif %}
+
+
+        {% if w.status %}
+        {% if w.status.name == "Выполнено" %}
+        <td><p color=green> {{w.status}} </p></td>
+        {% elif w.status.name == "В работе" %}
+        <td><p color=yellow> {{w.status}} </p></td>
+        {% else %}
+        <td><p class="text-danger" > {{w.status}} </p></td>
+        {% endif %}
+        {% else%}
+        <td> </td>
+        {% endif %}
+
         <td>{{w.description}}</td>
-        <td>{{w.created_at |date:"d.m.Y"}}</td>
-        <td>{{w.update_at }}</td>
+        <td>{{w.created_at | date:"d.m.Y"}}</td>
+        <td>{{w.update_at |date:"d.m.Y" }}</td>
         <td>
             <a class="text-orange" href="{% url 'toolspass'  %}">{{ btn_update }}</a>
             <!--            <br>-->

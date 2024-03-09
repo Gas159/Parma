@@ -18,13 +18,14 @@
         <th scope="col">{% trans 'Name' %}</th>
         <th scope="col">{% trans 'Number' %}</th>
         <th scope="col">{% trans 'Descriptions' %}</th>
-        <th scope="col">{% trans 'Operation_1' %}</th>
-        <th scope="col">{% trans 'Operation_2' %}</th>
-        <th scope="col">{% trans 'Operation_3' %}</th>
+        <th scope="col">{% trans 'Токарная чист №1' %}</th>
+        <th scope="col">{% trans 'Токарная чист №2' %}</th>
+        <th scope="col">{% trans 'Токарная чист №3' %}</th>
         <th scope="col">{% trans 'Create date' %}</th>
         <th scope="col">{% trans 'Update date' %}</th>
         <th scope="col"></th>
     </tr>
+
     </thead>
     {% for t in products %}
     <tr>
@@ -32,36 +33,68 @@
         <td>{{t.name}}</td>
         <td>{{t.number}}</td>
         <td>{{t.description | truncatechars:20 }}</td>
-<!--        <td>{% firstof t.status1 t.status2 t.status3 %}</td>-->
 
-        {% if t.status1 %}
-        <td> <p color="green"> {{t.status1}} </p> </td>
+        {% if t.clear_turning_first %}
+        {% if t.clear_turning_first.name == "Выполнено" %}
+        <td><p color="green"> {{t.clear_turning_first}} </p></td>
+        {% elif t.clear_turning_first.name == "В работе" %}
+        <td><p color="yellow"> {{t.clear_turning_first}} </p></td>
+        {% else %}
+        <td><p class="text-danger"> {{t.clear_turning_first}} </p></td>
+        {% endif %}
         {% else %}
         <td></td>
         {% endif %}
 
-        {% if t.status2 %}
-        <td> <p color="green"> {{t.status2}} </p> </td>
+        {% if t.clear_turning_second %}
+        {% if t.clear_turning_second.name == "Выполнено" %}
+        <td><p color="green"> {{ t.clear_turning_second }} </p></td>
+        {% elif s.name == "В работе" %}
+        <td><p color="yellow"> {{t.clear_turning_second}} </p></td>
+        {% else %}
+        <td><p class="text-danger"> {{t.clear_turning_second}} </p></td>
+        {% endif %}
         {% else %}
         <td></td>
         {% endif %}
 
-        {% if t.status3 %}
-        <td> <p color="green"> {{t.status3}} </p> </td>
+        {% if t.clear_turning_third %}
+        {% if t.clear_turning_third.name == "Выполнено" %}
+        <td><p color="green"> {{ t.clear_turning_third }} </p></td>
+        {% elif t.clear_turning_third.name == "В работе" %}
+        <td><p color="yellow"> {{ t.clear_turning_third }} </p></td>
+        {% else %}
+        <td><p class="text-danger"> {{ t.clear_turning_third }} </p></td>
+        {% endif %}
         {% else %}
         <td></td>
-<!--        <td><a class="text-danger"/> {{t.step_2}}</td>-->
         {% endif %}
 
 
-        <td>{{t.created_at |date:"d.m.Y"}}</td>
-        <td>{{t.update_at |date:"d.m.Y h" }}</td>
+        <td>{{t.created_at | date:"d.m.Y" }}</td>
+        <td>{{t.update_at | date:"d.m.Y h" }}</td>
         <td>
-              <a class="text-orange" href="{% url 'toolspass'  %}">{{ btn_update }}</a>
-<!--            <br>-->
-              <a  class="text-danger" href="{% url 'toolspass'  %}">{{btn_delete}}</a>
+            <a class="text-orange" href="{% url 'toolspass'  %}">{{ btn_update }}</a>
+            <!--            <br>-->
+            <a class="text-danger" href="{% url 'toolspass'  %}">{{btn_delete}}</a>
         </td>
+
+
+        <!--        {% if t.clear_turning_second %}-->
+        <!--        <td> <p color="green"> {{t.clear_turning_second}} </p> </td>-->
+        <!--        {% else %}-->
+        <!--        <td></td>-->
+        <!--        {% endif %}-->
+
+        <!--        {% if t.clear_turning_third %}-->
+        <!--        <td> <p color="green"> {{t.clear_turning_third}} </p> </td>-->
+        <!--        {% else %}-->
+        <!--        <td></td>-->
+        <!--        <td><a class="text-danger"/> {{t.step_2}}</td>-->
+
+
     </tr>
+    <!--    {% endif %}-->
     {% empty %}
     <p>Sorry, no data in this list.</p>
     {% endfor %}

@@ -1,18 +1,21 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from labels.models import Labels
 from products.models import Product
 from statuses.models import Status
 from users.models import Users
 
 
 class WorkDay(models.Model):
-    user_name = models.ForeignKey(Users, on_delete=models.DO_NOTHING, null=True, verbose_name=_('Worker name'))
+    user_name = models.ForeignKey(Users, on_delete=models.SET_NULL, null=True, verbose_name=_('Worker name'))
     workplace_name = models.CharField(max_length=222, null=True, verbose_name=_('Workplace'))
     # user = models.(Users, on_delete=models.CASCADE,  verbose_name=_('Worker name'))
-    product = models.ForeignKey(Product, on_delete=models.DO_NOTHING, verbose_name=_('Product name'))
-    time = models.IntegerField(verbose_name=_('Time of create'))
-    status = models.ForeignKey(Status, on_delete=models.DO_NOTHING, default=' ', null=True,  verbose_name=_('Status1'))
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, verbose_name=_('Product name'))
+    time = models.FloatField(verbose_name=_('Time of create'))
+    operation = models.ForeignKey(Labels, on_delete=models.SET_NULL, blank=True, null=True,
+                                  verbose_name=_('Operation'))
+    status = models.ForeignKey(Status, on_delete=models.SET_NULL, null=True, verbose_name=_('Status'))
     description = models.TextField(max_length=333, blank=True, verbose_name=_('Description'))
     # workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT,
     #                               null=True, blank=True, verbose_name=_('Workplace'))
