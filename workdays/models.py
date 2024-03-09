@@ -11,7 +11,7 @@ class WorkDay(models.Model):
     workplace_name = models.CharField(max_length=222, null=True, verbose_name=_('Workplace'))
     # user = models.(Users, on_delete=models.CASCADE,  verbose_name=_('Worker name'))
     product = models.ForeignKey(Product, on_delete=models.DO_NOTHING, verbose_name=_('Product name'))
-    time = models.IntegerField(verbose_name=_('Time'))
+    time = models.IntegerField(verbose_name=_('Time of create'))
     status = models.ForeignKey(Status, on_delete=models.DO_NOTHING, default=' ', null=True,  verbose_name=_('Status1'))
     description = models.TextField(max_length=333, blank=True, verbose_name=_('Description'))
     # workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT,

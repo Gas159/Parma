@@ -49,17 +49,18 @@
                  <li class="nav-item active">
                     <a class="nav-link" href="{% url 'workdays' %}">{% translate 'Workdays' %}
                         <span class="sr-only">(current)</span></a></li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'products' %}">{% translate 'Products' %}
+                        <span class="sr-only">(current)</span></a></li>
+
+                 {% if request.user.username == 'gas' or request.user.username == 'test_user1' %}
                  <li class="nav-item active">
                     <a class="nav-link" href="{% url 'workplaces' %}">{% translate 'Workplace' %}
                         <span class="sr-only">(current)</span></a></li>
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'tools' %}">{% translate 'Tools' %}
                         <span class="sr-only">(current)</span></a></li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'products' %}">{% translate 'Products' %}
-                        <span class="sr-only">(current)</span></a></li>
 
-                {% if request.user.username == '123' or 'gas' %}
                <li class="nav-item active">
                    <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}
                         <span class="sr-only">(current)</span></a></li>

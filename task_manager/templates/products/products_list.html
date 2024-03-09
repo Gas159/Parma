@@ -31,7 +31,8 @@
         <td>{{t.id}}</td>
         <td>{{t.name}}</td>
         <td>{{t.number}}</td>
-        <td>{{t.description}}</td>
+        <td>{{t.description | truncatechars:20 }}</td>
+<!--        <td>{% firstof t.status1 t.status2 t.status3 %}</td>-->
 
         {% if t.status1 %}
         <td> <p color="green"> {{t.status1}} </p> </td>
