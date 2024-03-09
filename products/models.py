@@ -9,14 +9,17 @@ from workplaces.models import Workplace
 class Product(models.Model):
     # unique = True
     name = models.CharField(max_length=222, verbose_name=_('Product name'))
-    number = models.CharField(max_length=222, verbose_name=_('Product number'))
+    number = models.IntegerField( verbose_name=_('Product number'))
     description = models.TextField(max_length=333, blank=True, verbose_name=_('Description'))
     # step_1 = models.BooleanField(blank=True, default=False, verbose_name=_('Step_1'))
-    #step_1 = models.CharField(max_length=222, blank=True, verbose_name=_('Step_1'))
-    #step_2 = models.BooleanField(default='', verbose_name=_('Step_2'))
-    status1 = models.ForeignKey(Status, on_delete=models.CASCADE, blank=True, null=True, verbose_name=_('Clear_1'))
-    status2 = models.ForeignKey(Status, on_delete=models.CASCADE, blank=True, null=True, verbose_name=_('Clear_2'))
-    status3 = models.ForeignKey(Status, on_delete=models.CASCADE, blank=True, null=True, verbose_name=_('Clear_3'))
+    # step_1 = models.CharField(max_length=222, blank=True, verbose_name=_('Step_1'))
+    # step_2 = models.BooleanField(default='', verbose_name=_('Step_2'))
+    status1 = models.ForeignKey(Status, on_delete=models.DO_NOTHING, blank=True, null=True,
+                                related_name='status1', verbose_name=_('status1'))
+    status2 = models.ForeignKey(Status, on_delete=models.DO_NOTHING, blank=True, null=True,
+                                related_name='status2', verbose_name=_('status2'))
+    status3 = models.ForeignKey(Status, on_delete=models.DO_NOTHING, blank=True, null=True,
+                                related_name='status3', verbose_name=_('status3'))
     # workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT,
     #                               null=True, blank=True, verbose_name=_('Workplace'))
     # in_supply = models.CharField(max_length=222, null=True, blank=True, default='В наличии')

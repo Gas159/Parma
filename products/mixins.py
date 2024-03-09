@@ -7,4 +7,4 @@ class ProductsMixin:
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('products')
     fields = ['name', 'number', 'description']
-    #exclude = ['step_1', 'step_2']
+    # exclude = ['step_1', 'step_2']
