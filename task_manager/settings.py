@@ -105,7 +105,8 @@ AUTH_USER_MODEL = 'users.Users'
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'US/Pacific'
+# USE_TZ = False
+TIME_ZONE = 'Europe/Moscow'
 USE_I18N = True
 USE_TZ = True
 

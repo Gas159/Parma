@@ -31,7 +31,7 @@
     {% for w in workdays %}
     <tr>
         <td>{{ w.id }}</td>
-        <td>{{user.last_name}} {{user.first_name}}</td>
+        <td>{{w.user_name}} </td>
         <td>{{ w.workplace}}</td>
         <td>{{w.product}}</td>
         <td><p class="centr"> {{ w.time }} ч </p></td>

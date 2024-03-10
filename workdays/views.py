@@ -38,6 +38,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
 
     def form_valid(self, form):
         form.instance.user_name = self.request.user
+        # form.instance.author = self.request.user
 
         print("hello1111111111111111111111111111111111111111")
         # status = form.instance.status
@@ -50,11 +51,11 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
 
             # product = Product.objects.get(id=product_id)
             setattr(product, operation_name, status)
-
             product.save()
-            print(status, type(status), dir(status))
-            g = getattr(product, operation_name)
-            print(g, type(g))
+
+            # print(status, type(status), dir(status))
+            # g = getattr(product, operation_name)
+            # print(g, type(g))
 
             # print(
             #     f'operation={workday_operation}, type={type(workday_operation)},'
@@ -116,6 +117,8 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
             print("Объект не сушествует")
         except MultipleObjectsReturned:
             print("Найдено более одного объекта")
+        except:
+            print("Some went wrong!")
 
         # status1 = form.cleaned_data.get('status')
         # status2 = status1.id
