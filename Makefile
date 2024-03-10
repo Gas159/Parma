@@ -32,8 +32,9 @@ export:
 
 # make translate messages commands
 messages:
-		django-admin makemessages --ignore="static" --ignore=".env"  -l ru
-
+		django-admin makemessages --ignore="static" --ignore=".env" --ignore="venv" -l ru
+mes1:
+		django-admin makemessages --ignore="static" --ignore=".env" --ignore="venv"  -a #update all
 compilemess:
 		django-admin compilemessages
 
