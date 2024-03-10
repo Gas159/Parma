@@ -25,7 +25,7 @@ class WorkdaysListView(LoginAuthMixin, WorkdayMixin, ListView):
     context_object_name = 'workdays'
     # fields = ['name', 'description', 'workplace']
     extra_context = {
-        'title': _('Workdays'), 'btn_create': _('Create Workdays'),
+        'title': _('Workdays'), 'btn_create': _('Create Workday'),
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
         'menu': ['t.clear_turning_first', 't.clear_turning_second', 't.clear_turning_second']
     }
@@ -33,8 +33,8 @@ class WorkdaysListView(LoginAuthMixin, WorkdayMixin, ListView):
 
 class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, CreateView):
     template_name = 'workdays/workday_form.html'
-    success_message = _("Workdays created successfully")
-    extra_context = {'title': _('Create workdays'), 'btn': _('Create')}
+    success_message = _("Workday created successfully")
+    extra_context = {'title': _('Create workday'), 'btn': _('Create')}
 
     def form_valid(self, form):
         form.instance.user_name = self.request.user
