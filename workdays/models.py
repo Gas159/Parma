@@ -5,13 +5,14 @@ from labels.models import Labels
 from products.models import Product
 from statuses.models import Status
 from users.models import Users
+from workplaces.models import Workplace
 
 
 class WorkDay(models.Model):
     user_name = models.ForeignKey(Users, on_delete=models.SET_NULL,
                                   null=True, verbose_name=_('Worker name'))
-    workplace_name = models.CharField(max_length=222, null=True,
-                                      verbose_name=_('Workplace'))
+    workplace_name = models.ForeignKey(Workplace, on_delete=models.SET_NULL,
+                                       null=True, verbose_name=_('Workplace'))
     # user = models.(Users, on_delete=models.CASCADE,  verbose_name=_('Worker name'))
     product = models.ForeignKey(Product, on_delete=models.SET_NULL,
                                 null=True, verbose_name=_('Product name'))

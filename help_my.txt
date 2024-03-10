@@ -14,3 +14,14 @@ rm /home/<username>/.local/bin/poetry
 sudo rm /usr/bin/poetry
 rm -rf ~/.poetry
 
+
+ssh root@45.9.73.213
+Доменное имя: vm2650604.firstbyte.club
+IP-адрес сервера: 45.9.73.213
+Пользователь: root
+ 45.9.73.213:8000
+
+netstat -lnp
+
+{% if request.user.username == 'gas' or request.user.username == 'test_user1' %}
+{% if request.user.is_authenticated %}
