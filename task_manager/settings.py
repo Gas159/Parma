@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'tools.apps.ToolsConfig',
     'products.apps.ProductsConfig',
     'workdays.apps.WorkdaysConfig',
+    'overtimes.apps.OvertimeConfig',
 
 ]
 

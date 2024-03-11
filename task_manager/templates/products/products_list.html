@@ -49,7 +49,7 @@
         {% if t.clear_turning_second %}
         {% if t.clear_turning_second.name == "Выполнено" %}
         <td><p color="green"> {{ t.clear_turning_second }} </p></td>
-        {% elif s.name == "В работе" %}
+        {% elif t.clear_turning_second.name == "В работе" %}
         <td><p color="yellow"> {{t.clear_turning_second}} </p></td>
         {% else %}
         <td><p class="text-danger"> {{t.clear_turning_second}} </p></td>
