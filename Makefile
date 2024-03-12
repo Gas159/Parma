@@ -86,7 +86,7 @@ PORT ?= 8000
 db:
 	poetry shell
 
-	poetry run gunicorn -w 2 --bind 0.0.0.0:$(PORT) task_manager.wsgi --timeout 120
+	poetry run gunicorn -w 3 --bind 0.0.0.0:$(PORT) task_manager.wsgi --timeout 120
 
 setup:
 	poetry install

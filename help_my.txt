@@ -2,6 +2,7 @@
 
 python manage.py startapp название_приложения
 python manage.py creatsuperuser 'name'
+git reset --hard origin/main
 
 
 # install
