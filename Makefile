@@ -85,8 +85,8 @@ lang_check:
 PORT ?= 8000
 db:
 	poetry shell
-	python3 manage.py migrate
-	poetry run gunicorn -w 3 --bind 0.0.0.0:$(PORT) task_manager.wsgi
+
+	poetry run gunicorn -w 2 --bind 0.0.0.0:$(PORT) task_manager.wsgi --timeout 120
 
 setup:
 	poetry install
