@@ -1,4 +1,5 @@
 
+
 python manage.py startapp название_приложения
 python manage.py creatsuperuser 'name'
 
@@ -22,6 +23,19 @@ IP-адрес сервера: 45.9.73.213
  45.9.73.213:8000
 
 netstat -lnp
+nproc
 
 {% if request.user.username == 'gas' or request.user.username == 'test_user1' %}
 {% if request.user.is_authenticated %}
+
+
+Ответ: Для того, чтоб удалить untracked файл можно воспользоваться командой git clean.
+Сначала следует выполнить git clean -n, это покажет файлы, подлежащие удалению.
+Затем выполнить само удаление командой git clean -f.
+
+class TTest(models.Model):
+    t1 = models.IntegerField()
+    t2 = models.IntegerField()
+
+    class Meta:
+        unique_together = ('t1', 't2')
