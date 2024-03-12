@@ -45,11 +45,11 @@
 
         {% if w.status %}
         {% if w.status.name == "Выполнено" %}
-        <td><p color=green> {{w.status}} </p></td>
+        <td><p class="btn btn-outline-success"> {{w.status}} </p></td>
         {% elif w.status.name == "В работе" %}
-        <td><p color=yellow> {{w.status}} </p></td>
+        <td><p class="btn btn-outline-warning"> {{w.status}} </p></td>
         {% else %}
-        <td><p class="text-danger" > {{w.status}} </p></td>
+        <td><p class="btn btn-outline-danger" > {{w.status}} </p></td>
         {% endif %}
         {% else%}
         <td> </td>

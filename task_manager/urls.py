@@ -34,6 +34,8 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('workdays/', include('workdays.urls')),
     path('overtimes/', include('overtimes.urls')),
+    # path('overtimes/create_overtime/', include('overtimes.urls')),
+    # path('create_workday/', include('workdays.urls')),
 
 
 ]

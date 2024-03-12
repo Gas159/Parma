@@ -36,11 +36,11 @@
 
         {% if t.clear_turning_first %}
         {% if t.clear_turning_first.name == "Выполнено" %}
-        <td><p color="green"> {{t.clear_turning_first}} </p></td>
+        <td><p class="btn btn-success"> {{t.clear_turning_first}} </p></td>
         {% elif t.clear_turning_first.name == "В работе" %}
-        <td><p color="yellow"> {{t.clear_turning_first}} </p></td>
+        <td><p class="btn btn-outline-warning"> {{t.clear_turning_first}} </p></td>
         {% else %}
-        <td><p class="text-danger"> {{t.clear_turning_first}} </p></td>
+        <td><p class="btn btn-outline-danger"> {{t.clear_turning_first}} </p></td>
         {% endif %}
         {% else %}
         <td></td>
@@ -48,11 +48,11 @@
 
         {% if t.clear_turning_second %}
         {% if t.clear_turning_second.name == "Выполнено" %}
-        <td><p color="green"> {{ t.clear_turning_second }} </p></td>
+        <td><p class="btn btn-success"> {{ t.clear_turning_second }} </p></td>
         {% elif t.clear_turning_second.name == "В работе" %}
-        <td><p color="yellow"> {{t.clear_turning_second}} </p></td>
+        <td><p class="btn btn-outline-warning"> {{t.clear_turning_second}} </p></td>
         {% else %}
-        <td><p class="text-danger"> {{t.clear_turning_second}} </p></td>
+        <td><p class="btn btn-outline-danger"> {{t.clear_turning_second}} </p></td>
         {% endif %}
         {% else %}
         <td></td>
@@ -60,11 +60,11 @@
 
         {% if t.clear_turning_third %}
         {% if t.clear_turning_third.name == "Выполнено" %}
-        <td><p color="green"> {{ t.clear_turning_third }} </p></td>
+        <td><p class="btn btn-success"> {{ t.clear_turning_third }} </p></td>
         {% elif t.clear_turning_third.name == "В работе" %}
-        <td><p color="yellow"> {{ t.clear_turning_third }} </p></td>
+        <td><p class="btn btn-outline-warning"> {{ t.clear_turning_third }} </p></td>
         {% else %}
-        <td><p class="text-danger"> {{ t.clear_turning_third }} </p></td>
+        <td><p class="btn btn-outline-danger"> {{ t.clear_turning_third }} </p></td>
         {% endif %}
         {% else %}
         <td></td>

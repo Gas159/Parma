@@ -24,6 +24,12 @@ class OverTimeListView(LoginAuthMixin, OverTimeMixin, ListView):
         'title': _('Overtimes  ' + str(datetime.now().strftime("%B %Y"))), 'btn_create': _('Create overtime'),
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
     }
+    def get_queryset(self):
+        if self.request.user.username == 'boss':
+            return OverTime.objects.all()
+        else:
+            return OverTime.objects.filter(user=self.request.user)
+
 
 
 class CreateOvertimeView(SuccessMessageMixin, LoginAuthMixin, OverTimeMixin, CreateView):
@@ -34,21 +40,19 @@ class CreateOvertimeView(SuccessMessageMixin, LoginAuthMixin, OverTimeMixin, Cre
     error_message = _('FigVam')
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        user = self.request.user
+        form.instance.user = user
         try:
-            user = self.request.user
-            user_check = OverTime.objects.get(user=user)
-            if not user_check:
-                messages.error(
-                    self.request, _('Your record is exist. Please click "Update" button. ')
-                )
-                return redirect('overtimes')
+            if OverTime.objects.filter(user=user).exists():
+                OverTime.objects.get(user=self.request.user).delete()
+                return super().form_valid(form)
             else:
-                user_check.delete()
                 return super().form_valid(form)
         except ObjectDoesNotExist:
-            print('2111111111111')
-            return super().form_valid(form)
+            print('Some went wrong form_valid')
+
+
+
 
     # def form_valid(self, form):
     #     form.instance.user = self.request.user

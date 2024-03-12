@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.utils.translation import gettext as _
@@ -8,7 +10,8 @@ from django.views.generic import TemplateView
 
 class IndexView(SuccessMessageMixin, TemplateView):
     template_name = 'index.html'
-    extra_context = {'title': _('User'), 'btn': _('Create')}
+    extra_context = {'title': _('User'), 'btn': _('Create'),
+                     'date': _(str((datetime.now().strftime('%B %Y'))))}
 
 
 class UserLoginView(SuccessMessageMixin, LoginView):
