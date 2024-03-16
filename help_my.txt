@@ -1,4 +1,4 @@
-й
+й1
 
 python manage.py startapp название_приложения
 python manage.py creatsuperuser 'name'
