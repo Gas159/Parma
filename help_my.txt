@@ -3,6 +3,7 @@
 python manage.py startapp название_приложения
 python manage.py creatsuperuser 'name'
 git reset --hard origin/main
+python3 manage.py migrate --fake --> make mig
 
 
 # install
@@ -28,7 +29,7 @@ nproc
 
 {% if request.user.username == 'gas' or request.user.username == 'test_user1' %}
 {% if request.user.is_authenticated %}
-
+  {% if request.user.is_authenticated %}
 
 Ответ: Для того, чтоб удалить untracked файл можно воспользоваться командой git clean.
 Сначала следует выполнить git clean -n, это покажет файлы, подлежащие удалению.
@@ -40,3 +41,6 @@ class TTest(models.Model):
 
     class Meta:
         unique_together = ('t1', 't2')
+
+ # create CostomUser
+ https://www.fomfus.com/articles/how-to-use-email-as-username-for-django-authentication-removing-the-username/

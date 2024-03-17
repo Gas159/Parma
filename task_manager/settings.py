@@ -119,8 +119,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-# DEFAULT_AUTO_FIELD = 'django.db.models.py.BigAutoField'
-# DEFAULT_AUTO_FIELD = 'django.db.models.py.BigAutoField'
+# ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+# ACCOUNT_USERNAME_REQUIRED = False
+# ACCOUNT_AUTHENTICATION_METHOD = 'email'
+#
+# ACCOUNT_EMAIL_REQUIRED = True
+
 
 ROLLBAR = {
     'access_token': os.getenv('ACCESS_TOKEN'),

@@ -7,14 +7,17 @@ from django.contrib.auth import get_user_model
 from django.contrib.messages.views import SuccessMessageMixin
 
 from task_manager.mixins import LoginAuthMixin
-from users.forms import RegisterUserForm
+# from users.forms import RegisterUserForm
 from users.models import Users
+from .forms import RegisterUserForm
 from .mixins import UserMixin
 
 
 class UserView(ListView):
     template_name = 'users/users.html'
     model = Users
+    # fields = ['email', 'first_name', 'last_name', 'password']
+    # fields = ['email', 'first_name', 'last_name', 'password']
     context_object_name = 'users'
     extra_context = {'title': _('Users'), 'btn_update': _('Update'), 'btn_delete': _('Delete')}
     redirect_field_name = 'home'
@@ -22,6 +25,8 @@ class UserView(ListView):
 
 class RegisterUserView(SuccessMessageMixin, CreateView):
     form_class = RegisterUserForm
+    model = Users
+    # fields = ['email']
     template_name = 'users/register.html'
     success_url = reverse_lazy('user_login')
     success_message = _('User successfully registered')
@@ -31,8 +36,10 @@ class RegisterUserView(SuccessMessageMixin, CreateView):
 
 
 class UpdateUserView(LoginAuthMixin, UserMixin, UpdateView):
-    model = get_user_model()
-    form_class = RegisterUserForm
+    model = Users
+    # fields = ['email', 'first_name', 'last_name', 'password']
+    # model = get_user_model()
+    # form_class = RegisterUserForm
     template_name_suffix = '_update_form'
     success_url = reverse_lazy('users')
     success_message = _('User successfully changed')
@@ -42,6 +49,7 @@ class UpdateUserView(LoginAuthMixin, UserMixin, UpdateView):
 
 class DeleteUserView(LoginAuthMixin, UserMixin, DeleteView):
     model = Users
+    fields = ['email', 'first_name', 'last_name', 'password']
     success_url = reverse_lazy('users')
     success_message = _('User successfully deleted')
     extra_context = {'title': _('Delete user'),

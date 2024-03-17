@@ -53,7 +53,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'users' %}">{% translate 'Emploeys'%}
                         <span class="sr-only">(current)</span></a></li>
-                {% if request.user.is_authenticated %}
                  <li class="nav-item active">
                     <a class="nav-link" href="{% url 'workdays' %}">{% translate 'Workdays' %}
                         <span class="sr-only">(current)</span></a></li>
@@ -73,7 +72,7 @@
                         <span class="sr-only">(current)</span></a></li>
 
 
-                {% if request.user.username == 'gas159' or request.user.username == 'dev' %}
+
                <li class="nav-item active">
                    <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}
                         <span class="sr-only">(current)</span></a></li>
@@ -83,13 +82,12 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'labels' %}">{% translate 'Labels' %}
                         <span class="sr-only">(current)</span></a></li>
-                {% endif %}
-                {% endif %}
+
             </ul>
 
             <ul class="navbar-nav">
                 {% if request.user.is_authenticated %}
-                <li class="nav-item nav-link "> {{user.username}}</li>
+                <li class="nav-item nav-link "> {{user.first_name}}</li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}">
                     {% translate "Logout" %}</a></li>
                 {% else %}

@@ -12,23 +12,25 @@
 <table class="table table-striped ">
     <thead>
     <tr class="table-info">
-        <th scope="col">ID</th>
-        <th scope="col">{% trans 'Login_name' %}</th>
+
+        <th scope="col">{% trans 'ID' %}</th>
         <th scope="col">{% trans 'Fullname' %}</th>
         <th scope="col">{% trans 'Created date' %}</th>
         <th scope="col"></th>
     </tr>
     </thead>
+
     {% for user in users %}
     <tr>
+
         <td>{{user.id}}</td>
-        <td>{{user.username}}</td>
-        <td>{{user.last_name}} {{user.first_name|truncatechars_html:10 }} </td>
+        <td>{{user | truncatechars_html:12 }}</td>
         <td>{{user.date_joined}}</td>
+
 
         <td>
             <a class="text-orange" href="{% url 'update_user' user.pk %}">{{ btn_update }}</a>
-<!--            <br>-->
+            <!--            <br>-->
             <a class="text-danger" href="{% url 'delete_user' user.pk %}">{{ btn_delete }}</a>
 
         </td>
