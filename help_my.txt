@@ -1,4 +1,7 @@
-
+ps auxw | grep runserver 
+pkill -f runserver
+lsof -t -i tcp:8000 | xargs kill -9
+kill PID
 
 python manage.py startapp название_приложения
 python manage.py creatsuperuser 'name'
