@@ -26,12 +26,12 @@ class OverTimeListView( OverTimeMixin, ListView):
 
     def get_queryset(self):
         # try:
-        if self.request.user.username == 'boss':
-            return OverTime.objects.all()
-        elif not self.request.user:
-            return None
-        else:
-            return OverTime.objects.filter(user=self.request.user)
+        # if self.request.user.username == 'boss':
+        #     return OverTime.objects.all()
+        # elif not self.request.user:
+        #     return None
+        # else:
+        #     return OverTime.objects.filter(user=self.request.user)
         # except:
 
             # messages.error(request, self.error_message)
