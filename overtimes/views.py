@@ -24,7 +24,7 @@ class OverTimeListView( OverTimeMixin, ListView):
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
     }
 
-    def get_queryset(self):
+    # def get_queryset(self):
         # try:
         # if self.request.user.username == 'boss':
         #     return OverTime.objects.all()
