@@ -50,6 +50,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
             operation_name = operations[form.instance.operation.name]
             status = form.instance.status
             product = form.instance.product
+            print(operation_name, status, product)
 
             # operation_name = form.instance.operation.name
             # status = form.instance.status
@@ -60,7 +61,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
             product.save()
         except:
             # print("Some went wrong!")
-            raise Exception('I dont know what need write here')
+            raise Exception('I dont know what need write here. Зовите Рината)')
 
         return super().form_valid(form)
         # print(status, type(status), dir(status))
@@ -94,7 +95,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
         # exec('Product.objects.get(id=product_id)' + operation_name = status_value)
         # print(product1, type(product1))
 
-        t.product_dict[operation_name] = Status.objects.get(id=status_id)
+        # t.product_dict[operation_name] = Status.objects.get(id=status_id)
         # print(f'operation name = {operation_name}, {type(operation_name)}')
         # print(f'product={p}, {type(p)}')
 

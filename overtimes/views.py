@@ -28,7 +28,7 @@ class OverTimeListView( OverTimeMixin, ListView):
         # try:
         if self.request.user.username == 'boss':
             return OverTime.objects.all()
-        elif not self.request.user.username:
+        elif not self.request.user:
             return None
         else:
             return OverTime.objects.filter(user=self.request.user)
