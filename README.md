@@ -7,7 +7,7 @@
 
 
 # Task Manager
-https://python-project-52-production-b3b8.up.railway.app/
+http://45.9.73.213:8000/users/
 
 _Register, create, delete and edit tasks, labels and statuses, assign executors to tasks. Filter tasks by tags, statuses, and executors, or filter only your created tasks._
 
@@ -16,7 +16,7 @@ A simple web application for task management. Implemented in the [Django 4.1.5](
 [Rollbar](https://rollbar.com) is connected (service for tracking and collecting errors).
 
 ## Demo
-Just click and try to use **[DEMO on Railway](https://python-project-52-production-b3b8.up.railway.app/)**
+Just click and try to use **[DEMO on Railway](http://45.9.73.213:8000/users/)**
 
 <hr> <hr/>
 
