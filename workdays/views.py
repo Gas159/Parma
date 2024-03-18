@@ -50,7 +50,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
             operation_name = operations[form.instance.operation.name]
             status = form.instance.status
             product = form.instance.product
-            print(operation_name, status, product)
+            #print(operation_name, status, product)
 
             # operation_name = form.instance.operation.name
             # status = form.instance.status
