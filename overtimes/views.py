@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
+from django.shortcuts import redirect
 
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView
@@ -48,13 +49,15 @@ class CreateOvertimeView(SuccessMessageMixin, LoginAuthMixin, OverTimeMixin, Cre
     def form_valid(self, form):
         user = self.request.user
         form.instance.user = user
-
-        if OverTime.objects.filter(user=user).exists():
-            OverTime.objects.get(user=self.request.user).delete()
-            # raise Exception('I dont know what need write here')
-            return super().form_valid(form)
-        else:
-            return super().form_valid(form)
+        try:
+            if OverTime.objects.filter(user=user).exists():
+                OverTime.objects.get(user=self.request.user).delete()
+                # raise Exception('I dont know what need write here')
+                return super().form_valid(form)
+            else:
+                return super().form_valid(form)
+        except ValueError:
+            return redirect('user_login')
 
     # def form_valid(self, form):
     #     form.instance.user = self.request.user

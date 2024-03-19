@@ -43,7 +43,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
         # status = form.instance.status
         # status1 = form.cleaned_data['status']
         operations = {"Первая чистовая операция": 'clear_turning_first',
-                      "Вторая чистовая операция": 'clear_turning_second,',
+                      "Вторая чистовая операция": 'clear_turning_second',
                       'Третья чистовая операция': 'clear_turning_third'}
         try:
 
@@ -59,8 +59,9 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
             # product = Product.objects.get(id=product_id)
             setattr(product, operation_name, status)
             product.save()
+        except ValueError:
+            return redirect('user_login')
         except:
-            # print("Some went wrong!")
             raise Exception('I dont know what need write here. Зовите Рината)')
 
         return super().form_valid(form)
