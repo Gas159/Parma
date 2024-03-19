@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-10 18:09+0500\n"
+"POT-Creation-Date: 2024-03-19 15:13+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr "Метка"
 msgid "=Labels="
 msgstr "Метки"
 
-#: labels/views.py:11 task_manager/templates/base.html:79
+#: labels/views.py:11 task_manager/templates/base.html:83
 #: task_manager/templates/tasks/task.html:36 tasks/models.py:19
 msgid "Labels"
 msgstr "Метки"
@@ -39,21 +39,21 @@ msgstr "Метки"
 msgid "Create label"
 msgstr "Создать метку"
 
-#: labels/views.py:11 labels/views.py:26 products/views.py:22
-#: statuses/views.py:15 statuses/views.py:28
+#: labels/views.py:11 labels/views.py:26 overtimes/views.py:25
+#: products/views.py:22 statuses/views.py:15 statuses/views.py:28
 #: task_manager/templates/tasks/task.html:51
 #: task_manager/templates/users/pass_change.html:11
 #: task_manager/templates/workplaces/workplace.html:48 tasks/views.py:14
-#: tasks/views.py:20 tasks/views.py:44 tools/views.py:20 users/views.py:19
-#: users/views.py:40 workdays/views.py:29 workplaces/views.py:17
+#: tasks/views.py:20 tasks/views.py:44 tools/views.py:20 users/views.py:22
+#: users/views.py:47 workdays/views.py:29 workplaces/views.py:17
 #: workplaces/views.py:30
 msgid "Update"
 msgstr "Изменить"
 
-#: labels/views.py:12 products/views.py:22 statuses/views.py:15
-#: task_manager/templates/tasks/task.html:53
+#: labels/views.py:12 overtimes/views.py:25 products/views.py:22
+#: statuses/views.py:15 task_manager/templates/tasks/task.html:53
 #: task_manager/templates/workplaces/workplace.html:50 tasks/views.py:15
-#: tasks/views.py:21 tools/views.py:20 users/views.py:19 workdays/views.py:29
+#: tasks/views.py:21 tools/views.py:20 users/views.py:22 workdays/views.py:29
 #: workplaces/views.py:18 workplaces/views.py:30
 msgid "Delete"
 msgstr "Удалить"
@@ -66,9 +66,9 @@ msgstr "Метка успешно создана"
 msgid "New Label"
 msgstr "Создать метку"
 
-#: labels/views.py:20 products/views.py:27 statuses/views.py:22
-#: task_manager/views.py:11 tasks/views.py:31 tools/views.py:25
-#: workdays/views.py:37 workplaces/views.py:37
+#: labels/views.py:20 overtimes/views.py:46 products/views.py:27
+#: statuses/views.py:22 task_manager/views.py:13 tasks/views.py:31
+#: tools/views.py:25 workdays/views.py:38 workplaces/views.py:37
 msgid "Create"
 msgstr "Создать"
 
@@ -92,9 +92,46 @@ msgstr "Невозможно удалить метку, потому что он
 msgid "Delete label"
 msgstr "Удалить метку"
 
-#: labels/views.py:34 statuses/views.py:33 tasks/views.py:51 users/views.py:48
+#: labels/views.py:34 statuses/views.py:33 tasks/views.py:51 users/views.py:56
 msgid "yes, delete"
 msgstr "Да, удалить"
+
+#: overtimes/mixins.py:21
+msgid "Your record is exist. Please click \"Update\" button. "
+msgstr "Фигня какая то"
+
+#: overtimes/models.py:9 workdays/models.py:13
+msgid "Worker name"
+msgstr "Имя пользователя"
+
+#: overtimes/models.py:10
+#: task_manager/templates/overtimes/overtimes_list.html:19
+msgid "Overtime"
+msgstr "Переработка"
+
+#: overtimes/models.py:19
+msgid "-=Overtime=-"
+msgstr "Переработка"
+
+#: overtimes/views.py:24
+msgid "Overtimes  "
+msgstr "Переработки"
+
+#: overtimes/views.py:24
+msgid "Create overtime"
+msgstr "Переработка"
+
+#: overtimes/views.py:44
+msgid "Overtime created successfully"
+msgstr "Успешно создана"
+
+#: overtimes/views.py:46
+msgid "Create Overtime"
+msgstr "Переработка"
+
+#: overtimes/views.py:47
+msgid "FigVam"
+msgstr "блаб ла"
 
 #: products/models.py:11 workdays/models.py:18
 msgid "Product name"
@@ -132,7 +169,7 @@ msgstr "Статус"
 msgid "-=Products=-"
 msgstr ""
 
-#: products/views.py:21 task_manager/templates/base.html:61
+#: products/views.py:21 task_manager/templates/base.html:60
 msgid "Products"
 msgstr "Продукция"
 
@@ -156,7 +193,7 @@ msgstr "Статус"
 msgid "=Statuses="
 msgstr "Статусы"
 
-#: statuses/views.py:14 task_manager/templates/base.html:73
+#: statuses/views.py:14 task_manager/templates/base.html:77
 msgid "Statuses"
 msgstr "Статусы"
 
@@ -188,10 +225,6 @@ msgstr "Удаление статуса"
 msgid "Can't delete status because it's in use"
 msgstr "Невозможно удалить метку, потому что она используется"
 
-#: task_manager/mixins.py:12
-msgid "You are not authorized! Please sign in."
-msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
-
 #: task_manager/templates/base.html:42
 msgid "Glavnaya Stranica"
 msgstr "Главная страница"
@@ -200,49 +233,54 @@ msgstr "Главная страница"
 msgid "Emploeys"
 msgstr "Персонал"
 
-#: task_manager/templates/base.html:58 workdays/views.py:28
+#: task_manager/templates/base.html:57 workdays/views.py:28
 msgid "Workdays"
 msgstr "Смены"
 
-#: task_manager/templates/base.html:66
+#: task_manager/templates/base.html:65
 #: task_manager/templates/tools/tools_list.html:20
 #: task_manager/templates/workdays/workdays_list.html:19 tools/models.py:11
 #: workdays/models.py:15 workplaces/views.py:17
 msgid "Workplace"
 msgstr "Рабочее место"
 
-#: task_manager/templates/base.html:69
+#: task_manager/templates/base.html:68
 #: task_manager/templates/workplaces/workplace.html:22
 #: task_manager/templates/workplaces/workplace.html:31 tools/views.py:19
 msgid "Tools"
 msgstr "Инструменты"
 
-#: task_manager/templates/base.html:76
+#: task_manager/templates/base.html:71
+msgid "Overtimes"
+msgstr "Переработки"
+
+#: task_manager/templates/base.html:80
 #: task_manager/templates/tasks/task_list.html:11 tasks/views.py:20
 msgid "Tasks"
 msgstr "Задачи"
 
-#: task_manager/templates/base.html:88
+#: task_manager/templates/base.html:92
 msgid "Logout"
 msgstr "Выход"
 
-#: task_manager/templates/base.html:91 task_manager/templates/login.html:7
+#: task_manager/templates/base.html:95 task_manager/templates/login.html:7
 msgid "Login"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:93
+#: task_manager/templates/base.html:97
 msgid "Registration"
 msgstr "Регистрация"
 
-#: task_manager/templates/base.html:113
+#: task_manager/templates/base.html:117
 msgid "This project on GitHub"
 msgstr "Этот проект на гитхабе"
 
-#: task_manager/templates/base.html:118
+#: task_manager/templates/base.html:122
 msgid "More projects"
 msgstr "БОльше проектов"
 
 #: task_manager/templates/labels/labels_list.html:22
+#: task_manager/templates/overtimes/overtimes_list.html:18
 #: task_manager/templates/products/products_list.html:18
 #: task_manager/templates/statuses/statuses.html:18
 #: task_manager/templates/tasks/task_list.html:32
@@ -261,9 +299,28 @@ msgstr "Создано"
 msgid "Log in"
 msgstr "Войти"
 
+#: task_manager/templates/overtimes/overtimes_list.html:20
+#: task_manager/templates/products/products_list.html:24
+#: task_manager/templates/statuses/statuses.html:19
+#: task_manager/templates/tools/tools_list.html:22
+#: task_manager/templates/workdays/workdays_list.html:25
+#: task_manager/templates/workplaces/workplaces_list.html:20
+msgid "Create date"
+msgstr "Дата создания"
+
+#: task_manager/templates/overtimes/overtimes_list.html:21
+#: task_manager/templates/products/products_list.html:25
+#: task_manager/templates/statuses/statuses.html:20
+#: task_manager/templates/tools/tools_list.html:23
+#: task_manager/templates/workdays/workdays_list.html:26
+#: task_manager/templates/workplaces/workplaces_list.html:21
+msgid "Update date"
+msgstr "Дата обновления"
+
 #: task_manager/templates/products/products_list.html:17
 #: task_manager/templates/statuses/statuses.html:17
 #: task_manager/templates/tools/tools_list.html:17
+#: task_manager/templates/users/users.html:16
 #: task_manager/templates/workdays/workdays_list.html:17
 #: task_manager/templates/workplaces/workplaces_list.html:17
 msgid "ID"
@@ -284,22 +341,6 @@ msgstr "Токарная чист №2"
 #: task_manager/templates/products/products_list.html:23
 msgid "Токарная чист №3"
 msgstr "Токарная чист №3"
-
-#: task_manager/templates/products/products_list.html:24
-#: task_manager/templates/statuses/statuses.html:19
-#: task_manager/templates/tools/tools_list.html:22
-#: task_manager/templates/workdays/workdays_list.html:25
-#: task_manager/templates/workplaces/workplaces_list.html:20
-msgid "Create date"
-msgstr "Дата создания"
-
-#: task_manager/templates/products/products_list.html:25
-#: task_manager/templates/statuses/statuses.html:20
-#: task_manager/templates/tools/tools_list.html:23
-#: task_manager/templates/workdays/workdays_list.html:26
-#: task_manager/templates/workplaces/workplaces_list.html:21
-msgid "Update date"
-msgstr "Дата обновления"
 
 #: task_manager/templates/statuses/status_confirm_delete.html:14
 #: task_manager/templates/users/users_confirm_delete.html:14
@@ -356,10 +397,6 @@ msgstr "На складе"
 msgid "Change password"
 msgstr "Изменить пароль"
 
-#: task_manager/templates/users/users.html:16
-msgid "Username"
-msgstr "Имя пользователя"
-
 #: task_manager/templates/users/users.html:17
 msgid "Fullname"
 msgstr "Полное имя"
@@ -386,15 +423,15 @@ msgstr "Операция"
 msgid "workplace without any tools"
 msgstr "Задача без метки"
 
-#: task_manager/views.py:11
+#: task_manager/views.py:13
 msgid "User"
 msgstr "Пользователь"
 
-#: task_manager/views.py:16
+#: task_manager/views.py:19
 msgid "Successfully login"
 msgstr "Вы залогинены"
 
-#: task_manager/views.py:26
+#: task_manager/views.py:29
 msgid "You are logged out"
 msgstr "Вы разлогинены"
 
@@ -482,45 +519,63 @@ msgstr "Создано"
 msgid "You can not change another user"
 msgstr "У вас нет прав для изменения другого пользователя."
 
-#: users/views.py:19
+#: users/models.py:53
+msgid "email address"
+msgstr ""
+
+#: users/models.py:57
+#, fuzzy
+#| msgid "Fullname"
+msgid "full name"
+msgstr "Полное имя"
+
+#: users/models.py:58
+msgid "session id"
+msgstr ""
+
+#: users/models.py:59
+msgid "time left for session id"
+msgstr ""
+
+#: users/models.py:60
+msgid "verification code"
+msgstr ""
+
+#: users/views.py:22
 msgid "Users"
 msgstr "Пользователи"
 
-#: users/views.py:27
+#: users/views.py:32
 msgid "User successfully registered"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: users/views.py:28
+#: users/views.py:33
 msgid "Registration user"
 msgstr "Регистрация"
 
-#: users/views.py:29
+#: users/views.py:34
 msgid "Register"
 msgstr "Зарегистрировать"
 
-#: users/views.py:38
+#: users/views.py:45
 msgid "User successfully changed"
 msgstr "Пользователь успешно изменён"
 
-#: users/views.py:39
+#: users/views.py:46
 msgid "Update user"
 msgstr "Изменение пользователя"
 
-#: users/views.py:46
+#: users/views.py:54
 msgid "User successfully deleted"
 msgstr "Пользователь успешно удалён"
 
-#: users/views.py:47
+#: users/views.py:55
 msgid "Delete user"
 msgstr "Удаление пользователя"
 
-#: users/views.py:49
+#: users/views.py:57
 msgid "Невозможно удалить пользователя, потому что он используется"
 msgstr ""
-
-#: workdays/models.py:13
-msgid "Worker name"
-msgstr "Имя пользователя"
 
 #: workdays/models.py:19
 msgid "Time of create"
@@ -539,6 +594,10 @@ msgid "Workday created successfully"
 msgstr "Смена успешно создана"
 
 #: workdays/views.py:37
+msgid "Some went wrong"
+msgstr ""
+
+#: workdays/views.py:38
 msgid "Create workday"
 msgstr "Записать смену"
 
@@ -575,6 +634,12 @@ msgstr "Метка успешно создана"
 #| msgid "Create label"
 msgid "Create workplace"
 msgstr "Создать метку"
+
+#~ msgid "You are not authorized! Please sign in."
+#~ msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#~ msgid "Username"
+#~ msgstr "Имя пользователя"
 
 #~ msgid "Product изделия"
 #~ msgstr "Имя детали"

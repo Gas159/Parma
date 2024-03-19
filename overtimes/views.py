@@ -16,27 +16,27 @@ def toolspass(request):
     return HttpResponse("<h1> Здесь ничего нет, но скоро обязательно будет, наверное, ну максимум - нет:)</h1>")
 
 
-class OverTimeListView( OverTimeMixin, ListView):
+class OverTimeListView(OverTimeMixin, ListView):
     template_name = 'overtimes/overtimes_list.html'
     context_object_name = 'overtimes'
 
     extra_context = {
-        'title': _('Overtimes  ' + str(datetime.now().strftime("%B %Y"))), 'btn_create': _('Create overtime'),
+        'title': _('Overtimes') + ' ' + str(datetime.now().strftime("%B %Y")), 'btn_create': _('Create overtime'),
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
     }
 
     # def get_queryset(self):
-        # try:
-        # if self.request.user.username == 'boss':
-        #     return OverTime.objects.all()
-        # elif not self.request.user:
-        #     return None
-        # else:
-        #     return OverTime.objects.filter(user=self.request.user)
-        # except:
+    # try:
+    # if self.request.user.username == 'boss':
+    #     return OverTime.objects.all()
+    # elif not self.request.user:
+    #     return None
+    # else:
+    #     return OverTime.objects.filter(user=self.request.user)
+    # except:
 
-            # messages.error(request, self.error_message)
-            # return redirect(self.success_url)
+    # messages.error(request, self.error_message)
+    # return redirect(self.success_url)
 
 
 class CreateOvertimeView(SuccessMessageMixin, LoginAuthMixin, OverTimeMixin, CreateView):
