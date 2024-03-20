@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing import Dict,  Any
 
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.shortcuts import render, redirect
