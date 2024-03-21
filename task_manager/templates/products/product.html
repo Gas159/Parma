@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+<div class="container wrapper flex-grow-1 ">
+    <h1 class="my-4">{{ title }}</h1>
+
+    {% if product %}
+    <div class="card">
+        <div class="card-header bg-secondary text-white">
+            <h2>{{ product.name }}</h2>
+        </div>
+        <div class="card-body bg-light text-dark ">
+            <p>{{ product.description }}</p>
+            <hr>
+            <div class="container ">
+                <!--                <div class="row p-1">-->
+                <!--                    <div class="col">{% trans 'Author' %}</div>-->
+                <!--                    <div class="col">{{ product.author }}</div>-->
+                <!--                </div>-->
+                <!--                <div class="row p-1">-->
+                <!--                    <div class="col">{% trans 'Executor' %}</div>-->
+                <!--                    <div class="col">{{ product.executor }}</div>-->
+                <!--                </div>-->
+                <div class="row p-1">
+                    <div class="col">{% trans 'Status' %}</div>
+                    <div class="col">{{ product.status }}</div>
+                </div>
+                <div class="row p-1">
+                    <div class="col">{% trans 'Created' %}</div>
+                    <div class="col">{{ product.created_at|date:"d.m.Y" }}</div>
+                </div>
+                <div class="row p-1">
+                    <div class="col">{% trans 'Updated' %}</div>
+                    <div class="col">{{ product.update_at|date:"d.m.Y" }}</div>
+                </div>
+                <div class="row p-1">
+                    <div class="col">
+                        <h6>{% trans 'Operations' %}:</h6>
+                        <ul>
+
+                            {% if product.workday_set.all %}
+                            {% for tl in product.order %}
+                            <div class="row p-1">
+                                <div class="col"> {{ tl.user_name }}</div>
+                                <div class="col"> {{ tl.workplace_name }}</div>
+                                <div class="col"> {{ tl.time }}</div>
+                                <div class="col"> {{ tl.operation |truncatechars:17}}</div>
+                                <div class="col"> {{ tl.status }}</div>
+                                <div class="col"> {{ tl.created_at |date:"d.m.Y" }}</div>
+                                <div class="col"></div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            <p>{% trans 'product without any label' %}</p>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="row p-5">
+                    <div class="col">
+                        <h6>{% trans 'Total' %}:</h6>
+                        <ul>
+
+                            {% if product.workday_set.all %}
+                            {% for key, value in product.total.items %}
+                            <div class="row p-1">
+                                <div class="col btn btn-success"> {% trans 'Total time of treatment:' %}  {{ key }}  =
+                              {{ value }} ч</div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            <p>{% trans 'product without any label' %}</p>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="row p-1">
+                    <div class="col">
+                        <a class="btn btn-primary" href="{% url 'toolspass' %}">
+                            {% trans 'Update'%}</a>
+                        <a class="btn btn-danger" href="{% url 'toolspass' %}">
+                            {% trans 'Delete'%}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+
+</div>
+{% endblock content %}

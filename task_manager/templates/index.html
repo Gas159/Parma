@@ -5,14 +5,14 @@
 
 {% block content %}
 <div class="text-center">
-    <h1> Hello mr. {{ request.user.username }}</h1>
+    <h1> Hello {{ request.user.first_name }}</h1>
 <!--    <h1> Django 4.1.5 PostgreSql Bootstrap v5.0</h1>-->
     <a href="{% url 'create_workday' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Записать смену</a>
     <a href="{% url 'create_overtime' %} " class="btn btn-secondary btn-lg active btn-outline-info"
        role="button" aria-pressed="true">Сверхурочные за {{ date }} </a>
 
     <div><p> Для возможности заносить какие либо данные, следует зарегистрироваться/залогиниться,
-        так же для незарегистрированных пользователь могут возникать ошибки.</p></div>
+        так же для незарегистрированных пользователь могут возникать ошибки - <h1> зарегистрируйтесь\залогиньтесь!</h1></p></div>
     <p> Функционал и области видимости упрощены для наглядности.</p>
     <!--    <div class="lead fs-6 fw-lighter p-3 m-3 b-5 ">-->
     <!--        <em><p>Драко Малфой залетел от мальчика который смог выжить.</p>-->

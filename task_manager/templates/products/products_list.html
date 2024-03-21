@@ -30,7 +30,9 @@
     {% for t in products %}
     <tr>
         <td>{{t.id}}</td>
-        <td>{{t.name}}</td>
+        <!--        <td>{{t.name}}</td>-->
+
+        <td><a href="{% url 'product' t.id %}">{{ t.name }}</a></td>
         <td>{{t.number}}</td>
         <td>{{t.description | truncatechars:20 }}</td>
 

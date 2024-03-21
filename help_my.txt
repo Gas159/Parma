@@ -5,7 +5,7 @@ kill PID
 
 python manage.py startapp название_приложения
 python manage.py creatsuperuser 'name'
-git reset --hard origin/main
+
 
 
 # install
@@ -32,15 +32,9 @@ nproc
 {% if request.user.username == 'gas' or request.user.username == 'test_user1' %}
 {% if request.user.is_authenticated %}
 
-git config credential.helper store # naher token
-git config --unset credential.helper	# token naher
-git config --global credential.helper "cache --timeout=3600" #temporary
 
 
 
-Ответ: Для того, чтоб удалить untracked файл можно воспользоваться командой git clean.
-Сначала следует выполнить git clean -n, это покажет файлы, подлежащие удалению.
-Затем выполнить само удаление командой git clean -f.
 
 class TTest(models.Model):
     t1 = models.IntegerField()
