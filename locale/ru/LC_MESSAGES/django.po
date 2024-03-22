@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 15:26+0500\n"
+"POT-Creation-Date: 2024-03-22 12:42+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -144,7 +144,7 @@ msgstr "Наименование изделия"
 msgid "Product number"
 msgstr "Номер изделия"
 
-#: products/models.py:13 task_manager/templates/products/products_list.html:20
+#: products/models.py:13 task_manager/templates/products/products_list.html:21
 #: task_manager/templates/workdays/workdays_list.html:24 tasks/models.py:11
 #: tools/models.py:9 workdays/models.py:25 workplaces/models.py:11
 msgid "Description"
@@ -288,7 +288,7 @@ msgstr "БОльше проектов"
 
 #: task_manager/templates/labels/labels_list.html:22
 #: task_manager/templates/overtimes/overtimes_list.html:18
-#: task_manager/templates/products/products_list.html:18
+#: task_manager/templates/products/products_list.html:19
 #: task_manager/templates/statuses/statuses.html:18
 #: task_manager/templates/tasks/task_list.html:32
 #: task_manager/templates/tools/tools_list.html:18
@@ -307,7 +307,7 @@ msgid "Log in"
 msgstr "Войти"
 
 #: task_manager/templates/overtimes/overtimes_list.html:20
-#: task_manager/templates/products/products_list.html:24
+#: task_manager/templates/products/products_list.html:25
 #: task_manager/templates/statuses/statuses.html:19
 #: task_manager/templates/tools/tools_list.html:22
 #: task_manager/templates/workdays/workdays_list.html:25
@@ -316,7 +316,7 @@ msgid "Create date"
 msgstr "Дата создания"
 
 #: task_manager/templates/overtimes/overtimes_list.html:21
-#: task_manager/templates/products/products_list.html:25
+#: task_manager/templates/products/products_list.html:26
 #: task_manager/templates/statuses/statuses.html:20
 #: task_manager/templates/tools/tools_list.html:23
 #: task_manager/templates/workdays/workdays_list.html:26
@@ -374,7 +374,7 @@ msgstr "Общее"
 msgid "Total time of treatment:"
 msgstr "Затраченое время: "
 
-#: task_manager/templates/products/products_list.html:17
+#: task_manager/templates/products/products_list.html:18
 #: task_manager/templates/statuses/statuses.html:17
 #: task_manager/templates/tools/tools_list.html:17
 #: task_manager/templates/users/users.html:16
@@ -383,19 +383,19 @@ msgstr "Затраченое время: "
 msgid "ID"
 msgstr "ID"
 
-#: task_manager/templates/products/products_list.html:19
+#: task_manager/templates/products/products_list.html:20
 msgid "Number"
 msgstr "Номер"
 
-#: task_manager/templates/products/products_list.html:21
+#: task_manager/templates/products/products_list.html:22
 msgid "Токарная чист №1"
 msgstr "Токарная чист №1"
 
-#: task_manager/templates/products/products_list.html:22
+#: task_manager/templates/products/products_list.html:23
 msgid "Токарная чист №2"
 msgstr "Токарная чист №2"
 
-#: task_manager/templates/products/products_list.html:23
+#: task_manager/templates/products/products_list.html:24
 msgid "Токарная чист №3"
 msgstr "Токарная чист №3"
 
@@ -615,7 +615,7 @@ msgstr "Смены"
 
 #: workdays/views.py:28
 msgid "Create Workday"
-msgstr "Записать смену"
+msgstr "Записать наряд"
 
 #: workdays/views.py:36
 msgid "Workday created successfully"
@@ -627,7 +627,7 @@ msgstr ""
 
 #: workdays/views.py:38
 msgid "Create workday"
-msgstr "Записать смену"
+msgstr "Записать наряд"
 
 #: workplaces/models.py:10
 msgid "Workplace name"

@@ -10,6 +10,8 @@ class Product(models.Model):
     # unique = True
     name = models.CharField(max_length=222, verbose_name=_('Product name'))
     number = models.IntegerField(verbose_name=_('Product number'))
+    specification = models.IntegerField('Specification', null=True, blank=True)
+
     description = models.TextField(max_length=333, blank=True, verbose_name=_('Description'))
     # step_1 = models.BooleanField(blank=True, default=False, verbose_name=_('Step_1'))
     # step_1 = models.CharField(max_length=222, blank=True, verbose_name=_('Step_1'))

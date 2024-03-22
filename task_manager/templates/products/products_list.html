@@ -9,21 +9,33 @@
 
 <div class="container wrapper flex-grow-1">
     <h1 class="my-4">{{ title }}</h1>
+    <P> NB Search is case sensitive </P>
+    <form action="{% url 'search' %}" method="get">
+        <input  type="text" name="q" placeholder="Name or Number field">
+        <button  class="btn btn-secondary btn-sm" type="submit"> {% trans 'search' %} </button>
+        <a class="btn btn-secondary btn-sm" href="{% url 'products' %}"
+           role="submit">{%  trans  'reset' %} </a>
+    </form>
+
+
+    <br>
     <h4><a href="{% url 'create_product' %}">{{ btn_create }}</a></h4>
 </div>
-<table class="table table-striped">
-    <thead>
-    <tr class="table-info">
-        <th scope="col">{% trans 'ID' %}</th>
-        <th scope="col">{% trans 'Name' %}</th>
-        <th scope="col">{% translate 'Number' %}</th>
-        <th scope="col">{% trans 'Description' %}</th>
-        <th scope="col">{% trans 'Токарная чист №1' %}</th>
-        <th scope="col">{% trans 'Токарная чист №2' %}</th>
-        <th scope="col">{% trans 'Токарная чист №3' %}</th>
-        <th scope="col">{% trans 'Create date' %}</th>
-        <th scope="col">{% trans 'Update date' %}</th>
-        <th scope="col"></th>
+<!--<table class="table table-striped">-->
+<table class="table table-striped table-dark table-sm ">
+    <thead class="thead-dark">
+    <tr class="text-sm-start">
+        <th scope="col-md-8 mx-auto">{% trans 'ID' %}</th>
+        <th scope="col-md-8 mx-auto">{% trans 'Name' %}</th>
+        <th scope="col-md-8 mx-auto">{% translate 'Number' %}</th>
+        <th scope='col-md-8 mx-auto'> {% trans 'Specification' %}</th>
+        <th scope="col-md-8 mx-auto">{% trans 'Description' %}</th>
+        <th scope="col-md-8 mx-auto">{% trans 'Токарная чист №1' %}</th>
+        <th scope="col-md-8 mx-auto">{% trans 'Токарная чист №2' %}</th>
+        <th scope="col-md-8 mx-auto">{% trans 'Токарная чист №3' %}</th>
+        <th scope="col-md-8 mx-auto">{% trans 'Create date' %}</th>
+        <th scope="col-md-8 mx-auto">{% trans 'Update date' %}</th>
+        <th scope="col-md-8 mx-auto"></th>
     </tr>
 
     </thead>
@@ -34,6 +46,8 @@
 
         <td><a href="{% url 'product' t.id %}">{{ t.name }}</a></td>
         <td>{{t.number}}</td>
+        <td>{{t.specification }}</td>
+
         <td>{{t.description | truncatechars:20 }}</td>
 
         {% if t.clear_turning_first %}
@@ -77,7 +91,7 @@
         <td>{{t.update_at | date:"d.m.Y h" }}</td>
         <td>
             <a class="text-orange" href="{% url 'toolspass'  %}">{{ btn_update }}</a>
-            <!--            <br>-->
+            <!--                        <br>-->
             <a class="text-danger" href="{% url 'toolspass'  %}">{{btn_delete}}</a>
         </td>
 

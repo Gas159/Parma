@@ -47,7 +47,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
                       'Третья чистовая операция': 'clear_turning_third'}
         try:
 
-            operation_name = operations.get(form.instance.operation.name, '0')
+            operation_name = operations.get(form.instance.operation.name, 'Call admin')
             status = form.instance.status
             product = form.instance.product
             #print(operation_name, status, product)

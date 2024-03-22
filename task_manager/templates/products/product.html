@@ -75,6 +75,7 @@
                             {% else %}
                             <p>{% trans 'product without any label' %}</p>
                             {% endif %}
+                            <div> {% trans  'Time on production:  ' %} {{ product.delta_time  }} </div>
                         </ul>
                     </div>
                 </div>

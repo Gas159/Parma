@@ -1,7 +1,5 @@
 from django.db.models import Sum
-from django.shortcuts import render
 
-# Create your views here.
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
 from django.utils.translation import gettext as _
@@ -9,7 +7,6 @@ from django.views.generic import ListView, CreateView, DetailView
 
 from products.mixins import ProductsMixin
 from task_manager.mixins import LoginAuthMixin
-from tools.mixins import ToolsMixin
 
 
 def toolspass(request):
@@ -25,17 +22,20 @@ class ProductView(LoginAuthMixin, ProductsMixin, DetailView):
     def get_object(self, queryset=None):
         # try:
         object = super(ProductView, self).get_object()
-        object.order = object.workday_set.all().order_by('created_at')
-        operation_names = set([i.workplace_name for i in object.workday_set.all()])
+        obj_simple = object.workday_set
+        object.order = obj_simple.all().order_by('created_at')
+        operation_names = set([i.workplace_name for i in obj_simple.all()])
         operation_list = {}
         for operation in operation_names:
-            total_sum = object.workday_set.filter(workplace_name=operation).aggregate(total=Sum('time'))
+            total_sum = obj_simple.filter(workplace_name=operation).aggregate(total=Sum('time'))
+            print(total_sum, type(total_sum))
             # name = object.workday_set.filter(workplace_name=operation)[0].workplace_name.name
             operation_list[operation] = total_sum['total']
+        operation_list['total_time'] = obj_simple.aggregate(total=Sum('time'))['total']
+        delta_time_for_treatment = object.update_at - object.created_at
+        object.delta_time = delta_time_for_treatment
 
         object.total = operation_list
-
-
 
         return object
 
