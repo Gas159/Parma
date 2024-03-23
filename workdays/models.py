@@ -11,8 +11,8 @@ from workplaces.models import Workplace
 class WorkDay(models.Model):
     user_name = models.ForeignKey(Users, on_delete=models.SET_NULL,
                                   null=True, verbose_name=_('Worker name'))
-    workplace_name = models.ForeignKey(Workplace, on_delete=models.SET_NULL,
-                                       null=True, verbose_name=_('Workplace'))
+    workplace = models.ForeignKey(Workplace, on_delete=models.SET_NULL,
+                                  null=True, verbose_name=_('Workplace'))
     # user = models.(Users, on_delete=models.CASCADE,  verbose_name=_('Worker name'))
     product = models.ForeignKey(Product, on_delete=models.SET_NULL,
                                 null=True, verbose_name=_('Product name'))

@@ -13,15 +13,29 @@ class Product(models.Model):
     specification = models.IntegerField('Specification', null=True, blank=True)
 
     description = models.TextField(max_length=333, blank=True, verbose_name=_('Description'))
+    color_1 = models.CharField(max_length=29, null=True, blank=True)
+    color_2 = models.CharField(max_length=29, null=True, blank=True)
+    color_3 = models.CharField(max_length=29, null=True, blank=True)
+
+
+    step_1 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
+                               related_name='Step_1', verbose_name=_('Step_1'))
+    step_2 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
+                               related_name='Step_2', verbose_name=_('Step_2'))
+    step_3 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
+                               related_name='Step_3', verbose_name=_('Step_3'))
+
     # step_1 = models.BooleanField(blank=True, default=False, verbose_name=_('Step_1'))
-    # step_1 = models.CharField(max_length=222, blank=True, verbose_name=_('Step_1'))
-    # step_2 = models.BooleanField(default='', verbose_name=_('Step_2'))
-    clear_turning_first = models.ForeignKey(Status, on_delete=models.SET_NULL, blank=True, null=True,
-                                            related_name='status1', verbose_name=_('status1'))
-    clear_turning_second = models.ForeignKey(Status, on_delete=models.SET_NULL, blank=True, null=True,
-                                             related_name='status2', verbose_name=_('status2'))
-    clear_turning_third = models.ForeignKey(Status, on_delete=models.SET_NULL, blank=True, null=True,
-                                            related_name='status3', verbose_name=_('status3'))
+    # step_2 = models.CharField(max_length=222, blank=True, verbose_name=_('Step_1'))
+    # step_3 = models.BooleanField(default='', verbose_name=_('Step_2'))
+
+    # clear_turning_first = models.ForeignKey(Status, on_delete=models.SET_NULL, blank=True, null=True,
+    #                                         related_name='status1', verbose_name=_('status1'))
+    # clear_turning_second = models.ForeignKey(Status, on_delete=models.SET_NULL, blank=True, null=True,
+    #                                          related_name='status2', verbose_name=_('status2'))
+    # clear_turning_third = models.ForeignKey(Status, on_delete=models.SET_NULL, blank=True, null=True,
+    #                                         related_name='status3', verbose_name=_('status3'))
+
     # workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT,
     #                               null=True, blank=True, verbose_name=_('Workplace'))
     # in_supply = models.CharField(max_length=222, null=True, blank=True, default='В наличии')

@@ -44,7 +44,7 @@
                             {% for tl in product.order %}
                             <div class="row p-1">
                                 <div class="col"> {{ tl.user_name }}</div>
-                                <div class="col"> {{ tl.workplace_name }}</div>
+                                <div class="col"> {{ tl.workplace }}</div>
                                 <div class="col"> {{ tl.time }}</div>
                                 <div class="col"> {{ tl.operation |truncatechars:17}}</div>
                                 <div class="col"> {{ tl.status }}</div>

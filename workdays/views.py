@@ -1,6 +1,8 @@
-from typing import Dict,  Any
+from typing import Dict, Any
 
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
+from django.forms import model_to_dict
+
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -39,111 +41,145 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
 
     def form_valid(self, form):
         form.instance.user_name = self.request.user
+
         # form.instance.author = self.request.user
         # status = form.instance.status
         # status1 = form.cleaned_data['status']
-        operations = {"Первая чистовая операция": 'clear_turning_first',
-                      "Вторая чистовая операция": 'clear_turning_second',
-                      'Третья чистовая операция': 'clear_turning_third'}
+
+        status_color = {"Выполнено": "text-success",
+                        'В работе': "text-warning",
+                        'Перенаплавка': "text-danger"}
+
         try:
+            product_status = form.instance.status.name
+            workplace_id = form.instance.workplace.id
+            product_obj = form.instance.product
+            color = status_color.get(product_status, 'Call Gas')
+            dict_of_product = model_to_dict(product_obj)  # преобразует обьект в словарь
+            count = 0
 
-            operation_name = operations.get(form.instance.operation.name, 'Call admin')
-            status = form.instance.status
-            product = form.instance.product
-            #print(operation_name, status, product)
+            for key, value in dict_of_product.items():
+                if key.startswith('step'):
+                    count += 1
+                    if workplace_id == value:
+                        setattr(product_obj, 'color_' + str(count), color)
+                        break
+            product_obj.save()
 
-            # operation_name = form.instance.operation.name
-            # status = form.instance.status
-            # product = form.instance.product
-
-            # product = Product.objects.get(id=product_id)
-            setattr(product, operation_name, status)
-            product.save()
         except ValueError:
             return redirect('user_login')
         except:
             raise Exception('I dont know what need write here. Зовите Рината)')
 
         return super().form_valid(form)
-        # print(status, type(status), dir(status))
-        # g = getattr(product, operation_name)
-        # print(g, type(g))
 
-        # print(
-        #     f'operation={workday_operation}, type={type(workday_operation)},'
-        #     f' status={workday_status}, type = {type(workday_status)}'
-        #     f' product={product_in_workday}, type={type(workday_status)}')
+    # def form_valid(self, form):
+    #     form.instance.user_name = self.request.user
+    #     # form.instance.author = self.request.user
+    #     # status = form.instance.status
+    #     # status1 = form.cleaned_data['status']
+    #     operations = {"Первая чистовая операция": 'clear_turning_first',
+    #                   "Вторая чистовая операция": 'clear_turning_second',
+    #                   'Третья чистовая операция': 'clear_turning_third'}
+    #     try:
+    #
+    #         operation_name = operations.get(form.instance.operation.name, 'Call admin')
+    #         status = form.instance.status
+    #         product = form.instance.product
+    #         #print(operation_name, status, product)
+    #
+    #         # operation_name = form.instance.operation.name
+    #         # status = form.instance.status
+    #         # product = form.instance.product
+    #
+    #         # product = Product.objects.get(id=product_id)
+    #         setattr(product, operation_name, status)
+    #         product.save()
+    #     except ValueError:
+    #         return redirect('user_login')
+    #     except:
+    #         raise Exception('I dont know what need write here. Зовите Рината)')
+    #
+    #     return super().form_valid(form)
+    # print(status, type(status), dir(status))
+    # g = getattr(product, operation_name)
+    # print(g, type(g))
 
-        # product_in_workday.workday_operation = workday_status
-        # operation_list = ['clear_turning_first', 'clear_turning_second', 'clear_turning_third']
-        # product = Product.objects.get(id=product_id)
-        # status_value = Status.objects.get(id=status_id)
-        # setattr(product, operation_name, status_id)
+    # print(
+    #     f'operation={workday_operation}, type={type(workday_operation)},'
+    #     f' status={workday_status}, type = {type(workday_status)}'
+    #     f' product={product_in_workday}, type={type(workday_status)}')
 
-        # setattr(product, operation_name, status_value)
-        # g = getattr(product, operation_name)
-        # print(g, type(g))
-        # product_dict = {'clear_turning_first': 'product.clear_turning_first',
-        #                 'clear_turning_second': 'product.clear_turning_second',
-        #                 'clear_turning_third': 'product.clear_turning_third'}
-        # module = __import__('Product')
-        # class_object = getattr(module, "MyClass")()  # Берём класс у соседей
+    # product_in_workday.workday_operation = workday_status
+    # operation_list = ['clear_turning_first', 'clear_turning_second', 'clear_turning_third']
+    # product = Product.objects.get(id=product_id)
+    # status_value = Status.objects.get(id=status_id)
+    # setattr(product, operation_name, status_id)
 
-        # globals()['Product.objects.get(id=product_id).clear_turning_first'] = status_value
+    # setattr(product, operation_name, status_value)
+    # g = getattr(product, operation_name)
+    # print(g, type(g))
+    # product_dict = {'clear_turning_first': 'product.clear_turning_first',
+    #                 'clear_turning_second': 'product.clear_turning_second',
+    #                 'clear_turning_third': 'product.clear_turning_third'}
+    # module = __import__('Product')
+    # class_object = getattr(module, "MyClass")()  # Берём класс у соседей
 
-        # print(product.clear_turning_first)
-        # eval(product_dict['clear_turning_first']) = status_value.name
-        # exec('Product.objects.get(id=product_id)' + operation_name = status_value)
-        # print(product1, type(product1))
+    # globals()['Product.objects.get(id=product_id).clear_turning_first'] = status_value
 
-        # t.product_dict[operation_name] = Status.objects.get(id=status_id)
-        # print(f'operation name = {operation_name}, {type(operation_name)}')
-        # print(f'product={p}, {type(p)}')
+    # print(product.clear_turning_first)
+    # eval(product_dict['clear_turning_first']) = status_value.name
+    # exec('Product.objects.get(id=product_id)' + operation_name = status_value)
+    # print(product1, type(product1))
 
-        # p = Status.objects.get(id=status_id)
-        # product.operation_name = Status.objects.get(id=status_id)
+    # t.product_dict[operation_name] = Status.objects.get(id=status_id)
+    # print(f'operation name = {operation_name}, {type(operation_name)}')
+    # print(f'product={p}, {type(p)}')
 
-        # print(product)
-        # print(p, type(p))
-        # print(operation_name, type(operation_name))
+    # p = Status.objects.get(id=status_id)
+    # product.operation_name = Status.objects.get(id=status_id)
 
-        # except ObjectDoesNotExist:
-        #     print("Объект не сушествует")
-        # except MultipleObjectsReturned:
-        #     print("Найдено более одного объекта")
+    # print(product)
+    # print(p, type(p))
+    # print(operation_name, type(operation_name))
 
-        # status1 = form.cleaned_data.get('status')
-        # status2 = status1.id
-        # print(status1, status2, type(status1), type(status2), sep='\n', end='\n')
-        #
-        # q = form.instance.product
-        # print(q, type(q))
-        # id1_workday = form.cleaned_data.get('product')
-        # id1_workday1 = id1_workday.id
-        # print(id1_workday, id1_workday1, type(id1_workday1))
-        #
-        # product_st = Product.objects.get(pk=id1_workday1)
-        # product_st.step_1 = 'status2'
-        # # product_st.status = status2
-        # product_st.status = Status.objects.get(id=status2)
-        # print(product_st)
-        # product_st.save()
-        # for operation in operation_list:
-        #     if operation == 'clear_turning_first':
-        #         # exec("from " + moduleName + " import " + className)
-        #         exec("product1 =" + 'Product.objects.get(id=product_id).' + operation_name)
-        #         print(product1, type(product1))
+    # except ObjectDoesNotExist:
+    #     print("Объект не сушествует")
+    # except MultipleObjectsReturned:
+    #     print("Найдено более одного объекта")
 
-        # q = globals()['product.clear_turning_first']
-        # q = status_value.name
-        # product_dict[operation] = status_value.name
-        # print()
-        # product.operation = status_value
-        # print(operation, type(operation))
-        # print(product_dict[operation_name], type(product_dict[operation_name]))
-        # product_dict[operation_name].save()
-        # print(f'product first: {product}, type={type(product)}')
+    # status1 = form.cleaned_data.get('status')
+    # status2 = status1.id
+    # print(status1, status2, type(status1), type(status2), sep='\n', end='\n')
+    #
+    # q = form.instance.product
+    # print(q, type(q))
+    # id1_workday = form.cleaned_data.get('product')
+    # id1_workday1 = id1_workday.id
+    # print(id1_workday, id1_workday1, type(id1_workday1))
+    #
+    # product_st = Product.objects.get(pk=id1_workday1)
+    # product_st.step_1 = 'status2'
+    # # product_st.status = status2
+    # product_st.status = Status.objects.get(id=status2)
+    # print(product_st)
+    # product_st.save()
+    # for operation in operation_list:
+    #     if operation == 'clear_turning_first':
+    #         # exec("from " + moduleName + " import " + className)
+    #         exec("product1 =" + 'Product.objects.get(id=product_id).' + operation_name)
+    #         print(product1, type(product1))
 
-        # p = product_dict[operation_name]
-        # produc
-        # print(form)
+    # q = globals()['product.clear_turning_first']
+    # q = status_value.name
+    # product_dict[operation] = status_value.name
+    # print()
+    # product.operation = status_value
+    # print(operation, type(operation))
+    # print(product_dict[operation_name], type(product_dict[operation_name]))
+    # product_dict[operation_name].save()
+    # print(f'product first: {product}, type={type(product)}')
+
+    # p = product_dict[operation_name]
+    # produc
+    # print(form)

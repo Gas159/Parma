@@ -6,4 +6,4 @@ class WorkdayMixin:
     model = WorkDay
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('workdays')
-    fields = [ 'product', 'workplace_name', 'time', 'operation', 'status', 'description']
+    fields = [ 'product', 'workplace', 'time', 'operation', 'status', 'description']
