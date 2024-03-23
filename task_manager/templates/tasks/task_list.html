@@ -20,20 +20,23 @@
             <div class="mr-4 ml-3">
                 <input class="btn btn-primary " type="submit" value="{% trans 'Show' %}">
             </div>
-    </form>
-</div>
+        </form>
+    </div>
 </div>
 
 
 <table class="table table-striped ">
     <thead>
     <tr class="table-info">
-        <th scope="col">ID</th>
-        <th scope="col">{% trans 'Name' %}</th>
-        <th scope="col">{% trans 'Status' %}</th>
-        <th scope="col">{% trans 'Author' %}</th>
+<!--        <th scope="col">ID</th>-->
+                <th scope="col">{% trans 'Name' %}</th>
         <th scope="col">{% trans 'Executor' %}</th>
+        <th scope="col">{% trans 'Status' %}</th>
+        <th scope="col">{% trans 'Description' %}</th>
+        <th scope="col">{% trans 'Author' %}</th>
+
         <th scope="col">{% trans 'Created at' %}</th>
+        <th scope="col">{% trans 'update_at' %}</th>
         <th></th>
     </tr>
     </thead>
@@ -41,12 +44,15 @@
     {% for task in tasks %}
     <tr>
 
-        <td>{{task.id}}</td>
+        <!--        <td>{{task.id}}</td>-->
         <td><a href="{% url 'task' task.id %}">{{task.name}}</a></td>
-        <td>{{ task.status }}</td>
-        <td>{{ task.author}}</td>
         <td>{{task.executor}}</td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.author}}</td>
+
         <td>{{task.created_at|date:"d.m.Y"}}</td>
+        <td>{{task.update_at|date:"d.m.Y"}}</td>
         <td>
             <a href="{% url 'update_task' task.pk %}">{{btn_update}}</a>
             <br>

@@ -28,7 +28,7 @@ class ProductView(LoginAuthMixin, ProductsMixin, DetailView):
         operation_list = {}
         for operation in operation_names:
             total_sum = obj_simple.filter(workplace_name=operation).aggregate(total=Sum('time'))
-            print(total_sum, type(total_sum))
+            # print(total_sum, type(total_sum))
             # name = object.workday_set.filter(workplace_name=operation)[0].workplace_name.name
             operation_list[operation] = total_sum['total']
         operation_list['total_time'] = obj_simple.aggregate(total=Sum('time'))['total']

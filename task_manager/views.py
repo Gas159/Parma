@@ -13,6 +13,17 @@ class IndexView(SuccessMessageMixin, TemplateView):
     extra_context = {'title': _('User'), 'btn': _('Create'),
                      'date': _(str((datetime.now().strftime('%B %Y'))))}
 
+    def get_context_date(self,**kwargs):
+        context = super().get_context_data(self, **kwargs)
+
+
+    def get_context_data(self, **kwargs):
+        kwargs.setdefault("view", self)
+        if self.extra_context is not None:
+            kwargs.update(self.extra_context)
+        return kwargs
+
+
 
 class UserLoginView(SuccessMessageMixin, LoginView):
     template_name = 'login.html'

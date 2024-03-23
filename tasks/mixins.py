@@ -9,7 +9,7 @@ class TaskMixin:
     model = Task
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('tasks')
-    fields = ['name', 'description', 'status', 'executor', 'labels']
+    fields = ['name', 'executor', 'description', 'status', 'labels']
 
 
 class TaskDeleteMixin:
