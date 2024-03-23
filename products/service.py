@@ -27,7 +27,7 @@ class Search(LoginAuthMixin, ProductsMixin, ListView):
         return Product.objects.filter(Q(number__icontains=value) | Q(name__icontains=value))
         # return Product.objects.all()
 
-    def get_context_data(self, *arg, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # context['q'] = self.request.GET.get('q')
-        return context
+    # def get_context_data(self, *arg, object_list=None, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     # context['q'] = self.request.GET.get('q')
+    #     return context

@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from products.models import Product
 from users.models import Users
 from statuses.models import Status
 from labels.models import Labels
@@ -8,6 +9,10 @@ from labels.models import Labels
 
 class Task(models.Model):
     name = models.CharField(max_length=250, unique=True, verbose_name=_('Task name'))
+
+    product = models.ForeignKey(Product, verbose_name=_('Product'), on_delete=models.SET_NULL, null=True)
+
+
     description = models.TextField(max_length=300, blank=True, verbose_name=_('Description'))
     status = models.ForeignKey(Status, on_delete=models.PROTECT, null=True,
                                verbose_name=_('Status'))

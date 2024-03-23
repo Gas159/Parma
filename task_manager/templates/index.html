@@ -4,25 +4,74 @@
 
 
 {% block content %}
+
 <div class="text-center">
     <h1> Hello {{ request.user.first_name }}</h1>
-<!--    <h1> Django 4.1.5 PostgreSql Bootstrap v5.0</h1>-->
-    <a href="{% url 'create_workday' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Записать наряд</a>
+    <!--    <h1> Django 4.1.5 PostgreSql Bootstrap v5.0</h1>-->
+    <a href="{% url 'create_workday' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Записать
+        наряд</a>
     <a href="{% url 'create_overtime' %} " class="btn btn-secondary btn-lg active btn-outline-info"
        role="button" aria-pressed="true">Сверхурочные за {{ date }} </a>
 
-<!--    <div><p> Для возможности заносить какие либо данные, следует зарегистрироваться/залогиниться,-->
-<!--        так же для незарегистрированных пользователь могут возникать ошибки - <h1> зарегистрируйтесь\залогиньтесь!</h1></p></div>-->
-<!--    <p> Функционал и области видимости упрощены для наглядности.</p>-->
+    <!--    <div><p> Для возможности заносить какие либо данные, следует зарегистрироваться/залогиниться,-->
+    <!--        так же для незарегистрированных пользователь могут возникать ошибки - <h1> зарегистрируйтесь\залогиньтесь!</h1></p></div>-->
+    <!--    <p> Функционал и области видимости упрощены для наглядности.</p>-->
     <!--    <div class="lead fs-6 fw-lighter p-3 m-3 b-5 ">-->
     <!--        <em><p>Драко Малфой залетел от мальчика который смог выжить.</p>-->
     <!--            <p>— Повторяю: Драко Малфой ждёт от тебя ребёнка.</p>-->
     <!--            <p></p>-->
-<!--    <p></p> Использования алгоритма Дейкстры с графом, содержащего-->
-<!--    ребра с-->
-<!--    отрицательным весом, невозможно. </em></p>-->
+    <!--    <p></p> Использования алгоритма Дейкстры с графом, содержащего-->
+    <!--    ребра с-->
+    <!--    отрицательным весом, невозможно. </em></p>-->
     <!--    </div>-->
+    <br>
+    <br>
+    {% if tasks %}
+    <table class="table table-striped ">
+    <thead>
+    <tr class="table-info">
+        <th scope="col">ID</th>
+        <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Executor' %}</th>
+        <th scope="col">{% trans 'Product' %}</th>
+        <th scope="col">{% trans 'Label' %}</th>
+        <th scope="col">{% trans 'Status' %}</th>
+        <th scope="col">{% trans 'Description' %}</th>
+        <th scope="col">{% trans 'Author' %}</th>
+        <th scope="col">{% trans 'Created at' %}</th>
+        <th scope="col">{% trans 'update_at' %}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for task in tasks %}
+    <tr>
 
+        <td>{{task.id}}</td>
+        <td><a href="{% url 'task' task.id %}">{{task.name}}</a></td>
+        <td>{{task.executor}}</td>
+        <td>{{task.product}}</td>
+        <td>{% for i in task.labels.all %}
+            {{i.name}}
+            <br>
+            {% endfor %}
+        </td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.author}}</td>
+
+        <td>{{task.created_at|date:"d.m.Y"}}</td>
+        <td>{{task.update_at|date:"d.m.Y"}}</td>
+        <td>
+            <a href="{% url 'update_task' task.pk %}">{{btn_update}}</a>
+            <br>
+            <a href="{% url 'delete_task' task.pk %}">{{btn_delete}}</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 </div>
+{% endif %}
 {% endblock %}
 

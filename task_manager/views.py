@@ -5,24 +5,33 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.utils.translation import gettext as _
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+
+from tasks.models import Task
 
 
-class IndexView(SuccessMessageMixin, TemplateView):
+class IndexView(SuccessMessageMixin, ListView):
     template_name = 'index.html'
     extra_context = {'title': _('User'), 'btn': _('Create'),
                      'date': _(str((datetime.now().strftime('%B %Y'))))}
+    model = Task
+    context_object_name = 'tasks'
 
-    def get_context_date(self,**kwargs):
-        context = super().get_context_data(self, **kwargs)
+    def get_queryset(self):
+        queryset = Task.objects.filter(executor=self.request.user)
+        return queryset
 
 
-    def get_context_data(self, **kwargs):
-        kwargs.setdefault("view", self)
-        if self.extra_context is not None:
-            kwargs.update(self.extra_context)
-        return kwargs
 
+
+    # def get_context_date(self,**kwargs):
+    #     context = super().get_context_data(self, **kwargs)
+
+    # def get_context_data(self, **kwargs):
+    #     kwargs.setdefault("view", self)
+    #     if self.extra_context is not None:
+    #         kwargs.update(self.extra_context)
+    #     return kwargs
 
 
 class UserLoginView(SuccessMessageMixin, LoginView):

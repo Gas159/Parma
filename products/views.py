@@ -19,6 +19,7 @@ class ProductView(LoginAuthMixin, ProductsMixin, DetailView):
                      'btn_delete': _('Delete')}
     context_object_name = 'product'
 
+
     def get_object(self, queryset=None):
         # try:
         object = super(ProductView, self).get_object()
