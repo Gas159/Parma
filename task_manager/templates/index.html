@@ -26,51 +26,51 @@
     <!--    </div>-->
     <br>
     <br>
-    {% if tasks %}
-    <table class="table table-striped ">
-    <thead>
-    <tr class="table-info">
-        <th scope="col">ID</th>
-        <th scope="col">{% trans 'Name' %}</th>
-        <th scope="col">{% trans 'Executor' %}</th>
-        <th scope="col">{% trans 'Product' %}</th>
-        <th scope="col">{% trans 'Label' %}</th>
-        <th scope="col">{% trans 'Status' %}</th>
-        <th scope="col">{% trans 'Description' %}</th>
-        <th scope="col">{% trans 'Author' %}</th>
-        <th scope="col">{% trans 'Created at' %}</th>
-        <th scope="col">{% trans 'update_at' %}</th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for task in tasks %}
-    <tr>
+<!--    {% if tasks %}-->
+<!--    <table class="table table-striped ">-->
+<!--        <thead>-->
+<!--        <tr class="table-info">-->
+<!--            <th scope="col">ID</th>-->
+<!--            <th scope="col">{% trans 'Name' %}</th>-->
+<!--            <th scope="col">{% trans 'Executor' %}</th>-->
+<!--            <th scope="col">{% trans 'Product' %}</th>-->
+<!--            <th scope="col">{% trans 'Label' %}</th>-->
+<!--            <th scope="col">{% trans 'Status' %}</th>-->
+<!--            <th scope="col">{% trans 'Description' %}</th>-->
+<!--            <th scope="col">{% trans 'Author' %}</th>-->
+<!--            <th scope="col">{% trans 'Created at' %}</th>-->
+<!--            <th scope="col">{% trans 'update_at' %}</th>-->
+<!--            <th></th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        {% for task in tasks %}-->
+<!--        <tr>-->
 
-        <td>{{task.id}}</td>
-        <td><a href="{% url 'task' task.id %}">{{task.name}}</a></td>
-        <td>{{task.executor}}</td>
-        <td>{{task.product}}</td>
-        <td>{% for i in task.labels.all %}
-            {{i.name}}
-            <br>
-            {% endfor %}
-        </td>
-        <td>{{ task.status }}</td>
-        <td>{{ task.description }}</td>
-        <td>{{ task.author}}</td>
+<!--            <td>{{task.id}}</td>-->
+<!--            <td><a href="{% url 'task' task.id %}">{{task.name}}</a></td>-->
+<!--            <td>{{task.executor}}</td>-->
+<!--            <td>{{task.product}}</td>-->
+<!--            <td>{% for i in task.labels.all %}-->
+<!--                {{i.name}}-->
+<!--                <br>-->
+<!--                {% endfor %}-->
+<!--            </td>-->
+<!--            <td>{{ task.status }}</td>-->
+<!--            <td>{{ task.description }}</td>-->
+<!--            <td>{{ task.author}}</td>-->
 
-        <td>{{task.created_at|date:"d.m.Y"}}</td>
-        <td>{{task.update_at|date:"d.m.Y"}}</td>
-        <td>
-            <a href="{% url 'update_task' task.pk %}">{{btn_update}}</a>
-            <br>
-            <a href="{% url 'delete_task' task.pk %}">{{btn_delete}}</a>
-        </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
+<!--            <td>{{task.created_at|date:"d.m.Y"}}</td>-->
+<!--            <td>{{task.update_at|date:"d.m.Y"}}</td>-->
+<!--            <td>-->
+<!--                <a href="{% url 'update_task' task.pk %}">{{btn_update}}</a>-->
+<!--                <br>-->
+<!--                <a href="{% url 'delete_task' task.pk %}">{{btn_delete}}</a>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        {% endfor %}-->
+<!--        </tbody>-->
+<!--    </table>-->
 </div>
 {% endif %}
 {% endblock %}

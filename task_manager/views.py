@@ -7,10 +7,11 @@ from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic import TemplateView, ListView
 
+from task_manager.mixins import LoginAuthMixin
 from tasks.models import Task
 
 
-class IndexView(SuccessMessageMixin, ListView):
+class IndexView(SuccessMessageMixin,  LoginAuthMixin,  ListView):
     template_name = 'index.html'
     extra_context = {'title': _('User'), 'btn': _('Create'),
                      'date': _(str((datetime.now().strftime('%B %Y'))))}
