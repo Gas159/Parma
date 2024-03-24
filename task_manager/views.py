@@ -17,7 +17,7 @@ class IndexView(SuccessMessageMixin,  LoginAuthMixin,  ListView):
                      'date': _(str((datetime.now().strftime('%B %Y'))))}
     model = Task
     context_object_name = 'tasks'
-
+    paginate_by = 5
     def get_queryset(self):
         queryset = Task.objects.filter(executor=self.request.user)
         return queryset

@@ -12,6 +12,7 @@ from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView
 
 from task_manager.mixins import LoginAuthMixin
+from tasks.models import Task
 from workdays.mixins import WorkdayMixin
 from products.models import Product
 from statuses.models import Status
@@ -54,6 +55,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
             product_status = form.instance.status.name
             workplace_id = form.instance.workplace.id
             product_obj = form.instance.product
+
             color = status_color.get(product_status, 'Call Gas')
             dict_of_product = model_to_dict(product_obj)  # преобразует обьект в словарь
             count = 0
@@ -64,6 +66,15 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
                     if workplace_id == value:
                         setattr(product_obj, 'color_' + str(count), color)
                         break
+            # print(Task.objects.values())
+            # q = product_obj.id
+            # task_obj = Task.objects.get(product=12)
+            # print(task_obj)
+            # task_obj.status_color = color
+            # print(task_obj.status_color, type(task_obj.status_color))
+            # print()
+            # print(vars(task_obj), dir(task_obj), sep='\n')
+
             product_obj.save()
 
         except ValueError:

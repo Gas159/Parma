@@ -16,6 +16,9 @@ class Product(models.Model):
     color_1 = models.CharField(max_length=29, null=True, blank=True)
     color_2 = models.CharField(max_length=29, null=True, blank=True)
     color_3 = models.CharField(max_length=29, null=True, blank=True)
+    color_4 = models.CharField(max_length=29, null=True, blank=True)
+    color_5 = models.CharField(max_length=29, null=True, blank=True)
+    color_6 = models.CharField(max_length=29, null=True, blank=True)
 
 
     step_1 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
@@ -24,6 +27,12 @@ class Product(models.Model):
                                related_name='Step_2', verbose_name=_('Step_2'))
     step_3 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
                                related_name='Step_3', verbose_name=_('Step_3'))
+    step_4 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
+                               related_name='Step_4', verbose_name=_('Step_4'))
+    step_5 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
+                               related_name='Step_5', verbose_name=_('Step_5'))
+    step_6 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
+                               related_name='Step_6', verbose_name=_('Step_6'))
 
     # step_1 = models.BooleanField(blank=True, default=False, verbose_name=_('Step_1'))
     # step_2 = models.CharField(max_length=222, blank=True, verbose_name=_('Step_1'))
