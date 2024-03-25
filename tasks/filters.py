@@ -19,9 +19,9 @@ class TaskFilter(django_filters.FilterSet):
         widget=forms.Select(attrs={'class': 'm-1'})
     )
     executor = django_filters.ModelChoiceFilter(
-        label=_('Executor'),
+        # label=_('Executor'),
         queryset=Users.objects.all(),
-        widget=forms.Select(attrs={'class': 'm-1'})
+        # widget=forms.Select(attrs={'class': 'm-1'})
     )
 
     labels = django_filters.ModelChoiceFilter(
@@ -39,3 +39,4 @@ class TaskFilter(django_filters.FilterSet):
     class Meta:
         model = Task
         fields = ['status', 'executor']
+        # fields = '__all__'

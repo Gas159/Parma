@@ -21,6 +21,25 @@
     <br>
     <h4><a href="{% url 'create_product' %}">{{ btn_create }}</a></h4>
 </div>
+
+<div class="card mb-2">
+    <div class="card-body bg-secondary">
+        <form class="form-inline center" method="get">
+            {% bootstrap_form filter.form field_class="mr-3 ml-2" %}
+            <br>
+            <div class="mr-4 ml-3 btn-sm">
+                <input class="btn btn-primary  " type="submit" value="{% trans 'Show' %}">
+                 <a class="btn btn-primary " href="{% url 'products' %}"
+           role="submit">{% trans 'Reset' %} </a>
+                </div>
+        </form>
+<!--        {% for obj in filter.qs %}-->
+<!--        {{ obj.name }} - ${{ obj.specification }}<br/>-->
+<!--        {% endfor %}-->
+    </div>
+</div>
+
+
 <!--<table class="table table-striped">-->
 <!--<table class="table table-striped table-dark table-sm ">-->
 <table class="table table-striped table-dark  ">

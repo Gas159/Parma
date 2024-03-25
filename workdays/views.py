@@ -66,19 +66,31 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
                     if workplace_id == value:
                         setattr(product_obj, 'color_' + str(count), color)
                         break
-            # print(Task.objects.values())
-            # q = product_obj.id
-            # task_obj = Task.objects.get(product=12)
-            # print(task_obj)
-            # task_obj.status_color = color
-            # print(task_obj.status_color, type(task_obj.status_color))
-            # print()
-            # print(vars(task_obj), dir(task_obj), sep='\n')
+
+
+            try:
+                executor_id = form.instance.user_name.id
+                task_obj = Task.objects.get(product_id=product_obj.id, workplace_id=workplace_id,
+                                                executor_id=executor_id)
+                task_obj.status =  form.instance.status
+                task_obj.status_color = color
+                task_obj.save()
+            except Task.DoesNotExist:
+                pass
 
             product_obj.save()
 
-        except ValueError:
-            return redirect('user_login')
+            # print(Task.objects.values())
+            # q = product_obj.id
+
+            # print(task_obj, type(task_obj))
+            # print(task_obj.status_color, type(task_obj.status_color))
+            # print()
+            # print(vars(task_obj), dir(task_obj), sep='\n\n')
+
+
+        # except ValueError:
+        #     return redirect('user_login')
         except:
             raise Exception('I dont know what need write here. Зовите Рината)')
 
