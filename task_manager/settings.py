@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'django_extensions',
+
     'task_manager',
     'bootstrap4',
     'django_filters',

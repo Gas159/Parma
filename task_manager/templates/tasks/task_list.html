@@ -31,6 +31,7 @@
         <th scope="col">ID</th>
         <th scope="col">{% trans 'Name' %}</th>
         <th scope="col">{% trans 'Executor' %}</th>
+        <th scope="col">{% trans 'Workplace' %}</th>
         <th scope="col">{% trans 'Product' %}</th>
         <th scope="col">{% trans 'Label' %}</th>
         <th scope="col">{% trans 'Status' %}</th>
@@ -48,13 +49,15 @@
         <td>{{task.id}}</td>
         <td><a href="{% url 'task' task.id %}">{{task.name}}</a></td>
         <td>{{task.executor}}</td>
+        <td>{{task.workplace}}</td>
         <td>{{task.product}}</td>
+
         <td>{% for i in task.labels.all %}
             {{i.name}}
             <br>
-            {% endfor %}
-        </td>
-        <td>{{ task.status }}</td>
+            {% endfor %}</td>
+
+        <td><p class={{ task.status_color }}> {{ task.status }} {{ task.status_color }}</p></td>
         <td>{{ task.description }}</td>
         <td>{{ task.author}}</td>
 

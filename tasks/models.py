@@ -5,6 +5,7 @@ from products.models import Product
 from users.models import Users
 from statuses.models import Status
 from labels.models import Labels
+from workplaces.models import Workplace
 
 
 class Task(models.Model):
@@ -12,10 +13,13 @@ class Task(models.Model):
 
     product = models.ForeignKey(Product, verbose_name=_('Product'), on_delete=models.SET_NULL, null=True)
 
+    workplace = models.ForeignKey(Workplace, on_delete=models.SET_NULL, null=True)
 
     description = models.TextField(max_length=300, blank=True, verbose_name=_('Description'))
     status = models.ForeignKey(Status, on_delete=models.PROTECT, null=True,
-                               verbose_name=_('Status'))
+                               verbose_name=_('Status'), default='Взять в работу')
+    status_color = models.CharField(max_length=222, null=True, blank=True)
+
     executor = models.ForeignKey(Users, on_delete=models.PROTECT, verbose_name=_('Executor'))
     author = models.ForeignKey(Users, related_name='author', on_delete=models.PROTECT,
                                verbose_name=_('Author'), default='2')

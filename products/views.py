@@ -4,7 +4,9 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView, DetailView
+from django_filters.views import FilterView
 
+from products.filters import ProductFilter
 from products.mixins import ProductsMixin
 from task_manager.mixins import LoginAuthMixin
 
@@ -41,15 +43,16 @@ class ProductView(LoginAuthMixin, ProductsMixin, DetailView):
         return object
 
 
-class ProductsListView(LoginAuthMixin, ProductsMixin, ListView):
+class ProductsListView(LoginAuthMixin, ProductsMixin, FilterView,ListView ):
     template_name = 'products/products_list.html'
     context_object_name = 'products'
-    # fields = ['name', 'description', 'workplace']
+    filterset_class = ProductFilter
     extra_context = {
         'title': _('Products'), 'btn_create': _('Create product'),
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
     }
-    # 'color': "text-primary"
+
+
 
 
 class CreateProductView(SuccessMessageMixin, LoginAuthMixin, ProductsMixin, CreateView):
