@@ -15,6 +15,18 @@ git config credential.helper store # set token
 git config --unset credential.helper	# unset token
 git config --global credential.helper "cache --timeout=3600" #temporary
 
+
+
 Ответ: Для того, чтоб удалить untracked файл можно воспользоваться командой git clean.
 Сначала следует выполнить git clean -n, это покажет файлы, подлежащие удалению.
 Затем выполнить само удаление командой git clean -f.
+
+
+
+
+Объединить изменения из удаленной ветки в вашу локальную ветку: git config pull.rebase falseили git config pull.ff only.
+
+Перебазировать ваши локальные изменения слоя изменений из удаленной ветки: git config pull.rebase true.
+
+Принимать только быстрые слияния (ускоренное слияние), что позволяет разрешать обновление веток только в том
+ случае, если оно может быть быстрым перемещением: git config pull.ff only.
