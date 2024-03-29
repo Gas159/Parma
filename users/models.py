@@ -14,6 +14,8 @@ from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from workplaces.models import Workplace
+
 
 class UserManager(BaseUserManager):
     def _create_user(self, email, password, **kwargs):
@@ -46,6 +48,7 @@ class UserManager(BaseUserManager):
             raise ValueError("Superuser must have is_superuser True")
         return self._create_user(email, password, **kwargs)
 
+
 class Users(AbstractUser):
     username = None
     # first_name = None
@@ -56,17 +59,19 @@ class Users(AbstractUser):
     REQUIRED_FIELDS = []
     full_name = models.CharField(_('full name'), max_length=1000, null=True, blank=True)
     user_id = models.CharField(_('session id'), max_length=10000, null=True, blank=True)
-    verification_code_time = models.IntegerField(_('time left for session id'), null=True, blank=True)
+    verification_code_time = models.IntegerField(_('time left for session id'),
+                                                 null=True, blank=True)
     verification_code = models.IntegerField(_('verification code'), null=True, blank=True)
+    workplace = models.ForeignKey(Workplace, on_delete=models.SET_NULL,
+                                  verbose_name=_('workplace'), null=True, blank=True)
     objects = UserManager()
 
     def __str__(self):
         return self.last_name + " " + self.first_name
+
     class Meta:
         ordering = ['-date_joined']
 
     #     class Meta:
     # #         ordering = ['-date_joined']
     #
-
-

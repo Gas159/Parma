@@ -13,9 +13,12 @@ from django.views.generic import ListView, CreateView
 
 from task_manager.mixins import LoginAuthMixin
 from tasks.models import Task
+from workdays.forms import FilterModelForm
 from workdays.mixins import WorkdayMixin
 from products.models import Product
 from statuses.models import Status
+from workdays.models import WorkDay
+from workplaces.models import Workplace
 
 
 # Create your views here.
@@ -39,6 +42,23 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
     success_message = _("Workday created successfully")
     error_message = _('Some went wrong')
     extra_context = {'title': _('Create workday'), 'btn': _('Create')}
+    form_class = FilterModelForm
+    model = WorkDay
+
+    def get_form_kwargs(self):
+        kwargs = super(CreateWorkdayView, self).get_form_kwargs()
+        # current_user = self.request.user
+        current_user = self.request.user
+        kwargs['current_user'] = current_user
+        # kwargs['current_products'] = Product.objects.filter(step_1=)
+
+        return kwargs
+
+    # def get(self, request):
+    #     # Получение текущего пользователя
+    #     current_user = request.user
+    #     form = FilterModelForm(initial={'current_user': current_user})
+    #     return render(request, 'workdays/workday_form.html', {'form': form})
 
     def form_valid(self, form):
         form.instance.user_name = self.request.user
@@ -67,12 +87,11 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
                         setattr(product_obj, 'color_' + str(count), color)
                         break
 
-
             try:
                 executor_id = form.instance.user_name.id
                 task_obj = Task.objects.get(product_id=product_obj.id, workplace_id=workplace_id,
-                                                executor_id=executor_id)
-                task_obj.status =  form.instance.status
+                                            executor_id=executor_id)
+                task_obj.status = form.instance.status
                 task_obj.status_color = color
                 task_obj.save()
             except Task.DoesNotExist:
@@ -87,7 +106,6 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
             # print(task_obj.status_color, type(task_obj.status_color))
             # print()
             # print(vars(task_obj), dir(task_obj), sep='\n\n')
-
 
         # except ValueError:
         #     return redirect('user_login')
