@@ -9,7 +9,7 @@ from .models import WorkDay
 class FilterModelForm(forms.ModelForm):
     filter_value = forms.CharField(label='Filter')
     workplace = forms.ModelChoiceField(queryset=Workplace.objects.all())
-    product = forms.ModelChoiceField(queryset=Product.objects.none())
+    product = forms.ModelChoiceField(queryset=Product.objects.all())
 
     def __init__(self, *args, **kwargs):
         current_user = kwargs.pop('current_user', None)
