@@ -15,7 +15,21 @@
     <thead>
     <tr class="table-info">
         <th scope="col">{% trans 'ID' %}</th>
-        <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Type' %}</th>
+        <th scope="col">{% trans 'dm' %}</th>
+        <th scope="col">{% trans 'D' %}</th>
+        <th scope="col">{% trans 'L' %}</th>
+        <th scope="col">{% trans 'Lc' %}</th>
+        <th scope="col">{% trans 'Z' %}</th>
+        <th scope="col">{% trans 'R' %}</th>
+        <th scope="col">{% trans 'Departure' %}</th>
+        <th scope="col">{% trans 'Monolith' %}</th>
+        <th scope="col">{% trans 'Plate' %}</th>
+        <th scope="col">{% trans 'Plate_name' %}</th>
+        <th scope="col">{% trans 'Company' %}</th>
+        <th scope="col">{% trans 'Price' %}</th>
+        <th scope="col">{% trans 'Delivery_time' %}</th>
+
         <th scope="col">{% trans 'Descriptions' %}</th>
         <th scope="col">{% trans 'Workplace' %}</th>
         <th scope="col">{% trans 'In_supply' %}</th>
@@ -26,17 +40,31 @@
     </thead>
     {% for t in tools %}
     <tr>
-        <td>{{t.id}}</td>
-        <td>{{t.name}}</td>
-        <td>{{t.description}}</td>
-        <td>{{t.workplace}}</td>
-        <td>{{t.in_supply}}</td>
-        <td>{{t.created_at}}</td>
-        <td>{{t.update_at}}</td>
+        <td>{{ t.id }}</td>
+        <td>{{ t.type }}</td>
+        <td>{% if t.dm %}{{ t.dm }}{% endif %}</td>
+        <td>{% if t.D %}{{ t.D }}{% endif %}</td>
+        <td>{% if t.L %}{{ t.L }}{% endif %}</td>
+        <td>{% if t.Lc %}{{ t.Lc }}{% endif %}</td>
+        <td>{% if t.Z %}{{ t.Z }}{% endif %}</td>
+        <td>{% if t.R %}{{ t.R }}{% endif %}</td>
+        <td>{% if t.departure %}{{ t.departure }}{% endif %}</td>
+        <td>{% if t.monolith %}{{ t.monolith }}{% endif %}</td>
+        <td>{% if t.plate %}{{ t.plate }}{% endif %}</td>
+        <td>{% if t.plate_name %}{{ t.plate_name }}{% endif %}</td>
+        <td>{% if t.company %}{{ t.company }}{% endif %}</td>
+        <td>{% if t.price %}{{ t.price }}{% endif %}</td>
+        <td>{% if t.dilevery_time %}{{ t.dilevery_time }}{% endif %}</td>
+
+        <td>{% if t.description %}{{ t.description }}{% endif %}</td>
+        <td>{% if t.workplace %}{{ t.workplace }}{% endif %}</td>
+        <td>{% if t.in_supply %}{{ t.in_supply }}{% endif %}</td>
+        <td>{% if t.created_at %}{{ t.created_at }}{% endif %}</td>
+        <td>{% if t.update_at %}{{ t.update_at }}{% endif %}</td>
         <td>
-              <a class="text-orange" href="{% url 'workpass'  %}">{{ btn_update }}</a>
-<!--            <br>-->
-              <a  class="text-danger" href="{% url 'workpass'  %}">{{btn_delete}}</a>
+            <a class="text-orange" href="{% url 'workpass'  %}">{{ btn_update }}</a>
+            <!--            <br>-->
+            <a class="text-danger" href="{% url 'workpass'  %}">{{btn_delete}}</a>
         </td>
     </tr>
     {% empty %}

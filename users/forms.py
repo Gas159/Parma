@@ -7,5 +7,5 @@ class RegisterUserForm(UserCreationForm):
         model = get_user_model()
         # fields = []  # fields = '__all__'
         # fields = ['first_name', 'last_name']  # fields = '__all__'
-        fields = ['first_name', 'last_name', 'email']  # fields = '__all__'
+        fields = ['first_name', 'last_name', 'email', 'workplace']  # fields = '__all__'
         ordering = ['-date_joined']

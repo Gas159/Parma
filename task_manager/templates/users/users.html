@@ -16,6 +16,7 @@
         <th scope="col">{% trans 'ID' %}</th>
         <th scope="col">{% trans 'Fullname' %}</th>
         <th scope="col">{% trans 'Workplace' %}</th>
+        <th scope="col">{% trans 'Email' %}</th>
         <th scope="col">{% trans 'Created date' %}</th>
         <th scope="col"></th>
     </tr>
@@ -26,6 +27,7 @@
 
         <td>{{user.id}}</td>
         <td>{{user | truncatechars_html:12 }}</td>
+        <td>{{user.email }}</td>
         <td>{{user.workplace}}</td>
         <td>{{user.date_joined}}</td>
 

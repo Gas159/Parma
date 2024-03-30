@@ -7,4 +7,6 @@ class ToolsMixin:
     model = Tool
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('tools')
-    fields = ['name', 'description', 'workplace', 'in_supply']
+    # fields = ['type', 'description', 'workplace', 'in_supply']
+    fields = "__all__"
+

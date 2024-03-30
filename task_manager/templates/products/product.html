@@ -29,7 +29,8 @@
                     <div class="col">{{ product.update_at|date:"d.m.Y" }}</div>
                 </div>
                 <div>
-                    <h6>{% trans 'Operations' %}:</h6>
+                    {% if product.workday_set.all %}
+                    <h6  class="row p-3" >{% trans 'Operations' %}:</h6>
                     <table class="table table-striped table-dark  ">
                         <thead class="thead-dark">
                         <tr class="text-sm-start">
@@ -50,7 +51,7 @@
                         {% if product.workday_set.all %}
                         {% for tl in product.order %}
                         <tr>
-                            <td>{{ tl.id }}}</td>
+                            <td>{{ tl.id }}</td>
                             <td> {{ tl.user_name }}</td>
                             <td> {{ tl.product }}</td>
                             <td> {{ tl.workplace }}</td>
@@ -67,6 +68,7 @@
                         <p>{% trans 'product without any label' %}</p>
                         {% endif %}
                     </table>
+                    {% endif %}
                     <!--                            <ul>-->
 
                     <!--                                {% if product.workday_set.all %}-->
@@ -91,24 +93,27 @@
                     <!--                            </ul>-->
 
 
-                    <div class="row p-5">
+                    <div class="row p-1">
                         <div class="col">
-                            <h6>{% trans 'Total' %}:</h6>
+                            <h6>{% trans 'Total time of treatment:' %}</h6>
                             <ul>
 
                                 {% if product.workday_set.all %}
                                 {% for key, value in product.total.items %}
                                 <div class="row p-1">
-                                    <div class='text-info'> {% trans 'Total time of treatment:' %} {{ key }} =
-                                        {{ value }} ч
-                                    </div>
+                                    <div class='text-info'> {{ key }} = {{ value }} ч</div>
                                 </div>
                                 {% endfor %}
                                 {% else %}
                                 <p>{% trans 'product without any label' %}</p>
                                 {% endif %}
-                                <div> {% trans 'Time on production: ' %} {{ product.delta_time }}</div>
+
                             </ul>
+                        </div>
+                        <div> {% trans 'Time on production: ' %}
+                            <div class="row p-1">
+                                <div class="col">{{ product.delta_time    }}</div>
+                            </div>
                         </div>
                     </div>
 

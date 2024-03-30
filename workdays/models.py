@@ -21,6 +21,7 @@ class WorkDay(models.Model):
                                   null=True, verbose_name=_('Operation'))
     status = models.ForeignKey(Status, on_delete=models.SET_NULL,
                                null=True, verbose_name=_('Status'))
+    amount = models.IntegerField(verbose_name=_('Amount'), null=True, blank=True)
     description = models.TextField(max_length=333, blank=True,
                                    verbose_name=_('Description'))
     # workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT,

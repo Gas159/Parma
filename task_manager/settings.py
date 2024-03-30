@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 import dj_database_url
+import logging
 
 load_dotenv()
 
@@ -11,7 +12,6 @@ FIXTURE_DIRS = (
 )
 
 SECRET_KEY = os.getenv('SECRET_KEY')
-
 
 DEBUG = os.getenv('DEBUG') == 'yes'
 # DEBUG = True
@@ -74,6 +74,35 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'console': {
+            'format': '{asctime} - {levelname} - {module} - {filename} - {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'console',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'formatter': 'console',
+            'filename': 'iformational.log'
+        },
+    },
+    'loggers': {
+        'main': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 WSGI_APPLICATION = 'task_manager.wsgi.application'
 

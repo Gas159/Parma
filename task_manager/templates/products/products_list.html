@@ -29,13 +29,13 @@
             <br>
             <div class="mr-4 ml-3 btn-sm">
                 <input class="btn btn-primary  " type="submit" value="{% trans 'Show' %}">
-                 <a class="btn btn-primary " href="{% url 'products' %}"
-           role="submit">{% trans 'Reset' %} </a>
-                </div>
+                <a class="btn btn-primary " href="{% url 'products' %}"
+                   role="submit">{% trans 'Reset' %} </a>
+            </div>
         </form>
-<!--        {% for obj in filter.qs %}-->
-<!--        {{ obj.name }} - ${{ obj.specification }}<br/>-->
-<!--        {% endfor %}-->
+        <!--        {% for obj in filter.qs %}-->
+        <!--        {{ obj.name }} - ${{ obj.specification }}<br/>-->
+        <!--        {% endfor %}-->
     </div>
 </div>
 
@@ -67,59 +67,17 @@
     <tr>
         <td>{{t.id}}</td>
         <td>{{t.specification }}</td>
-        <!--                <td>{{t.name}}</td>-->
-
         <td><a href="{% url 'product' t.id %}">{{ t.name }}</a></td>
-
         <td>{{t.number}}</td>
         <td>{{t.amount}}</td>
-
         <td>{{t.description | truncatechars:20 }}</td>
-        <!--        <td> <p class="btn btn-success" > {{t.step_1 }}  </p> </td>-->
-        <td><p class={{t.color_1 }}> {{t.step_1 }} </p></td>
-        <td><p class={{t.color_2 }}> {{t.step_2 }} </p></td>
-        <td><p class={{t.color_3 }}> {{t.step_3 }} </p></td>
-        <td><p class={{t.color_4 }}> {{t.step_4 }} </p></td>
-        <td><p class={{t.color_5 }}> {{t.step_5 }} </p></td>
-        <td><p class={{t.color_6 }}> {{t.step_6 }} </p></td>
 
-
-        <!--        {% if t.clear_turning_first %}-->
-        <!--        {% if t.clear_turning_first.name == "Выполнено" %}-->
-        <!--        <td><p class="btn btn-success"> {{t.clear_turning_first}} </p></td>-->
-        <!--        {% elif t.clear_turning_first.name == "В работе" %}-->
-        <!--        <td><p class="btn btn-outline-warning"> {{t.clear_turning_first}} </p></td>-->
-        <!--        {% else %}-->
-        <!--        <td><p class="btn btn-outline-danger"> {{t.clear_turning_first}} </p></td>-->
-        <!--        {% endif %}-->
-        <!--        {% else %}-->
-        <!--        <td></td>-->
-        <!--        {% endif %}-->
-
-        <!--        {% if t.clear_turning_second %}-->
-        <!--        {% if t.clear_turning_second.name == "Выполнено" %}-->
-        <!--        <td><p class="btn btn-success"> {{ t.clear_turning_second }} </p></td>-->
-        <!--        {% elif t.clear_turning_second.name == "В работе" %}-->
-        <!--        <td><p class="btn btn-outline-warning"> {{t.clear_turning_second}} </p></td>-->
-        <!--        {% else %}-->
-        <!--        <td><p class="btn btn-outline-danger"> {{t.clear_turning_second}} </p></td>-->
-        <!--        {% endif %}-->
-        <!--        {% else %}-->
-        <!--        <td></td>-->
-        <!--        {% endif %}-->
-
-        <!--        {% if t.clear_turning_third %}-->
-        <!--        {% if t.clear_turning_third.name == "Выполнено" %}-->
-        <!--        <td><p class="btn btn-success"> {{ t.clear_turning_third }} </p></td>-->
-        <!--        {% elif t.clear_turning_third.name == "В работе" %}-->
-        <!--        <td><p class="btn btn-outline-warning"> {{ t.clear_turning_third }} </p></td>-->
-        <!--        {% else %}-->
-        <!--        <td><p class="btn btn-outline-danger"> {{ t.clear_turning_third }} </p></td>-->
-        <!--        {% endif %}-->
-        <!--        {% else %}-->
-        <!--        <td></td>-->
-        <!--        {% endif %}-->
-
+        <td>{% if t.step_1 is not none %}<p class="{{ t.color_1 }}">{{ t.step_1 }}</p>{% endif %}</td>
+        <td>{% if t.step_2 is not none %}<p class="{{ t.color_2 }}">{{ t.step_2 }}</p>{% endif %}</td>
+        <td>{% if t.step_3 is not none %}<p class="{{ t.color_3 }}">{{ t.step_3 }}</p>{% endif %}</td>
+        <td>{% if t.step_4 is not none %}<p class="{{ t.color_4 }}">{{ t.step_4 }}</p>{% endif %}</td>
+        <td>{% if t.step_5 is not none %}<p class="{{ t.color_5 }}">{{ t.step_5 }}</p>{% endif %}</td>
+        <td>{% if t.step_6 is not none %}<p class="{{ t.color_6 }}">{{ t.step_6 }}</p>{% endif %}</td>
 
         <td>{{t.created_at | date:"d.m.Y" }}</td>
         <td>{{t.update_at | date:"d.m.Y h" }}</td>
@@ -130,21 +88,8 @@
         </td>
 
 
-        <!--        {% if t.clear_turning_second %}-->
-        <!--        <td> <p color="green"> {{t.clear_turning_second}} </p> </td>-->
-        <!--        {% else %}-->
-        <!--        <td></td>-->
-        <!--        {% endif %}-->
-
-        <!--        {% if t.clear_turning_third %}-->
-        <!--        <td> <p color="green"> {{t.clear_turning_third}} </p> </td>-->
-        <!--        {% else %}-->
-        <!--        <td></td>-->
-        <!--        <td><a class="text-danger"/> {{t.step_2}}</td>-->
-
-
     </tr>
-    <!--    {% endif %}-->
+
     {% empty %}
     <p>Sorry, no data in this list.</p>
     {% endfor %}

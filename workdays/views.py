@@ -20,6 +20,9 @@ from statuses.models import Status
 from workdays.models import WorkDay
 from workplaces.models import Workplace
 
+import logging
+
+logger = logging.getLogger('main')
 
 # Create your views here.
 def toolspass(request):
@@ -30,6 +33,7 @@ class WorkdaysListView(LoginAuthMixin, WorkdayMixin, ListView):
     template_name = 'workdays/workdays_list.html'
     context_object_name = 'workdays'
     # fields = ['name', 'description', 'workplace']
+    logger.info('hello!')
     extra_context = {
         'title': _('Workdays'), 'btn_create': _('Create Workday'),
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
@@ -47,26 +51,13 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
 
     def get_form_kwargs(self):
         kwargs = super(CreateWorkdayView, self).get_form_kwargs()
-        # current_user = self.request.user
         current_user = self.request.user
         kwargs['current_user'] = current_user
-        # kwargs['current_products'] = Product.objects.filter(step_1=)
-
         return kwargs
 
-    # def get(self, request):
-    #     # Получение текущего пользователя
-    #     current_user = request.user
-    #     form = FilterModelForm(initial={'current_user': current_user})
-    #     return render(request, 'workdays/workday_form.html', {'form': form})
 
     def form_valid(self, form):
         form.instance.user_name = self.request.user
-
-        # form.instance.author = self.request.user
-        # status = form.instance.status
-        # status1 = form.cleaned_data['status']
-
         status_color = {"Выполнено": "text-success",
                         'В работе': "text-warning",
                         'Перенаплавка': "text-danger"}
@@ -85,7 +76,7 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
                     count += 1
                     if workplace_id == value:
                         setattr(product_obj, 'color_' + str(count), color)
-                        break
+
 
             try:
                 executor_id = form.instance.user_name.id
@@ -110,7 +101,8 @@ class CreateWorkdayView(SuccessMessageMixin, LoginAuthMixin, WorkdayMixin, Creat
         # except ValueError:
         #     return redirect('user_login')
         except:
-            raise Exception('I dont know what need write here. Зовите Рината)')
+            pass
+            # raise Exception('I dont know what need write here. Зовите Рината)')
 
         return super().form_valid(form)
 
