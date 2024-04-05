@@ -6,7 +6,7 @@ from workplaces.models import Workplace
 
 class Tool(models.Model):
     type = models.CharField(max_length=222, null=True, blank=True, verbose_name=_('Type tool'))
-    dm = models.FloatField('d, mm', null=True, blank=True)
+    dm = models.DecimalField('d, mm', null=True, blank=True, decimal_places=1, max_digits=3)
     D = models.FloatField('D, mm', null=True, blank=True, )
     L = models.FloatField('L, mm', null=True, blank=True, )
     Lc = models.FloatField('Lc, mm', null=True, blank=True, )
@@ -23,7 +23,7 @@ class Tool(models.Model):
     workplace = models.ForeignKey(Workplace, on_delete=models.SET_NULL,
                                   null=True, blank=True, verbose_name=_('Workplace'))
     in_supply = models.CharField(max_length=222, null=True, blank=True, default='В наличии')
-    description = models.TextField(max_length=333, verbose_name=_('Description'))
+    description = models.TextField(max_length=333, verbose_name=_('Description'), blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     update_at = models.DateTimeField(auto_now=True, null=True)

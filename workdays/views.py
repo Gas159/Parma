@@ -33,7 +33,7 @@ class WorkdaysListView(LoginAuthMixin, WorkdayMixin, ListView):
     template_name = 'workdays/workdays_list.html'
     context_object_name = 'workdays'
     # fields = ['name', 'description', 'workplace']
-    logger.info('hello!')
+    # logger.info('hello!')
     extra_context = {
         'title': _('Workdays'), 'btn_create': _('Create Workday'),
         'btn_update': _('Update'), 'btn_delete': _('Delete'),
