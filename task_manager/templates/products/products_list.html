@@ -47,6 +47,7 @@
     <tr class="text-sm-start">
         <th scope="col-md-8 mx-auto">{% trans 'ID' %}</th>
         <th scope='col-md-8 mx-auto'> {% trans 'Specification' %}</th>
+        <th scope='col-md-8 mx-auto'> {% trans 'Spec_number' %}</th>
         <th scope="col-md-8 mx-auto">{% trans 'Name' %}</th>
         <th scope="col-md-8 mx-auto">{% translate 'Number' %}</th>
         <th scope="col-md-8 mx-auto">{% translate 'Amount' %}</th>
@@ -67,6 +68,7 @@
     <tr>
         <td>{{t.id}}</td>
         <td>{{t.specification }}</td>
+        <td>{{t.spec_number }}</td>
         <td><a href="{% url 'product' t.id %}">{{ t.name }}</a></td>
         <td>{{t.number}}</td>
         <td>{{t.amount}}</td>

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-22 12:42+0500\n"
+"POT-Creation-Date: 2024-04-05 22:41+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgid "=Labels="
 msgstr "Метки"
 
 #: labels/views.py:11 task_manager/templates/base.html:83
-#: task_manager/templates/tasks/task.html:36 tasks/models.py:19
+#: task_manager/templates/tasks/task.html:36 tasks/models.py:28
 msgid "Labels"
 msgstr "Метки"
 
@@ -40,23 +40,24 @@ msgid "Create label"
 msgstr "Создать метку"
 
 #: labels/views.py:11 labels/views.py:26 overtimes/views.py:25
-#: products/views.py:21 products/views.py:49 statuses/views.py:15
-#: statuses/views.py:28 task_manager/templates/products/product.html:86
+#: products/service.py:17 products/views.py:20 products/views.py:45
+#: statuses/views.py:15 statuses/views.py:28
+#: task_manager/templates/products/product.html:124
 #: task_manager/templates/tasks/task.html:51
 #: task_manager/templates/users/pass_change.html:11
 #: task_manager/templates/workplaces/workplace.html:48 tasks/views.py:14
 #: tasks/views.py:20 tasks/views.py:44 tools/views.py:20 users/views.py:22
-#: users/views.py:47 workdays/views.py:29 workplaces/views.py:17
+#: users/views.py:47 workdays/views.py:39 workplaces/views.py:17
 #: workplaces/views.py:30
 msgid "Update"
 msgstr "Изменить"
 
-#: labels/views.py:12 overtimes/views.py:25 products/views.py:22
-#: products/views.py:49 statuses/views.py:15
-#: task_manager/templates/products/product.html:88
+#: labels/views.py:12 overtimes/views.py:25 products/service.py:17
+#: products/views.py:21 products/views.py:45 statuses/views.py:15
+#: task_manager/templates/products/product.html:126
 #: task_manager/templates/tasks/task.html:53
 #: task_manager/templates/workplaces/workplace.html:50 tasks/views.py:15
-#: tasks/views.py:21 tools/views.py:20 users/views.py:22 workdays/views.py:29
+#: tasks/views.py:21 tools/views.py:20 users/views.py:22 workdays/views.py:39
 #: workplaces/views.py:18 workplaces/views.py:30
 msgid "Delete"
 msgstr "Удалить"
@@ -69,9 +70,9 @@ msgstr "Метка успешно создана"
 msgid "New Label"
 msgstr "Создать метку"
 
-#: labels/views.py:20 overtimes/views.py:46 products/views.py:56
-#: statuses/views.py:22 task_manager/views.py:13 tasks/views.py:31
-#: tools/views.py:25 workdays/views.py:38 workplaces/views.py:37
+#: labels/views.py:20 overtimes/views.py:46 products/views.py:52
+#: statuses/views.py:22 task_manager/views.py:16 tasks/views.py:31
+#: tools/views.py:25 workdays/views.py:48 workplaces/views.py:37
 msgid "Create"
 msgstr "Создать"
 
@@ -116,7 +117,7 @@ msgstr "Переработка"
 msgid "-=Overtime=-"
 msgstr "Переработка"
 
-#: overtimes/views.py:24 task_manager/templates/base.html:71
+#: overtimes/views.py:24 task_manager/templates/base.html:72
 msgid "Overtimes"
 msgstr "Переработки"
 
@@ -136,55 +137,65 @@ msgstr "Переработка"
 msgid "FigVam"
 msgstr "блаб ла"
 
-#: products/models.py:11 workdays/models.py:18
+#: products/models.py:12 workdays/models.py:18
 msgid "Product name"
 msgstr "Наименование изделия"
 
-#: products/models.py:12
+#: products/models.py:13
 msgid "Product number"
 msgstr "Номер изделия"
 
-#: products/models.py:13 task_manager/templates/products/products_list.html:21
-#: task_manager/templates/workdays/workdays_list.html:24 tasks/models.py:11
-#: tools/models.py:9 workdays/models.py:25 workplaces/models.py:11
+#: products/models.py:18 task_manager/templates/index.html:39
+#: task_manager/templates/products/product.html:44
+#: task_manager/templates/products/products_list.html:53
+#: task_manager/templates/tasks/task_list.html:38
+#: task_manager/templates/workdays/workdays_list.html:24 tasks/models.py:18
+#: tools/models.py:26 workdays/models.py:26 workplaces/models.py:11
 msgid "Description"
 msgstr "Описание"
 
-#: products/models.py:18
-#, fuzzy
-#| msgid "Status"
-msgid "status1"
-msgstr "Статус"
+#: products/models.py:28
+msgid "Step_1"
+msgstr ""
 
-#: products/models.py:20
-#, fuzzy
-#| msgid "Status"
-msgid "status2"
-msgstr "Статус"
+#: products/models.py:30
+msgid "Step_2"
+msgstr ""
 
-#: products/models.py:22
-#, fuzzy
-#| msgid "Status"
-msgid "status3"
-msgstr "Статус"
+#: products/models.py:32
+msgid "Step_3"
+msgstr ""
 
 #: products/models.py:34
+msgid "Step_4"
+msgstr ""
+
+#: products/models.py:36
+msgid "Step_5"
+msgstr ""
+
+#: products/models.py:38
+msgid "Step_6"
+msgstr ""
+
+#: products/models.py:62
 msgid "-=Products=-"
 msgstr ""
 
-#: products/views.py:21 tasks/views.py:14
-msgid "Task"
-msgstr "Задача"
-
-#: products/views.py:48 task_manager/templates/base.html:60
+#: products/service.py:16 products/views.py:44
+#: task_manager/templates/base.html:61
 msgid "Products"
 msgstr "Продукция"
 
-#: products/views.py:48 products/views.py:56
+#: products/service.py:16 products/views.py:44 products/views.py:52
 msgid "Create product"
 msgstr "Внести изделие"
 
-#: products/views.py:55
+#: products/views.py:20 tasks/views.py:14
+msgid "Task"
+msgstr "Задача"
+
+#: products/views.py:51
 msgid "Products created successfully"
 msgstr "Продукция успешно создан"
 
@@ -232,30 +243,33 @@ msgstr "Удаление статуса"
 msgid "Can't delete status because it's in use"
 msgstr "Невозможно удалить метку, потому что она используется"
 
-#: task_manager/mixins.py:14
+#: task_manager/mixins.py:12
 msgid "You are not authorized! Please sign in."
 msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
 
-#: task_manager/templates/base.html:42
+#: task_manager/templates/base.html:43
 msgid "Glavnaya Stranica"
 msgstr "Главная страница"
 
-#: task_manager/templates/base.html:54
+#: task_manager/templates/base.html:55
 msgid "Emploeys"
 msgstr "Персонал"
 
-#: task_manager/templates/base.html:57 workdays/views.py:28
+#: task_manager/templates/base.html:58 workdays/views.py:38
 msgid "Workdays"
 msgstr "Смены"
 
-#: task_manager/templates/base.html:65
-#: task_manager/templates/tools/tools_list.html:20
-#: task_manager/templates/workdays/workdays_list.html:19 tools/models.py:11
+#: task_manager/templates/base.html:66
+#: task_manager/templates/products/product.html:40
+#: task_manager/templates/tasks/task_list.html:34
+#: task_manager/templates/tools/tools_list.html:34
+#: task_manager/templates/users/users.html:18
+#: task_manager/templates/workdays/workdays_list.html:19 tools/models.py:24
 #: workdays/models.py:15 workplaces/views.py:17
 msgid "Workplace"
 msgstr "Рабочее место"
 
-#: task_manager/templates/base.html:68
+#: task_manager/templates/base.html:69
 #: task_manager/templates/workplaces/workplace.html:22
 #: task_manager/templates/workplaces/workplace.html:31 tools/views.py:19
 msgid "Tools"
@@ -286,95 +300,105 @@ msgstr "Этот проект на гитхабе"
 msgid "More projects"
 msgstr "БОльше проектов"
 
+#: task_manager/templates/index.html:34
 #: task_manager/templates/labels/labels_list.html:22
 #: task_manager/templates/overtimes/overtimes_list.html:18
-#: task_manager/templates/products/products_list.html:19
+#: task_manager/templates/products/product.html:38
+#: task_manager/templates/products/products_list.html:50
 #: task_manager/templates/statuses/statuses.html:18
 #: task_manager/templates/tasks/task_list.html:32
-#: task_manager/templates/tools/tools_list.html:18
 #: task_manager/templates/workdays/workdays_list.html:18
 #: task_manager/templates/workplaces/workplaces_list.html:18
 msgid "Name"
 msgstr "Имя"
 
+#: task_manager/templates/index.html:35
+#: task_manager/templates/tasks/task.html:23
+#: task_manager/templates/tasks/task_list.html:33 tasks/models.py:23
+msgid "Executor"
+msgstr "Исполнитель"
+
+#: task_manager/templates/index.html:36
+#: task_manager/templates/products/product.html:39
+#: task_manager/templates/tasks/task_list.html:35
+#: task_manager/templates/workdays/workdays_list.html:20 tasks/models.py:14
+msgid "Product"
+msgstr "Продукция"
+
+#: task_manager/templates/index.html:37
+#: task_manager/templates/tasks/task_list.html:36 tasks/filters.py:31
+msgid "Label"
+msgstr "Метка"
+
+#: task_manager/templates/index.html:38
+#: task_manager/templates/products/product.html:20
+#: task_manager/templates/products/product.html:43
+#: task_manager/templates/tasks/task.html:27
+#: task_manager/templates/tasks/task_list.html:37
+#: task_manager/templates/workdays/workdays_list.html:23 tasks/filters.py:17
+#: tasks/models.py:20 workdays/models.py:23
+msgid "Status"
+msgstr "Статус"
+
+#: task_manager/templates/index.html:40
+#: task_manager/templates/tasks/task.html:19
+#: task_manager/templates/tasks/task_list.html:39 tasks/models.py:25
+msgid "Author"
+msgstr "Автор"
+
+#: task_manager/templates/index.html:41
 #: task_manager/templates/labels/labels_list.html:23
-#: task_manager/templates/tasks/task_list.html:36
+#: task_manager/templates/tasks/task_list.html:40
 msgid "Created at"
 msgstr "Создано"
+
+#: task_manager/templates/index.html:42
+#: task_manager/templates/tasks/task_list.html:41
+#, fuzzy
+#| msgid "Update date"
+msgid "update_at"
+msgstr "Дата обновления"
 
 #: task_manager/templates/login.html:11
 msgid "Log in"
 msgstr "Войти"
 
 #: task_manager/templates/overtimes/overtimes_list.html:20
-#: task_manager/templates/products/products_list.html:25
+#: task_manager/templates/products/product.html:45
+#: task_manager/templates/products/products_list.html:60
 #: task_manager/templates/statuses/statuses.html:19
-#: task_manager/templates/tools/tools_list.html:22
+#: task_manager/templates/tools/tools_list.html:36
 #: task_manager/templates/workdays/workdays_list.html:25
 #: task_manager/templates/workplaces/workplaces_list.html:20
 msgid "Create date"
 msgstr "Дата создания"
 
 #: task_manager/templates/overtimes/overtimes_list.html:21
-#: task_manager/templates/products/products_list.html:26
+#: task_manager/templates/products/product.html:46
+#: task_manager/templates/products/products_list.html:61
 #: task_manager/templates/statuses/statuses.html:20
-#: task_manager/templates/tools/tools_list.html:23
+#: task_manager/templates/tools/tools_list.html:37
 #: task_manager/templates/workdays/workdays_list.html:26
 #: task_manager/templates/workplaces/workplaces_list.html:21
 msgid "Update date"
 msgstr "Дата обновления"
 
-#: task_manager/templates/products/product.html:19
-#: task_manager/templates/tasks/task.html:19
-#: task_manager/templates/tasks/task_list.html:34 tasks/models.py:16
-msgid "Author"
-msgstr "Автор"
-
-#: task_manager/templates/products/product.html:23
-#: task_manager/templates/tasks/task.html:23
-#: task_manager/templates/tasks/task_list.html:35 tasks/filters.py:22
-#: tasks/models.py:14
-msgid "Executor"
-msgstr "Исполнитель"
-
-#: task_manager/templates/products/product.html:27
-#: task_manager/templates/tasks/task.html:27
-#: task_manager/templates/tasks/task_list.html:33
-#: task_manager/templates/workdays/workdays_list.html:23 tasks/filters.py:17
-#: tasks/models.py:13 workdays/models.py:23
-msgid "Status"
-msgstr "Статус"
-
-#: task_manager/templates/products/product.html:31
+#: task_manager/templates/products/product.html:24
 #: task_manager/templates/tasks/task.html:31
 #: task_manager/templates/workplaces/workplace.html:26
 msgid "Created"
 msgstr "Создано"
 
-#: task_manager/templates/products/product.html:35
+#: task_manager/templates/products/product.html:28
 msgid "Updated"
 msgstr "Обновлено"
 
-#: task_manager/templates/products/product.html:40
+#: task_manager/templates/products/product.html:33
 msgid "Operations"
 msgstr "Операции"
 
-#: task_manager/templates/products/product.html:56
-#: task_manager/templates/products/product.html:76
-#, fuzzy
-#| msgid "Task without any label"
-msgid "product without any label"
-msgstr "Задача без метки"
-
-#: task_manager/templates/products/product.html:65
-msgid "Total"
-msgstr "Общее"
-
-#: task_manager/templates/products/product.html:71
-msgid "Total time of treatment:"
-msgstr "Затраченое время: "
-
-#: task_manager/templates/products/products_list.html:18
+#: task_manager/templates/products/product.html:37
+#: task_manager/templates/products/products_list.html:48
 #: task_manager/templates/statuses/statuses.html:17
 #: task_manager/templates/tools/tools_list.html:17
 #: task_manager/templates/users/users.html:16
@@ -383,21 +407,86 @@ msgstr "Затраченое время: "
 msgid "ID"
 msgstr "ID"
 
-#: task_manager/templates/products/products_list.html:20
+#: task_manager/templates/products/product.html:41
+#: task_manager/templates/workdays/workdays_list.html:21
+msgid "Time of "
+msgstr "Затраченное время"
+
+#: task_manager/templates/products/product.html:42
+#: task_manager/templates/workdays/workdays_list.html:22 workdays/models.py:21
+msgid "Operation"
+msgstr "Операция"
+
+#: task_manager/templates/products/product.html:68
+#: task_manager/templates/products/product.html:91
+#: task_manager/templates/products/product.html:108
+#, fuzzy
+#| msgid "Task without any label"
+msgid "product without any label"
+msgstr "Задача без метки"
+
+#: task_manager/templates/products/product.html:98
+msgid "Total time of treatment:"
+msgstr "Затраченое время: "
+
+#: task_manager/templates/products/product.html:113
+msgid "Time on production: "
+msgstr ""
+
+#: task_manager/templates/products/products_list.html:15
+msgid "search"
+msgstr ""
+
+#: task_manager/templates/products/products_list.html:17
+msgid "reset"
+msgstr ""
+
+#: task_manager/templates/products/products_list.html:31
+#: task_manager/templates/tasks/task_list.html:21
+msgid "Show"
+msgstr "Показать"
+
+#: task_manager/templates/products/products_list.html:33
+msgid "Reset"
+msgstr ""
+
+#: task_manager/templates/products/products_list.html:49
+#, fuzzy
+#| msgid "Operation"
+msgid "Specification"
+msgstr "Операция"
+
+#: task_manager/templates/products/products_list.html:51
 msgid "Number"
 msgstr "Номер"
 
-#: task_manager/templates/products/products_list.html:22
-msgid "Токарная чист №1"
-msgstr "Токарная чист №1"
+#: task_manager/templates/products/products_list.html:52 workdays/models.py:24
+msgid "Amount"
+msgstr ""
 
-#: task_manager/templates/products/products_list.html:23
-msgid "Токарная чист №2"
-msgstr "Токарная чист №2"
+#: task_manager/templates/products/products_list.html:54
+msgid "005"
+msgstr ""
 
-#: task_manager/templates/products/products_list.html:24
-msgid "Токарная чист №3"
-msgstr "Токарная чист №3"
+#: task_manager/templates/products/products_list.html:55
+msgid "010"
+msgstr ""
+
+#: task_manager/templates/products/products_list.html:56
+msgid "015"
+msgstr ""
+
+#: task_manager/templates/products/products_list.html:57
+msgid "020"
+msgstr ""
+
+#: task_manager/templates/products/products_list.html:58
+msgid "025"
+msgstr ""
+
+#: task_manager/templates/products/products_list.html:59
+msgid "030"
+msgstr ""
 
 #: task_manager/templates/statuses/status_confirm_delete.html:14
 #: task_manager/templates/users/users_confirm_delete.html:14
@@ -412,16 +501,74 @@ msgstr "Задача без метки"
 msgid "Create task"
 msgstr "Создать задачу"
 
-#: task_manager/templates/tasks/task_list.html:21
-msgid "Show"
-msgstr "Показать"
+#: task_manager/templates/tools/tools_list.html:18
+msgid "Type"
+msgstr ""
 
 #: task_manager/templates/tools/tools_list.html:19
+msgid "dm"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:20
+#, fuzzy
+#| msgid "ID"
+msgid "D"
+msgstr "ID"
+
+#: task_manager/templates/tools/tools_list.html:21
+msgid "L"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:22
+msgid "Lc"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:23
+msgid "Z"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:24
+msgid "R"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:25
+msgid "Departure"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:26
+msgid "Monolith"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:27
+msgid "Plate"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:28
+#, fuzzy
+#| msgid "Label name"
+msgid "Plate_name"
+msgstr "Имя"
+
+#: task_manager/templates/tools/tools_list.html:29
+msgid "Company"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:30
+msgid "Price"
+msgstr ""
+
+#: task_manager/templates/tools/tools_list.html:31
+#, fuzzy
+#| msgid "Overtime"
+msgid "Delivery_time"
+msgstr "Переработка"
+
+#: task_manager/templates/tools/tools_list.html:33
 #: task_manager/templates/workplaces/workplaces_list.html:19
 msgid "Descriptions"
 msgstr "Описание"
 
-#: task_manager/templates/tools/tools_list.html:21
+#: task_manager/templates/tools/tools_list.html:35
 msgid "In_supply"
 msgstr "На складе"
 
@@ -433,21 +580,13 @@ msgstr "Изменить пароль"
 msgid "Fullname"
 msgstr "Полное имя"
 
-#: task_manager/templates/users/users.html:18
+#: task_manager/templates/users/users.html:19
+msgid "Email"
+msgstr ""
+
+#: task_manager/templates/users/users.html:20
 msgid "Created date"
 msgstr "Дата создания"
-
-#: task_manager/templates/workdays/workdays_list.html:20
-msgid "Product"
-msgstr "Продукция"
-
-#: task_manager/templates/workdays/workdays_list.html:21
-msgid "Time of "
-msgstr "Затраченное время"
-
-#: task_manager/templates/workdays/workdays_list.html:22 workdays/models.py:21
-msgid "Operation"
-msgstr "Операция"
 
 #: task_manager/templates/workplaces/workplace.html:39
 #, fuzzy
@@ -455,21 +594,17 @@ msgstr "Операция"
 msgid "workplace without any tools"
 msgstr "Задача без метки"
 
-#: task_manager/views.py:13
+#: task_manager/views.py:16
 msgid "User"
 msgstr "Пользователь"
 
-#: task_manager/views.py:19
+#: task_manager/views.py:40
 msgid "Successfully login"
 msgstr "Вы залогинены"
 
-#: task_manager/views.py:29
+#: task_manager/views.py:50
 msgid "You are logged out"
 msgstr "Вы разлогинены"
-
-#: tasks/filters.py:31
-msgid "Label"
-msgstr "Метка"
 
 #: tasks/filters.py:36
 msgid "Show own tasks"
@@ -479,15 +614,15 @@ msgstr "Только свои задачи"
 msgid "Only author can delete task"
 msgstr "Только автор может удалить задачу"
 
-#: tasks/models.py:10
+#: tasks/models.py:12
 msgid "Task name"
 msgstr "Имя"
 
-#: tasks/models.py:27
+#: tasks/models.py:36
 msgid "=Task="
 msgstr "Задача"
 
-#: tasks/models.py:28
+#: tasks/models.py:37
 msgid "=Tasks="
 msgstr "Задачи"
 
@@ -517,11 +652,11 @@ msgstr "Удалить задачу"
 
 #: tools/models.py:8
 #, fuzzy
-#| msgid "Task name"
-msgid "Tool name"
-msgstr "Имя"
+#| msgid "Created at"
+msgid "Type tool"
+msgstr "Создано"
 
-#: tools/models.py:21
+#: tools/models.py:36
 msgid "-=Tools=-"
 msgstr ""
 
@@ -547,27 +682,33 @@ msgstr "Создано"
 msgid "You can not change another user"
 msgstr "У вас нет прав для изменения другого пользователя."
 
-#: users/models.py:53
+#: users/models.py:56
 msgid "email address"
 msgstr ""
 
-#: users/models.py:57
+#: users/models.py:60
 #, fuzzy
 #| msgid "Fullname"
 msgid "full name"
 msgstr "Полное имя"
 
-#: users/models.py:58
+#: users/models.py:61
 msgid "session id"
 msgstr ""
 
-#: users/models.py:59
+#: users/models.py:62
 msgid "time left for session id"
 msgstr ""
 
-#: users/models.py:60
+#: users/models.py:64
 msgid "verification code"
 msgstr ""
+
+#: users/models.py:66
+#, fuzzy
+#| msgid "Workplace"
+msgid "workplace"
+msgstr "Рабочее место"
 
 #: users/views.py:22
 msgid "Users"
@@ -609,23 +750,23 @@ msgstr ""
 msgid "Time of create"
 msgstr "Затраченое время"
 
-#: workdays/models.py:38
+#: workdays/models.py:39
 msgid "-=WorkDays=-"
 msgstr "Смены"
 
-#: workdays/views.py:28
+#: workdays/views.py:38
 msgid "Create Workday"
 msgstr "Записать наряд"
 
-#: workdays/views.py:36
+#: workdays/views.py:46
 msgid "Workday created successfully"
 msgstr "Смена успешно создана"
 
-#: workdays/views.py:37
+#: workdays/views.py:47
 msgid "Some went wrong"
 msgstr ""
 
-#: workdays/views.py:38
+#: workdays/views.py:48
 msgid "Create workday"
 msgstr "Записать наряд"
 
@@ -662,6 +803,38 @@ msgstr "Метка успешно создана"
 #| msgid "Create label"
 msgid "Create workplace"
 msgstr "Создать метку"
+
+#, fuzzy
+#~| msgid "Status"
+#~ msgid "status1"
+#~ msgstr "Статус"
+
+#, fuzzy
+#~| msgid "Status"
+#~ msgid "status2"
+#~ msgstr "Статус"
+
+#, fuzzy
+#~| msgid "Status"
+#~ msgid "status3"
+#~ msgstr "Статус"
+
+#~ msgid "Total"
+#~ msgstr "Общее"
+
+#~ msgid "Токарная чист №1"
+#~ msgstr "Токарная чист №1"
+
+#~ msgid "Токарная чист №2"
+#~ msgstr "Токарная чист №2"
+
+#~ msgid "Токарная чист №3"
+#~ msgstr "Токарная чист №3"
+
+#, fuzzy
+#~| msgid "Task name"
+#~ msgid "Tool name"
+#~ msgstr "Имя"
 
 #~ msgid "Overtimes  "
 #~ msgstr "Переработки"

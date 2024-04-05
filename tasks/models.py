@@ -9,9 +9,10 @@ from workplaces.models import Workplace
 
 
 class Task(models.Model):
-    name = models.CharField(max_length=250, unique=True, verbose_name=_('Task name'))
+    name = models.CharField(max_length=250, verbose_name=_('Task name'))
 
-    product = models.ForeignKey(Product, verbose_name=_('Product'), on_delete=models.SET_NULL, null=True)
+    product = models.ForeignKey(Product, verbose_name=_('Product'),
+                                on_delete=models.SET_NULL, null=True)
 
     workplace = models.ForeignKey(Workplace, on_delete=models.SET_NULL, null=True)
 
@@ -20,7 +21,8 @@ class Task(models.Model):
                                verbose_name=_('Status'), default='Взять в работу')
     status_color = models.CharField(max_length=222, null=True, blank=True)
 
-    executor = models.ForeignKey(Users, on_delete=models.PROTECT, verbose_name=_('Executor'))
+    executor = models.ForeignKey(Users, on_delete=models.PROTECT,
+                                 verbose_name=_('Executor'), blank=True, null=True)
     author = models.ForeignKey(Users, related_name='author', on_delete=models.PROTECT,
                                verbose_name=_('Author'), default='2')
 

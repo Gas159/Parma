@@ -10,18 +10,18 @@ from workplaces.models import Workplace
 class Product(models.Model):
     # unique = True
     name = models.CharField(max_length=222, verbose_name=_('Product name'))
-    number = models.IntegerField(verbose_name=_('Product number'))
+    number = models.IntegerField(verbose_name=_('Product number'), null=True)
     specification = models.IntegerField('Specification', null=True, blank=True)
-    amount = IntegerField('Кол-во', null=True, blank=True)
-
+    amount = IntegerField('Кол-во', null=True, blank=True, default=1)
+    spec_number = IntegerField('Пункт спецификации', null=True, blank=True)
     description = models.TextField(max_length=333, blank=True, verbose_name=_('Description'))
+
     color_1 = models.CharField(max_length=29, null=True, blank=True)
     color_2 = models.CharField(max_length=29, null=True, blank=True)
     color_3 = models.CharField(max_length=29, null=True, blank=True)
     color_4 = models.CharField(max_length=29, null=True, blank=True)
     color_5 = models.CharField(max_length=29, null=True, blank=True)
     color_6 = models.CharField(max_length=29, null=True, blank=True)
-
 
     step_1 = models.ForeignKey(Workplace, on_delete=models.SET_NULL, blank=True, null=True,
                                related_name='Step_1', verbose_name=_('Step_1'))

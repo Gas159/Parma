@@ -29,7 +29,7 @@
     <thead>
     <tr class="table-info">
         <th scope="col">ID</th>
-        <th scope="col">{% trans 'Name' %}</th>
+        <!--        <th scope="col">{% trans 'Name' %}</th>-->
         <th scope="col">{% trans 'Executor' %}</th>
         <th scope="col">{% trans 'Workplace' %}</th>
         <th scope="col">{% trans 'Product' %}</th>
@@ -45,22 +45,18 @@
     <tbody>
     {% for task in tasks %}
     <tr>
-
         <td>{{task.id}}</td>
-        <td><a href="{% url 'task' task.id %}">{{task.name}}</a></td>
         <td>{{task.executor}}</td>
-        <td>{{task.workplace}}</td>
+        <td><a href="{% url 'task' task.id %}">{{task.workplace}}</a></td>
         <td>{{task.product}}</td>
-
         <td>{% for i in task.labels.all %}
             {{i.name}}
             <br>
-            {% endfor %}</td>
-
+            {% endfor %}
+        </td>
         <td><p class={{ task.status_color }}> {{ task.status }} {{ task.status_color }}</p></td>
         <td>{{ task.description }}</td>
         <td>{{ task.author}}</td>
-
         <td>{{task.created_at|date:"d.m.Y"}}</td>
         <td>{{task.update_at|date:"d.m.Y"}}</td>
         <td>
