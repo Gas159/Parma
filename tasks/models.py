@@ -17,7 +17,7 @@ class Task(models.Model):
     workplace = models.ForeignKey(Workplace, on_delete=models.SET_NULL, null=True)
 
     description = models.TextField(max_length=300, blank=True, verbose_name=_('Description'))
-    status = models.ForeignKey(Status, on_delete=models.PROTECT, null=True,
+    status = models.ForeignKey(Status, on_delete=models.PROTECT, null=True, blank=True,
                                verbose_name=_('Status'), default='Взять в работу')
     status_color = models.CharField(max_length=222, null=True, blank=True)
 

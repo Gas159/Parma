@@ -1,3 +1,5 @@
+import logging
+
 from django.db.models import Sum
 
 from django.contrib.messages.views import SuccessMessageMixin
@@ -8,7 +10,13 @@ from django_filters.views import FilterView
 
 from products.filters import ProductFilter
 from products.mixins import ProductsMixin
+from products.models import Product
+from statuses.models import Status
 from task_manager.mixins import LoginAuthMixin
+from tasks.models import Task
+from workplaces.models import Workplace
+
+logger = logging.getLogger('main')
 
 
 def toolspass(request):
@@ -17,7 +25,7 @@ def toolspass(request):
 
 class ProductView(LoginAuthMixin, ProductsMixin, DetailView):
     template_name = 'products/product.html'
-    extra_context = {'title': _('Task'), 'btn_update': _('Update'),
+    extra_context = {'title': _('Product'), 'btn_update': _('Update'),
                      'btn_delete': _('Delete')}
     context_object_name = 'product'
 
@@ -50,3 +58,22 @@ class CreateProductView(SuccessMessageMixin, LoginAuthMixin, ProductsMixin, Crea
     template_name = 'products/product_form.html'
     success_message = _("Products created successfully")
     extra_context = {'title': _('Create product'), 'btn': _('Create')}
+
+    def form_valid(self, form):
+        ''' Пробегаем по полям продукции. Ищем раб места и создаем на каждое задачу'''
+        response = super().form_valid(form)
+        workplaces = Workplace.objects.all()
+        # logger.debug(workplaces)
+        # logger.debug(response)
+        for field in [f.name for f in Product._meta.get_fields()]:
+            # logger.debug(field)
+            # logger.debug(getattr(form.instance, field, 'pass'))
+            # logger.debug(' ')
+            workplace = getattr(form.instance, field, 'pass')
+            if workplace in workplaces:
+                Task.objects.create(workplace=workplace,
+                                    product=form.instance,
+                                    author=self.request.user,
+                                    status=Status.objects.get(name='Взять в работу'))
+                logger.info(f'Task {workplace} created')
+        return response

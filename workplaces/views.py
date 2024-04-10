@@ -18,6 +18,27 @@ class WorkplaceView(LoginAuthMixin, WorkplaceMixin, DetailView):  # modelname_de
                      'btn_delete': _('Delete')}
     context_object_name = 'workplace'
 
+class WorkplaceStageView(LoginAuthMixin, WorkplaceMixin, DetailView):
+    template_name = 'products/product_stage.html'
+    extra_context = {'title': _('Workplace'), 'btn_update': _('Update'),
+                     'btn_delete': _('Delete')}
+    context_object_name = 'product_stage'
+
+    # def get_object(self, queryset=None):
+    #     object = super(WorkplaceStageView, self).get_object()
+    #     obj_simple = object.workday_set
+    #     object.order = obj_simple.all().order_by('created_at')
+    #     operation_names = set([i.workplace for i in obj_simple.all()])
+    #     operation_list = {}
+    #     for operation in operation_names:
+    #         total_sum = obj_simple.filter(workplace=operation).aggregate(total=Sum('time'))
+    #         operation_list[operation] = total_sum['total']
+    #     operation_list['total_time'] = obj_simple.aggregate(total=Sum('time'))['total']
+    #     object.delta_time = object.update_at - object.created_at
+    #     object.total = operation_list
+    #     return object
+
+
 class WorkplacesListView(LoginAuthMixin,WorkplaceMixin, ListView):
     model = Workplace
     login_url = reverse_lazy('user_login')

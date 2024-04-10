@@ -2639,3 +2639,1829 @@
 2024-03-30 20:54:15,631 - INFO - views - views.py - hello!
 2024-03-30 20:58:48,217 - INFO - views - views.py - hello!
 2024-03-30 20:58:48,709 - INFO - views - views.py - hello!
+2024-04-10 10:33:03,027 - INFO - views - views.py - ['task', 'workday', 'id', 'name', 'number', 'specification', 'amount', 'spec_number', 'description', 'color_1', 'color_2', 'color_3', 'color_4', 'color_5', 'color_6', 'step_1', 'step_2', 'step_3', 'step_4', 'step_5', 'step_6', 'created_at', 'update_at']
+2024-04-10 10:33:47,726 - INFO - views - views.py - ['task', 'workday', 'id', 'name', 'number', 'specification', 'amount', 'spec_number', 'description', 'color_1', 'color_2', 'color_3', 'color_4', 'color_5', 'color_6', 'step_1', 'step_2', 'step_3', 'step_4', 'step_5', 'step_6', 'created_at', 'update_at']
+2024-04-10 10:34:26,125 - INFO - views - views.py - ['task', 'workday', 'id', 'name', 'number', 'specification', 'amount', 'spec_number', 'description', 'color_1', 'color_2', 'color_3', 'color_4', 'color_5', 'color_6', 'step_1', 'step_2', 'step_3', 'step_4', 'step_5', 'step_6', 'created_at', 'update_at']
+2024-04-10 10:45:07,440 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:46:09,967 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:46:52,776 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:46:52,776 - DEBUG - views - views.py - task
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - workday
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - id
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - name
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - number
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - specification
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - amount
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - spec_number
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - description
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - color_1
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - color_2
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - color_3
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - color_4
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - color_5
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - color_6
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - step_1
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - step_2
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - step_3
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - step_4
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - step_5
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - step_6
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - created_at
+2024-04-10 10:46:52,777 - DEBUG - views - views.py - update_at
+2024-04-10 10:48:17,175 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:48:17,176 - DEBUG - views - views.py - task
+2024-04-10 10:51:21,300 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:51:21,300 - DEBUG - views - views.py - task
+2024-04-10 10:51:21,300 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,300 - DEBUG - views - views.py - workday
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - id
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - name
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - number
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - specification
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - amount
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - spec_number
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - description
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - color_1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - color_2
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - color_3
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - color_4
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - color_5
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - color_6
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - step_1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - step_2
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - step_3
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - step_4
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - step_5
+2024-04-10 10:51:21,301 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,302 - DEBUG - views - views.py - step_6
+2024-04-10 10:51:21,302 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,302 - DEBUG - views - views.py - created_at
+2024-04-10 10:51:21,302 - DEBUG - views - views.py - 1
+2024-04-10 10:51:21,302 - DEBUG - views - views.py - update_at
+2024-04-10 10:51:21,302 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,664 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - task
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - workday
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - id
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - name
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - number
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - specification
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - amount
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - spec_number
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - description
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - color_1
+2024-04-10 10:52:33,665 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - color_2
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - color_3
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - color_4
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - color_5
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - color_6
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - step_1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - step_2
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - step_3
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - step_4
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - step_5
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - step_6
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - created_at
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - update_at
+2024-04-10 10:52:33,666 - DEBUG - views - views.py - 1
+2024-04-10 10:53:42,717 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:53:42,718 - DEBUG - views - views.py - task
+2024-04-10 10:55:09,988 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - task
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - workday
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - id
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - name
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - number
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - specification
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - amount
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - spec_number
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - description
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - color_1
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - color_2
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - color_3
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - color_4
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - color_5
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - color_6
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - step_1
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - step_2
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - step_3
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - step_4
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - step_5
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - step_6
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - created_at
+2024-04-10 10:55:09,989 - DEBUG - views - views.py - update_at
+2024-04-10 10:55:32,180 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - task
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - workday
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - id
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - name
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - number
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - specification
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - amount
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - spec_number
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - description
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - color_1
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - color_2
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - color_3
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - color_4
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - color_5
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - color_6
+2024-04-10 10:55:32,181 - DEBUG - views - views.py - step_1
+2024-04-10 10:55:32,182 - DEBUG - views - views.py - step_2
+2024-04-10 10:55:32,182 - DEBUG - views - views.py - step_3
+2024-04-10 10:55:32,182 - DEBUG - views - views.py - step_4
+2024-04-10 10:55:32,182 - DEBUG - views - views.py - step_5
+2024-04-10 10:55:32,182 - DEBUG - views - views.py - step_6
+2024-04-10 10:55:32,182 - DEBUG - views - views.py - created_at
+2024-04-10 10:55:32,182 - DEBUG - views - views.py - update_at
+2024-04-10 10:55:43,862 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:55:43,862 - DEBUG - views - views.py - task
+2024-04-10 10:55:43,862 - DEBUG - views - views.py - workday
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - id
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - name
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - number
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - specification
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - amount
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - spec_number
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - description
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - color_1
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - color_2
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - color_3
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - color_4
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - color_5
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - color_6
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - step_1
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - step_2
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - step_3
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - step_4
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - step_5
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - step_6
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - created_at
+2024-04-10 10:55:43,863 - DEBUG - views - views.py - update_at
+2024-04-10 10:56:26,812 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - task
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - workday
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - id
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - name
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - number
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - specification
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - amount
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - spec_number
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - description
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - color_1
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - color_2
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - color_3
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - color_4
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - color_5
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - color_6
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - step_1
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - step_2
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - step_3
+2024-04-10 10:56:26,813 - DEBUG - views - views.py - step_4
+2024-04-10 10:56:26,814 - DEBUG - views - views.py - step_5
+2024-04-10 10:56:26,814 - DEBUG - views - views.py - step_6
+2024-04-10 10:56:26,814 - DEBUG - views - views.py - created_at
+2024-04-10 10:56:26,814 - DEBUG - views - views.py - update_at
+2024-04-10 10:57:38,567 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - task
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - workday
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - id
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - name
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - number
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - specification
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - amount
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - spec_number
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - description
+2024-04-10 10:57:38,568 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - color_1
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - color_2
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - color_3
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - color_4
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - color_5
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - color_6
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - step_1
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - step_2
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - step_3
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - step_4
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - step_5
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - step_6
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - created_at
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - update_at
+2024-04-10 10:57:38,569 - DEBUG - views - views.py - Succes
+2024-04-10 10:58:34,031 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:58:34,032 - DEBUG - views - views.py - task
+2024-04-10 10:58:42,520 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - task
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - pass
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - workday
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - pass
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - id
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - name
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - 1
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - number
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - 1
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - specification
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - 1
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - amount
+2024-04-10 10:58:42,521 - DEBUG - views - views.py - 1
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - spec_number
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - 1
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - description
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - 
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - color_1
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - color_2
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - color_3
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - color_4
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - color_5
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - color_6
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - step_1
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - Входной контроль
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - step_2
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - step_3
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - step_4
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - step_5
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - step_6
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - created_at
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - update_at
+2024-04-10 10:58:42,522 - DEBUG - views - views.py - None
+2024-04-10 11:00:31,951 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 11:00:31,951 - DEBUG - views - views.py - task
+2024-04-10 11:00:31,954 - DEBUG - views - views.py - workday
+2024-04-10 11:00:31,955 - DEBUG - views - views.py - id
+2024-04-10 11:00:31,955 - DEBUG - views - views.py - name
+2024-04-10 11:00:31,956 - DEBUG - views - views.py - number
+2024-04-10 11:00:31,957 - DEBUG - views - views.py - specification
+2024-04-10 11:00:31,958 - DEBUG - views - views.py - amount
+2024-04-10 11:00:31,967 - DEBUG - views - views.py - spec_number
+2024-04-10 11:00:31,968 - DEBUG - views - views.py - description
+2024-04-10 11:00:31,969 - DEBUG - views - views.py - color_1
+2024-04-10 11:00:31,969 - DEBUG - views - views.py - color_2
+2024-04-10 11:00:31,970 - DEBUG - views - views.py - color_3
+2024-04-10 11:00:31,971 - DEBUG - views - views.py - color_4
+2024-04-10 11:00:31,971 - DEBUG - views - views.py - color_5
+2024-04-10 11:00:31,972 - DEBUG - views - views.py - color_6
+2024-04-10 11:00:31,973 - DEBUG - views - views.py - step_1
+2024-04-10 11:00:31,974 - DEBUG - views - views.py - step_2
+2024-04-10 11:00:31,974 - DEBUG - views - views.py - step_3
+2024-04-10 11:00:31,975 - DEBUG - views - views.py - step_4
+2024-04-10 11:00:31,976 - DEBUG - views - views.py - step_5
+2024-04-10 11:00:31,977 - DEBUG - views - views.py - step_6
+2024-04-10 11:00:31,977 - DEBUG - views - views.py - created_at
+2024-04-10 11:00:31,978 - DEBUG - views - views.py - update_at
+2024-04-10 11:00:43,941 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 11:00:43,942 - DEBUG - views - views.py - task
+2024-04-10 11:00:43,943 - DEBUG - views - views.py - workday
+2024-04-10 11:00:43,944 - DEBUG - views - views.py - id
+2024-04-10 11:00:43,944 - DEBUG - views - views.py - name
+2024-04-10 11:00:43,945 - DEBUG - views - views.py - number
+2024-04-10 11:00:43,946 - DEBUG - views - views.py - specification
+2024-04-10 11:00:43,946 - DEBUG - views - views.py - amount
+2024-04-10 11:00:43,947 - DEBUG - views - views.py - spec_number
+2024-04-10 11:00:43,948 - DEBUG - views - views.py - description
+2024-04-10 11:00:43,949 - DEBUG - views - views.py - color_1
+2024-04-10 11:00:43,949 - DEBUG - views - views.py - color_2
+2024-04-10 11:00:43,950 - DEBUG - views - views.py - color_3
+2024-04-10 11:00:43,951 - DEBUG - views - views.py - color_4
+2024-04-10 11:00:43,951 - DEBUG - views - views.py - color_5
+2024-04-10 11:00:43,952 - DEBUG - views - views.py - color_6
+2024-04-10 11:00:43,953 - DEBUG - views - views.py - step_1
+2024-04-10 11:00:43,961 - DEBUG - views - views.py - step_2
+2024-04-10 11:00:43,962 - DEBUG - views - views.py - step_3
+2024-04-10 11:00:43,962 - DEBUG - views - views.py - step_4
+2024-04-10 11:00:43,963 - DEBUG - views - views.py - step_5
+2024-04-10 11:00:43,964 - DEBUG - views - views.py - step_6
+2024-04-10 11:00:43,964 - DEBUG - views - views.py - created_at
+2024-04-10 11:00:43,965 - DEBUG - views - views.py - update_at
+2024-04-10 11:01:11,780 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 11:01:11,781 - DEBUG - views - views.py - task
+2024-04-10 11:01:11,781 - DEBUG - views - views.py - pass
+2024-04-10 11:01:11,781 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:01:11,781 - DEBUG - views - views.py - workday
+2024-04-10 11:01:11,781 - DEBUG - views - views.py - pass
+2024-04-10 11:01:11,781 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:01:11,781 - DEBUG - views - views.py - id
+2024-04-10 11:01:11,781 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - name
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - 1
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - number
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - 1
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - specification
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - 1
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - amount
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - 1
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - spec_number
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - 1
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - description
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - 
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - color_1
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - color_2
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,782 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - color_3
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - color_4
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - color_5
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - color_6
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - step_1
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - step_2
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - step_3
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - step_4
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,783 - DEBUG - views - views.py - step_5
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - step_6
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - created_at
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - update_at
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - None
+2024-04-10 11:01:11,784 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,087 - DEBUG - views - views.py - ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']
+2024-04-10 11:04:34,087 - DEBUG - views - views.py - task
+2024-04-10 11:04:34,087 - DEBUG - views - views.py - pass
+2024-04-10 11:04:34,087 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - workday
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - pass
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - id
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - name
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - 1
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - number
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - 1
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - specification
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - 1
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - amount
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - 1
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - spec_number
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - 1
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:04:34,088 - DEBUG - views - views.py - description
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - 
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - color_1
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - color_2
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - color_3
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - color_4
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - color_5
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - color_6
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - step_1
+2024-04-10 11:04:34,089 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - step_2
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - step_3
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - step_4
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - step_5
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - step_6
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - created_at
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:04:34,090 - DEBUG - views - views.py - update_at
+2024-04-10 11:04:34,091 - DEBUG - views - views.py - None
+2024-04-10 11:04:34,091 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,723 - DEBUG - views - views.py - <QuerySet ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']>
+2024-04-10 11:05:56,723 - DEBUG - views - views.py - task
+2024-04-10 11:05:56,723 - DEBUG - views - views.py - pass
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - workday
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - pass
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - id
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - name
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - 1
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - number
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - 1
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - specification
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - 1
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - amount
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - 1
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - spec_number
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - 1
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - description
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - 
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - color_1
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - color_2
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - color_3
+2024-04-10 11:05:56,724 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - color_4
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - color_5
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - color_6
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - step_1
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - step_2
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - step_3
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - step_4
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - step_5
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - step_6
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - created_at
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - update_at
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - None
+2024-04-10 11:05:56,725 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:27,844 - DEBUG - views - views.py - ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']
+2024-04-10 11:07:27,844 - DEBUG - views - views.py - task
+2024-04-10 11:07:40,486 - DEBUG - views - views.py - ['Входной контроль', 'Токарно-карусельный с ЧПУ', 'токарый', 'Фрезер']
+2024-04-10 11:07:40,486 - DEBUG - views - views.py - task
+2024-04-10 11:07:40,486 - DEBUG - views - views.py - pass
+2024-04-10 11:07:40,486 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:07:40,486 - DEBUG - views - views.py - workday
+2024-04-10 11:07:40,486 - DEBUG - views - views.py - pass
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - id
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - name
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - 1
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - number
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - 1
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - specification
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - 1
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - amount
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - 1
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - spec_number
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - 1
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - description
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - 
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - color_1
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - color_2
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - color_3
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - color_4
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - color_5
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,487 - DEBUG - views - views.py - color_6
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - step_1
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - step_2
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - step_3
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - step_4
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - step_5
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - step_6
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - created_at
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - update_at
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - None
+2024-04-10 11:07:40,488 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,127 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:11:43,128 - DEBUG - views - views.py - task
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - pass
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - workday
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - pass
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - id
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - name
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - 1
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - number
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - 1
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - specification
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - 1
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - amount
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - 1
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - spec_number
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - 1
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:11:43,129 - DEBUG - views - views.py - description
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - 
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - color_1
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - color_2
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - color_3
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - color_4
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - color_5
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - color_6
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - step_1
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - !!!
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:11:43,130 - DEBUG - views - views.py - step_2
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - !!!
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - <class 'workplaces.models.Workplace'>
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - step_3
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - step_4
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - step_5
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - step_6
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - created_at
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - update_at
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - None
+2024-04-10 11:11:43,131 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:16:24,683 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:16:24,684 - DEBUG - views - views.py - pass
+2024-04-10 11:16:24,684 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:16:24,684 - DEBUG - views - views.py - pass
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - None
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - 1
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - 1
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - 1
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - 1
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - 1
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - 
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - None
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - None
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - None
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - None
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - None
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - None
+2024-04-10 11:16:24,685 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:18:12,350 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - pass
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - pass
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - None
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - 1
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - 1
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - 1
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - 1
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - 1
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - 
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - None
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - None
+2024-04-10 11:18:12,352 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:18:12,353 - DEBUG - views - views.py - None
+2024-04-10 11:18:12,353 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:18:12,353 - DEBUG - views - views.py - None
+2024-04-10 11:18:12,353 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:18:12,353 - DEBUG - views - views.py - None
+2024-04-10 11:18:12,353 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:18:12,353 - DEBUG - views - views.py - None
+2024-04-10 11:18:12,353 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:06,363 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - pass
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - pass
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - None
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - 1
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - 1
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - 1
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - 1
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - 1
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - 
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - None
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - None
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:06,365 - DEBUG - views - views.py - None
+2024-04-10 11:19:06,366 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:06,366 - DEBUG - views - views.py - None
+2024-04-10 11:19:06,366 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:06,366 - DEBUG - views - views.py - None
+2024-04-10 11:19:06,366 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:06,366 - DEBUG - views - views.py - None
+2024-04-10 11:19:06,366 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:49,650 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:19:49,651 - DEBUG - views - views.py - pass
+2024-04-10 11:19:49,651 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:19:49,651 - DEBUG - views - views.py - pass
+2024-04-10 11:19:49,651 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - None
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - 1
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - 1
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - 1
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - 1
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - 1
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - 
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - None
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - None
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - None
+2024-04-10 11:19:49,652 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:49,653 - DEBUG - views - views.py - None
+2024-04-10 11:19:49,653 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:49,653 - DEBUG - views - views.py - None
+2024-04-10 11:19:49,653 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:19:49,653 - DEBUG - views - views.py - None
+2024-04-10 11:19:49,653 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:14,141 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - pass
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - pass
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - None
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - 1
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - 1
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - 1
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - 1
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - 1
+2024-04-10 11:21:14,143 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - 
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - None
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - None
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - None
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - None
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - None
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - None
+2024-04-10 11:21:14,144 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:39,632 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:21:39,633 - DEBUG - views - views.py - task
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - pass
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - workday
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - pass
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - id
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - None
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - name
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - 1
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - number
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - 1
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - specification
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - 1
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - amount
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - 1
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - spec_number
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - 1
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - description
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - 
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - color_1
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - None
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - color_2
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - None
+2024-04-10 11:21:39,634 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - color_3
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - None
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - color_4
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - None
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - color_5
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - None
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - color_6
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - None
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:21:39,635 - DEBUG - views - views.py - step_1
+2024-04-10 11:22:46,770 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - task
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - pass
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - workday
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - pass
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - id
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - None
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:22:46,771 - DEBUG - views - views.py - name
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - 1
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - number
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - 1
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - specification
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - 1
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - amount
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - 1
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - spec_number
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - 1
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - description
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - 
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - color_1
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - None
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - color_2
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - None
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - color_3
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - None
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - color_4
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - None
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - color_5
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - None
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:22:46,772 - DEBUG - views - views.py - color_6
+2024-04-10 11:22:46,773 - DEBUG - views - views.py - None
+2024-04-10 11:22:46,773 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:22:46,773 - DEBUG - views - views.py - step_1
+2024-04-10 11:39:53,911 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:39:53,912 - DEBUG - views - views.py - task
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - pass
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - workday
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - pass
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - id
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - 36
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - name
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - 1
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - number
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - 1
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - specification
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - 1
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - amount
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - 1
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:39:53,913 - DEBUG - views - views.py - spec_number
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - 1
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - <class 'int'>
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - description
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - 
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - <class 'str'>
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - color_1
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - None
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - color_2
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - None
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - color_3
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - None
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - color_4
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - None
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - color_5
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - None
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - color_6
+2024-04-10 11:39:53,914 - DEBUG - views - views.py - None
+2024-04-10 11:39:53,915 - DEBUG - views - views.py - <class 'NoneType'>
+2024-04-10 11:39:53,915 - DEBUG - views - views.py - step_1
+2024-04-10 11:43:21,328 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:43:21,328 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:44:31,269 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:44:31,270 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:44:31,270 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:31,271 - DEBUG - views - views.py - 1
+2024-04-10 11:44:49,313 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:44:49,314 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:44:49,314 - DEBUG - views - views.py - pass
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - pass
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - 39
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - 1
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - 1
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - 1
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - 1
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - 1
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - 
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - None
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - None
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - None
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - None
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - None
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - None
+2024-04-10 11:44:49,315 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:45:21,070 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:45:21,070 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - task
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - pass
+2024-04-10 11:45:21,071 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - workday
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - pass
+2024-04-10 11:45:21,071 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - id
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - 40
+2024-04-10 11:45:21,071 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - name
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - 1
+2024-04-10 11:45:21,071 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - number
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - 1
+2024-04-10 11:45:21,071 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - specification
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - 1
+2024-04-10 11:45:21,071 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - amount
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - 1
+2024-04-10 11:45:21,071 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - spec_number
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - 1
+2024-04-10 11:45:21,071 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,071 - DEBUG - views - views.py - description
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - 
+2024-04-10 11:45:21,072 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - color_1
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - None
+2024-04-10 11:45:21,072 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - color_2
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - None
+2024-04-10 11:45:21,072 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - color_3
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - None
+2024-04-10 11:45:21,072 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - color_4
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - None
+2024-04-10 11:45:21,072 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - color_5
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - None
+2024-04-10 11:45:21,072 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - color_6
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - None
+2024-04-10 11:45:21,072 - DEBUG - views - views.py -  
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - step_1
+2024-04-10 11:45:21,072 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:45:21,072 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,683 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:46:00,684 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - task
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - pass
+2024-04-10 11:46:00,685 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - workday
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - pass
+2024-04-10 11:46:00,685 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - id
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - 41
+2024-04-10 11:46:00,685 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - name
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - 1
+2024-04-10 11:46:00,685 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - number
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - 1
+2024-04-10 11:46:00,685 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - specification
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - 1
+2024-04-10 11:46:00,685 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - amount
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - 1
+2024-04-10 11:46:00,685 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - spec_number
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - 1
+2024-04-10 11:46:00,685 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,685 - DEBUG - views - views.py - description
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - 
+2024-04-10 11:46:00,686 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - color_1
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - None
+2024-04-10 11:46:00,686 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - color_2
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - None
+2024-04-10 11:46:00,686 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - color_3
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - None
+2024-04-10 11:46:00,686 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - color_4
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - None
+2024-04-10 11:46:00,686 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - color_5
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - None
+2024-04-10 11:46:00,686 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - color_6
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - None
+2024-04-10 11:46:00,686 - DEBUG - views - views.py -  
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - step_1
+2024-04-10 11:46:00,686 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:46:00,686 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,003 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:46:27,004 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:46:27,004 - DEBUG - views - views.py - task
+2024-04-10 11:46:27,004 - DEBUG - views - views.py - pass
+2024-04-10 11:46:27,004 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,004 - DEBUG - views - views.py - workday
+2024-04-10 11:46:27,004 - DEBUG - views - views.py - pass
+2024-04-10 11:46:27,004 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,004 - DEBUG - views - views.py - id
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - 42
+2024-04-10 11:46:27,005 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - name
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - 1
+2024-04-10 11:46:27,005 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - number
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - 1
+2024-04-10 11:46:27,005 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - specification
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - 1
+2024-04-10 11:46:27,005 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - amount
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - 1
+2024-04-10 11:46:27,005 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - spec_number
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - 1
+2024-04-10 11:46:27,005 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - description
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - 
+2024-04-10 11:46:27,005 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - color_1
+2024-04-10 11:46:27,005 - DEBUG - views - views.py - None
+2024-04-10 11:46:27,005 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - color_2
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - None
+2024-04-10 11:46:27,006 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - color_3
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - None
+2024-04-10 11:46:27,006 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - color_4
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - None
+2024-04-10 11:46:27,006 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - color_5
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - None
+2024-04-10 11:46:27,006 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - color_6
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - None
+2024-04-10 11:46:27,006 - DEBUG - views - views.py -  
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - step_1
+2024-04-10 11:46:27,006 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:46:27,006 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,096 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:46:59,097 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:46:59,097 - DEBUG - views - views.py - task
+2024-04-10 11:46:59,097 - DEBUG - views - views.py - pass
+2024-04-10 11:46:59,097 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,097 - DEBUG - views - views.py - workday
+2024-04-10 11:46:59,097 - DEBUG - views - views.py - pass
+2024-04-10 11:46:59,097 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,097 - DEBUG - views - views.py - id
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - 43
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - name
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - 1
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - number
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - 1
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - specification
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - 1
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - amount
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - 1
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - spec_number
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - 1
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - description
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - 
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - color_1
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - None
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - color_2
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - None
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - color_3
+2024-04-10 11:46:59,098 - DEBUG - views - views.py - None
+2024-04-10 11:46:59,098 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,099 - DEBUG - views - views.py - color_4
+2024-04-10 11:46:59,099 - DEBUG - views - views.py - None
+2024-04-10 11:46:59,099 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,099 - DEBUG - views - views.py - color_5
+2024-04-10 11:46:59,099 - DEBUG - views - views.py - None
+2024-04-10 11:46:59,099 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,099 - DEBUG - views - views.py - color_6
+2024-04-10 11:46:59,099 - DEBUG - views - views.py - None
+2024-04-10 11:46:59,099 - DEBUG - views - views.py -  
+2024-04-10 11:46:59,099 - DEBUG - views - views.py - step_1
+2024-04-10 11:46:59,099 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:46:59,099 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,727 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:47:31,728 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:47:31,728 - DEBUG - views - views.py - task
+2024-04-10 11:47:31,728 - DEBUG - views - views.py - pass
+2024-04-10 11:47:31,728 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - workday
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - pass
+2024-04-10 11:47:31,729 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - id
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - 44
+2024-04-10 11:47:31,729 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - name
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - 1
+2024-04-10 11:47:31,729 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - number
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - 1
+2024-04-10 11:47:31,729 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - specification
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - 1
+2024-04-10 11:47:31,729 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - amount
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - 1
+2024-04-10 11:47:31,729 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - spec_number
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - 1
+2024-04-10 11:47:31,729 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,729 - DEBUG - views - views.py - description
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - 
+2024-04-10 11:47:31,730 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - color_1
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - None
+2024-04-10 11:47:31,730 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - color_2
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - None
+2024-04-10 11:47:31,730 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - color_3
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - None
+2024-04-10 11:47:31,730 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - color_4
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - None
+2024-04-10 11:47:31,730 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - color_5
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - None
+2024-04-10 11:47:31,730 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - color_6
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - None
+2024-04-10 11:47:31,730 - DEBUG - views - views.py -  
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - step_1
+2024-04-10 11:47:31,730 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:47:31,730 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,769 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:47:35,770 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:47:35,770 - DEBUG - views - views.py - task
+2024-04-10 11:47:35,770 - DEBUG - views - views.py - pass
+2024-04-10 11:47:35,770 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,770 - DEBUG - views - views.py - workday
+2024-04-10 11:47:35,770 - DEBUG - views - views.py - pass
+2024-04-10 11:47:35,770 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,770 - DEBUG - views - views.py - id
+2024-04-10 11:47:35,770 - DEBUG - views - views.py - 45
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - name
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - 1
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - number
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - 1
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - specification
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - 1
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - amount
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - 1
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - spec_number
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - 1
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - description
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - 
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - color_1
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - None
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - color_2
+2024-04-10 11:47:35,771 - DEBUG - views - views.py - None
+2024-04-10 11:47:35,771 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - color_3
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - None
+2024-04-10 11:47:35,772 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - color_4
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - None
+2024-04-10 11:47:35,772 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - color_5
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - None
+2024-04-10 11:47:35,772 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - color_6
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - None
+2024-04-10 11:47:35,772 - DEBUG - views - views.py -  
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - step_1
+2024-04-10 11:47:35,772 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:47:35,772 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,104 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:55:23,105 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:55:23,105 - DEBUG - views - views.py - task
+2024-04-10 11:55:23,105 - DEBUG - views - views.py - pass
+2024-04-10 11:55:23,105 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - workday
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - pass
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - id
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - 46
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - name
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - 1
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - number
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - 1
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - specification
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - 1
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - amount
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - 1
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - spec_number
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - 1
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - description
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - 
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - color_1
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - None
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - color_2
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - None
+2024-04-10 11:55:23,106 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - color_3
+2024-04-10 11:55:23,106 - DEBUG - views - views.py - None
+2024-04-10 11:55:23,107 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,107 - DEBUG - views - views.py - color_4
+2024-04-10 11:55:23,107 - DEBUG - views - views.py - None
+2024-04-10 11:55:23,107 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,107 - DEBUG - views - views.py - color_5
+2024-04-10 11:55:23,107 - DEBUG - views - views.py - None
+2024-04-10 11:55:23,107 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,107 - DEBUG - views - views.py - color_6
+2024-04-10 11:55:23,107 - DEBUG - views - views.py - None
+2024-04-10 11:55:23,107 - DEBUG - views - views.py -  
+2024-04-10 11:55:23,107 - DEBUG - views - views.py - step_1
+2024-04-10 11:55:23,107 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:55:23,107 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,075 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - task
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - pass
+2024-04-10 11:55:33,076 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - workday
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - pass
+2024-04-10 11:55:33,076 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - id
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - 47
+2024-04-10 11:55:33,076 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - name
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - 1
+2024-04-10 11:55:33,076 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - number
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - 1
+2024-04-10 11:55:33,076 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - specification
+2024-04-10 11:55:33,076 - DEBUG - views - views.py - 1
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - amount
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - 1
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - spec_number
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - 1
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - description
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - 
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - color_1
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - None
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - color_2
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - None
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - color_3
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - None
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - color_4
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - None
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - color_5
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - None
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - color_6
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - None
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - step_1
+2024-04-10 11:55:33,077 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:55:33,077 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,936 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:59:14,937 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:59:14,937 - DEBUG - views - views.py - task
+2024-04-10 11:59:14,937 - DEBUG - views - views.py - pass
+2024-04-10 11:59:14,937 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - workday
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - pass
+2024-04-10 11:59:14,938 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - id
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - 48
+2024-04-10 11:59:14,938 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - name
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - 1
+2024-04-10 11:59:14,938 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - number
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - 1
+2024-04-10 11:59:14,938 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - specification
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - 1
+2024-04-10 11:59:14,938 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - amount
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - 1
+2024-04-10 11:59:14,938 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - spec_number
+2024-04-10 11:59:14,938 - DEBUG - views - views.py - 1
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - description
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - 
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - color_1
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - None
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - color_2
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - None
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - color_3
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - None
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - color_4
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - None
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - color_5
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - None
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - color_6
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - None
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - step_1
+2024-04-10 11:59:14,939 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:59:14,939 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,044 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 11:59:21,045 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 11:59:21,045 - DEBUG - views - views.py - task
+2024-04-10 11:59:21,045 - DEBUG - views - views.py - pass
+2024-04-10 11:59:21,045 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,045 - DEBUG - views - views.py - workday
+2024-04-10 11:59:21,045 - DEBUG - views - views.py - pass
+2024-04-10 11:59:21,045 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,045 - DEBUG - views - views.py - id
+2024-04-10 11:59:21,045 - DEBUG - views - views.py - 49
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - name
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - 1
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - number
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - 1
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - specification
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - 1
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - amount
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - 1
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - spec_number
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - 1
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - description
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - 
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - color_1
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - None
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - color_2
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - None
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - color_3
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - None
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - color_4
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - None
+2024-04-10 11:59:21,046 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - color_5
+2024-04-10 11:59:21,046 - DEBUG - views - views.py - None
+2024-04-10 11:59:21,047 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,047 - DEBUG - views - views.py - color_6
+2024-04-10 11:59:21,047 - DEBUG - views - views.py - None
+2024-04-10 11:59:21,047 - DEBUG - views - views.py -  
+2024-04-10 11:59:21,047 - DEBUG - views - views.py - step_1
+2024-04-10 11:59:21,047 - DEBUG - views - views.py - Входной контроль
+2024-04-10 11:59:21,047 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,972 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 12:03:46,973 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 12:03:46,973 - DEBUG - views - views.py - task
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - pass
+2024-04-10 12:03:46,974 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - workday
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - pass
+2024-04-10 12:03:46,974 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - id
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - 50
+2024-04-10 12:03:46,974 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - name
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - 1
+2024-04-10 12:03:46,974 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - number
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - 1
+2024-04-10 12:03:46,974 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - specification
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - 1
+2024-04-10 12:03:46,974 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,974 - DEBUG - views - views.py - amount
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - 1
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - spec_number
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - 1
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - description
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - 
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - color_1
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - None
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - color_2
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - None
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - color_3
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - None
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - color_4
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - None
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - color_5
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - None
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - color_6
+2024-04-10 12:03:46,975 - DEBUG - views - views.py - None
+2024-04-10 12:03:46,975 - DEBUG - views - views.py -  
+2024-04-10 12:03:46,976 - DEBUG - views - views.py - step_1
+2024-04-10 12:03:46,976 - DEBUG - views - views.py - Входной контроль
+2024-04-10 12:03:46,976 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,178 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 12:04:07,179 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 12:04:07,179 - DEBUG - views - views.py - task
+2024-04-10 12:04:07,179 - DEBUG - views - views.py - pass
+2024-04-10 12:04:07,179 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,179 - DEBUG - views - views.py - workday
+2024-04-10 12:04:07,179 - DEBUG - views - views.py - pass
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - id
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - 51
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - name
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - 1
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - number
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - 1
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - specification
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - 1
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - amount
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - 1
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - spec_number
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - 1
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - description
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - 
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - color_1
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - color_2
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - color_3
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - color_4
+2024-04-10 12:04:07,180 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,180 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,181 - DEBUG - views - views.py - color_5
+2024-04-10 12:04:07,181 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,181 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,181 - DEBUG - views - views.py - color_6
+2024-04-10 12:04:07,181 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,181 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,181 - DEBUG - views - views.py - step_1
+2024-04-10 12:04:07,181 - DEBUG - views - views.py - Входной контроль
+2024-04-10 12:04:07,181 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,185 - DEBUG - views - views.py - !!!
+2024-04-10 12:04:07,185 - DEBUG - views - views.py - step_2
+2024-04-10 12:04:07,185 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 12:04:07,185 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,187 - DEBUG - views - views.py - !!!
+2024-04-10 12:04:07,187 - DEBUG - views - views.py - step_3
+2024-04-10 12:04:07,187 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,187 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - step_4
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,188 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - step_5
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,188 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - step_6
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - None
+2024-04-10 12:04:07,188 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - created_at
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - 2024-04-10 09:04:07.177432+00:00
+2024-04-10 12:04:07,188 - DEBUG - views - views.py -  
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - update_at
+2024-04-10 12:04:07,188 - DEBUG - views - views.py - 2024-04-10 09:04:07.177447+00:00
+2024-04-10 12:04:07,188 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,343 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 12:07:22,344 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - task
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - pass
+2024-04-10 12:07:22,345 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - workday
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - pass
+2024-04-10 12:07:22,345 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - id
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - 52
+2024-04-10 12:07:22,345 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - name
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - 1
+2024-04-10 12:07:22,345 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - number
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - 1
+2024-04-10 12:07:22,345 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - specification
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - 1
+2024-04-10 12:07:22,345 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - amount
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - 1
+2024-04-10 12:07:22,345 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,345 - DEBUG - views - views.py - spec_number
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - 1
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - description
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - 
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - color_1
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - color_2
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - color_3
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - color_4
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - color_5
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - color_6
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - step_1
+2024-04-10 12:07:22,346 - DEBUG - views - views.py - Входной контроль
+2024-04-10 12:07:22,346 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,348 - DEBUG - views - views.py - 
+2024-04-10 12:07:22,348 - DEBUG - views - views.py - !!!
+2024-04-10 12:07:22,348 - DEBUG - views - views.py - step_2
+2024-04-10 12:07:22,348 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 12:07:22,348 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - 
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - !!!
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - step_3
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,350 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - step_4
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,350 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - step_5
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,350 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - step_6
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - None
+2024-04-10 12:07:22,350 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - created_at
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - 2024-04-10 09:07:22.337928+00:00
+2024-04-10 12:07:22,350 - DEBUG - views - views.py -  
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - update_at
+2024-04-10 12:07:22,350 - DEBUG - views - views.py - 2024-04-10 09:07:22.337945+00:00
+2024-04-10 12:07:22,350 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,718 - DEBUG - views - views.py - <QuerySet [<Workplace: Входной контроль>, <Workplace: Токарно-карусельный с ЧПУ>, <Workplace: токарый>, <Workplace: Фрезер>]>
+2024-04-10 12:09:54,719 - DEBUG - views - views.py - <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/products/">
+2024-04-10 12:09:54,719 - DEBUG - views - views.py - task
+2024-04-10 12:09:54,719 - DEBUG - views - views.py - pass
+2024-04-10 12:09:54,719 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - workday
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - pass
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - id
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - 53
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - name
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - 1
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - number
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - 1
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - specification
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - 1
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - amount
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - 1
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - spec_number
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - 1
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - description
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - 
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - color_1
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - color_2
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,720 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - color_3
+2024-04-10 12:09:54,720 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,721 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,721 - DEBUG - views - views.py - color_4
+2024-04-10 12:09:54,721 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,721 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,721 - DEBUG - views - views.py - color_5
+2024-04-10 12:09:54,721 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,721 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,721 - DEBUG - views - views.py - color_6
+2024-04-10 12:09:54,721 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,721 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,721 - DEBUG - views - views.py - step_1
+2024-04-10 12:09:54,721 - DEBUG - views - views.py - Входной контроль
+2024-04-10 12:09:54,721 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,722 - DEBUG - views - views.py - Task Входной контроль created
+2024-04-10 12:09:54,722 - DEBUG - views - views.py - step_2
+2024-04-10 12:09:54,723 - DEBUG - views - views.py - Токарно-карусельный с ЧПУ
+2024-04-10 12:09:54,723 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - Task Токарно-карусельный с ЧПУ created
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - step_3
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,724 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - step_4
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,724 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - step_5
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,724 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - step_6
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - None
+2024-04-10 12:09:54,724 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - created_at
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - 2024-04-10 09:09:54.711124+00:00
+2024-04-10 12:09:54,724 - DEBUG - views - views.py -  
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - update_at
+2024-04-10 12:09:54,724 - DEBUG - views - views.py - 2024-04-10 09:09:54.711152+00:00
+2024-04-10 12:09:54,724 - DEBUG - views - views.py -  

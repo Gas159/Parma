@@ -19,7 +19,7 @@ class IndexView(SuccessMessageMixin,  LoginAuthMixin,  ListView):
     context_object_name = 'tasks'
     paginate_by = 5
     def get_queryset(self):
-        queryset = Task.objects.filter(executor=self.request.user)
+        queryset = Task.objects.filter(workplace=self.request.user.workplace)
         return queryset
 
 
