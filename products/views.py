@@ -44,6 +44,41 @@ class ProductView(LoginAuthMixin, ProductsMixin, DetailView):
         return object
 
 
+class ProductStageView(LoginAuthMixin, ProductsMixin, DetailView):
+    template_name = 'products/product_stage.html'
+    extra_context = {'title': _('Workplace'), 'btn_update': _('Update'),
+                     'btn_delete': _('Delete')}
+    context_object_name = 'product_stage'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        try:
+            stage_id = self.request.GET.get('stage_id')
+            context['stage_id'] = stage_id
+        except:
+            pass
+        finally:
+            return context
+
+    def get_object(self, queryset=None):
+        object = super(ProductStageView, self).get_object()
+
+
+        obj_simple = object.workday_set
+        object.order = obj_simple.all().order_by('created_at')
+        operation_names = set([i.workplace for i in obj_simple.all()])
+        operation_list = {}
+        for operation in operation_names:
+            total_sum = obj_simple.filter(workplace=operation).aggregate(total=Sum('time'))
+            operation_list[operation] = total_sum['total']
+        operation_list['total_time'] = obj_simple.aggregate(total=Sum('time'))['total']
+        object.delta_time = object.update_at - object.created_at
+        object.total = operation_list
+        # object.workplace = obj_simple.filter(id=self.request.GET.get('stage_id'))
+        object.workplace = obj_simple.filter(workplace=self.request.GET.get('stage_id'))
+        return object
+
+
 class ProductsListView(LoginAuthMixin, ProductsMixin, FilterView, ListView):
     template_name = 'products/products_list.html'
     context_object_name = 'products'

@@ -74,7 +74,7 @@
         <td>{{t.amount}}</td>
         <td>{{t.description | truncatechars:20 }}</td>
 
-        <td>{% if t.step_1 is not none %}<a href='{% url "product_stage" t.step_1.id %}'> <p class="{{ t.color_1 }}"> {{ t.step_1 }} </p></a>{% endif %}</td>
+        <td>{% if t.step_1 is not none %}<a href='{% url "product_stage" t.id %}?stage_id={{ t.step_1.id }}'> <p class="{{ t.color_1 }}"> {{ t.step_1 }} </p></a>{% endif %}</td>
         <td>{% if t.step_2 is not none %}<a href='{% url "product_stage" t.step_2.id %}'> <p class="{{ t.color_2 }}"> {{ t.step_2 }} </p> </a>{% endif %}</td>
         <td>{% if t.step_3 is not none %}<a href='{% url "product_stage" t.step_3.id %}'> <p class="{{ t.color_3 }}"> {{ t.step_3 }} </p> </a>{% endif %}</td>
         <td>{% if t.step_4 is not none %}<a href='{% url "product_stage" t.step_4.id %}'> <p class="{{ t.color_4 }}"> {{ t.step_4 }} </p> </a>{% endif %}</td>

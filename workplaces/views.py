@@ -10,19 +10,24 @@ from workplaces.mixins import WorkplaceMixin
 from workplaces.models import Workplace
 
 
-
-
 class WorkplaceView(LoginAuthMixin, WorkplaceMixin, DetailView):  # modelname_detail.html.
     template_name = 'workplaces/workplace.html'
     extra_context = {'title': _('Workplace'), 'btn_update': _('Update'),
                      'btn_delete': _('Delete')}
     context_object_name = 'workplace'
 
-class WorkplaceStageView(LoginAuthMixin, WorkplaceMixin, DetailView):
-    template_name = 'products/product_stage.html'
-    extra_context = {'title': _('Workplace'), 'btn_update': _('Update'),
-                     'btn_delete': _('Delete')}
-    context_object_name = 'product_stage'
+
+# class WorkplaceStageView(LoginAuthMixin, WorkplaceMixin, DetailView):
+#     template_name = 'products/product_stage.html'
+#     extra_context = {'title': _('Workplace'), 'btn_update': _('Update'),
+#                      'btn_delete': _('Delete')}
+#     context_object_name = 'product_stage'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         step_id = self.request.GET.get('step_id')
+#         context['step_id'] = step_id
+#         return context
 
     # def get_object(self, queryset=None):
     #     object = super(WorkplaceStageView, self).get_object()
@@ -39,7 +44,7 @@ class WorkplaceStageView(LoginAuthMixin, WorkplaceMixin, DetailView):
     #     return object
 
 
-class WorkplacesListView(LoginAuthMixin,WorkplaceMixin, ListView):
+class WorkplacesListView(LoginAuthMixin, WorkplaceMixin, ListView):
     model = Workplace
     login_url = reverse_lazy('user_login')
     success_url = reverse_lazy('workplaces')
@@ -57,6 +62,7 @@ class CreateWorkplaceView(SuccessMessageMixin, LoginAuthMixin, WorkplaceMixin, C
     success_message = _("Workplace created successfully")
     extra_context = {'title': _('Create workplace'), 'btn': _('Create')}
     model = Workplace
+
 
 # class TasksListView(LoginAuthMixin, TaskMixin, FilterView):  # modelname_list.html.
 #     extra_context = {'title': _('Tasks'), 'btn': _('Create task'), 'btn_update': _('Update'),

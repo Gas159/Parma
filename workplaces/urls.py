@@ -10,5 +10,5 @@ urlpatterns = [
     path('create_workplace/', CreateWorkplaceView.as_view(), name='create_workplace'),
     path('<int:pk>/', WorkplaceView.as_view(), name='workplace'),
     path('workpass/', workpass, name='workpass'),
-    path('stage/<int:pk>/', WorkplaceStageView.as_view(), name='product_stage')
+    # path('stage/<int:pk>/', WorkplaceStageView.as_view(), name='product_stage')
 ]
