@@ -74,7 +74,7 @@ class ProductStageView(LoginAuthMixin, ProductsMixin, DetailView):
         operation_list['total_time'] = obj_simple.aggregate(total=Sum('time'))['total']
         object.delta_time = object.update_at - object.created_at
         object.total = operation_list
-        # object.workplace = obj_simple.filter(id=self.request.GET.get('stage_id'))
+        # object.workplace = obj_simple.filter(id=self.request.GET.get('stage_id')) #1
         object.workplace = obj_simple.filter(workplace=self.request.GET.get('stage_id'))
         return object
 
