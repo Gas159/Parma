@@ -10,7 +10,7 @@ from workplaces.models import Workplace
 class Product(models.Model):
     # unique = True
     name = models.CharField(max_length=222, verbose_name=_('Product name'))
-    number = models.IntegerField(verbose_name=_('Product number'), null=True)
+    number = models.IntegerField(verbose_name=_('Product number'), null=True, blank=True)
     specification = models.IntegerField('Specification', null=True, blank=True)
     amount = IntegerField('Кол-во', null=True, blank=True, default=1)
     spec_number = IntegerField('Пункт спецификации', null=True, blank=True)
