@@ -25,7 +25,7 @@ class IndexView(SuccessMessageMixin,  LoginAuthMixin,  ListView):
 
 
 
-    # def get_context_date(self,**kwargs):
+    # def get_context_date(self,**kwargs):1
     #     context = super().get_context_data(self, **kwargs)
 
     # def get_context_data(self, **kwargs):
