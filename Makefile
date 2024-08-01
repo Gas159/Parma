@@ -12,7 +12,7 @@ run-gunicorn:
 		poetry run gunicorn task_manager.wsgi --log-file
 
 
-# service commands
+# service commands1
 shell:
 		$(LOCAL) shell_plus
 
