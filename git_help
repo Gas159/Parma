@@ -13,7 +13,7 @@ git reset --hard origin/main
 
 git config credential.helper store # set token
 git config --unset credential.helper	# unset token
-git config --global credential.helper "cache --timeout=3600" #temporary
+git config --global credential.helper "cache --timeout=3600" #temporary1
 
 
 
